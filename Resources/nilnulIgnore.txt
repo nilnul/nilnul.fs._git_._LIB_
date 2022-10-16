@@ -1,0 +1,35 @@
+#nilnul: ignore temp files
+**/~(*
+**/~)*
+#~$*
+**/~$*
+
+
+#nilnul retiring a repo by renaming it to the ~{reason}{date}).git
+**/*).git/
+**/*(.git/
+
+#nilnul: makeing a repo from inside a repo; to avoid conflicts with parent repo, name a special folder in place; this folder is named: (Git
+**/*([Gg]it/
+
+
+# excluded; not controlled by version
+**/*(!Git/
+**/*(![Gg]it).*
+**/*(![Gg]it)*
+**/*(![Gg]it)
+
+
+#files generated for output
+**/out)*
+**/~out)*
+**/*.out(![Gg]it)
+**/*.out(![Gg]it).*
+
+
+#cfg files; unless added explicitly by a specific repo
+.nilnulCfg
+.nilnul
+
+# dot led dnts are considered settings tackled by bot, thus not source code. We here allow for dotLed doc.
+**/.*/

@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nilnul.fs.git._module_
+{
+	/// <summary>
+	/// including ".gitignore"
+	/// excluding:
+	///		inner modules
+	/// </summary>
+	interface WorkI
+	{
+	}
+}

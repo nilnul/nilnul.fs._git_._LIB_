@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+	<style type="text/css">
+p{clear:both;margin-bottom:1em;margin-top:0}p code{padding:1px 5px}code{font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;background-color:#eff0f1}pre{max-height:none\9}pre{margin-bottom:1em;padding:5px;padding-bottom:20px !ie7;width:auto;width:650px !ie7;max-height:600px;overflow:auto;font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;font-size:13px;background-color:#eff0f1}.post-text pre>code:first-child,.wmd-preview pre>code:first-child{max-height:600px\9;display:block\9}i,em{font-style:italic}.post-text h1,.post-text h2,.post-text h3,.post-text h4,.post-text h5,.post-text h6{word-wrap:break-word}h3{font-size:15px}h1,h2,h3{line-height:1.3;margin:0 0 1em}sup,sub{font-size:80%}sup{vertical-align:super}sub,sup{font-size:80%;vertical-align:sub;line-height:1}b,strong{font-weight:bold}ul{list-style-type:disc}ul,ol{margin-left:30px;margin-bottom:1em}ul,ol,li{margin:0;padding:0}ol,ul{list-style:none}a{color:#07C;text-decoration:none;cursor:pointer}
+		.auto-style1 {
+			font-size: 100%;
+			vertical-align: baseline;
+			border-style: none;
+			border-color: inherit;
+			border-width: 0;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<p class="auto-style1">
+		It&#39;s mostly a quirk of how <code class="auto-style1">git checkout</code> works internally. The Git folks have a tendency to let implementation dictate interface.</p>
+	<p class="auto-style1">
+		The end result is that after <code class="auto-style1">git checkout</code> with <code class="auto-style1">--ours</code> or <code class="auto-style1">--theirs</code>, if you want to resolve the conflict, you must also <code class="auto-style1">git add</code> the same paths:</p>
+	<pre class="auto-style1"><code class="auto-style1">git checkout --ours -- path/to/file
+git add path/to/file
+</code></pre>
+	<p class="auto-style1">
+		But this is <em class="auto-style1">not</em> the case with other forms of <code class="auto-style1">git checkout</code>:</p>
+	<pre class="auto-style1"><code class="auto-style1">git checkout HEAD -- path/to/file
+</code></pre>
+	<p class="auto-style1">
+		or:</p>
+	<pre class="auto-style1"><code class="auto-style1">git checkout MERGE_HEAD -- path/to/file
+</code></pre>
+	<p class="auto-style1">
+		(these are subtly different in multiple ways). In some cases this means the fastest way is to use the middle command. (Incidentally, the <code class="auto-style1">--</code> here is to make sure Git can distinguish between a path name and an option or branch name. For instance, if you have a file named <code class="auto-style1">--theirs</code>, it will look like an option, but <code class="auto-style1">--</code> will tell Git that no, it&#39;s really a path name.)</p>
+	<p class="auto-style1">
+		To see how this all works internally, and why you need the separate <code class="auto-style1">git add</code> except when you don&#39;t, read on. :-) First, let&#39;s do a quick review of the merge process.</p>
+	<h3 class="auto-style1">Merge, part 1: how merge begins</h3>
+	<p class="auto-style1">
+		When you run:</p>
+	<p class="auto-style1">
+		<code class="auto-style1">$ git merge <em class="auto-style1">commit-or-branch</em></code></p>
+	<p class="auto-style1">
+		the first thing Git does is find the <em class="auto-style1">merge base</em> between the named commit and the current (<code class="auto-style1">HEAD</code>) commit. (Note that if you supply a branch name here, as in <code class="auto-style1">git merge otherbranch</code>, Git translates that to a commit-ID, namely the tip of the branch. It saves the branch name argument for the eventual merge log message, but needs the commit ID to find the merge base.)</p>
+	<p class="auto-style1">
+		Having found a suitable merge base,<sup class="auto-style1">1</sup> Git then produces two <code class="auto-style1">git diff</code> listings: one from the merge base to <code class="auto-style1">HEAD</code>, and one from the merge base to the commit you identified. This gets &quot;what you changed&quot; and &quot;what they changed&quot;, which Git now has to combine.</p>
+	<p class="auto-style1">
+		For files where you made a change and they didn&#39;t, Git can just take your version.</p>
+	<p class="auto-style1">
+		For files where they made a change and you didn&#39;t, Git can just take their version.</p>
+	<p class="auto-style1">
+		For files where you both made changes, Git must do some real merge work. It compares the changes, line by line, to see if it can combine them. If it <em class="auto-style1">can</em> combine them, it does so. If the merges seem—based, again, on purely line-by-line comparisons—to conflict, Git declares a &quot;merge conflict&quot; for that file (and goes ahead and tries to merge anyway, but leaves conflict markers in place).</p>
+	<p class="auto-style1">
+		Once Git has merged everything it can, it either finishes the merge—because there were no conflicts—or stops with a merge conflict.</p>
+	<hr />
+	<p class="auto-style1">
+		<sup class="auto-style1">1</sup>The merge base is obvious if you draw the commit graph. Without drawing the graph, it&#39;s kind of mysterious. This is why I always tell people to draw the graph, or at least, as much of it as needed to make sense.</p>
+	<p class="auto-style1">
+		The technical definition is that the merge base is the &quot;lowest common ancestor&quot; (LCA) node in the commit graph. In less technical terms, it&#39;s the most recent commit where your current branch joins up with the branch you&#39;re merging. That is, by recording each merge&#39;s parent commit IDs, Git is able to find the <em class="auto-style1">last</em> time the two branches were together, and hence figure out both what you did, and what they did. For this to work at all, though, Git has to record each merge. Specifically, it has to write both (or all, for so-called &quot;octopus&quot; merges) parent IDs into the new merge commit.</p>
+	<p class="auto-style1">
+		In some cases, there&#39;s more than one suitable merge base. The process then depends on your merge strategy. The default <em class="auto-style1">recursive</em> strategy will merge the multiple merge bases to produce a &quot;virtual merge base&quot;. This is rare enough that you can ignore it for now.</p>
+	<hr />
+	<h3 class="auto-style1">Merge, part 2: stopping with a conflict, and Git&#39;s &quot;index&quot;</h3>
+	<p class="auto-style1">
+		When Git does stop this way, it needs to give you a chance to <em class="auto-style1">resolve</em> the conflicts. But this also means that it needs to <em class="auto-style1">record</em> the conflicts, and this is where Git&#39;s &quot;index&quot;—also called &quot;the staging area&quot;, and sometimes &quot;the cache&quot;—really earns its existence.</p>
+	<p class="auto-style1">
+		For every staged file in your work-tree, the index has <em class="auto-style1">up to four</em> entries, rather than just one entry. At most three of these are ever actually in use, but there are four slots, which are numbered, <code class="auto-style1">0</code> through <code class="auto-style1">3</code>.</p>
+	<p class="auto-style1">
+		Slot zero is used for resolved files. When you&#39;re working with Git and not doing merges, <em class="auto-style1">only</em> slot zero gets used. When you edit a file in the work tree, it has &quot;unstaged changes&quot;, and then you <code class="auto-style1">git add</code> the file and the changes are written to the repository, updating slot zero; your changes are now &quot;staged&quot;.</p>
+	<p class="auto-style1">
+		Slots 1-3 are used for unresolved files. When <code class="auto-style1">git merge</code> has to stop with a merge conflict, it leaves slot zero empty, and writes everything to slots 1, 2, and 3. The <em class="auto-style1">merge base</em> version of the file is recorded in slot 1, the <code class="auto-style1">--ours</code> version is recorded in slot 2, and the <code class="auto-style1">--theirs</code> version is recorded in slot 3. These nonzero slot entries are how Git knows that the file is unresolved.<sup class="auto-style1">2</sup></p>
+	<p class="auto-style1">
+		As you resolve files, you <code class="auto-style1">git add</code> them, which erases all the slot 1-3 entries and writes a slot-zero, staged-for-commit entry. This is how Git knows the file is resolved and ready for a new commit. (Or, in some cases, you <code class="auto-style1">git rm</code> the file, in which case Git writes a special &quot;removed&quot; value to slot zero, again erasing slots 1-3.)</p>
+	<hr />
+	<p class="auto-style1">
+		<sup class="auto-style1">2</sup>There are a few cases where one of these three slots is also empty. Suppose file <em class="auto-style1"><code class="auto-style1">new</code></em> does not exist in the merge base and is added in both ours and theirs. Then <code class="auto-style1">:1:<em class="auto-style1">new</em></code> is left empty and <code class="auto-style1">:2:<em class="auto-style1">new</em></code> and <code class="auto-style1">:3:<em class="auto-style1">new</em></code> record the add/add conflict. Or, suppose file <em class="auto-style1"><code class="auto-style1">f</code></em> does exist in the base, is modified in our HEAD branch, and is removed in their branch. Then <code class="auto-style1">:1:<em class="auto-style1">f</em></code> records the base file, <code class="auto-style1">:2:<em class="auto-style1">f</em></code> records our version of the file, and <code class="auto-style1">:3:<em class="auto-style1">f</em></code> is empty, recording the modify/delete conflict.</p>
+	<p class="auto-style1">
+		For modify/modify conflicts, all three slots are occupied; only when one file is missing is one of these slots empty. It&#39;s actually impossible to have two empty slots: there&#39;s no such thing as a delete/delete conflict, nor a nocreate/add conflict. But in any case it&#39;s the existence of some value(s) in slots 1, 2, and/or 3 that mark the file as unresolved.</p>
+	<hr />
+	<h3 class="auto-style1">Merge, part 3: finishing the merge</h3>
+	<p class="auto-style1">
+		Once all files are resolved—all entries are only in the zero-numbered slots—you can <code class="auto-style1">git commit</code> the merge result. If <code class="auto-style1">git merge</code> is able to do the merge without assistance, it normally runs <code class="auto-style1">git commit</code> for you, but the actual commit is still done by running <code class="auto-style1">git commit</code>.</p>
+	<p class="auto-style1">
+		The commit command works the same way as it always does: it turns the index contents into <em class="auto-style1">tree</em> objects and writes a new commit. The only thing special about a merge commit is that it has more than one parent commit ID.<sup class="auto-style1">3</sup> The extra parents come from a file <code class="auto-style1">git merge</code> leaves behind. The default merge message also comes from a file (a separate file in practice, although in principle they could have been combined).</p>
+	<p class="auto-style1">
+		Note that in all cases, the new commit&#39;s contents are determined by the index&#39;s contents. Moreover, once the new commit is done, the index is <em class="auto-style1">still full</em>: it still contains the same contents. By default, <code class="auto-style1">git commit</code> won&#39;t make another new commit at this point because it sees that the index matches the <code class="auto-style1">HEAD</code> commit. It calls this &quot;empty&quot; and requires <code class="auto-style1">--allow-empty</code> to make an extra commit, but the index is not <em class="auto-style1">empty</em> at all. It&#39;s still quite full—it just is full of the <em class="auto-style1">same thing</em> as the <code class="auto-style1">HEAD</code> commit.</p>
+	<hr />
+	<p class="auto-style1">
+		<sup class="auto-style1">3</sup>This assumes you are making a real merge, not a squash merge. When making a squash merge, <code class="auto-style1">git merge</code> deliberately <em class="auto-style1">does not</em> write the extra parent ID to the extra file, so that the new merge commit has only a single parent. (For some reason, <code class="auto-style1">git merge --squash</code> also suppresses the automatic commit, as if it included the <code class="auto-style1">--no-commit</code> flag as well. It&#39;s not clear why, since you <em class="auto-style1">could</em> just run <code class="auto-style1">git merge --squash --no-commit</code> if you <em class="auto-style1">want</em> the automatic commit suppressed.)</p>
+	<p class="auto-style1">
+		A squash merge does not record its other parent(s). This means that if we go to merge <em class="auto-style1">again</em>, some time later, Git won&#39;t know <em class="auto-style1">where to start the diffs from</em>. This means you should generally only squash-merge if you plan to abandon the other branch. (There are some tricky ways to combine squash merges and real merges but they&#39;re well out of the scope of this answer.)</p>
+	<hr />
+	<h3 class="auto-style1">How <code class="auto-style1">git checkout <em class="auto-style1">branch</em></code> uses the index</h3>
+	<p class="auto-style1">
+		With all that out of the way, we then have to look at how <code class="auto-style1">git checkout</code> uses Git&#39;s index, too. Remember, in normal usage, only slot zero is occupied, and the index has one entry for every staged file. Moreover, that entry <em class="auto-style1">matches the current (<code class="auto-style1">HEAD</code>) commit</em> unless you&#39;ve modified the file and <code class="auto-style1">git add</code>-ed the result. It also <em class="auto-style1">matches the file in the work-tree</em> unless you&#39;ve modified the file.<sup class="auto-style1">4</sup></p>
+	<p class="auto-style1">
+		If you are on some branch and you <code class="auto-style1">git checkout</code> some <em class="auto-style1">other</em> branch, Git tries to switch to the other branch. For this to succeed, Git has to replace the index entry for each file with the entry that goes with the other branch.</p>
+	<p class="auto-style1">
+		Let&#39;s say, just for concreteness, that you&#39;re on <code class="auto-style1">master</code> and you are doing <code class="auto-style1">git checkout branch</code>. Git will compare each current index entry with the index entry it would need to be on the tip-most commit of branch <code class="auto-style1">branch</code>. That is, for file <code class="auto-style1">README.txt</code>, are the <code class="auto-style1">master</code> contents <em class="auto-style1">the same</em> as those for <code class="auto-style1">branch</code>, or are they different?</p>
+	<p class="auto-style1">
+		If the contents are <em class="auto-style1">the same</em>, Git can take it easy and just move on to the next file. If the contents are <em class="auto-style1">different</em>, Git has to do something to the index entry. (It&#39;s around this point that Git checks to see if the work-tree file differs from the index entry, too.)</p>
+	<p class="auto-style1">
+		Specifically, in the case where <code class="auto-style1">branch</code>&#39;s file differs from <code class="auto-style1">master</code>&#39;s, <code class="auto-style1">git checkout</code> has to <em class="auto-style1">replace</em> the index entry with the version from <code class="auto-style1">branch</code>—or, if <code class="auto-style1">README.txt</code> doesn&#39;t <em class="auto-style1">exist</em> in the tip commit of <code class="auto-style1">branch</code>, Git has to <em class="auto-style1">remove</em> the index entry. Moreover, if <code class="auto-style1">git checkout</code> is going to modify or remove the index entry, it also needs to modify or remove the work-tree file. Git makes sure this is a safe thing to do, i.e., that the work-tree file matches the <code class="auto-style1">master</code> commit&#39;s file, before it will let you switch branches.</p>
+	<p class="auto-style1">
+		In other words, this is how (and why) Git finds out whether it&#39;s OK to change branches—whether you have modifications that would be clobbered by switching from <code class="auto-style1">master</code> to <code class="auto-style1">branch</code>. If you have modifications in your work-tree, <strong class="auto-style1">but</strong> the modified files are <em class="auto-style1">the same in both branches,</em> Git can just leave the modifications in the index and work-tree. It can and will alert you to these modified files &quot;carried over&quot; into the new branch: easy, since it had to check for this anyway.</p>
+	<p class="auto-style1">
+		Once all the tests have passed and Git has decided that it&#39;s OK to switch from <code class="auto-style1">master</code> to <code class="auto-style1">branch</code>—or if you specified <code class="auto-style1">--force</code>—<code class="auto-style1">git checkout</code> actually updates the index with all the changed (or removed) files, and updates the work-tree to match.</p>
+	<p class="auto-style1">
+		Note that all this action has used slot zero. There are no slot 1-3 entries at all, so that <code class="auto-style1">git checkout</code> does not have to remove any such things. You&#39;re not in the middle of a conflicted merge, and you ran <code class="auto-style1">git checkout branch</code> to not just check out <em class="auto-style1">one file</em>, but rather an entire <em class="auto-style1">set</em> of files and switch branches.</p>
+	<p class="auto-style1">
+		Note also that you can, instead of checking out a branch, check out a specific commit. For instance, this is how you might look at a previous commit:</p>
+	<pre class="auto-style1"><code class="auto-style1">$ git log
+... peruse log output ...
+$ git checkout f17c393 # let&#39;s see what&#39;s in this commit
+</code></pre>
+	<p class="auto-style1">
+		The action here is the same as for checking out a branch, except that instead of using the <em class="auto-style1">tip</em> commit of the branch, Git checks out an arbitrary commit. Instead of now being &quot;on&quot; the new branch, you&#39;re now on <em class="auto-style1">no</em> branch:<sup class="auto-style1">5</sup> Git gives you a &quot;detached HEAD&quot;. To reattach your head, you must <code class="auto-style1">git checkout master</code> or <code class="auto-style1">git checkout branch</code> to get back &quot;on&quot; the branch.</p>
+	<hr />
+	<p class="auto-style1">
+		<sup class="auto-style1">4</sup>The index entry may not match the work-tree version if Git is doing special CR-LF ending modifications, or applying smudge filters. This gets pretty advanced and the best thing is to ignore this case for now. :-)</p>
+	<p class="auto-style1">
+		<sup class="auto-style1">5</sup>More accurately, this puts you on an <em class="auto-style1">anonymous</em> (unnamed) branch that will grow from the current commit. You will stay in detached HEAD mode if you make new commits, and as soon as you <code class="auto-style1">git checkout</code> some other commit or branch, you&#39;ll switch there and Git will &quot;abandon&quot; the commits you&#39;ve made. The point of this detached HEAD mode is both to let you look around <em class="auto-style1">and</em> to let you make new commits that <em class="auto-style1">will</em> just go away if you don&#39;t take special action to save them. For anyone relatively new to Git, though, having commits &quot;just go away&quot; is not so good—so make sure you know that you&#39;re in this &quot;detached HEAD&quot; mode, whenever you are in it.</p>
+	<p class="auto-style1">
+		The <code class="auto-style1">git status</code> command will tell you if you&#39;re in detached HEAD mode. Use it often.<sup class="auto-style1">6</sup> If your Git is old (the OP&#39;s is 1.7.1, which is very old now), <code class="auto-style1">git status</code> is not as helpful as it is in modern versions of Git, but it&#39;s still better than nothing.</p>
+	<p class="auto-style1">
+		<sup class="auto-style1">6</sup>Some programmers like to have key <code class="auto-style1">git status</code> information encoded into each command-prompt. I personally do not go this far, but can be a good idea.</p>
+	<hr />
+	<h3 class="auto-style1">Checking out specific files, and why it sometimes resolves merge conflicts</h3>
+	<p class="auto-style1">
+		The <code class="auto-style1">git checkout</code> command has other modes of operation, though. In particular, you can run <code class="auto-style1">git checkout [flags etc] -- path [path ...]</code> to check out specific files. This is where things get weird. Note that when you use <em class="auto-style1">this</em> form of the command, Git <em class="auto-style1">does not</em> check to make sure you are not overwriting your files.<sup class="auto-style1">7</sup></p>
+	<p class="auto-style1">
+		Now, instead of changing branches, you&#39;re telling Git to get some particular file(s) from somewhere, and drop them into the work-tree, overwriting whatever is there, if anything. The tricky question is: <em class="auto-style1">just where is Git getting these files?</em></p>
+	<p class="auto-style1">
+		Generally speaking, there are three places that Git keeps files:</p>
+	<ul class="auto-style1">
+		<li class="auto-style1">in commits;<sup class="auto-style1">8</sup></li>
+		<li class="auto-style1">in the index;</li>
+		<li class="auto-style1">and in the work-tree.</li>
+	</ul>
+	<p class="auto-style1">
+		The checkout command can read from either of the first two places, and always writes the result to the work-tree.</p>
+	<p class="auto-style1">
+		When <code class="auto-style1">git checkout</code> gets a file from a commit, it first <em class="auto-style1">copies it to the index</em>. Whenever it does this, it writes the file to slot zero. Writing to slot zero wipes out slots 1-3, if they are occupied. When <code class="auto-style1">git checkout</code> gets a file from the index, it does not have to copy it to the index. (Of course not: it&#39;s already there!) This is how <code class="auto-style1">git checkout</code> works when you are <em class="auto-style1">not</em> in the middle of a merge: you can <code class="auto-style1">git checkout -- path/to/file</code> to get the index version back.<sup class="auto-style1">9</sup></p>
+	<p class="auto-style1">
+		Suppose, though, that you <em class="auto-style1">are</em> in the middle of a conflicted merge and are going to <code class="auto-style1">git checkout</code> some path, maybe with <code class="auto-style1">--ours</code>. (If you are not in the middle of a merge, there&#39;s nothing in slots 1-3, and <code class="auto-style1">--ours</code> makes no sense.) So you run <code class="auto-style1">git checkout --ours -- path/to/file</code>.</p>
+	<p class="auto-style1">
+		This <code class="auto-style1">git checkout</code> gets the file from the index—in this case, from index slot 2. Since this is already in the index, Git does not write <em class="auto-style1">to</em> the index, just to the work-tree. So the file is <em class="auto-style1">not</em> resolved!</p>
+	<p class="auto-style1">
+		The same goes for <code class="auto-style1">git checkout --theirs</code>: it gets the file from the index (slot 3), and does not resolve anything.</p>
+	<p class="auto-style1">
+		<strong class="auto-style1">But</strong>: if you <code class="auto-style1">git checkout HEAD -- path/to/file</code>, you are telling <code class="auto-style1">git checkout</code> to extract from the <code class="auto-style1">HEAD</code> commit. Since this is a <em class="auto-style1">commit</em>, Git starts by writing the file contents to the index. This writes slot 0 and erases 1-3. And now the file is resolved!</p>
+	<p class="auto-style1">
+		Since, during a conflicted merge, Git records the being-merged commit&#39;s ID in <code class="auto-style1">MERGE_HEAD</code>, you can also <code class="auto-style1">git checkout MERGE_HEAD -- path/to/file</code> to get the file from the other commit. This, too, extracts from a commit, so it writes to the index, resolving the file.</p>
+	<hr />
+	<p class="auto-style1">
+		<sup class="auto-style1">7</sup>I often wish Git used a different front-end command for this, since we could then say, unequivocally, that git checkout is safe, that it won&#39;t overwrite files without <code class="auto-style1">--force</code>. But this kind of <code class="auto-style1">git checkout</code> <em class="auto-style1">does</em> overwrite files, on purpose!</p>
+	<p class="auto-style1">
+		<sup class="auto-style1">8</sup>This is a bit of a lie, or at least a stretch: commits don&#39;t contain files directly. Instead, commits contain a (single) pointer to a <em class="auto-style1">tree</em> object. This tree object contains the IDs of additional tree objects and of <em class="auto-style1">blob</em> objects. The blob objects contain the actual file contents.</p>
+	<p class="auto-style1">
+		The same is, in fact, true of the index as well. Each index slot contains, not the actual file <em class="auto-style1">contents</em>, but rather the hash IDs of blob objects in the repository.</p>
+	<p class="auto-style1">
+		For our purposes, though, this doesn&#39;t really matter: we just ask Git to retrieve <em class="auto-style1"><code class="auto-style1">commit:path</code></em> and it finds the trees and the blob ID for us. Or, we ask Git to retrieve <em class="auto-style1"><code class="auto-style1">:n:path</code></em> and it finds the blob ID in the index entry for <em class="auto-style1"><code class="auto-style1">path</code></em> for slot <em class="auto-style1"><code class="auto-style1">n</code></em>. Then it gets us the file&#39;s contents, and we&#39;re good to go.</p>
+	<p class="auto-style1">
+		This colon-and-number syntax works everywhere in Git, while the <code class="auto-style1">--ours</code> and <code class="auto-style1">--theirs</code> flags only work in <code class="auto-style1">git checkout</code>. The funny colon syntax is described in <a class="auto-style1" href="https://www.kernel.org/pub/software/scm/git/docs/gitrevisions.html" rel="nofollow noreferrer"><code class="auto-style1">gitrevisions</code></a>.</p>
+	<p class="auto-style1">
+		<sup class="auto-style1">9</sup>The use-case for <code class="auto-style1">git checkout -- path</code> is this: suppose, whether or not you are merging, you made some changes to a file, tested, found those changes worked, then ran <code class="auto-style1">git add</code> on the file. Then you decided to make more changes, but have not run <code class="auto-style1">git add</code> again. You test the second set of changes and find they are wrong. If only you could get the work-tree version of the file set back to the version you <code class="auto-style1">git add</code>-ed just a moment ago.... Aha, you <em class="auto-style1">can</em>: you <code class="auto-style1">git checkout -- path</code> and Git copies the index version, from slot zero, back to the work-tree.</p>
+	<hr />
+	<h3 class="auto-style1">Subtle behavior warning</h3>
+	<p class="auto-style1">
+		Note, though, that using <code class="auto-style1">--ours</code> or <code class="auto-style1">--theirs</code> has another slight subtle difference besides just the &quot;extract from index and therefore don&#39;t resolve&quot; behavior. Suppose that, in our conflicted merge, Git has detected that some file was <em class="auto-style1">renamed</em>. That is, in the merge base, we had file <code class="auto-style1">doc.txt</code>, but now in <code class="auto-style1">HEAD</code> we have <code class="auto-style1">Documentation/doc.txt</code>. The path we need for <code class="auto-style1">git checkout --ours</code> is <code class="auto-style1">Documentation/doc.txt</code>. This is also the path in the <code class="auto-style1">HEAD</code> commit, so it&#39;s OK to <code class="auto-style1">git checkout HEAD -- Documentation/doc.txt</code>.</p>
+	<p class="auto-style1">
+		But what if, in the commit we&#39;re merging, <code class="auto-style1">doc.txt</code> did <em class="auto-style1">not</em> get renamed? In this case, we should<sup class="auto-style1">10</sup> be able to <code class="auto-style1">git checkout --theirs -- Documentation/doc.txt</code> to get <em class="auto-style1">their</em> <code class="auto-style1">doc.txt</code> from the index. But if we try to <code class="auto-style1">git checkout MERGE_HEAD -- Documentation/doc.txt</code>, Git won&#39;t be able to find the file: it&#39;s not in <code class="auto-style1">Documentation</code>, in the <code class="auto-style1">MERGE_HEAD</code> commit. We have to <code class="auto-style1">git checkout MERGE_HEAD -- doc.txt</code> to get their file ... and that would <em class="auto-style1">not</em> resolve <code class="auto-style1">Documentation/doc.txt</code>. In fact, it would just create <code class="auto-style1">./doc.txt</code> (if it was renamed there&#39;s almost certainly no <code class="auto-style1">
+		./doc.txt</code>, hence &quot;create&quot; is a better guess than &quot;overwrite&quot;).</p>
+	<p class="auto-style1">
+		Because merging uses <code class="auto-style1">HEAD</code>&#39;s names, it&#39;s generally safe enough to <code class="auto-style1">git checkout HEAD -- path</code> to extract-and-resolve in one step. And if you&#39;re working on resolving files and have been running <code class="auto-style1">git status</code>, you should know whether they have a renamed file, and therefore whether it&#39;s safe to <code class="auto-style1">git checkout MERGE_HEAD -- path</code> to extract-and-resolve in one step by discarding your own changes. But you should still be aware of this, and know what to do if there <em class="auto-style1">is</em> a rename to be concerned with.</p>
+	<hr />
+	<p class="auto-style1">
+		<sup class="auto-style1">10</sup>I say &quot;should&quot; here, not &quot;can&quot;, because Git currently <em class="auto-style1">forgets</em> the rename a little bit too soon. So if using <code class="auto-style1">--theirs</code> to get a file that you renamed in <code class="auto-style1">HEAD</code>, you have to use the old name here too, and then rename the file in the work-tree.</p>
+
+</body>
+</html>

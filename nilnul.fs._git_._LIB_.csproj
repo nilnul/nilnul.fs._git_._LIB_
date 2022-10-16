@@ -1,0 +1,2526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FE3229C3-D9A8-4CDA-9ACB-A549855C9F2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>nilnul.fs.git</RootNamespace>
+    <AssemblyName>nilnul.fs._git_._LIB_</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Deterministic>false</Deterministic>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == '_Release|AnyCPU'">
+    <OutputPath>bin\_Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Symbols4Debug|AnyCPU'">
+    <OutputPath>bin\Symbols4Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Symbol|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Symbol\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <LangVersion>default</LangVersion>
+    <!--<LangVersion>latest</LangVersion>-->
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Nuget|AnyCPU'">
+    <OutputPath>bin\Nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>t.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AE.Net.Mail, Version=1.7.7816.38666, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\AE.Net.Mail.1.7.7816.38666\lib\net48\AE.Net.Mail.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CodeCommit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\AWSSDK.CodeCommit.3.7.0.206\lib\net45\AWSSDK.CodeCommit.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\AWSSDK.Core.3.7.13.4\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745">
+      <HintPath>packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.DevOps.Comments.WebApi, Version=18.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.Azure.DevOps.Comments.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Services.AppAuthentication, Version=1.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.Azure.Services.AppAuthentication.1.6.2\lib\net472\Microsoft.Azure.Services.AppAuthentication.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.Bcl.AsyncInterfaces.6.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Abstractions.6.23.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.IdentityModel.Clients.ActiveDirectory.5.2.9\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.JsonWebTokens.6.23.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Logging.6.23.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Tokens.6.23.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Build2.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Common, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.VisualStudio.Services.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Core.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Dashboards.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Dashboards.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.16.170.0\lib\net462\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Policy.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Policy.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Test.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Test.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.TestManagement.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.TestManagement.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Wiki.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Wiki.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Work.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Work.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.Common, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.VisualStudio.Services.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.TestResults.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.TestResults.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Services.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.VisualStudio.Services.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul.collection_._discrete_._LIB_.1.1.220728.140313\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul.num._integer_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul.num._integer_._LIB_.1.1.220905.105721\lib\net481\nilnul.num._integer_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num._quotient_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul.num._quotient_._LIB_.1.1.220728.140804\lib\net48\nilnul.num._quotient_._LIB_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul.num._real_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.num._real_._LIB_.2.1.220818.53104\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._acc_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._acc_._LIB_.2.1.220731.182834\lib\net48\nilnul._acc_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._acc_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._acc_._LINQ_.1.1.220731.182834\lib\net48\nilnul._acc_._LINQ_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._app_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul._app_._LIB_.1.1.220729.93739\lib\net48\nilnul._app_._LIB_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._bit_._LIB_.1.1.220822.32314\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._character_._LIB_, Version=2.1.8272.35271, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._character_._LIB_.2.1.220825.113426\lib\net481\nilnul._character_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._comm_._LIB_, Version=1.0.7827.34092, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul._comm_._LIB_.1.0.7827.34092\lib\net48\nilnul._comm_._LIB_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul._data_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._data_._LIB_.1.1.220818.120031\lib\net481\nilnul._data_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._fs_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._fs_._LIB_.2.1.220916.152857\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._fs_._WIN_CTR_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._fs_._WIN_CTR_.1.1.220828.160201\lib\net481\nilnul._fs_._WIN_CTR_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._human_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul._human_._LIB_.1.1.220725.151533\lib\net48\nilnul._human_._LIB_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul._human_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul._human_._LINQ_.1.1.220725.150847\lib\net48\nilnul._human_._LINQ_.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nilnul._ling_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._ling_._LIB_.1.1.220728.141114\lib\net48\nilnul._ling_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._linq_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._linq_._LIB_.1.1.220906.140610\lib\net481\nilnul._linq_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._num_._LIB_.1.1.220826.15831\lib\net481\nilnul._num_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._num_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._num_._LINQ_.1.1.220825.155237\lib\net481\nilnul._num_._LINQ_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._obj_._CTR4WIN_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._obj_._CTR4WIN_.1.1.220725.150624\lib\net48\nilnul._obj_._CTR4WIN_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._obj_._LIB_.1.2.220905.122106\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._rel_._LIB_.1.2.220817.152548\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._set_._LIB_.1.1.220905.140119\lib\net481\nilnul._set_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._time_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._time_._LIB_.1.1.220814.174124\lib\net48\nilnul._time_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._txt_._LIB_.1.1.220908.84230\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._txt_._WIN_CTR_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._txt_._WIN_CTR_.1.1.220828.153928\lib\net481\nilnul._txt_._WIN_CTR_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._web_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._web_._LIB_.1.1.220906.153231\lib\net481\nilnul._web_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._win_._CTR4WIN_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._win_._CTR4WIN_.1.1.220909.180734\lib\net481\nilnul._win_._CTR4WIN_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._win_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._win_._LIB_.1.1.220909.180901\lib\net481\nilnul._win_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._xml_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\nilnul._xml_._LIB_.1.1.220731.165341\lib\net48\nilnul._xml_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="Octokit, Version=0.51.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\Octokit.2.1.0.1\lib\net48\Octokit.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.23.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.IdentityModel.Tokens.Jwt.6.23.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Linq.Expressions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.9\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive, Version=5.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>packages\System.Reactive.5.0.0\lib\net472\System.Reactive.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Text.Encodings.Web.6.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=6.0.0.6, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.Text.Json.6.0.6\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Cors, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.Cors.5.2.9\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Web.Http, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.9\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Cors.5.2.9\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.9\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="ZTn.Json.JsonTreeView, Version=1.0.7838.23259, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\ZTn.Json.JsonTreeView.1.0.7838.23259\lib\net48\ZTn.Json.JsonTreeView.dll</HintPath>
+    </Reference>
+    <Reference Include="_nilnul_._CTR4WIN_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\_nilnul_._CTR4WIN_.1.1.220818.3083605\lib\net48\_nilnul_._CTR4WIN_.dll</HintPath>
+    </Reference>
+    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\_nilnul_._LIB_.1.1.220819.143251\lib\net481\_nilnul_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="_nilnul_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\_nilnul_._LINQ_.1.1.220819.143032\lib\net481\_nilnul_._LINQ_.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IManaged.cs" />
+    <Compile Include="IModule.cs" />
+    <Compile Include="IRepo.cs" />
+    <Compile Include="module\act_\Unlock.cs" />
+    <Compile Include="module\be\Anto.cs" />
+    <Compile Include="module\be\anto_\BeDefault.cs" />
+    <Compile Include="module\be_\NewFolder1\AllDotLed.cs" />
+    <Compile Include="module\be_\Wrought.cs" />
+    <Compile Include="module\be_\Locked1.cs" />
+    <Compile Include="module\be_\locked\Anto.cs" />
+    <Compile Include="module\be_\Nonwrought.cs" />
+    <Compile Include="module\branches\merge_\Squash.cs" />
+    <Compile Include="module\cfg\key\Val.cs" />
+    <Compile Include="module\child_\INested.cs" />
+    <Compile Include="module\child_\nested\SubtreeAbsorb.cs" />
+    <Compile Include="module\repo\head_\empty\xpn_\UnrecognizedModule.cs" />
+    <Compile Include="module\INested.cs" />
+    <Compile Include="module\IPrime.cs" />
+    <Compile Include="module\repo\branches_\local\Vw.cs" />
+    <Compile Include="module\repo\branch\ISnap.cs" />
+    <Compile Include="module\repo\branch\push_\remotes_\Cfged.cs" />
+    <Compile Include="module\repo\branch\snap\Assign.cs" />
+    <Compile Include="module\repo\branch\snap\assign_\_ForceX.cs" />
+    <Compile Include="module\repo\branch_\current\be_\Pub.cs" />
+    <Compile Include="module\repo\branch_\current\vw_\ShowCurrent.cs" />
+    <Compile Include="module\repo\branch_\IInHeadOnly.cs" />
+    <Compile Include="module\repo\branch_\remote\checkout_\IXpn.cs" />
+    <Compile Include="module\repo\branch_\_pub\Settings1.cs" />
+    <Compile Include="module\repo\branch_\_pub\SettingsX.cs" />
+    <Compile Include="module\repo\head\branch_\IRemote.cs" />
+    <Compile Include="module\repo\head\branch_\remote_\RemoteCantCheckoutException.cs" />
+    <Compile Include="module\repo\head\Detach.cs" />
+    <Compile Include="module\repo\head\ICategorize.cs" />
+    <Compile Include="module\repo\head\branch\BranchShowCurrent.cs" />
+    <Compile Include="module\repo\head\branch\vw_\SymbolicRef.cs" />
+    <Compile Include="module\repo\head\branch\vw_\NewFolder1\RevParse.cs" />
+    <Compile Include="module\repo\IBranch.cs" />
+    <Compile Include="module\repo\ICfg.cs" />
+    <Compile Include="module\repo\IHead.cs" />
+    <Compile Include="module\repo\IIndex.cs" />
+    <Compile Include="module\repo\remotes\vw_\EachAsTiers.cs" />
+    <Compile Include="module\repo\snap\net\WithRefers.cs" />
+    <Compile Include="module\repo\snap_\current\push_\remote_\Tag.cs" />
+    <Compile Include="module\repo\snap_\current\push_\remote_\Branch.cs" />
+    <Compile Include="module\repo\branches_\Pub.cs" />
+    <Compile Include="module\repo\_cfg_\IRemote.cs" />
+    <Compile Include="module\repo\_cfg_\remotes_\IPub.cs" />
+    <Compile Include="module\repo\_cfg_\remotes_\Pub.cs" />
+    <Compile Include="module\repo\_cfg_\remotes_\pub\Umbrella.cs" />
+    <Compile Include="module\repo\_cfg_\remotes_\pub\_umbrella\OnCurrent.cs" />
+    <Compile Include="module\repo\_cfg_\remotes_\pub\_umbrella\onCurrent_\ByRepoDict.cs" />
+    <Compile Include="module\repo\_cfg_\remotes_\pub_\IIndividuals.cs" />
+    <Compile Include="module\repo\_cfg_\remotes_\pub\IUmbrella.cs" />
+    <Compile Include="module\repo\_cfg_\remotes_\pub_\OfCaptions.cs" />
+    <Compile Include="module\repo\_cfg_\remote\create_\NewFolder1\_ResultX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\IUrn.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\_AssignX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url_\push\Drop.cs" />
+    <Compile Include="module\repo\_cfg_\remote\urns_\push\_InsX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\urns_\_PushX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\urn\_VwX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\Pub.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\pub_\All.cs" />
+    <Compile Include="module\repo\branch_\_pub\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+    <Compile Include="module\repo\_cfg_\remote\url_\svr_\vs\ensureSvr_\EnsureSvr.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\pub_\all\Vw.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\pub_\IIndividual.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\Self.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\github\urn\be_\Ssh.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\github\urn\be_\ssh\Anto.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\github\urn\_ToSshX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\nulable\Backfill1.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\nulable\backfill_\Github.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\nulable\backfill_\github_\Orged.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\nulable\backfill_\svren_\Github.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\nulable\backfill_\svren_\Azure.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\nulable\backfill_\WithSvr.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\nulable\backfill_\svren_\Amazon.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\_pub\Settings1.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\_pub\Settings1.Designer.cs">
+      <DependentUpon>Settings1.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="module\repo_\_\Db.cs" />
+    <Compile Include="module\repo_\_\_DbX.cs" />
+    <Compile Include="module\stage\commit_\CfgCustom.cs" />
+    <Compile Include="module\stage\divisions_\Ignored.cs" />
+    <Compile Include="module\repo\head\snap\vw_\RevParse.cs" />
+    <Compile Include="module\repo\path\Vw.cs" />
+    <Compile Include="module\repo\snap_\IWork.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\azure_\next\_CreateX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\github_\next\create_\_AccInRemoteX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\_usr\Key.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\nulable\url\IsInPlace.cs" />
+    <Compile Include="module\state_\IncludingIgnored.cs" />
+    <Compile Include="module\work\be_\Nonwrought.cs" />
+    <Compile Include="module\work\be_\Wrought.cs" />
+    <Compile Include="module\work\be_\_NoDocumentX.cs" />
+    <Compile Include="module\work\be_\_EmptyX.cs" />
+    <Compile Include="module\work\be_\_TriviaX.cs" />
+    <Compile Include="module\work\dir\be_\Ignored.cs" />
+    <Compile Include="module\work\divisions_\Ignored.cs" />
+    <Compile Include="module\work\division\be_\Ignored.cs" />
+    <Compile Include="module\work\division\be_\_ignored\rules_\dotnet0nilnul\ovFile_\Establish.cs" />
+    <Compile Include="module\work\division\be_\_ignored\rules_\Dotnet0nilnul.cs" />
+    <Compile Include="module\work\division\be_\_ignored\rules_\dotnet0nilnul\ovFile_\Patch.cs" />
+    <Compile Include="module\work\division_\Untracked.cs" />
+    <Compile Include="module\work\division_\_ignored\blacklist_\UserCfg.cs" />
+    <Compile Include="module\work\division_\_ignored\Blacklist.cs" />
+    <Compile Include="module\work\div\doc_\ignore\establish_\Dotnet9nilnul.cs" />
+    <Compile Include="module\work\div\doc_\ignore\patch_\_Nilnul0dotnetX.cs" />
+    <Compile Include="module\work\div\doc_\ignore\patch_\_nn\_rules\Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+    <Compile Include="module\work\div\doc_\ignore\patch_\_nn\_rules\RscX.cs" />
+    <Compile Include="module\work\document_\Large.cs" />
+    <Compile Include="module\work\document_\Larges.cs" />
+    <Compile Include="module\work\doc_\ignore\put_\Nilnul0dotnet.cs" />
+    <Compile Include="module\work\doc_\~\Ignore.cs" />
+    <Compile Include="module\_cfg\IIgnore.cs" />
+    <Compile Include="module\_cfg\Symlink.cs" />
+    <Compile Include="module\repo\_cfg\IExclude.cs" />
+    <Compile Include="module\_repo\IPath.cs" />
+    <Compile Include="module\_work\_ignore\_rules\RscX.cs" />
+    <Compile Include="module\_work_\directories_\noDotLed_\_NonlinkX.cs" />
+    <Compile Include="module\_work_\directories_\_NoDotLedX.cs" />
+    <Compile Include="module\_work_\documents_\noDotLed_\nonlink_\Large.cs" />
+    <Compile Include="module\_work_\documents_\noDotLed_\nonlink_\large\Split.cs" />
+    <Compile Include="module\_work_\documents_\Nonignored.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\cfg_\safe_\_DirecotoryInGlobalX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\documents_\notDotLed_\nonlink_\_WithinWorkX.cs" />
+    <Compile Include="module\_work_\documents_\_NonlinkX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\directories_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\directories_\noDotLed_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\directories_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\_NotDotLedX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\documents_\notDotLed_\_WithinWorkX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\directories_\noDotLed_\nonlink_\_NontopX.cs" />
+    <Compile Include="module\_work_\directory_\notDotLed_\nonlink\dirs_\notDotLed_\_UnLinkX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\divs_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\divs_\noDotLed_\nonlink_\_NontopX.cs" />
+    <Compile Include="module\_work_\directory_\unLink\dirs_\_UnLinkX.cs" />
+    <Compile Include="module\_work_\dirs_\noDotLed_\_UnlinkX.cs" />
+    <Compile Include="module\_work_\dirs_\_NotDotLedX.cs" />
+    <Compile Include="module\_work_\dirs_\_UnLinkX1.cs" />
+    <Compile Include="module\_work_\divisions_\_ignored\Ignore.cs" />
+    <Compile Include="module\_work_\documents_\noDotLed_\_NonlinkX.cs" />
+    <Compile Include="module\_work_\documents_\_NotDotLed.cs" />
+    <Compile Include="module\_work_\_DstsX.cs" />
+    <Compile Include="module_\INoWork.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\bare_\Nontop.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\ByGitDir.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\embed\Anto - Copy.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\be_\Nonrepo.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\be_\Nonplain.cs" />
+    <Compile Include="nilnul0\fs\folder\dir\be_\giT_\Manable.cs" />
+    <Compile Include="nilnul0\fs\folder\dir_\nonlink_\giT_\Manables.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\cfg_\Nn.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\newable\be_\Trivia.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\nonrepo\be_\wrought\_AntoX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\nonrepo\be_\Wrought.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\nonrepo\IWork.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\nonrepo\_work_\dirs_\_NotDotLedX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\nonrepo\_work_\documents_\_NotDotLed.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\nonrepo\_work_\_DirsX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo\be_\Nontop.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\bare_\top\Anto.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\dirs_\NoEmbedRepoS.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\dir\be_\NotEmbedRepo.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\nontop_\_NotDotLedX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dir\be_\NoEmbedRepoS.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dir_\NoEmbedRepoS.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\nontop_\nonlink_\_NotDotLedX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\notDotLed_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\notDotLed_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\nontop_\_NonlinkX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\divs_\noDotLed_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\divs_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\NewFolder1\_DocumentsX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\directories_\noDotLed_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\directories_\noDotLed_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\directories_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\directories_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dirs_\noDotLed_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dirs_\noDotLed_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dirs_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dir\be_\NoEmbedRepo_byName.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dir_\NoEmbedRepo_byName.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dir_\nonlink_\giT_\_NoEmbedRepoSX.cs" />
+    <Compile Include="module\document\FroRepo.cs" />
+    <Compile Include="module\repo\doc_\cfg_\Custom.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\manable\Anto.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\manable\Vow1.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\manable\vow\Ee.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\Managible.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\Module - Copy.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\module\Vow1 - Copy.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\module\vow\En - Copy.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\Bare%28.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\bare\Anto - Copy.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\bare_\Top.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\NonBare - Copy.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo\io\be_\Nonplain.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo_\ByIsInsideGitDir.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\Manageable.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo\be_\Top.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo\ManagedRt.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo\top_\ByRevParse.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo\top_\byRevParse_\Abs.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo_\bare\ModuleRt - Copy.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dirs_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dir_\_NoEmbedRepoSX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\divs_\noDotLed_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\divs_\noDotLed_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\divs_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\divs_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink\dir_\nonlink_\giT_\Manables.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink\div_\nonlink_\giT_\Depos.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\Plain.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\Nonrepo.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\Manable.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\manable\div_\nonlink_\giT_\Depobases.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\manable\div_\nonlink_\giT_\depo_\Directlies.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain0depobase\div_\nonlink_\giT_\Depobases.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain0depobase\div_\nonlink_\giT_\depo_\Directly.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain\directory_\nonlink_\giT_\depo_\Directlies.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain\directory_\nonlink_\giT_\Depos.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain\div_\nonlink_\giT_\depo_\Directly.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain\div_\nonlink_\giT_\Depos.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work\div_\nonlink_\giT_\depo_\Directlies.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work\div_\nonlink_\giT_\depo_\Inside.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\nontop\directory_\nonlink_\giT_\depo_\Directlies.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\nontop\directory_\nonlink_\giT_\Depobases.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\nontop\div_\nonlink_\giT_\Depos.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\directory_\nonlink_\giT_\depos_\directlyFirst_\Internal.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\directory_\nonlink_\giT_\depo_\Directlies.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\dir_\nonlink_\giT_\_NoEmbedRepoSX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\div_\nonlink_\giT_\depos_\Inside.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run\CodI.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run\cod\vow_\NewFolder1\Nil - Copy.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run\result_\_ByMngersX.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run\_CodX.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\lurk\cod\vow_\NewFolder1\Nil - Copy.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\lurk\_CodX.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run\result_\NewFolder1\_ResultX - Copy - Copy.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\timeout_\end\Cod.cs" />
+    <Compile Include="nilnul0\win\prog_\git\_RunX.cs" />
+    <Compile Include="nilnul0\win\prog_\git\_run\_cfg\setting_\User.cs" />
+    <Compile Include="nilnul0\win\prog_\git\_run\_cfg\setting_\Machine.cs" />
+    <Compile Include="nilnul0\win\prog_\git\_run\_cfg\_setting\sect_\Cred.cs" />
+    <Compile Include="nilnul0\win\prog_\git\_run\_cfg\_setting\sect_\Init.cs" />
+    <Compile Include="nilnul0\win\prog_\git_\cfg\Write.cs" />
+    <Compile Include="Properties\SettingsX.cs" />
+    <Compile Include="Repo.cs" />
+    <Compile Include="repo\Act.cs" />
+    <Compile Include="repo\act_\Unlock.cs" />
+    <Compile Include="repo\be_\Lockee.cs" />
+    <Compile Include="repo\branch\Fetch.cs" />
+    <Compile Include="repo\branch\Move.cs" />
+    <Compile Include="repo\branch_\noncurrent\Fetch.cs" />
+    <Compile Include="repo\branch_\noncurrent\fetch_\NonFast1forward.cs" />
+    <Compile Include="repo\head\Detach.cs" />
+    <Compile Include="repo\Snap.cs" />
+    <Compile Include="repo\snap\Branch.cs" />
+    <Compile Include="repo\snap\branch_\Create.cs" />
+    <Compile Include="repo\snap_\Stashed.cs" />
+    <Compile Include="repo\snap_\stashed\branch_\Created.cs" />
+    <Compile Include="repo\snap_\stashed\Tag.cs" />
+    <Compile Include="repo\_branch\name_\Dnts.cs" />
+    <Compile Include="repo\_branch\name_\dnts\be_\Local.cs" />
+    <Compile Include="repo\_branch\name_\dnts\be_\local_\pub_\Pub.cs" />
+    <Compile Include="repo\_branch\name_\_dnts\dnt_\Segmented.cs" />
+    <Compile Include="repo\branch_\Bak.cs" />
+    <Compile Include="repo\Cfg.cs" />
+    <Compile Include="repo\doc_\cfg_\Custom.cs" />
+    <Compile Include="repo\fetch_\brancH_\Noncurrent.cs" />
+    <Compile Include="repo\_branch\name_\_dnts\dnt_\segmented\Contrast.cs" />
+    <Compile Include="repo\_branch\name_\_dnts\Local.cs" />
+    <Compile Include="repo\_reference\name_\_strict\txt\Be.cs" />
+    <Compile Include="repo\_reference\name_\_strict\txt\be\Vow.cs" />
+    <Compile Include="repo\_reference\name_\_strict\txt\be\vow\En.cs" />
+    <Compile Include="repo\_reference\_name\txt\be_\ByGit.cs" />
+    <Compile Include="repo_\bare\Mirror.cs" />
+    <Compile Include="svrs_\IAagg.cs" />
+    <Compile Include="svr\Client.cs" />
+    <Compile Include="svr\client\RepoI.cs" />
+    <Compile Include="svr\client\repos\size\Accrue.cs" />
+    <Compile Include="svr\client\repo\OfI.cs" />
+    <Compile Include="svr\client\repo\of_\AccVaultedClient.cs" />
+    <Compile Include="svr\client\repo\push\Size.cs" />
+    <Compile Include="svr\client\repo\push\size\Limit.cs" />
+    <Compile Include="svr\client\repo\sortie_\byHost\biject_\Nom1nonemptys.cs" />
+    <Compile Include="svr\client\repo\sortie_\byHost\biject_\Nom1nonempty.cs" />
+    <Compile Include="svr\client\repo\biject_\Word.cs" />
+    <Compile Include="svr\client\repo\document\size\Limit.cs" />
+    <Compile Include="svr\client\repo\Eq.cs" />
+    <Compile Include="svr\client\repo\eq_\BySvr.cs" />
+    <Compile Include="svr\client\repo\sortie_\ByHost.cs" />
+    <Compile Include="svr\client\repo\Url.cs" />
+    <Compile Include="svr\client\_repo_\BaseUrl.cs" />
+    <Compile Include="svr\client\_repo_\Client.cs" />
+    <Compile Include="svr\client\_repo_\Ensure - Copy.cs" />
+    <Compile Include="svr\client\_repo_\UrnI.cs" />
+    <Compile Include="svr\client\_repo_\Url.cs" />
+    <Compile Include="svr\client\_repo_\Exists.cs" />
+    <Compile Include="svr\client\_repo_\Create.cs" />
+    <Compile Include="svr\client\_repo_\Ensure.cs" />
+    <Compile Include="svr\client\_repo_\url_\AsTxt.cs" />
+    <Compile Include="svr\client_\AccVaultedA.cs" />
+    <Compile Include="svr\client_\AccVaultedI.cs" />
+    <Compile Include="svr\client_\accVaulted_\GitlabI.cs" />
+    <Compile Include="svr\client_\vaulted\named\Typed.cs" />
+    <Compile Include="svr\client_\vaulted\Typed.cs" />
+    <Compile Include="svr\client_\vaulted\~\AccVaulted.cs" />
+    <Compile Include="svr\client_\accVaulted_\Amazon.cs" />
+    <Compile Include="svr\client_\accVaulted_\Vs.cs" />
+    <Compile Include="svr\client_\accVaulted_\Gitlab.cs" />
+    <Compile Include="svr\client_\%28retiring\NoCred - Copy.cs" />
+    <Compile Include="svr\client_\AccVaultedS.cs" />
+    <Compile Include="svr\client_\AccVaulted.cs" />
+    <Compile Include="svr\client_\vaulted\Named.cs" />
+    <Compile Include="svr\client_\vaulted\Nameds.cs" />
+    <Compile Include="svr\client_\accVaulted_\github\Named.cs" />
+    <Compile Include="svr\client_\vaulted\repo\Named.cs" />
+    <Compile Include="svr\client_\vaulted\repo\Nameds.cs" />
+    <Compile Include="svr\client_\vaulted\repo\names_\Dict.cs" />
+    <Compile Include="svr_\amazon\client\repo\create\_EnsureX.cs" />
+    <Compile Include="svr_\amazon\client\repo\_CreateX.cs" />
+    <Compile Include="svr_\amazon\client_\vaulted\Repo.cs" />
+    <Compile Include="svr_\azure\client\Division.cs" />
+    <Compile Include="svr_\azure\client\division_\Prjs.cs" />
+    <Compile Include="svr_\azure\client\Prjs.cs" />
+    <Compile Include="svr_\azure\client\repo\be_\Exist.cs" />
+    <Compile Include="svr_\azure\client\repo\push\size\Limit.cs" />
+    <Compile Include="svr_\azure\client\repo\IUrl.cs" />
+    <Compile Include="svr_\azure\client\teamwork\Create.cs" />
+    <Compile Include="svr_\azure\client\teamwork\create_\Pub.cs" />
+    <Compile Include="svr_\azure\client\teamwork\create_\Personal.cs" />
+    <Compile Include="svr_\azure\client\teamwork\create_\personal\Ensure.cs" />
+    <Compile Include="svr_\azure\client\teamwork\Repos.cs" />
+    <Compile Include="svr_\azure\client\teamwork\repo_\Defaulted.cs" />
+    <Compile Include="svr_\azure\client\teamwork\create_\ViaLib.cs" />
+    <Compile Include="svr_\azure\client\teamwork\create_\_PrjDefault.cs" />
+    <Compile Include="svr_\azure\Client.cs" />
+    <Compile Include="svr_\azure\client\Teamwork.cs" />
+    <Compile Include="svr_\azure\client\teamwork\Division.cs" />
+    <Compile Include="svr_\azure\client\_teamworks\ConsumerLib.cs" />
+    <Compile Include="svr_\azure\client_\vaulted\Repo.cs" />
+    <Compile Include="svr_\azure\_api\Version.cs" />
+    <Compile Include="svr_\azure\_client_\Orged.cs" />
+    <Compile Include="svr_\azure\IClient.cs" />
+    <Compile Include="svr_\azure\client_\Vaulted.cs" />
+    <Compile Include="svr_\azure\repo\Name.cs" />
+    <Compile Include="svr_\azure\repo\_name\txt\Be.cs" />
+    <Compile Include="svr_\azure\repo\_name\txt\be\Vow.cs" />
+    <Compile Include="svr_\azure\repo\_name\txt\be\vow\Ee.cs" />
+    <Compile Include="svr_\azure\repo\_name\txt\be_\StartWithMinus.cs" />
+    <Compile Include="svr_\azure\_client\Org.cs" />
+    <Compile Include="svr_\bitbucket\client\repo\size\Limit.cs" />
+    <Compile Include="svr_\github\repo\urn_\_SshX.cs" />
+    <Compile Include="svr_\gitlab\client\prj\create_\IImport.cs" />
+    <Compile Include="svr_\gitlab\client\prj\Creation.cs" />
+    <Compile Include="svr_\gitlab\client\prj\ICreate.cs" />
+    <Compile Include="svr_\gitlab\client\prj\_CreationX.cs" />
+    <Compile Include="svr_\gitlab\client\repo\_UrlX.cs" />
+    <Compile Include="svr_\gitlab\grp\Prjs.cs" />
+    <Compile Include="svr_\gitlab\grp\prj\create_\_PublicX.cs" />
+    <Compile Include="svr_\gitlab\grp\prj\GetId.cs" />
+    <Compile Include="svr_\gitlab\grp\prj\_CreationX.cs" />
+    <Compile Include="svr_\gitlab\IGroup.cs" />
+    <Compile Include="svr_\gitlab\IProject.cs" />
+    <Compile Include="svr_\Codeup.cs" />
+    <Compile Include="svr_\Gitea.cs" />
+    <Compile Include="svr_\github\client\org\repo\Create.cs" />
+    <Compile Include="svr_\github\client\org\repo\Url.cs" />
+    <Compile Include="svr_\github\client\Repo.cs" />
+    <Compile Include="svr_\github\client\repo\push\size\_LimitX.cs" />
+    <Compile Include="svr_\github\client_\vaulted_\orged\Repo4pub.cs" />
+    <Compile Include="svr_\github\client_\vaulted\Repo4pub.cs" />
+    <Compile Include="svr_\github\client\repo\Create.cs" />
+    <Compile Include="svr_\github\client\repo\create_\Nonpub.cs" />
+    <Compile Include="svr_\github\client\repo~\Github.cs" />
+    <Compile Include="Module2.cs" />
+    <Compile Include="Module0BareRepo.cs" />
+    <Compile Include="modules\each\_cfg_\remotes\EnsureBitbucketAcc.cs" />
+    <Compile Include="module\act_\ReInit.cs" />
+    <Compile Include="module\BeI.cs" />
+    <Compile Include="module\be\Vow.cs" />
+    <Compile Include="module\be_\Sealed.cs" />
+    <Compile Include="module\be_\Clear.cs" />
+    <Compile Include="module\be_\Unlink.cs" />
+    <Compile Include="module\be_\unlink\Vow.cs" />
+    <Compile Include="module\be_\unlink\vow\En.cs" />
+    <Compile Include="module\branch\merge_\AllTheirs.cs" />
+    <Compile Include="module\branch\merge_\TheirsOnlyIfConflict.cs" />
+    <Compile Include="module\branch_\current\be_\Empty.cs" />
+    <Compile Include="module\branch_\current\_upstream\_CfgX.cs" />
+    <Compile Include="module\content\Modules.cs" />
+    <Compile Include="module\destination\_HashObjectX.cs" />
+    <Compile Include="module\directory\Db.cs" />
+    <Compile Include="module\Dirs.cs" />
+    <Compile Include="module\dirs_\_Work.cs" />
+    <Compile Include="module\dir\be_\work\_AntoX.cs" />
+    <Compile Include="module\dir_\work\be_\_NonTopX.cs" />
+    <Compile Include="module\dir_\work\modules_\InnerDirectly.cs" />
+    <Compile Include="module\dir_\work\modules_\InsideDirectly.cs" />
+    <Compile Include="module\dir_\work_\_NonsymsX.cs" />
+    <Compile Include="module\dir_\_WorksX.cs" />
+    <Compile Include="module\div\be_\Work.cs" />
+    <Compile Include="module\div\TopAddress.cs" />
+    <Compile Include="module\div\Local.cs" />
+    <Compile Include="module\div\Path2Top.cs" />
+    <Compile Include="module\div\_DbX.cs" />
+    <Compile Include="module\files\List.cs" />
+    <Compile Include="module\head\Detach.cs" />
+    <Compile Include="module\stage\commit_\AllowEmpty.cs" />
+    <Compile Include="module\stage\trackings\_DelX.cs" />
+    <Compile Include="module\repo\branch\BringOut.cs" />
+    <Compile Include="module\repo\branch\bringOut_\KeepWork.cs" />
+    <Compile Include="module\repo\branch\co_\tracked\be_\Pushed.cs" />
+    <Compile Include="module\repo\cfg\section_\core\Longpaths.cs" />
+    <Compile Include="module\repo\head\vw_\RevParse.cs" />
+    <Compile Include="module\repo\head\vw_\ShowRef.cs" />
+    <Compile Include="module\stage\Commit.cs" />
+    <Compile Include="module\repo\branches_\all\but_\current\del_\Force.cs" />
+    <Compile Include="module\repo\branches_\all\Vw2.cs" />
+    <Compile Include="module\repo\branches_\all\del_\Force.cs" />
+    <Compile Include="module\repo\branches_\local_\nonDefault\Del.cs" />
+    <Compile Include="module\repo\branches_\local_\nonDefault\del_\Del.cs" />
+    <Compile Include="module\repo\branches_\local_\nonDefault\Vw2.cs" />
+    <Compile Include="module\repo\branch\co\be_\DestinationsSame.cs" />
+    <Compile Include="module\repo\branch\co\be_\same\_AntoX.cs" />
+    <Compile Include="module\repo\branch\push\log\Lag.cs" />
+    <Compile Include="module\repo\branch\push\log\lag\be_\Empty.cs" />
+    <Compile Include="module\repo\branch_\current\push_\Result.cs" />
+    <Compile Include="module\repo\branch_\local_\nonDefault\Drop.cs" />
+    <Compile Include="module\repo\branch_\local_\nonDefault\drop_\Force.cs" />
+    <Compile Include="module\repo\branch_\vered_\key\delNewIfSame\PrevIfNoDif.cs" />
+    <Compile Include="module\repo\branch_\vered_\key\DelNewestIfNoDif.cs" />
+    <Compile Include="module\repo\branch_\vereds\_SortX.cs" />
+    <Compile Include="module\repo\branch_\_VeredsX.cs" />
+    <Compile Include="module\stage\commit\_AddAllFirstX.cs" />
+    <Compile Include="module\repo\objct\_ContentX.cs" />
+    <Compile Include="module\repo\snaps\merge_\Tool.cs" />
+    <Compile Include="module\repo\snap_\current\document\toWork\Reset.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\nulable\url\AppendIfNo.cs" />
+    <Compile Include="module\work\be_\Trivia.cs" />
+    <Compile Include="module\work\div\doc_\Ignore.cs" />
+    <Compile Include="module\work\div\doc_\ignore\Patch.cs" />
+    <Compile Include="module\work\doc_\Ignore.cs" />
+    <Compile Include="module\work\doc_\ignore\Create.cs" />
+    <Compile Include="module\work\doc_\ignore\Patch.cs" />
+    <Compile Include="module\work\doc_\ignore\Ensure.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\newable\Vow1.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\newable\vow\En.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\nonrepo\Vow1.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\nonrepo\vow\En.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\Plain0Subwork.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\nonrepo\Be.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\newable\Be.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\newable\be_\OnlyIgnore.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\NonRepo.cs" />
+    <Compile Include="repo\Refer.cs" />
+    <Compile Include="repo\refer_\Head.cs" />
+    <Compile Include="repo\remote\Branch.cs" />
+    <Compile Include="module\repo\remote\push_\branches_\all_\Void.cs" />
+    <Compile Include="module\repo\remote\push_\branches_\all_\Log.cs" />
+    <Compile Include="module\repo\remote\push_\branch_\uiTitled_\_UiTitledX - Copy.cs" />
+    <Compile Include="module\repo\remote_\_LocalX.cs" />
+    <Compile Include="module\repo\snap\Amend.cs" />
+    <Compile Include="module\exe_\_GitX.cs" />
+    <Compile Include="module\repo\snap\document\blob\_VwX.cs" />
+    <Compile Include="module\repo\snap\document\Checkout.cs" />
+    <Compile Include="module\repo\snap\tree\_VwX.cs" />
+    <Compile Include="repo\_branch\_name\txt\_be\whole\set_\Invalids.cs" />
+    <Compile Include="svr\Clients.cs" />
+    <Compile Include="svr\client_\accVaulted_\~\Github - Copy.cs" />
+    <Compile Include="svr\client_\_accVaulted\Settings1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings1.settings</DependentUpon>
+    </Compile>
+    <Compile Include="svr\client_\_accVaulted\SettingsX.cs" />
+    <Compile Include="svr\co_\ToGitee.cs" />
+    <Compile Include="svr_\amazon\client_\AccInVault.cs" />
+    <Compile Include="svr_\amazon_\region\Client.cs" />
+    <Compile Include="svr_\amazon_\Region.cs" />
+    <Compile Include="svr_\amazon_\region\repo\Url.cs" />
+    <Compile Include="svr_\github\Client.cs" />
+    <Compile Include="svr_\github\client_\vaulted_\NewFolder1\Github.cs" />
+    <Compile Include="svr_\github\client\repo\Url.cs" />
+    <Compile Include="svr_\github\client_\Vaulted.cs" />
+    <Compile Include="svr_\github\client_\vaulted_\NewFolder1\AccInVault.cs" />
+    <Compile Include="svr_\github\client_\vaulted_\ForOrg.cs" />
+    <Compile Include="svr_\github\repo\blob\lenth\Limit.cs" />
+    <Compile Include="svr_\github\_client_\Login.cs" />
+    <Compile Include="svr_\github\_client_\Header.cs" />
+    <Compile Include="svr_\gitlab\client_\AccInVault.cs" />
+    <Compile Include="svr_\gitlab\client_\vaulted\Repo.cs" />
+    <Compile Include="svr_\gitlab\Prjs.cs" />
+    <Compile Include="svr_\gitlab\repo\document\ISize.cs" />
+    <Compile Include="svr_\gitlab\repo\document\_size\Limit.cs" />
+    <Compile Include="svr_\gitlab\repo\ICreate.cs" />
+    <Compile Include="svr_\gitlab\repo\_NameX.cs" />
+    <Compile Include="svr_\gitlab\_ClientX.cs" />
+    <Compile Include="svr_\vs\client\repo\_UrlX.cs" />
+    <Compile Include="svr_\vs\client\teamwork\create_\Pub.cs" />
+    <Compile Include="svr_\vs\client\teamwork\create_\Personal.cs" />
+    <Compile Include="svr_\vs\client\teamwork\create_\personal\Ensure.cs" />
+    <Compile Include="svr_\vs\client\teamwork\create_\pub\Ensure.cs" />
+    <Compile Include="svr_\vs\client\teamwork\create_\ViaLib.cs" />
+    <Compile Include="svr_\vs\client\_teamworks\ConsumerLib.cs" />
+    <Compile Include="svr_\vs\client_\vaulted\Repo.cs" />
+    <Compile Include="svr_\vs\repo\push\size\Limit.cs" />
+    <Compile Include="svr_\vs\_client\Org.cs" />
+    <Compile Include="svr_\vs_\prefixed\client\repo\create_\prjDefault\_EnsureX.cs" />
+    <Compile Include="svr_\vs\client_\AccInVault.cs" />
+    <Compile Include="svr_\vs_\prefixed\client\repo\create_\_PrjDefault.cs" />
+    <Compile Include="svr_\_amazon\ILimit.cs" />
+    <Compile Include="svr_\_amazon\LimitInMbyte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>LimitInMbyte.settings</DependentUpon>
+    </Compile>
+    <Compile Include="svr_\_amazon\LimitX.cs" />
+    <Compile Include="svr_\_azure\LimitInMbyte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>LimitInMbyte.settings</DependentUpon>
+    </Compile>
+    <Compile Include="svr_\_azure\LimitX.cs" />
+    <Compile Include="svrs_\_aagg\LimitX.cs" />
+    <Compile Include="svr_\_github\LimitX.cs" />
+    <Compile Include="svr_\_github\LimitInMbyte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>LimitInMbyte.settings</DependentUpon>
+    </Compile>
+    <Compile Include="svr_\_gitlab\LimitInMbyte.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>LimitInMbyte.settings</DependentUpon>
+    </Compile>
+    <Compile Include="svr_\_gitlab\LimitX.cs" />
+    <Compile Include="_module\work\BeA.cs" />
+    <Compile Include="_module\work\be_\NothingButIgnoreSetting.cs" />
+    <Compile Include="module\work\be_\Empty.cs" />
+    <Compile Include="module\work\div\Restore.cs" />
+    <Compile Include="module\_cfg_\_AttributeX.cs" />
+    <Compile Include="module\_cfg_\_AttributesX.cs" />
+    <Compile Include="module\crypt_\_TranscryptX.cs" />
+    <Compile Include="module\_work_\directory_\unLink\documents_\_Nonlinks.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\documents_\_WithinWorkX.cs" />
+    <Compile Include="module\_work_\documents_\nonlink\_DelDuplicateX.cs" />
+    <Compile Include="module\_work_\documents_\_NoIgnoreSetting.cs" />
+    <Compile Include="module\_work_\_DirectoryX.cs" />
+    <Compile Include="module\_work_\documents_\NewFolder1\_Documents - Copy.cs" />
+    <Compile Include="nilnul0\fs\address\be_\giT_\Newt0FolderNonRepo.cs" />
+    <Compile Include="nilnul0\fs\address\be_\giT_\FolderNonRepo.cs" />
+    <Compile Include="nilnul0\fs\file_\git_\ignore\_PatchX.cs" />
+    <Compile Include="nilnul0\fs\file_\git_\ignore\force\Ensure.cs" />
+    <Compile Include="nilnul0\fs\file_\git_\ignore\force\_CreateX.cs" />
+    <Compile Include="nilnul0\fs\file_\git_\ignore\_PutX.cs" />
+    <Compile Include="nilnul0\fs\file_\git_\ignore\_EnforceX.cs" />
+    <Compile Include="nilnul0\fs\folders\divs_\nonlink_\git_\nonRepo\Docs.cs" />
+    <Compile Include="nilnul0\fs\folders\divs_\nonlink_\git_\nonRepo\docs\_FindX.cs" />
+    <Compile Include="nilnul0\fs\folders\divs_\nonlink_\git_\_NonRepoX.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\Nonplain.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo\io\be_\Repo0Work.cs" />
+    <Compile Include="nilnul0\fs\folder\divs_\nonlink_\nonRepo\_DocsX.cs" />
+    <Compile Include="nilnul0\fs\folder\divs_\nonlink_\_NonRepoX.cs" />
+    <Compile Include="nilnul0\fs\folder\doc_\git_\NewFolder1\Ignore - Copy.cs" />
+    <Compile Include="nilnul0\fs\folder\doc_\git_\ignore\be_\File.cs" />
+    <Compile Include="nilnul0\fs\folder\doc_\git_\ignore\make\Ensure.cs" />
+    <Compile Include="nilnul0\fs\folder\doc_\git_\ignore\make\_CreateX.cs" />
+    <Compile Include="nilnul0\fs\folder\doc_\git_\ignore\PutDoc.cs" />
+    <Compile Include="nilnul0\fs\folder\doc_\git_\ignore\create_\_EnforceX.cs" />
+    <Compile Include="nilnul0\fs\folder\doc_\git_\ignore\_PatchX.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\manageds_\inner\Any.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo\CmdRt.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\BeI.cs" />
+    <Compile Include="nilnul0\win\prog_\GitK - Copy.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run\result\_MsgX - Copy.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run\_ResultX1.cs" />
+    <Compile Include="nilnul0\win\prog_\git\_BashX.cs" />
+    <Compile Include="nilnul0\win\prog_\_OpenSslX.cs" />
+    <Compile Include="repo\ov_\address_\Nonexist.cs" />
+    <Compile Include="repo\ov_\address_\Nonexist0EmptyFolder.cs" />
+    <Compile Include="repo\ov_\Folder.cs" />
+    <Compile Include="repo_\bare\create_\_TmpX.cs" />
+    <Compile Include="repo_\bare\ov_\address_\Nonexist0EmptyFolder.cs" />
+    <Compile Include="repo_\bare\ov_\address_\Nonexist.cs" />
+    <Compile Include="repo_\bare\ov_\Folder.cs" />
+    <Compile Include="repo_\bare\Size.cs" />
+    <Compile Include="svr_\Github.cs" />
+    <Compile Include="svr_\gitlab\repos\_count\_LimitX.cs" />
+    <Compile Include="module\work\division\be_\_ignored\rules\Dehydrate.cs" />
+    <Compile Include="module\work\division\be_\_ignored\rules_\Vs.cs" />
+    <Compile Include="module\work\div\doc_\ignore~\NewFolder1\Doc.cs" />
+    <Compile Include="module\work\div\doc_\ignore\_FileX1.cs" />
+    <Compile Include="module\work\div\doc_\ignore\_patch\_RscX.cs" />
+    <Compile Include="module\work\div\doc_\ignore~\Doc - 复制.cs" />
+    <Compile Include="module\work\div\doc_\ignore\ensure_\dotnet~\DotNet - 复制.cs" />
+    <Compile Include="module\work\doc_\~\Doc - 复制.cs" />
+    <Compile Include="module\work\div\doc_\ignore\patch_\_NilnulX.cs" />
+    <Compile Include="module\work\division\be_\_ignored\rules_\dotnet0nilnul\ovFile_\patch~\_NilnulX.cs" />
+    <Compile Include="module\_cfg_\exclude\Depatch.cs" />
+    <Compile Include="module\_cfg_\exclude\Unput.cs" />
+    <Compile Include="module\_cfg_\exclude\unput\IfLinesNonEmpty.cs" />
+    <Compile Include="nilnul0\fs\address_\shield\git_\modules_\nonlink_\_InsideX.cs" />
+    <Compile Include="nilnul0\fs\address_\shield\git_\modules_\nonlink_\_InternalX.cs" />
+    <Compile Include="nilnul0\fs\address_\shield\git_\modules_\_InternalX.cs" />
+    <Compile Include="nilnul0\fs\address_\shield\git_\modules_\_InsideX.cs" />
+    <Compile Include="nilnul0\fs\address_\shield\sups\NearestGitModule.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\Plain0work.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\Nonsubstancial.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\embed\Anto.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\embed\anto\Vow.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\embed\anto\vow\En.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\embed\Vow1.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\embed\vow\En.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\NonBare.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\~\Bare.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\bare\Anto.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\Commit.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\modules_\Internal.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\modules_\Inside.cs" />
+    <Compile Include="nilnul0\fs\folder\div_\nonlink_\giT_\depos_\Inside.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\modules_\nonlink_\inside_\Directly.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\modules_\nonlink_\interior_\Directly.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\modules_\nonlink_\Internal.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\_CfgX.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\_commit\div_\Plain.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\_commit\div_\top_\Plain.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\_commit\div_\top_\Repo.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\_commit\div_\top_\Work.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\_commit\div_\top_\work_\NonRoot.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\_commit\div_\top_\work_\Root.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\_commit\div_\work_\NonrootWork.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\_commit\div_\work_\RootOfInnerModule.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\_TopX.cs" />
+    <Compile Include="nilnul0\fs\folder\sups\NearestGitModule.cs" />
+    <Compile Include="module\repo\head\set_\Reference.cs" />
+    <Compile Include="module\repo\head\set_\ref_\_BranchX.cs" />
+    <Compile Include="module\head_\branch\Introduce.cs" />
+    <Compile Include="module\stage\add_\allBut_\MinWinTitled.cs" />
+    <Compile Include="module\stage\add_\allBut_\minWinTitled\commit_\allowEmpty_\MinWinTitled.cs" />
+    <Compile Include="module\stage\add_\all\commit_\AllowEmpty.cs" />
+    <Compile Include="module\stage\add_\all_\MinWinTitled.cs" />
+    <Compile Include="module\stage\commit_\allowEmpty_\Msg.cs" />
+    <Compile Include="module\stage\commit_\allowEmpty_\MinWinTitled.cs" />
+    <Compile Include="module\stage\divisions\Del.cs" />
+    <Compile Include="module\stage\vw_\Clear.cs" />
+    <Compile Include="module\stage\_commit\msg\Template.cs" />
+    <Compile Include="module\phase\co_\workIndex\Dif.cs" />
+    <Compile Include="module\phase\co_\indexRepo\Dif.cs" />
+    <Compile Include="module\repo\branches_\remote_\all\Del.cs" />
+    <Compile Include="module\repo\branches_\remote_\all\Vw.cs" />
+    <Compile Include="module\repo\branches_\remote\del_\_ForceX.cs" />
+    <Compile Include="module\repo\branch_\remote\drop_\Drop.cs" />
+    <Compile Include="module\repo\gc_\RepackPrune.cs" />
+    <Compile Include="module\repo\gc_\now_\ByExpirieUnreachable.cs" />
+    <Compile Include="module\repo\remote\push_\branch_\uiTitled_\_UiTitledX.cs" />
+    <Compile Include="module\repo\refs\Vw.cs" />
+    <Compile Include="module\repo\remotes\Vw.cs" />
+    <Compile Include="module\repo\remote\branch\Drop.cs" />
+    <Compile Include="module\repo\Size.cs" />
+    <Compile Include="module\repo\branches\del_\_ForceX.cs" />
+    <Compile Include="module\repo\branches_\local\%28retiring\Vw.cs" />
+    <Compile Include="module\repo\branches_\local_\all\Del.cs" />
+    <Compile Include="module\repo\branches_\local_\all\del_\Del.cs" />
+    <Compile Include="module\repo\branches_\remote_\Contain.cs" />
+    <Compile Include="module\repo\branch\drop_\Force.cs" />
+    <Compile Include="module\repo\branch\push_\svr_\_BbX.cs" />
+    <Compile Include="module\repo\branch\push_\_ResultX.cs" />
+    <Compile Include="module\repo\branch\push_\_svr_\_CredX.cs" />
+    <Compile Include="module\repo\branch\snap\tree\_VwX.cs" />
+    <Compile Include="module\repo\remote\push_\branches_\all\exitCode_\titled\_TaskX.cs" />
+    <Compile Include="module\repo\remote\push_\branches_\all\exitCode_\_TitledX.cs" />
+    <Compile Include="module\repo\remote\push_\branch_\uiTitled_\task_\_TaskX.cs" />
+    <Compile Include="module\repo\remote\push_\branch_\uiTitled_\_TaskX.cs" />
+    <Compile Include="module\repo\remote\push_\branch_\_UiTitledX.cs" />
+    <Compile Include="module\repo\snap_\current\document\toWork\Checkout.cs" />
+    <Compile Include="module\repo\snap_\prev\Checkout.cs" />
+    <Compile Include="module\repo\state\Repack.cs" />
+    <Compile Include="module\work\div\doc_\ignore\upd_\DotNet.cs" />
+    <Compile Include="module\work\doc_\ignore\upd_\_EnsureFirst.cs" />
+    <Compile Include="module\work\doc_\ignore\establish_\_DotNetX.cs" />
+    <Compile Include="module\work\div\doc_\ignore\patch_\Dotnet.cs" />
+    <Compile Include="module\work\div\doc_\ignore\patch_\_nn\file\upd_\DotNet.cs" />
+    <Compile Include="module\work\div\doc_\ignore\_EnsureX.cs" />
+    <Compile Include="module\work\doc_\ignore\Upsert.cs" />
+    <Compile Include="module\work\doc_\ignore\_PatchX.cs" />
+    <Compile Include="module\repo\_cfg_\Custom.cs" />
+    <Compile Include="module\repo\_cfg_\remotes\EnsureBitbucketAcc.cs" />
+    <Compile Include="module\repo\_cfg_\remote\urls\_DelKeyX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\urls\_VwX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\urls_\_PushX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\urls_\_ValidX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\change_\EnsureAcc.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\change_\DelKey.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\change_\DelCred.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url_\svr_\vs\EnsureSvr.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\vs_\newest\EnsureSvrRepo.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\vs_\newest\RepoName.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\vs_\next\create\ensureSvrFirst_\%28retiring\_UsrCfgedX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\ensureSvr_\AwOhio.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\ensureSvr_\Vs.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\_Newest.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\aw_\newest\EnsureSvrRepo.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\azure_\next\create_\anonym_\_AccCfgedX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\azure_\next\create_\_AnonymX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\github_\next\_CreateX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\_VsX.cs" />
+    <Compile Include="module\repo\_cfg_\section\Sub.cs" />
+    <Compile Include="module\repo\_cfg_\_credential_\helper\set_\_GlobalX.cs" />
+    <Compile Include="module\repo\_cfg_\_credential_\helper\_UnsetX.cs" />
+    <Compile Include="module\repo\_cfg_\_credential_\_HelperX.cs" />
+    <Compile Include="module\repo\_cfg_\_http_\_ProxyX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\create_\_ResultX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\create_\WinTitled.cs" />
+    <Compile Include="module\repo\_cfg_\_remote\key_\_vered\Name.cs" />
+    <Compile Include="module\work\div\doc_\ignore\_create\Force.cs" />
+    <Compile Include="module\work\div\doc_\ignore\PutDoc.cs" />
+    <Compile Include="module\work\div\doc_\ignore\_patch\File.cs" />
+    <Compile Include="module\work\div\doc_\ignore\be_\ExistsFile.cs" />
+    <Compile Include="module\work\doc_\ignore\put_\dotnet\Ensure - 复制.cs" />
+    <Compile Include="module\work\doc_\ignore\put_\dotnet\Ensure.cs" />
+    <Compile Include="module\work\doc_\ignore\patch_\dotnet\nilnul~\AftEnsureFile.cs" />
+    <Compile Include="module\_cfg_\exclude\be_\ExistsFile.cs" />
+    <Compile Include="module\_cfg_\exclude\Address.cs" />
+    <Compile Include="module\_cfg_\exclude\Put.cs" />
+    <Compile Include="module\_cfg_\exclude\Patch.cs" />
+    <Compile Include="module\_cfg_\exclude\put\_IfLinesNonemptyX.cs" />
+    <Compile Include="module\_cfg_\exclude\_create\Force.cs" />
+    <Compile Include="module\work\division\be_\_ignored\rules_\dotnet0nilnul~\_Rules.cs" />
+    <Compile Include="module\repo\snap_\current\document\toWork\ByCheckout.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo\Vow1.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo\vow\En.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\Plain0Nontop.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\work_\Nontop.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\work_\top\Anto.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\manageds_\inner_\InnerDirectly.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\modules_\InsideDirectly.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\NotEmbedRepo.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\nonEmbededRepo\InsideDirectly.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\notEmbedRepo\Init.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\plain\modules_\InsideDirectly.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\Repo.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\repo\Anto.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo\be_\bare\_AntoX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo\be_\_BareX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo\ModuleRt.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo_\bare\ManagedRt.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\repo_\embeded\ModuleRt.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\be\Vow.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\be_\Nontop.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\be_\nontop\Vow.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\be_\nontop\vow\En.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\be_\_TopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\modules_\InsideDirectly.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\modules_\InnerDirectly.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\Rt.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\VowI.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\vow\En.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\Nontop.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\DirI.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\modules_\InDirectly.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\modules_\Internal.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\modules_\InnnerDirectly.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\modules_\Contained.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlinks\_ModulesX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink\div_\nonlink_\giT_\depos_\Inside.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\manable\div_\nonlink_\giT_\depo_\directlies_\Directly.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink\git_\modules_\nonlink_\Internal.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink\git_\modules_\nonlink_\internal_\Directly.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink\_ModulesX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain\directory_\nonlink_\giT_\depos_\Interior.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain\div_\nonlink_\giT_\depos_\Inside.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain\directory_\nonlink_\giT_\depo_\directlies_\Directly.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain\div_\nonlink_\giT_\depo_\directlies_\Directly.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain\_ModulesX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work\div_\nonlink_\giT_\Depobases.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work\git_\modules_\nonlink_\Interior.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work\git_\modules_\nonlink_\interior_\InnerDirectly.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work\div_\nonlink_\giT_\depo_\directlies_\Directly.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work\_ModulesX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\nontop\div_\nonlink_\giT_\depobases_\Inside.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\nontop\directory_\nonlink_\giT_\Internal.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\nontop\directory_\nonlink_\giT_\depo_\directlies_\Directly.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\nontop\_ModulesX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\div_\nonlink_\giT_\Depobases.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\directory_\nonlink_\giT_\depo_\Directly.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\directory_\nonlink_\giT_\Depos.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\_ModulesX.cs" />
+    <Compile Include="nilnul0\fs\folder_\SrcI.cs" />
+    <Compile Include="nilnul0\fs\folder_\SrcsI.cs" />
+    <Compile Include="nilnul0\fs\_address\_dst\denote\be_\git_\IntendGit.cs" />
+    <Compile Include="nilnul0\fs\_address\_dst\denote\op_\unary_\git_\IntendGit.cs" />
+    <Compile Include="nilnul0\win\prog_\git\Boxed.cs" />
+    <Compile Include="nilnul0\win\prog_\git\nulable\Fallback.cs" />
+    <Compile Include="nilnul0\win\prog_\git\IRun.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run\CodMsgI.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run\codMsg\msgNul\TrimI.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run\codMsg\msg\TrimI.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run\cod\vow_\Nil.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\timeout\result\msgOrNul4err\_TrimmedX.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\timeout\result\msg\_TrimmedX.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\timeout\result\ThrowErr.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\timeout\result\_MsgOrNul4errX.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\timeout\result\_MsgX.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\lurk\NewFolder1\_CodX.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\timeout\_ResultX.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\timeout\CodMsg.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\lurk\NewFolder1\ExitCode.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\Log.cs" />
+    <Compile Include="nilnul0\win\prog_\git\run_\lurk\cod\vow_\Nil.cs" />
+    <Compile Include="nilnul0\win\prog_\git_\cfg\ReadX.cs" />
+    <Compile Include="nilnul0\win\prog_\git_\cfg\read\Trim.cs" />
+    <Compile Include="nilnul0\win\prog_\git_\cfg\read_\ResultX.cs" />
+    <Compile Include="nilnul0\win\prog_\Git.cs" />
+    <Compile Include="Properties\RscX.cs" />
+    <Compile Include="repo\branches\del_\All.cs" />
+    <Compile Include="repo\branch\remote_\_RemoteX.cs" />
+    <Compile Include="repo\branch\_RemoteX.cs" />
+    <Compile Include="repo\div\_RootX.cs" />
+    <Compile Include="module\repo\remote\push_\branches_\all\exitCode\_TaskX.cs" />
+    <Compile Include="module\repo\remote\push_\branches_\all\_ExitCodeX.cs" />
+    <Compile Include="module\repo\remote\push_\branch\_TaskX.cs" />
+    <Compile Include="module\repo\remote\push_\Branch.cs" />
+    <Compile Include="module\repo\remote\dif_\_ByCherryX.cs" />
+    <Compile Include="module\repo\remote\dif_\ByLog.cs" />
+    <Compile Include="module\repo\remote\dif_\byLog_\_BranchesNotRemotesX.cs" />
+    <Compile Include="module\repo\remote\dif_\_ByLogGraphX.cs" />
+    <Compile Include="module\repo\remote\dif_\_ByBranchVerbosX.cs" />
+    <Compile Include="module\repo\remote\_DifX.cs" />
+    <Compile Include="module\repo\snap\document\toWork_\veredNext_\ByShow.cs" />
+    <Compile Include="module\VowI.cs" />
+    <Compile Include="module\vow\En.cs" />
+    <Compile Include="module\work\div\_RootX.cs" />
+    <Compile Include="module\_work_\div_\top\doc_\ignore\ensure_\OnTop.cs" />
+    <Compile Include="module\work\doc_\~\_DocX.cs" />
+    <Compile Include="module\work\division\be_\_ignored\rules_\dotnet\_AtFolderX.cs" />
+    <Compile Include="module\work\document\_AttrX.cs" />
+    <Compile Include="module\repo\_cfg_\remotes_\awGlBbVs\powsub\next\_EnsureSvrFirstX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\Exist.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\awGlBbVs\_CreateX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\awGlBbVs_\next\_CreateX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\aw_\newest\NewestOrDefaultX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\bb\NewestOrDefaultX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\gl\NewestOrDefaultX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\name\be_\_AnyX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\newest\_Nulable.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\next\Create.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\vs_\NewestOrDefaultX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\vs_\prefixed\Create.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\vs_\prefixed\create_\_CfgedX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\vs_\next\_CreateX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\aw_\next\create_\_OhioX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\aw_\ohio\Create.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\aw_\ohio\create_\_CfgedX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\aw_\next\create_\ohio\_EnsureSvrFirstX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\bb\create_\_Cfged.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\bb_\next\create_\vaultedCred\_EnsureSvrFirstX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\bb_\next\create_\_CfgedUsrX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\gl\_CreateX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\gl_\next\create\_EnsureSvrFirstX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\gl_\next\create_\_CfgedUsrX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\gl_\next\_CreateX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\nom_\Next.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\name\_VwX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\_BbX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\_AwGlBbVsX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\_AzureX%28.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\_GlX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\_AwX.cs" />
+    <Compile Include="module\_work_\directories_\_UnLinkX.cs" />
+    <Compile Include="module\_work_\directory\_DirectoriesX.cs" />
+    <Compile Include="module\_work_\directory\_DivsX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\nontop_\_DirsX.cs" />
+    <Compile Include="module\_work_\directory_\unLink\directories_\_UnlinkX.cs" />
+    <Compile Include="module\_work_\directory_\unLink\divs_\_UnLinkX.cs" />
+    <Compile Include="module\_work_\dirs_\NewFolder1\_UnLinkX.cs" />
+    <Compile Include="module\_work_\documents\_DelDuplicateX.cs" />
+    <Compile Include="module\_work_\documents_\_Nonlinks.cs" />
+    <Compile Include="module\_work_\_DirsX.cs" />
+    <Compile Include="module\_work_\_DivsX.cs" />
+    <Compile Include="module\_work_\_Directories.cs" />
+    <Compile Include="module\_work_\_Documents.cs" />
+    <Compile Include="module\repo\_cfg_\Http.cs" />
+    <Compile Include="module\repo\_cfg_\lfs_\_ActivityX.cs" />
+    <Compile Include="module\work\div\doc_\ignore\patch_\_nn\file\EnsureRules.cs" />
+    <Compile Include="module\work\doc_\~\Doc.cs" />
+    <Compile Include="module\work\doc_\_ignore_\patch_\upsert_\Dotnet.cs" />
+    <Compile Include="module\work\doc_\_ignore_\patch_\upsert_\_dotnet\Patch.cs" />
+    <Compile Include="module\StagedI.cs" />
+    <Compile Include="module\stage\be_\empty_\DryRun - Copy.cs" />
+    <Compile Include="module\stage\reset_\BranchParent.cs" />
+    <Compile Include="module\stage\_add\Neglect.cs" />
+    <Compile Include="module\stage\_commit\_msg\txt\op_\ReplaceDblQuote - Copy.cs" />
+    <Compile Include="module\stage\_commit\_msg\txt\op_\replaceDblQuote\Ed - Copy.cs" />
+    <Compile Include="module\log_\referal\_ClearX.cs" />
+    <Compile Include="module\neglect_\SkipWorktree.cs" />
+    <Compile Include="module\reference\Upd.cs" />
+    <Compile Include="module\reference\construct_\Branch.cs" />
+    <Compile Include="module\reference\_DelX.cs" />
+    <Compile Include="module\remote\branch\Checkout.cs" />
+    <Compile Include="module\repo\Address.cs" />
+    <Compile Include="module\repo\snap_\current\document\toWork\ByShow.cs" />
+    <Compile Include="module\repo\branches\vw_\_VvX.cs" />
+    <Compile Include="module\repo\branches_\noMerged\_VwX.cs" />
+    <Compile Include="module\repo\branch_\vered_\key\_ClearX.cs" />
+    <Compile Include="module\repo\branch\Drop.cs" />
+    <Compile Include="module\repo\branch\merge_\AllTheirs.cs" />
+    <Compile Include="module\repo\branch\merge_\FavorTheirs.cs" />
+    <Compile Include="module\repo\branch\merge_\FavorOurs.cs" />
+    <Compile Include="module\repo\branch\merge_\AllOurs.cs" />
+    <Compile Include="module\repo\snap\_VwX.cs" />
+    <Compile Include="module\repo\snap_\current\_AmendX.cs" />
+    <Compile Include="module\repo\tree\_VwX.cs" />
+    <Compile Include="module\repo\_fetch_\Options.cs" />
+    <Compile Include="module\repo\_snap_\BlankI.cs" />
+    <Compile Include="module\Stash - Copy.cs" />
+    <Compile Include="module\stash\pop_\_BranchX.cs" />
+    <Compile Include="module\stash\apply_\_IndexX.cs" />
+    <Compile Include="module\stash\PushI.cs" />
+    <Compile Include="module\stash\push_\IndexI.cs" />
+    <Compile Include="module\stash\push_\_IncUntracked.cs" />
+    <Compile Include="module\stash\push_\_AllX.cs" />
+    <Compile Include="module\stash\Save.cs" />
+    <Compile Include="module\stash\save_\All.cs" />
+    <Compile Include="module\stash\save_\_IndexX.cs" />
+    <Compile Include="module\stash\_ApplyX.cs" />
+    <Compile Include="module\stash\_VwX.cs" />
+    <Compile Include="module\stash\_DropX.cs" />
+    <Compile Include="module\state\Vw.cs" />
+    <Compile Include="module\top\_TopX.cs" />
+    <Compile Include="module\_work_\documents_\Modified.cs" />
+    <Compile Include="module\_ApplyX.cs" />
+    <Compile Include="module\repo\_cfg_\Description.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\name\_DelX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vered_\name\be_\exist_\Named.cs" />
+    <Compile Include="module\repo\_cfg_\remotes\_DelX.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\vereds\Ided.cs" />
+    <Compile Include="module\repo\_cfg_\remote\Drop.cs" />
+    <Compile Include="module\repo\_cfg_\remote\urls_\push\_InsX.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\vw_\Cfg.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\vw_\remoteShow_\NoSvr.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\vw_\RemoteGetUrl.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\vw_\LsRemote.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\vw_\RemoteShow.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\_VwX.cs" />
+    <Compile Include="module\repo\_cfg_\_alias_\Top.cs" />
+    <Compile Include="module\work\division\be_\_ignored\rules_\dotNet_\nn~\DotNet - 复制.cs" />
+    <Compile Include="module\work\division\be_\_ignored\rules_\dotnet\onFile\DotNet.cs" />
+    <Compile Include="module\repo\_remote\url_\Ssh.cs" />
+    <Compile Include="module\neglect_\AssumeUnchanged.cs" />
+    <Compile Include="module\work\div\doc_\ignore~\Doc.cs" />
+    <Compile Include="module\work\division\be_\_ignored\Rule.cs" />
+    <Compile Include="module\work\division\be_\_ignored\rule_\nn_\IntendGit.cs" />
+    <Compile Include="module\work\division\be_\_ignored\_rule_\Space.cs" />
+    <Compile Include="module\work\division\be_\_ignored\_rule_\Neg.cs" />
+    <Compile Include="module\work\division\be_\_ignored\_rule_\Wildcard.cs" />
+    <Compile Include="module\_push\Cfg.cs" />
+    <Compile Include="module\_sub\GitModules.cs" />
+    <Compile Include="module\_TopX.cs" />
+    <Compile Include="module\_work_\document\_RenameX.cs" />
+    <Compile Include="module_\Unlink.cs" />
+    <Compile Include="module_\unlink\_work_\directories_\_UnLinkX.cs" />
+    <Compile Include="module_\unlink\_work_\directory\_DirectoriesX.cs" />
+    <Compile Include="module_\unlink\_work_\directory\_DirsX.cs" />
+    <Compile Include="module_\unlink\_work_\directory\_DivsX.cs" />
+    <Compile Include="module_\unlink\_work_\directory_\unLink\directories_\_UnlinkX.cs" />
+    <Compile Include="module_\unlink\_work_\directory_\unLink\dirs_\_DirsX.cs" />
+    <Compile Include="module_\unlink\_work_\directory_\unLink\divs_\_UnLinkX.cs" />
+    <Compile Include="module_\unlink\_work_\dirs_\_UnLinkX.cs" />
+    <Compile Include="module_\unlink\_work_\divs_\UnLinkX.cs" />
+    <Compile Include="module_\unlink\_work_\div_\unlink\docs_\_UnlinkX.cs" />
+    <Compile Include="module_\unlink\_work_\documents_\unlink\_DelDuplicateX.cs" />
+    <Compile Include="module_\unlink\_work_\documents_\_UnlinkX.cs" />
+    <Compile Include="module_\unlink\_work_\_Directories.cs" />
+    <Compile Include="module_\unlink\_work_\_DirsX.cs" />
+    <Compile Include="module_\unlink\_work_\_DivsX.cs" />
+    <Compile Include="module\stage\add_\All.cs" />
+    <Compile Include="module\stage\add_\all_\minWinTitled\commit_\allowEmpty_\MinWinTitled.cs" />
+    <Compile Include="module\stage\reset_\Parent.cs" />
+    <Compile Include="module\HeadI.cs" />
+    <Compile Include="module\repo\branch\push_\_ThinX.cs" />
+    <Compile Include="module\repo\remote\push_\branches_\all\Force.cs" />
+    <Compile Include="module\stage\_commit\Msg.cs" />
+    <Compile Include="module\stage\_commit\_msg\txt\op_\ReplaceDblQuote.cs" />
+    <Compile Include="module\stage\_commit\_msg\txt\op_\replaceDblQuote\Ed.cs" />
+    <Compile Include="repo\_branch\_name\txt\_be\ch\set_\Invalid.cs" />
+    <Compile Include="repo\_branch\_name\txt\_be\ch\be_\Invalid.cs" />
+    <Compile Include="repo\_reference\Name.cs" />
+    <Compile Include="repo\_reference\_name\txt\Be.cs" />
+    <Compile Include="repo\_reference\_name\txt\be\Vow.cs" />
+    <Compile Include="repo\_reference\_name\txt\be\vow\En.cs" />
+    <Compile Include="module\repo\_branch\Name.cs" />
+    <Compile Include="module\repo\_branch\_name\txt\Be.cs" />
+    <Compile Include="module\repo\_branch\_name\txt\be\Vow.cs" />
+    <Compile Include="module\repo\_branch\_name\txt\be\vow\En.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\module\Vow1.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\module\vow\Ee.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\work\Vow1.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\work\vow\En.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo\Io1.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo\io\BeI1.cs" />
+    <Compile Include="nilnul0\fs\folder\divs_\_NonRepoX.cs" />
+    <Compile Include="nilnul0\fs\folder\documents_\_NonRepoX.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\clone_\Bare.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\Init.cs" />
+    <Compile Include="nilnul0\fs\folder\git_\init_\Bare.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\Top2.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\Top.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink\divs_\_NonRepoX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink\documents_\_NonRepoX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain\divs_\_NonRepoX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\divs_\divs_\_NonRepoX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\divs_\_divs_\_NonRepoX.cs" />
+    <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\divs_\_NonRepoX.cs" />
+    <Compile Include="nilnul0\win\prog_\git\RevParse.cs" />
+    <Compile Include="nilnul0\win\prog_\git\Ver.cs" />
+    <Compile Include="nilnul0\win\prog_\_git\_cfg_\Usr.cs" />
+    <Compile Include="nilnul0\win\prog_\_git\_ignore_\Home.cs" />
+    <Compile Include="nilnul0\win\prog_\_git\_ignore_\line_\Skb.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RepoI.cs" />
+    <Compile Include="repo\BeI.cs" />
+    <Compile Include="repo\be_\Bare.cs" />
+    <Compile Include="repo\push\err_\NotFoundDueToLarge.cs" />
+    <Compile Include="repo\state_\Size.cs" />
+    <Compile Include="repo\_branch\Name.cs" />
+    <Compile Include="repo\_branch\name_\_vered\Prefix.cs" />
+    <Compile Include="repo\_branch\name_\_vered\_prefix\txt\Be.cs" />
+    <Compile Include="repo\_branch\name_\_vered\_prefix\txt\En.cs" />
+    <Compile Include="repo\_branch\_name\txt\Be.cs" />
+    <Compile Include="repo\_branch\_name\txt\be\Vow.cs" />
+    <Compile Include="repo\_branch\_name\txt\be\vow\En.cs" />
+    <Compile Include="repo\_push\ExitCode.cs" />
+    <Compile Include="repo\_push\ExitCodeX.cs" />
+    <Compile Include="repo_\BareI.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\None.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\none\Vow1.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\none\vow\En.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\work_\top\vow\En.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\VowI.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\vow\En.cs" />
+    <Compile Include="module\act_\Bisect.cs" />
+    <Compile Include="module\reference\Spec.cs" />
+    <Compile Include="module\stage\add\commit\AddCommit.cs" />
+    <Compile Include="module\branches_\HasSnap.cs" />
+    <Compile Include="module\branch_\current\be_\Master.cs" />
+    <Compile Include="module\branch_\current\be_\master\Vow.cs" />
+    <Compile Include="module\branch_\current\pull_\RemoteBranch.cs" />
+    <Compile Include="module\branch_\current\Pull.cs" />
+    <Compile Include="module\branch_\current\Vw.cs" />
+    <Compile Include="module\branch_\current\_pull\option_\MergeStrategy.cs" />
+    <Compile Include="module\branch_\master\to_\Head.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\change_\Pass.cs" />
+    <Compile Include="module\checkout_\Merge.cs" />
+    <Compile Include="module\checkout_\Master.cs" />
+    <Compile Include="module\repo\Gc.cs" />
+    <Compile Include="module\gc_\All.cs" />
+    <Compile Include="module\merge_\Strategy.cs" />
+    <Compile Include="module\Refer.cs" />
+    <Compile Include="module\Log.cs" />
+    <Compile Include="module\ReflogX.cs" />
+    <Compile Include="module\Fsck.cs" />
+    <Compile Include="module\conflict\Resolve.cs" />
+    <Compile Include="module\document_\Symlink.cs" />
+    <Compile Include="module\log_\RefLog.cs" />
+    <Compile Include="module\log_\Document.cs" />
+    <Compile Include="module\refs\Pack.cs" />
+    <Compile Include="module\repo\%40ref\to_\%40Ref.cs" />
+    <Compile Include="module\repo\branches\Filter.cs" />
+    <Compile Include="module\repo\branch\Push.cs" />
+    <Compile Include="module\repo\branch_\current\Push.cs" />
+    <Compile Include="module\repo\files_\deleted\Search.cs" />
+    <Compile Include="module\repo\files_\deleted_\recent\Search.cs" />
+    <Compile Include="module\repo\file\revisions\Vw.cs" />
+    <Compile Include="module\repo\gc_\Now.cs" />
+    <Compile Include="module\repo\remote\push_\branches_\All.cs" />
+    <Compile Include="module\repo\snapshots\dif\Vw.cs" />
+    <Compile Include="module\repo\snaps\Filter.cs" />
+    <Compile Include="module\repo\tree\revisions\deleted\Vw.cs" />
+    <Compile Include="module\repo\branch\create_\AtPresent.cs" />
+    <Compile Include="module\repo\branches\Del.cs" />
+    <Compile Include="module\repo\branches\merge\conflict\Resolve.cs" />
+    <Compile Include="module\repo\branches\merge\conflict\resolve_\Theirs.cs" />
+    <Compile Include="module\repo\branches\Rebase.cs" />
+    <Compile Include="module\repo\branches\_merge\Algo.cs" />
+    <Compile Include="module\repo\branches_\remote\Del.cs" />
+    <Compile Include="module\repo\branches_\remote\Prune.cs" />
+    <Compile Include="module\repo\branch\Dangling.cs" />
+    <Compile Include="module\repo\branch\co\MergeFile.cs" />
+    <Compile Include="module\repo\branch\Move.cs" />
+    <Compile Include="module\repo\branch\to_\ToHead.cs" />
+    <Compile Include="module\repo\branch\Pull.cs" />
+    <Compile Include="module\repo\branch\remote_\Default.cs" />
+    <Compile Include="module\repo\branch\remote_\initial\Set.cs" />
+    <Compile Include="module\repo\branch\remote_\initial\Vw.cs" />
+    <Compile Include="module\repo\branch\snap\Vw.cs" />
+    <Compile Include="module\repo\branch\upstream\Get.cs" />
+    <Compile Include="module\repo\branch_\current\commit\Tag.cs" />
+    <Compile Include="module\repo\branch_\current\CreateBranch.cs" />
+    <Compile Include="module\repo\branch_\current\Pick.cs" />
+    <Compile Include="module\repo\branch_\current\Merge.cs" />
+    <Compile Include="module\repo\branch_\current\merge_\Tracking.cs" />
+    <Compile Include="module\repo\branch_\current\pick_\Upto.cs" />
+    <Compile Include="module\repo\branch_\current\push\Force.cs" />
+    <Compile Include="module\repo\branch_\current\remote_\initial\Vw.cs" />
+    <Compile Include="module\repo\branch_\current\Vw.cs" />
+    <Compile Include="module\repo\branch_\current\_pull\option_\MergeStrategy.cs" />
+    <Compile Include="module\repo\branch_\master\to_\Head.cs" />
+    <Compile Include="module\repo\snaps\commits\append_\Revert.cs" />
+    <Compile Include="module\repo\snaps\commits\del_\BackTrack.cs" />
+    <Compile Include="module\repo\gc_\gc\Prune.cs" />
+    <Compile Include="module\repo\gc_\Agressive.cs" />
+    <Compile Include="module\repo\GitK.cs" />
+    <Compile Include="module\repo\Fetch_Head.cs" />
+    <Compile Include="module\repo\head\move_\to_\%40Ref.cs" />
+    <Compile Include="module\repo\head\move_\to_\Branch.cs" />
+    <Compile Include="module\repo\head\move_\to_\branch_\Master.cs" />
+    <Compile Include="module\repo\Name.cs" />
+    <Compile Include="module\repo\Orig_Head.cs" />
+    <Compile Include="module\repo\head\Vw.cs" />
+    <Compile Include="module\repo\Log.cs" />
+    <Compile Include="module\repo\_cfg_\remotes_\all\Clear.cs" />
+    <Compile Include="module\repo\remotes\Fetch.cs" />
+    <Compile Include="module\repo\remote\branches\Ls.cs" />
+    <Compile Include="module\repo\remote\branches_\all\Fetch.cs" />
+    <Compile Include="module\repo\remote\branch\Fetch.cs" />
+    <Compile Include="module\repo\remote\branch\NewFolder1\Fetch.cs" />
+    <Compile Include="module\repo\_cfg_\remote\name\Change.cs" />
+    <Compile Include="module\repo\remote\fetch\Master2Master.cs" />
+    <Compile Include="module\repo\remote\tags\Del.cs" />
+    <Compile Include="module\repo\remote\Update.cs" />
+    <Compile Include="module\repo\remote\Vw.cs" />
+    <Compile Include="module\repo\branch_\current\Pull.cs" />
+    <Compile Include="module\repo\Gui.cs" />
+    <Compile Include="module\repo\snaps\Pack.cs" />
+    <Compile Include="module\repo\snaps_\Dangling.cs" />
+    <Compile Include="module\repo\snaps_\dangling\Vw.cs" />
+    <Compile Include="module\repo\snap\Tag.cs" />
+    <Compile Include="module\repo\state\Fsck.cs" />
+    <Compile Include="module\repo\Tags.cs" />
+    <Compile Include="module\repo\tags\Del.cs" />
+    <Compile Include="module\repo\branch\create_\NoHistory.cs" />
+    <Compile Include="module\repo\branch\create_\orphan\Reset.cs" />
+    <Compile Include="module\repo\_cfg\Credential.cs" />
+    <Compile Include="module\repo\_cfg\credential\UseWin.cs" />
+    <Compile Include="module\route\Spec.cs" />
+    <Compile Include="module\show\Show2File.cs" />
+    <Compile Include="module\stage\be_\Addable.cs" />
+    <Compile Include="module\stage\be_\Empty.cs" />
+    <Compile Include="module\stage\be_\empty_\DryRun.cs" />
+    <Compile Include="module\stage\commit_\IfStaged.cs" />
+    <Compile Include="module\stage\addresses\Untrack.cs" />
+    <Compile Include="module\stage\blobs\Vw.cs" />
+    <Compile Include="module\stage\path\AssumeUnchanged.cs" />
+    <Compile Include="module\stage\set_\File2Prev.cs" />
+    <Compile Include="module\stage\Reset.cs" />
+    <Compile Include="module\stage\Clear.cs" />
+    <Compile Include="module\stage\division\Rm.cs" />
+    <Compile Include="module\state_\Porcelain.cs" />
+    <Compile Include="module\state_\Conflict.cs" />
+    <Compile Include="module\work\act_\Clean.cs" />
+    <Compile Include="module\work\be_\Stageable.cs" />
+    <Compile Include="module\work\Merge.cs" />
+    <Compile Include="module\work\merge\conflict\Resolve.cs" />
+    <Compile Include="module\work\merge\conflict\Restore.cs" />
+    <Compile Include="module\work\merge\Resolve.cs" />
+    <Compile Include="module\work\_merge\tool_\Kdiff3.cs" />
+    <Compile Include="module\_cfg\File.cs" />
+    <Compile Include="module\repo\_cfg_\gc\Auto.cs" />
+    <Compile Include="module\repo\_cfg_\branch\remote_\Default.cs" />
+    <Compile Include="module\repo\_cfg_\GitAttributes.cs" />
+    <Compile Include="module\repo\_cfg_\remotes\Has.cs" />
+    <Compile Include="module\repo\_cfg_\_alias_\Deleted.cs" />
+    <Compile Include="module\repo\_cfg_\remote\_CreateX.cs" />
+    <Compile Include="module\repo\_cfg_\_remote\Name.cs" />
+    <Compile Include="module\repo\_cfg_\_remote\_name\txt\Be.cs" />
+    <Compile Include="module\repo\_cfg_\_remote\_name\txt\be\Vow.cs" />
+    <Compile Include="module\repo\_cfg_\_remote\_name\txt\be\vow\Ed.cs" />
+    <Compile Include="module\work\div\doc_\ignore\establish_\DotNet.cs" />
+    <Compile Include="module\work\div\doc_\ignore~\_Apply.cs" />
+    <Compile Include="module\work\division\be_\_ignored\Pattern.cs" />
+    <Compile Include="module\_log\Log.cs" />
+    <Compile Include="module\_merge_\NoCommit.cs" />
+    <Compile Include="module\_push\Ssh.cs" />
+    <Compile Include="module\_sub\OtherOptions.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\work_\top\Vow.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\be_\top\Vow.cs" />
+    <Compile Include="nilnul0\fs\folder_\Git.cs" />
+    <Compile Include="nilnul0\fs\SymLink.cs" />
+    <Compile Include="nilnul0\win\prog_\gitBash_\BinExe.cs" />
+    <Compile Include="nilnul0\win\prog_\gitBash_\InGitBase.cs" />
+    <Compile Include="nilnul0\win\prog_\GitK.cs" />
+    <Compile Include="nilnul0\win\prog_\git\HashObj.cs" />
+    <Compile Include="nilnul0\win\prog_\_git\Cfg.cs" />
+    <Compile Include="nilnul0\win\prog_\_git\Arg.cs" />
+    <Compile Include="nilnul0\win\prog_\_git\ReportErrException.cs" />
+    <Compile Include="nilnul0\win\prog_\_git\Result.cs" />
+    <Compile Include="nilnul0\win\prog_\_git\_arg\txt\Be.cs" />
+    <Compile Include="nilnul0\win\prog_\_git\_cfg_\Push.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="repo_\bare\push_\Mirror.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="repo_\_bare\folder\Ini.cs" />
+    <Compile Include="svrs_\vsBbGl\client_\token\prjs\Add.cs" />
+    <Compile Include="svr\repo\Name.cs" />
+    <Compile Include="svr\repo\_name\txt\Be.cs" />
+    <Compile Include="svr\repo\_name\txt\be\Vow.cs" />
+    <Compile Include="svr\repo\_name\txt\be\vow\Ee.cs" />
+    <Compile Include="svr_\amazon\repos\_count\Limit.cs" />
+    <Compile Include="svr_\amazon\repo\_pushed\blob\_size\Limit.cs" />
+    <Compile Include="svr_\amazon\repo\_size\Limit.cs" />
+    <Compile Include="svr_\amazon\client\repo\_create\Response.cs" />
+    <Compile Include="svr_\amazon_\usEast2\repo\Url.cs" />
+    <Compile Include="svr_\amazon_\Ohio.cs" />
+    <Compile Include="svr_\amazon_\ohio\client_\cfged\repo\create\_EnsureX.cs" />
+    <Compile Include="svr_\amazon_\ohio\repo\Url.cs" />
+    <Compile Include="svr_\amazon_\ohio\client_\cfged\repo\_CreateX.cs" />
+    <Compile Include="svr_\amazon_\ohio\client_\_CfgedX.cs" />
+    <Compile Include="svr_\azure\Acc.cs" />
+    <Compile Include="svr_\azure\repo\_import\Limit.cs" />
+    <Compile Include="svr_\azure\repo\_pushed\Limit.cs" />
+    <Compile Include="svr_\azure\repo\_size\Limit.cs" />
+    <Compile Include="svr_\bitbucket\client_\cfged\repo\Client.cs" />
+    <Compile Include="svr_\Azure.cs" />
+    <Compile Include="svr_\gitlab\repo\_size\Limit.cs" />
+    <Compile Include="svr_\vs_\prefixed_\cfged\client_\vaulted\repo\create_\prjDefault\ensure\_NormalizeRepoNameFirstX.cs" />
+    <Compile Include="svr_\bitbucket\client\repo\url_\_UrlX.cs" />
+    <Compile Include="svr_\bitbucket\client\repo\_CreateX.cs" />
+    <Compile Include="svr_\bitbucket\client\repo\_UrlX.cs" />
+    <Compile Include="svr_\bitbucket\client_\cfged\repo\create\_EnsureX.cs" />
+    <Compile Include="svr_\bitbucket\client_\cfged\repo\_CreateX.cs" />
+    <Compile Include="svr_\bitbucket\client_\Cfged.cs" />
+    <Compile Include="svr_\bitbucket\client_\cfged\repo\NewFolder1\_UrlX.cs" />
+    <Compile Include="svr_\bitbucket\repos\_ApiX.cs" />
+    <Compile Include="svr_\bitbucket\client\repo\Put.cs" />
+    <Compile Include="svr_\bitbucket\client\repo\put_\privatize_\ByPersonalUrl.cs" />
+    <Compile Include="svr_\bitbucket\client\repo\put_\MakePrivate.cs" />
+    <Compile Include="svr_\bitbucket\client_\token\prjs\Add.cs" />
+    <Compile Include="svr_\gitlab\client\prj\create_\rest_\webReq\create_\parTyped\Create.cs" />
+    <Compile Include="svr_\gitlab\client\prj\create_\rest_\webReq\create_\parTyped\OnNormedName.cs" />
+    <Compile Include="svr_\gitlab\client\IRepo.cs" />
+    <Compile Include="svr_\gitlab\client\repo\Url.cs" />
+    <Compile Include="svr_\gitlab\repo\name\Normalize.cs" />
+    <Compile Include="svr_\gitlab\repo\Name.cs" />
+    <Compile Include="svr_\gitlab\repo\name_\Normed.cs" />
+    <Compile Include="svr_\gitlab\repo\_name\txt\Be.cs" />
+    <Compile Include="svr_\gitlab\repo\_name\txt\be\Vow.cs" />
+    <Compile Include="svr_\gitlab\repo\_name\txt\be\vow\Ee.cs" />
+    <Compile Include="svr_\gitlab\client\repo\NewFolder1\Url.cs" />
+    <Compile Include="svr_\gitlab\client_\vaulted\repo\Url.cs" />
+    <Compile Include="svr_\gitlab\_CfgedX.cs" />
+    <Compile Include="svr_\vs\client\teamwork\add_\ByWebClient_basicUser1.cs" />
+    <Compile Include="svr_\vs\client\teamwork\Rec.cs" />
+    <Compile Include="svr_\vs\client\teamwork\rec\Has.cs" />
+    <Compile Include="module\repo\branch_\current\Head2Branch.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\work_\Top.cs" />
+    <Compile Include="nilnul0\fs\folder\GitI.cs" />
+    <Compile Include="module\repo\remote\branches\branches\branches\Vw.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\assign_\Set.cs" />
+    <Compile Include="module\dotGit\FetchHead.cs" />
+    <Compile Include="module\RepoI.cs" />
+    <Compile Include="module\repo\branches_\remote\NewFolder1\Vw.cs" />
+    <Compile Include="module\repo\branch_\current\_pull\Pull.cs" />
+    <Compile Include="module\repo\_branches\CurrentAndRemaining.cs" />
+    <Compile Include="module\work\div\be_\Root.cs" />
+    <Compile Include="module\stage\_add\DryRun.cs" />
+    <Compile Include="module\State.cs" />
+    <Compile Include="module\repo\remotes_\vsBbGl\Name.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\BeI.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work\be_\Top.cs" />
+    <Compile Include="svrs_\vsBbGl\client\prjs\%28retiring\Add.cs" />
+    <Compile Include="svr\ClientI.cs" />
+    <Compile Include="svr\repo\branches\Vw.cs" />
+    <Compile Include="svr_\bitbucket\api\repos\Username.cs" />
+    <Compile Include="svr_\bitbucket\api\repos\user\Repo.cs" />
+    <Compile Include="svr_\bitbucket\api\repos\user\repo\exist\Client.cs" />
+    <Compile Include="svr_\bitbucket\api\repos\user\repo\exist\client_\Token.cs" />
+    <Compile Include="svr_\bitbucket\Client.cs" />
+    <Compile Include="svr_\bitbucket\client\prjs\_add\Add.cs" />
+    <Compile Include="svr_\bitbucket\client\repos\Add.cs" />
+    <Compile Include="svr_\bitbucket\client\repos\add_\ByToken.cs" />
+    <Compile Include="svr_\bitbucket\api\Repos.cs" />
+    <Compile Include="svr_\bitbucket\api\repos\Has.cs" />
+    <Compile Include="svr_\bitbucket\client_\Token.cs" />
+    <Compile Include="svr_\bitbucket\Bitbucket.cs" />
+    <Compile Include="svr_\bitbucket\bitbucket\Projects.cs" />
+    <Compile Include="svr_\bitbucket\projects\Add.cs" />
+    <Compile Include="svr_\bitbucket\bitbucket\User.cs" />
+    <Compile Include="svr_\bitbucket\user\user\Credential.cs" />
+    <Compile Include="svr_\bitbucket\user\user\credential\Put.cs" />
+    <Compile Include="svr_\Gitlab.cs" />
+    <Compile Include="svr_\gitlab\_prjs\Prjs.cs" />
+    <Compile Include="svr_\gitlab\client\prj\create_\rest_\webReq\create_\parTxt\Add.cs" />
+    <Compile Include="svr_\gitlab\user\user\PrivateToken.cs" />
+    <Compile Include="svr_\vs\repo\Name.cs" />
+    <Compile Include="svr_\vs\repo\_name\txt\Be.cs" />
+    <Compile Include="svr_\vs\repo\_name\txt\be\Vow.cs" />
+    <Compile Include="svr_\vs\repo\_name\txt\be\vow\Ee.cs" />
+    <Compile Include="svr_\vs\repo\_name\txt\be_\StartWithMinus.cs" />
+    <Compile Include="svr_\vs_\VisualStudio.cs" />
+    <Compile Include="svr_\vs\vs\Get.cs" />
+    <Compile Include="svr_\vs\prj\prj\Get.cs" />
+    <Compile Include="svr_\vs\prj\prj\repos\Get.cs" />
+    <Compile Include="svr_\vs\prj\prj\repo\Get.cs" />
+    <Compile Include="svr_\vs\prj\prj\Url.cs" />
+    <Compile Include="svr_\vs\prj\prj\work\create\ByWebClient_basicUser.cs" />
+    <Compile Include="svr_\vs\prj\prj\work\Get.cs" />
+    <Compile Include="svr_\vs\prj\prj\work\Type.cs" />
+    <Compile Include="svr_\vs\prj\prj\work\Url.cs" />
+    <Compile Include="svr_\vs\vs\Processes.cs" />
+    <Compile Include="svr_\vs\processes\processes\Get.cs" />
+    <Compile Include="svr_\vs\vs\Projects.cs" />
+    <Compile Include="svr_\vs\projects\Add.cs" />
+    <Compile Include="svr_\vs\projects\add\ByWebClient_basicUser.cs" />
+    <Compile Include="svr_\vs\projects\Get.cs" />
+    <Compile Include="svr_\vs\vs\Repos.cs" />
+    <Compile Include="svr_\vs\repos\repos\Add.cs" />
+    <Compile Include="svr_\vs\repos\repos\add_\toPrj_\ByWebClient_basicUser.cs" />
+    <Compile Include="svr_\vs\repos\repos\Get.cs" />
+    <Compile Include="svr_\vs\repo\repo\Get.cs" />
+    <Compile Include="svr_\vs\vs\Url.cs" />
+    <Compile Include="svr_\vs\url_\url_\WithPrj.cs" />
+    <Compile Include="svr_\vs\works\works\Get.cs" />
+    <Compile Include="svr_\vs\works\works\Url.cs" />
+    <Compile Include="svr_\vs\_url\_url\Ver.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\Module.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\Repo.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\BeI.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\be\Vow.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\be_\Module.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\be_\Plain.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\be_\Repo.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\be_\Work.cs" />
+    <Compile Include="nilnul0\fs\_folder\NoneRootSubRepo.cs" />
+    <Compile Include="nilnul0\fs\_folder\NoneWorkRepo.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\Module.cs" />
+    <Compile Include="module\repo\branches\Branches.cs" />
+    <Compile Include="module\repo\branches_\seeded\Seeded.cs" />
+    <Compile Include="module\repo\branches_\seeded\seeded\Current.cs" />
+    <Compile Include="module\repo\_branches\Tree.cs" />
+    <Compile Include="module\cfg\cfg\All.cs" />
+    <Compile Include="module\repo\_cfg_\Ignore.cs" />
+    <Compile Include="module\repo\remote\Fetch.cs" />
+    <Compile Include="module\repo\remote\Password.cs" />
+    <Compile Include="module\repo\remote\reference\Del.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\Change.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url_\push\upd~\Set.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\vw\parse~\Parse.cs" />
+    <Compile Include="module\cfg\cfg\SparseCheckout.cs" />
+    <Compile Include="module\cfg\_submodule\Submodule.cs" />
+    <Compile Include="module\cfg\_submodules\Submodules.cs" />
+    <Compile Include="module\repo\_cfg_\Config.cs" />
+    <Compile Include="module\RefLog.cs" />
+    <Compile Include="module\repo\snaps\Merge.cs" />
+    <Compile Include="module\repo\_remote\Remote.cs" />
+    <Compile Include="module\repo\remote\branches\branches\Del.cs" />
+    <Compile Include="module\repo\remote\tags\tags\Push.cs" />
+    <Compile Include="module\sub\Submodule.cs" />
+    <Compile Include="module\sub\Submodules.cs" />
+    <Compile Include="module\subs\submodules\Add.cs" />
+    <Compile Include="module\refs\UpdateRef.cs" />
+    <Compile Include="module\_cfg\_cfg\SystemWide.cs" />
+    <Compile Include="module\dir\be_\Work.cs" />
+    <Compile Include="module\dir\category_\_repoNot\RepoDescedentRoot.cs" />
+    <Compile Include="module\dir_\work\be_\Top.cs" />
+    <Compile Include="module\dir_\work_\NonRoot.cs" />
+    <Compile Include="module\cmd_\Clean.cs" />
+    <Compile Include="svr_\gitlab\client\prj\create_\rest_\webReq\create_\Add.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dir\be_\Top.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dir\category_\WorkRoot_WorkNonroot.cs" />
+    <Compile Include="nilnul0\fs\_git\_git\ReportErrException.cs" />
+    <Compile Include="nilnul0\fs\_git\_git\Result.cs" />
+    <Compile Include="module\ActI.cs" />
+    <Compile Include="module\act_\Reset.cs" />
+    <Compile Include="module\act_\Stash.cs" />
+    <Compile Include="module\AsSuper.cs" />
+    <Compile Include="module\Attr.cs" />
+    <Compile Include="module\repo\branch\co\Switch.cs" />
+    <Compile Include="module\CherryFile.cs" />
+    <Compile Include="module\Clean.cs" />
+    <Compile Include="module\Checkout.cs" />
+    <Compile Include="module\destinations\Dif.cs" />
+    <Compile Include="module\document\Dif.cs" />
+    <Compile Include="module\act_\merging\Undo.cs" />
+    <Compile Include="module\repo\snaps\commits\Notes.cs" />
+    <Compile Include="module\repo\snaps\commits\Vw.cs" />
+    <Compile Include="module\repo\objcts\Show.cs" />
+    <Compile Include="module\Refs.cs" />
+    <Compile Include="module\repo\remote\net\Daemon.cs" />
+    <Compile Include="module\repo\act_\Fsck.cs" />
+    <Compile Include="module\repo\act_\Gc.cs" />
+    <Compile Include="module\repo\branch\Create.cs" />
+    <Compile Include="module\repo\branches_\local\withCurrent\Vw.cs" />
+    <Compile Include="module\repo\branch\co\Dif.cs" />
+    <Compile Include="module\repo\branch\Upstream.cs" />
+    <Compile Include="module\repo\SnapI.cs" />
+    <Compile Include="module\repo\snaps\commits\last\Show.cs" />
+    <Compile Include="module\stage\commit\file\Show.cs" />
+    <Compile Include="module\repo\refs\BackstepCurrentBranch.cs" />
+    <Compile Include="module\repo\remote\protocol_\Git.cs" />
+    <Compile Include="module\repo\ShallowCopyI.cs" />
+    <Compile Include="module\repo\stage\act_\MoveStageBackWithBranch.cs" />
+    <Compile Include="module\repo\stage\act_\StageAll.cs" />
+    <Compile Include="module\repo\stage\act_\StepbackBranchWithStageAndWork.cs" />
+    <Compile Include="module\repo\stage\act_\UnStagePath.cs" />
+    <Compile Include="module\repo\stage\act_\UpdatePath2Commit.cs" />
+    <Compile Include="module\repo\stage\ReIni.cs" />
+    <Compile Include="module\repo\Treeish.cs" />
+    <Compile Include="module\repo\_branches\%28retiring\NewFolder1\CurrentAndRemaining.cs" />
+    <Compile Include="module\SavedI.cs" />
+    <Compile Include="module\saved\commits_\notReferenced\_VwX.cs" />
+    <Compile Include="module\saved\commits_\recent\_VwX.cs" />
+    <Compile Include="module\saved\commits_\referenced\_VwX.cs" />
+    <Compile Include="module\tree\co_\snapCurrentAndWork\TreeDif.cs" />
+    <Compile Include="module\saved\Diff.cs" />
+    <Compile Include="module\stage\act_\Untrack.cs" />
+    <Compile Include="module\stage\Files.cs" />
+    <Compile Include="module\stage\UnAdd.cs" />
+    <Compile Include="module\stage\ReIni.cs" />
+    <Compile Include="module\stage\Diff.cs" />
+    <Compile Include="module\stage\Short.cs" />
+    <Compile Include="module\Stash.cs" />
+    <Compile Include="module\stage\State.cs" />
+    <Compile Include="module\sub\StatusI.cs" />
+    <Compile Include="module\_work_\Destinations.cs" />
+    <Compile Include="module\_work_\destinations\RemoveUntracked.cs" />
+    <Compile Include="module\_work_\documents\CheckoutFroAnotherBranch.cs" />
+    <Compile Include="nilnul0\fs\folder\doc_\git_\Ignore.cs" />
+    <Compile Include="module\dotGit\_repo\meta\Branch.cs" />
+    <Compile Include="module\dotGit\_repo\meta\fetchHead\ActI.cs" />
+    <Compile Include="module\dotGit\_repo\meta\Head.cs" />
+    <Compile Include="module\dotGit\_repo\meta\head\ActI.cs" />
+    <Compile Include="module\dotGit\_repo\meta\Index.cs" />
+    <Compile Include="module\dotGit\_repo\meta\PseudoRefI.cs" />
+    <Compile Include="module\dotGit\_repo\meta\RemoteTrackingBranch.cs" />
+    <Compile Include="module\dotGit\_repo\meta\SubmoduleI.cs" />
+    <Compile Include="module\dotGit\_repo\meta\SymRef.cs" />
+    <Compile Include="module\dotGit\_repo\meta\Tag.cs" />
+    <Compile Include="module\dotGit\_repo\objDb\PackI.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\Work.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\PlainWorkRepo.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo\io\be_\Module.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo\io\be_\None.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo\io\be_\Repo.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo\io\be_\Work.cs" />
+    <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\Ret.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\Work1.cs" />
+    <Compile Include="SvrI.cs" />
+    <Compile Include="Svrs.cs" />
+    <Compile Include="svrs\Name.cs" />
+    <Compile Include="svrs_\vsBbGl\client\prjs\Add.cs" />
+    <Compile Include="svr_\Bitbucket.cs" />
+    <Compile Include="svr_\bitbucket\Projects.cs" />
+    <Compile Include="svr_\bitbucket\client\prjs\Add.cs" />
+    <Compile Include="svr_\bitbucket\User.cs" />
+    <Compile Include="svr_\bitbucket\user\Credential.cs" />
+    <Compile Include="svr_\bitbucket\user\credential\Put.cs" />
+    <Compile Include="svr_\gitlab\Client.cs" />
+    <Compile Include="svr_\gitlab\_prjs\Projects.cs" />
+    <Compile Include="svr_\gitlab\client\prj\NewFolder1\Add.cs" />
+    <Compile Include="svr_\gitlab\User.cs" />
+    <Compile Include="svr_\gitlab\user\PrivateToken.cs" />
+    <Compile Include="svr_\gitlab\_client\Gitlab.cs" />
+    <Compile Include="svr_\VisualStudio.cs" />
+    <Compile Include="svr_\vs\client\teamwork\add_\%28retiring\ByWebClient_basicUser.cs" />
+    <Compile Include="svr_\vs\client\repos\add_\ByWebClient_basicUser.cs" />
+    <Compile Include="svr_\vs\Get.cs" />
+    <Compile Include="svr_\vs\prj\Get.cs" />
+    <Compile Include="svr_\vs\prj\repos\Get.cs" />
+    <Compile Include="svr_\vs\prj\repo\Get.cs" />
+    <Compile Include="svr_\vs\prj\Url.cs" />
+    <Compile Include="svr_\vs\prj\work\create\ByWebClient_basicUser.cs" />
+    <Compile Include="svr_\vs\prj\work\Get.cs" />
+    <Compile Include="svr_\vs\prj\work\Type.cs" />
+    <Compile Include="svr_\vs\prj\work\Url.cs" />
+    <Compile Include="svr_\vs\Processes.cs" />
+    <Compile Include="svr_\vs\processes\Get.cs" />
+    <Compile Include="svr_\vs\Projects.cs" />
+    <Compile Include="svr_\vs\client\teamwork\add_\%28retiring\NewFolder1\ByWebClient_basicUser.cs" />
+    <Compile Include="svr_\vs\client\teamwork\Get.cs" />
+    <Compile Include="svr_\vs\Repos.cs" />
+    <Compile Include="svr_\vs\repos\Add.cs" />
+    <Compile Include="svr_\vs\repos\add_\toPrj_\ByWebClient_basicUser.cs" />
+    <Compile Include="svr_\vs\repos\Get.cs" />
+    <Compile Include="svr_\vs\repo\Get.cs" />
+    <Compile Include="svr_\vs\Url.cs" />
+    <Compile Include="svr_\vs\url_\WithPrj.cs" />
+    <Compile Include="svr_\vs\Client.cs" />
+    <Compile Include="svr_\vs\works\Get.cs" />
+    <Compile Include="svr_\vs\works\Url.cs" />
+    <Compile Include="svr_\vs\_url\Ver.cs" />
+    <Compile Include="nilnul0\fs\GitI.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\None.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\plain\nonRoot\Category.cs" />
+    <Compile Include="ModuleI.cs" />
+    <Compile Include="module\repo\Branches.cs" />
+    <Compile Include="module\repo\branches_\Seeded.cs" />
+    <Compile Include="module\repo\branch_\current\nulable\Vw.cs" />
+    <Compile Include="module\repo\branch\Tree.cs" />
+    <Compile Include="module\Cfg.cs" />
+    <Compile Include="module\cfg\All.cs" />
+    <Compile Include="module\work\division_\_ignored\_ignore\Ignore.cs" />
+    <Compile Include="module\repo\_cfg_\Remotes.cs" />
+    <Compile Include="module\repo\_cfg_\remotes\Vw.cs" />
+    <Compile Include="module\repo\remote\reference\reference\Del.cs" />
+    <Compile Include="module\repo\remote\urls\Fetch.cs" />
+    <Compile Include="module\repo\remote\urls\Show.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url_\push\upd~\forPush\Set.cs" />
+    <Compile Include="module\repo\_cfg_\remote\url\vw\Parse.cs" />
+    <Compile Include="module\cfg\settings\Show.cs" />
+    <Compile Include="module\cfg\SparseCheckout.cs" />
+    <Compile Include="module\cfg\Submodule.cs" />
+    <Compile Include="module\cfg\Submodules.cs" />
+    <Compile Include="module\cmd_\cmb_\Clean.cs" />
+    <Compile Include="module\cmd_\Reset.cs" />
+    <Compile Include="module\cmd_\UpdateRef.cs" />
+    <Compile Include="module\CmdI.cs" />
+    <Compile Include="module\Head.cs" />
+    <Compile Include="module\repo\head\StackOne.cs" />
+    <Compile Include="module\repo\Archive.cs" />
+    <Compile Include="module\repo\branches\Merge.cs" />
+    <Compile Include="module\repo\Remote.cs" />
+    <Compile Include="module\repo\remotes_\all\push_\_PushX.cs" />
+    <Compile Include="module\repo\remote\branches\Del.cs" />
+    <Compile Include="module\repo\remote\tags\Push.cs" />
+    <Compile Include="module\stage\divisions_\all\Del.cs" />
+    <Compile Include="module\Submodule.cs" />
+    <Compile Include="module\Submodules.cs" />
+    <Compile Include="module\subs\Add.cs" />
+    <Compile Include="module\WorkspaceI.cs" />
+    <Compile Include="module\work\Be.cs" />
+    <Compile Include="module\work\directory\dir\_categorize\WorkRoot_WorkNonroot.cs" />
+    <Compile Include="module\work\folder_\NotInnerModuleRoot.cs" />
+    <Compile Include="module\_work_\Root.cs" />
+    <Compile Include="module\_cfg\SystemWide.cs" />
+    <Compile Include="nilnul0\fs\_git\ReportErrException.cs" />
+    <Compile Include="nilnul0\fs\_git\Result.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="module\repo\_cfg_\remote_\svR_\vs_\next\create\EnsureSvrFirst.cs" />
+    <Compile Include="svr_\vs_\prefixed\repo\_UrlX.cs" />
+    <Compile Include="svr_\vs_\prefixed\client_\cfged\_repo\_ApiX.cs" />
+    <Compile Include="svr_\vs_\prefixed_\cfged\client_\vaulted\repo\create_\prjDefault\_EnsureX.cs" />
+    <Compile Include="svr_\vs_\prefixed_\cfged\client_\vaulted\repo\create_\_PrjDefault.cs" />
+    <Compile Include="svr_\vs_\prefixed_\cfged\repo\_UrlX.cs" />
+    <Compile Include="svr_\vs_\prefixed_\_cfged\_ApiX.cs" />
+    <Compile Include="svr_\vs_\_PrefixedX.cs" />
+    <Compile Include="svr_\vs_\prefixed\_client\cred_\Client.cs" />
+    <Compile Include="svr_\vs_\prefixed\client\_repo\_ApiX.cs" />
+    <Compile Include="svr_\vs_\prefixed\client_\cfged\repo\create_\_PrjDefault.cs" />
+    <Compile Include="svr_\vs_\prefixed\client_\cfged\repo\create_\prjDefault\_EnsureX.cs" />
+    <Compile Include="svr_\vs_\prefixed\client_\_CfgedX.cs" />
+    <Compile Include="svr_\vs_\prefixed\_prjs\_ApiX.cs" />
+    <Compile Include="svr_\bitbucket\_ApiX.cs" />
+    <Compile Include="svr_\bitbucket\client_\cfged\repo\url_\_WithAccX.cs" />
+    <Compile Include="svr_\bitbucket\client_\cfged\repo\_UrlX.cs" />
+    <Compile Include="svr_\_GitlabX.cs" />
+    <Compile Include="Tortoise.cs" />
+    <Compile Include="tortoise\Icons.cs" />
+    <Compile Include="svr\_client\Rev.cs" />
+    <Compile Include="_module\Clone.cs" />
+    <Compile Include="_module\clone_\NoCheckout.cs" />
+    <Compile Include="_module\Ini.cs" />
+    <Compile Include="_module\ini\Ensure.cs" />
+    <Compile Include="_module_\BlankI.cs" />
+    <Compile Include="_module_\CfgI.cs" />
+    <Compile Include="_module_\MiscI.cs" />
+    <Compile Include="_module_\IndexI.cs" />
+    <Compile Include="_module_\TopI1.cs" />
+    <Compile Include="_module_\TopI.cs" />
+    <Compile Include="_module_\WorkI.cs" />
+    <Compile Include="_module_\RepoI.cs" />
+    <Compile Include="_repo_\Head.cs" />
+    <Compile Include="_svrs\Enum.cs" />
+    <Compile Include="_svr\LimitInMbyteI.cs" />
+    <Compile Include="_svr_\LimitInMbyteI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="module\act_\act_\" />
+    <Folder Include="module\cfg\ignore\" />
+    <Folder Include="module\cfg\section\key\val\" />
+    <Folder Include="module\cfg\section_\sub\" />
+    <Folder Include="module\checkout\" />
+    <Folder Include="module\commit_\" />
+    <Folder Include="module\conflict\resolve\" />
+    <Folder Include="module\dir\rootChildFolder_\" />
+    <Folder Include="module\dir\_category\" />
+    <Folder Include="module\dir_\noEmbedRepo\" />
+    <Folder Include="module\dir_\nonlink_\" />
+    <Folder Include="module\dir_\work_\nonRoot\" />
+    <Folder Include="module\div\be_\work\" />
+    <Folder Include="module\div\db\" />
+    <Folder Include="module\div\NewFolder1\" />
+    <Folder Include="module\div\sup_\" />
+    <Folder Include="module\div_\top\" />
+    <Folder Include="module\documents\" />
+    <Folder Include="module\document\froRepo\" />
+    <Folder Include="module\exe_\git\result_\" />
+    <Folder Include="module\file\" />
+    <Folder Include="module\pull_\brancH_\noncurrent\" />
+    <Folder Include="module\reference\del_\" />
+    <Folder Include="module\reference_\branch\" />
+    <Folder Include="module\repo\%28retiring\" />
+    <Folder Include="module\repo\blob\checkout_\" />
+    <Folder Include="module\repo\branches\NewFolder1\" />
+    <Folder Include="module\repo\branches\_merge\algo_\" />
+    <Folder Include="module\repo\branches_\local\del_\" />
+    <Folder Include="module\repo\branches_\local\vw_\" />
+    <Folder Include="module\repo\branches_\vered\" />
+    <Folder Include="module\repo\branches_\withCurrent_\" />
+    <Folder Include="module\repo\branch\co_\tracked\be_\pushed_\" />
+    <Folder Include="module\repo\branch\create_\add_\" />
+    <Folder Include="module\repo\branch\push_\svr_\bb\" />
+    <Folder Include="module\repo\branch\push_\svr_\_bb_\" />
+    <Folder Include="module\repo\branch\to_\head\" />
+    <Folder Include="module\repo\branch_\current\commit\tag\" />
+    <Folder Include="module\repo\branch_\current\current\" />
+    <Folder Include="module\repo\branch_\current\nulable\_vw_\" />
+    <Folder Include="module\repo\branch_\current\remote\" />
+    <Folder Include="module\repo\branch_\vereds\sort\" />
+    <Folder Include="module\repo\head\assing_\" />
+    <Folder Include="module\repo\head\at_\" />
+    <Folder Include="module\repo\head_\branch\vw_\" />
+    <Folder Include="module\repo\log\" />
+    <Folder Include="module\repo\remote\branch\drop_\" />
+    <Folder Include="module\repo\remote\push_\branch_\uiTitled_\titled\" />
+    <Folder Include="module\repo\remote_\local\" />
+    <Folder Include="module\repo\snaps\commits\notes\" />
+    <Folder Include="module\repo\snaps\commits\_append\" />
+    <Folder Include="module\repo\snaps\commits\_ins_\" />
+    <Folder Include="module\repo\snap\net_\" />
+    <Folder Include="module\repo\snap\refers\" />
+    <Folder Include="module\repo\snap\revert\" />
+    <Folder Include="module\repo\snap_\current\document\toWork\by_\" />
+    <Folder Include="module\repo\snap_\current\froRepo_\" />
+    <Folder Include="module\repo\snap_\staged\" />
+    <Folder Include="module\repo\snap_\work\" />
+    <Folder Include="module\repo\_branches_\item_\" />
+    <Folder Include="module\repo\_branch\_name\txt\be_\" />
+    <Folder Include="module\repo\_cfg_\branches_\pub\" />
+    <Folder Include="module\repo\_cfg_\http\" />
+    <Folder Include="module\repo\_cfg_\remotes_\NewFolder1\" />
+    <Folder Include="module\repo\_cfg_\remotes_\pub_\individual_\" />
+    <Folder Include="module\repo\_cfg_\remote\key\" />
+    <Folder Include="module\repo\_cfg_\remote\name\change\" />
+    <Folder Include="module\repo\_cfg_\remote\urls_\valid\" />
+    <Folder Include="module\repo\_cfg_\remote\url\ensureSvr\" />
+    <Folder Include="module\repo\_cfg_\remote\url\_vw\" />
+    <Folder Include="module\repo\_cfg_\remote\_key_\" />
+    <Folder Include="module\repo\_cfg_\remote\_url\" />
+    <Folder Include="module\repo\_cfg_\remote_\key\" />
+    <Folder Include="module\repo\_cfg_\remote_\pub_\all_\" />
+    <Folder Include="module\repo\_cfg_\remote_\svR_\amazon_\newest\" />
+    <Folder Include="module\repo\_cfg_\remote_\svR_\aw\ensure\ensureSvrFirst\" />
+    <Folder Include="module\repo\_cfg_\remote_\svR_\aw\newestOrNul_\" />
+    <Folder Include="module\repo\_cfg_\remote_\svR_\aw\url\" />
+    <Folder Include="module\repo\_cfg_\remote_\svR_\aw_\next\create\ensureSvrFirst_\" />
+    <Folder Include="module\repo\_cfg_\remote_\svR_\aw_\ohio_\" />
+    <Folder Include="module\repo\_cfg_\remote_\svR_\bb_\next\create\" />
+    <Folder Include="module\repo\_cfg_\remote_\svR_\github\urn\toSsh\" />
+    <Folder Include="module\repo\_cfg_\remote_\svR_\gl_\next\create_\cfgedUsr\" />
+    <Folder Include="module\repo\_cfg_\remote_\svR_\vs\" />
+    <Folder Include="module\repo\_cfg_\remote_\svR_\vs_\newest\%28retiring\" />
+    <Folder Include="module\repo\_cfg_\remote_\vereds\vw_\" />
+    <Folder Include="module\repo\_cfg_\remote_\vered_\nom_\url_\" />
+    <Folder Include="module\repo\_cfg_\remote_\_vered_\" />
+    <Folder Include="module\repo\_cfg_\_branch\" />
+    <Folder Include="module\repo\_cfg_\_http_\_proxy_\" />
+    <Folder Include="module\repo\_cfg_\_remote\_name\txt\be_\" />
+    <Folder Include="module\repo\_commits_\" />
+    <Folder Include="module\repo\_remote\_remote\" />
+    <Folder Include="module\reset\" />
+    <Folder Include="module\saved\commits\" />
+    <Folder Include="module\saved\commit_\current\vsWork\" />
+    <Folder Include="module\saved\_dif\" />
+    <Folder Include="module\stage\addresses\_untrack\" />
+    <Folder Include="module\stage\add\commit\addCommit\" />
+    <Folder Include="module\stage\add_\allBut_\minUiTitled_\" />
+    <Folder Include="module\stage\add_\all\commit_\minWinTitled_\" />
+    <Folder Include="module\stage\commit~\" />
+    <Folder Include="module\stage\divisions_\ignored\" />
+    <Folder Include="module\stage\reset_\NewFolder1\" />
+    <Folder Include="module\stashed\" />
+    <Folder Include="module\stash\push\" />
+    <Folder Include="module\stash_\" />
+    <Folder Include="module\tree\co\dif_\" />
+    <Folder Include="module\work\directory\dir\be_\" />
+    <Folder Include="module\work\division\be_\ignored\" />
+    <Folder Include="module\work\division\be_\_ignored\rules_\vs\" />
+    <Folder Include="module\work\division\be_\_ignored\rule\" />
+    <Folder Include="module\work\division\be_\_ignored\_rules\" />
+    <Folder Include="module\work\divs_\" />
+    <Folder Include="module\work\div\doc_\ignore\ensure_\_dotnet\by_\" />
+    <Folder Include="module\work\div\doc_\ignore\patch_\dotnet\" />
+    <Folder Include="module\work\div\doc_\ignore\patch_\_nn\rules_\" />
+    <Folder Include="module\work\div\doc_\ignore\_patch\rsc\" />
+    <Folder Include="module\work\div\restore_\" />
+    <Folder Include="module\work\div\root\" />
+    <Folder Include="module\work\documents_\" />
+    <Folder Include="module\work\doc_\ignore\ensure_\" />
+    <Folder Include="module\work\doc_\ignore\upd_\dotNet\" />
+    <Folder Include="module\work\doc_\ignore\upsert\" />
+    <Folder Include="module\work\doc_\_ignore_\patch_\upsert_\dotnet\" />
+    <Folder Include="module\work\doc_\_ignore_\patch_\upsert_\_dotnet\patch_\" />
+    <Folder Include="module\work\merge_\" />
+    <Folder Include="module\_branch\" />
+    <Folder Include="module\_cfg_\attributes\" />
+    <Folder Include="module\_cfg_\exclude\_patch\" />
+    <Folder Include="module\_commit\" />
+    <Folder Include="module\_dst\" />
+    <Folder Include="module\_index_\" />
+    <Folder Include="module\_merge\" />
+    <Folder Include="module\_repo_\" />
+    <Folder Include="module\_work_\directories\" />
+    <Folder Include="module\_work_\directory_\noDotLed\" />
+    <Folder Include="module\_work_\directory_\notDotLed_\nonlink\directories_\" />
+    <Folder Include="module\_work_\directory_\unLink\dirs_\NewFolder1\" />
+    <Folder Include="module\_work_\divs_\noDotLed_\" />
+    <Folder Include="module\_work_\documents_\large\" />
+    <Folder Include="module\_work_\documents_\nonlink_\" />
+    <Folder Include="module\_work_\document\create_\" />
+    <Folder Include="module\_work_\files_\" />
+    <Folder Include="module\_work_\_documents\" />
+    <Folder Include="module_\unlink\_work_\div\" />
+    <Folder Include="nilnul0\fs\address\shield\" />
+    <Folder Include="nilnul0\fs\address_\shield_\" />
+    <Folder Include="nilnul0\fs\folders\divs_\nonlink_\gitNonrepo\" />
+    <Folder Include="nilnul0\fs\folders\divs_\nonlink_\git_\nonRepo\docs\find\" />
+    <Folder Include="nilnul0\fs\folders\documents_\" />
+    <Folder Include="nilnul0\fs\folder\be_\giT_\%28retiring\" />
+    <Folder Include="nilnul0\fs\folder\be_\giT_\NewFolder1\" />
+    <Folder Include="nilnul0\fs\folder\be_\giT_\repo_\byIsInsideGitDir\" />
+    <Folder Include="nilnul0\fs\folder\be_\giT_\_repo\" />
+    <Folder Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo\call_\" />
+    <Folder Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo\io_\" />
+    <Folder Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\be\vow\" />
+    <Folder Include="nilnul0\fs\folder\directory_\git_\manageds\" />
+    <Folder Include="nilnul0\fs\folder\directory_\git_\managed\" />
+    <Folder Include="nilnul0\fs\folder\divs_\nonlink_\nonRepo\docs\" />
+    <Folder Include="nilnul0\fs\folder\divs_\nonRepo_\" />
+    <Folder Include="nilnul0\fs\folder\documents\" />
+    <Folder Include="nilnul0\fs\folder\documents_\git_\" />
+    <Folder Include="nilnul0\fs\folder\git\" />
+    <Folder Include="nilnul0\fs\folder\git_\cfg\" />
+    <Folder Include="nilnul0\fs\folder\modules\" />
+    <Folder Include="nilnul0\fs\folder\vow_\git_\work\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\intend\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\plains\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\plains_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\repo\be_\top_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\top\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\work\manageds_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\work\vow_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\work_\nontop\directories_\noDotLed_\nonlink_\notDotLed_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\work_\nontop\dir\category_\_default\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\work_\nontop\dir_\nontop_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\work_\nontop\dir_\notDotLed_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\work_\top\directory_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\work_\top\dir\category_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\work_\top\dir_\noEmbedRepo_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\work_\top\div_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlinks\documents_\giT_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink\div_\nonlink_\giT_\depo_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink\documents_\nonlink_\git_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink\git_\manageds_\nonlinks_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink\git_\manageds_\nonlink_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink\git_\modules_\nonlink_\inside_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink\normal\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\depobase\div_\nonlink_\giT_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\plain\divs_\git_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\plain\git_\modules_\nonlink_\inside_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\plain\git_\modules_\nonlink_\internal_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\work0embedRepoBase\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\work\git_\modules_\nonlink_\inside_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\work_\nontop\divs_\git_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\work_\nontop\git_\modules_\nonlink_\internal_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\divs_\divs_\git_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\divs_\git_\" />
+    <Folder Include="nilnul0\fs\folder_\nonlink_\giT_\work_\top\modules_\nonlink_\inside_\" />
+    <Folder Include="nilnul0\fs\_git\%28retiring.nilnul.dev\" />
+    <Folder Include="nilnul0\txt\be_\" />
+    <Folder Include="nilnul0\win\prog_\gitk\run\" />
+    <Folder Include="nilnul0\win\prog_\git\run_\ui\" />
+    <Folder Include="nilnul0\win\prog_\_git\arg_\" />
+    <Folder Include="repo\branch\co\" />
+    <Folder Include="repo\branch\fetch_\" />
+    <Folder Include="repo\branch\_name\txt_\dnts_\" />
+    <Folder Include="repo\div\root\" />
+    <Folder Include="repo\remote\branch\" />
+    <Folder Include="repo\snap\branch\" />
+    <Folder Include="repo\_branch\name_\dnts\be_\local_\_pub_\" />
+    <Folder Include="repo\_branch\name_\_vered\_prefix\txt\be_\" />
+    <Folder Include="repo\_branch\_name\cha\" />
+    <Folder Include="repo\_branch\_name\txt\be_\" />
+    <Folder Include="repo\_branch\_name\txt\_be\ch\be_\_invalid\" />
+    <Folder Include="repo\_branch\_name\_cha\" />
+    <Folder Include="repo\_branch\_name_\" />
+    <Folder Include="repo\_push\exitCode\" />
+    <Folder Include="repo\_reference\name_\strict\" />
+    <Folder Include="repo\_reference\_name\txt\_be_\" />
+    <Folder Include="repo_\bare\create_\tmp\" />
+    <Folder Include="repo_\bare\ov_\address_\nonFile_\" />
+    <Folder Include="repo_\bare\ov_\folder_\tmp\" />
+    <Folder Include="svrs_\vsBbGl\client\prjs\add_\" />
+    <Folder Include="svrs_\vsBbGl\client_\token\prjs\add\" />
+    <Folder Include="svr\clients_\" />
+    <Folder Include="svr\client\repo\map_\word\" />
+    <Folder Include="svr\client\repo\map_\word_\" />
+    <Folder Include="svr\client\repo\set\" />
+    <Folder Include="svr\client\repo\set_\byHost\map_\" />
+    <Folder Include="svr\client\repo\set_\byHost_\" />
+    <Folder Include="svr\client\repo\sortie_\byHost\biject_\named_\" />
+    <Folder Include="svr\client\repo\sortie_\byHost\biject_\nom1nonemptyEs\" />
+    <Folder Include="svr\client\repo\sortie_\byHost\biject_\nomNonempty\" />
+    <Folder Include="svr\co\" />
+    <Folder Include="svr\repo\branches\vw\" />
+    <Folder Include="svr\_client_\" />
+    <Folder Include="svr_\amazon\_client\" />
+    <Folder Include="svr_\amazon_\ohio\client\repo\" />
+    <Folder Include="svr_\amazon_\region\client_\" />
+    <Folder Include="svr_\aws_\" />
+    <Folder Include="svr_\aw_\" />
+    <Folder Include="svr_\azure\acc\" />
+    <Folder Include="svr_\azure\acc_\" />
+    <Folder Include="svr_\azure\client\repos\" />
+    <Folder Include="svr_\azure\client\repo\url_\" />
+    <Folder Include="svr_\azure\client\repo_\" />
+    <Folder Include="svr_\azure\client\teamwork\create_\personal_\" />
+    <Folder Include="svr_\azure\client\teamwork\repo\" />
+    <Folder Include="svr_\azure\client\_division\" />
+    <Folder Include="svr_\github\client\repo\url\" />
+    <Folder Include="svr_\github\client\repo_\" />
+    <Folder Include="svr_\gitlab\client\prj\create_\rest_\webReq\create_\parTyped\%28retiring\" />
+    <Folder Include="svr_\gitlab\client\repos\" />
+    <Folder Include="svr_\gitlab\grp\client\" />
+    <Folder Include="svr_\gitlab\grp\prj\alter\" />
+    <Folder Include="svr_\gitlab\grp\prj\alter_\" />
+    <Folder Include="svr_\gitlab\prjs\" />
+    <Folder Include="svr_\gitlab\repos\count\" />
+    <Folder Include="svr_\gitlab\repo\_pushed\" />
+    <Folder Include="svr_\vs\client\repo\create_\" />
+    <Folder Include="svr_\vs\client\teamworks\" />
+    <Folder Include="svr_\vs\client\teamwork\has\" />
+    <Folder Include="svr_\vs\client_\prefixed_\" />
+    <Folder Include="svr_\vs\prjs\" />
+    <Folder Include="svr_\vs\prj\prj\work\get\" />
+    <Folder Include="svr_\vs\prj\work\get\" />
+    <Folder Include="svr_\vs\works\get\" />
+    <Folder Include="svr_\vs\works\works\get\" />
+    <Folder Include="svr_\vs_\prefixed\client\repo\create\" />
+    <Folder Include="svr_\vs_\prefixed\client_\cfged\repo\create\" />
+    <Folder Include="svr_\vs_\prefixed\client_\cfged\repo\create_\prjDefault\ensure\" />
+    <Folder Include="svr_\vs_\prefixed_\cfged\client_\vaulted\repo\create_\prjDefault\ensure_\" />
+    <Folder Include="svr_\wellknown_\" />
+    <Folder Include="svr_\_bak\" />
+    <Folder Include="svr_\_vs\" />
+    <Folder Include="_module\_work_\div\" />
+    <Folder Include="_module_\top\" />
+    <Folder Include="_module_\trans_\" />
+    <Folder Include="_svrs\enum_\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="module\work\div\doc_\ignore\patch_\_nn\_rules\Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="module\repo\branch_\_pub\Settings1.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="module\repo\_cfg_\remote_\_pub\Settings1.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="svr\client_\_accVaulted\Settings1.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="svr_\_amazon\LimitInMbyte.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>LimitInMbyte.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="svr_\_azure\LimitInMbyte.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>LimitInMbyte.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="svr_\_github\LimitInMbyte.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>LimitInMbyte.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="svr_\_gitlab\LimitInMbyte.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>LimitInMbyte.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\dotNetIgnore1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultGitAttribute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transcrypt" />
+    <None Include="Resources\txtFile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vsSlnIgnore1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nilnulIgnore.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\windows.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ignore4windows.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transcrypt.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transcryptBat.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\win.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nn.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vsSln.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\%28packages%29\AWSSDK.CodeCommit.3.7.0.206\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />
+  </ItemGroup>
+  <!--<ItemGroup>
+    <PackageReference Include="AdysTech.CredentialManager">
+      <Version>2.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="AWSSDK.CodeCommit">
+      <Version>3.5.0.57</Version>
+    </PackageReference>
+    <PackageReference Include="AWSSDK.Core">
+      <Version>3.5.1.57</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._acc_._LIB_">
+      <Version>2.0.7663.23249</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._bit_._LIB_">
+      <Version>1.0.7672.20244</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._character_._LIB_">
+      <Version>2.1.7634.36220</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._fs_._LIB_">
+      <Version>2.0.7632.36132</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._fs_._LINQ_">
+      <Version>1.0.7632.25119</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._time_._LIB_">
+      <Version>1.0.7633.26611</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._txt_._LIB_">
+      <Version>1.0.7642.38229</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._web_._LIB_">
+      <Version>1.0.7673.1770</Version>
+    </PackageReference>
+    <PackageReference Include="nilnul._win_._LIB_">
+      <Version>1.0.7640.15881</Version>
+    </PackageReference>
+    <PackageReference Include="Octokit">
+      <Version>0.48.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Net.Http">
+      <Version>4.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.Algorithms">
+      <Version>4.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Security.Cryptography.X509Certificates">
+      <Version>4.3.2</Version>
+    </PackageReference>
+  </ItemGroup>-->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="ChangeAliasesOfStrongNameAssemblies" BeforeTargets="FindReferenceAssembliesForReferences;ResolveReferences">
+    <ItemGroup>
+      <ReferencePath Condition="'%(FileName)' == 'nilnul._character_._LIB_'">
+        <Aliases>global,character</Aliases>
+      </ReferencePath>
+    </ItemGroup>
+  </Target>
+  <Target Name="PostBuildMacros">
+    <GetAssemblyIdentity AssemblyFiles="$(TargetPath)">
+      <Output TaskParameter="Assemblies" ItemName="Targets" />
+    </GetAssemblyIdentity>
+    <ItemGroup>
+      <VersionNumber Include="@(Targets->'%(Version)')" />
+      <MajorMinor Include="$([System.Text.RegularExpressions.Regex]::Replace(&quot;%(Targets.Version)&quot;, &quot;^([^\.]+)\.([^\.]+)(.*)$&quot;, &quot;$1.$2&quot;))" />
+    </ItemGroup>
+  </Target>
+  <PropertyGroup>
+    <nilnulTime>$([System.DateTime]::UtcNow.ToString("yyMMddHHmmss"))</nilnulTime>
+    <nilnulPattern4date>^.{6}</nilnulPattern4date>
+    <nilnulDate>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4date)))</nilnulDate>
+    <nilnulPattern4clock>.{6}$</nilnulPattern4clock>
+    <nilnulClock>$([System.Text.RegularExpressions.Regex]::Match($(nilnulTime), $(nilnulPattern4clock)))</nilnulClock>
+    <nilnulClockCollapsed>$(nilnulClock.TrimStart('0'))</nilnulClockCollapsed>
+    <_nilnulClockPrefixed>.$(nilnulClockCollapsed)</_nilnulClockPrefixed>
+    <nilnulClockPrefixed>$(_nilnulClockPrefixed.TrimEnd('.'))</nilnulClockPrefixed>
+    <nilnulPatchRevision>$(nilnulDate)$(nilnulClockPrefixed)</nilnulPatchRevision>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEventDependsOn>
+			$(PostBuildEventDependsOn);
+			PostBuildMacros;
+		</PostBuildEventDependsOn>
+    <PostBuildEvent>echo ConfigurationName is $(ConfigurationName)
+if $(ConfigurationName) == Release (
+	"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source local
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source my
+) ELSE (
+	if  $(ConfigurationName)==Symbol (
+		"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source local
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source my
+	)
+	if  $(ConfigurationName)==Nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Dev2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-dev
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-dev.nupkg -SkipDuplicate -Source nuget.org
+	)
+)</PostBuildEvent>
+  </PropertyGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\..\(packages)\System.Text.Json.6.0.6\build\System.Text.Json.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\(packages)\System.Text.Json.6.0.6\build\System.Text.Json.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\..\(packages)\System.Text.Json.6.0.6\build\System.Text.Json.targets" Condition="Exists('..\..\(packages)\System.Text.Json.6.0.6\build\System.Text.Json.targets')" />
+  <!--<PropertyGroup>
+		<PostBuildEvent>
+			xcopy /Y /E /D /I "$(SolutionDir)\packages\*.*" "$(MSBuildProjectDirectory)\packages\"
+
+			"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -OutputDirectory ..\..
+
+			rem "NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Symbol -OutputDirectory ..\..
+
+			start %25windir%25\explorer.exe  "$(ProjectDir)"
+		</PostBuildEvent>
+	</PropertyGroup>-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

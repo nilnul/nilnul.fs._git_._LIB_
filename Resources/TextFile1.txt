@@ -1,0 +1,40 @@
+# not controlled by version
+	# directories
+**/*(!Git/
+**/*(!git/
+**/*).git/
+**/*(.git/
+**/![Gg]it)*/
+
+#tmp files
+**/~(*
+**/~)*
+**/~$*
+
+#files generated for output
+**/out)*
+**/~out)*
+**/*.out(![Gg]it)
+**/*.out(![Gg]it).*
+
+**/*(![Gg]it).*
+**/*(![Gg]it)*
+**/*(![Gg]it)
+
+#nilnul: makeing a repo from inside a repo; to avoid conflicts with parent repo, name a special folder in place; this folder is named: (!Git
+**/*([Gg]it/
+
+.nilnulCfg
+#all dotLed entries shall be ignored. But here we allow doc
+.*/
+**/.*/
+
+
+
+#nilnul: packages; possibly a symlink to another folder. without this ignore rule, git treats this as a file.
+(packages)
+
+# sketchup backup file. it's redundant to *.skp
+*.skb
+
+

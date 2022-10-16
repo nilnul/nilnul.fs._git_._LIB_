@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="nilnul.fs.git.svr_._azure" GeneratedClassName="LimitInMbyte">
+  <Profiles />
+  <Settings>
+    <Setting Name="push" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5120</Value>
+    </Setting>
+    <Setting Name="repo" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">256000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

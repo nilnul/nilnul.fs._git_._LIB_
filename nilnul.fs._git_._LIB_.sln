@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nilnul.fs._git_._LIB_", "nilnul.fs._git_._LIB_.csproj", "{FE3229C3-D9A8-4CDA-9ACB-A549855C9F2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		_Release|Any CPU = _Release|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE3229C3-D9A8-4CDA-9ACB-A549855C9F2C}._Release|Any CPU.ActiveCfg = _Release|Any CPU
+		{FE3229C3-D9A8-4CDA-9ACB-A549855C9F2C}._Release|Any CPU.Build.0 = _Release|Any CPU
+		{FE3229C3-D9A8-4CDA-9ACB-A549855C9F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3229C3-D9A8-4CDA-9ACB-A549855C9F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3229C3-D9A8-4CDA-9ACB-A549855C9F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3229C3-D9A8-4CDA-9ACB-A549855C9F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD04296F-3257-431E-9C12-3B9F77E277D4}
+	EndGlobalSection
+EndGlobal

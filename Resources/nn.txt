@@ -1,0 +1,25 @@
+# not controlled by version
+# directories
+**/*(!Git/
+**/*).git/
+**/*(.git/
+
+#tmp files
+**/~(*
+**/~)*
+**/~$*
+
+#files generated for output
+**/out)*
+**/~out)*
+**/*.out(![Gg]it)
+**/*.out(![Gg]it).*
+
+**/*(![Gg]it).*
+**/*(![Gg]it)*
+**/*(![Gg]it)
+
+#nilnul: makeing a repo from inside a repo; to avoid conflicts with parent repo, name a special folder in place; this folder is named: (!Git
+**/*([Gg]it/
+
+.nilnulCfg

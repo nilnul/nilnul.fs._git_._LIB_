@@ -1,0 +1,6 @@
+bash transcrypt -y
+if errorlevel 1 goto end
+echo: >> .gitattributes
+echo *.crypt filter=crypt diff=crypt >> .gitattributes
+:end
+pause
