@@ -15,6 +15,9 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.git.module.repo._cfg_.remote_.vered_.nom_.newest.nulable
 {
+	/// <summary>
+	/// create one if there is none.
+	/// </summary>
 	static public class _BackfillLocalX
 	{
 

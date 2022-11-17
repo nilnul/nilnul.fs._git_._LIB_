@@ -5,7 +5,7 @@ namespace nilnul.fs.git.module.repo._cfg_.remote_.svR_.github.urn
 {
 	static public class _ToSshX
 	{
-		static public void TestMethod1(
+		static public void Vod(
 			string module
 			,
 			string remote

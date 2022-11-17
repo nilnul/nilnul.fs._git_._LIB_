@@ -17,7 +17,12 @@ namespace nilnul.fs.folder.categorize_.git_
 		static public _plainWorkRepo.Ret _Trich_assumeFolder(string folder, nilnul.win.prog_.Git git = null)
 		{
 
-			var result = win.prog_.git.run._ResultX1._Result_assumeAddress(
+			var result =
+				win.prog_.git.run._ResultX1._Result_assumeAddress
+				
+
+				//win.prog_.git.run_.timeout._ResultX.Result_ofAddress
+				(
 				folder/*.container.ToString()*/,
 				"rev-parse --is-inside-work-tree"
 				, git
@@ -25,7 +30,8 @@ namespace nilnul.fs.folder.categorize_.git_
 			);
 
 			if (result.beErr)
-			{
+			{	/// eg: bad config at last lines filled with nuls; in this case, it's a bad module;
+				/// 
 				return _plainWorkRepo.Ret.Plain;
 			}
 			else

@@ -1,5 +1,9 @@
 ﻿namespace nilnul.fs.git.svr_._gitlab
 {
+	///https://docs.gitlab.com/ee/user/gitlab_com/index.html#account-and-limit-settings
+	///Repository size including LFS	10 GB, which is increased from 5G, according to (https://about.gitlab.com/blog/2015/04/08/gitlab-dot-com-storage-limit-raised-to-10gb-per-repo/)
+	///
+	/// git push and GitLab project imports are limited to 5 GB per request through Cloudflare.
 	/// <summary>
 	/// in Mb
 	/// </summary>

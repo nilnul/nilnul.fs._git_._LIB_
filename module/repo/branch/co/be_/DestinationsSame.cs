@@ -34,7 +34,7 @@ That should do what you need, if I understand you correctly.
 		/// <param name="git"></param>
 		/// <returns></returns>
 		/// <exception cref="">
-		///warning: unable to access 'report_/1281650105@qq.com-梦到終时一场空-191221_215111-18080323 付鑫鹏 网页程序设计期末设计报告/_attach_/18080323 付鑫鹏 网页程序设计期末设计报告/18080323 +¦÷++( -°-¦¦¦-=+F+¦¦+-¬+F+¦¦¿+µ/18080323 +¦÷++( -°-¦¦¦-=+F+¦¦+-¬+F+¦¦¿+µ/-°++/.gitattributes': Filename too long
+		///warning: unable to access 'report_/128...-¬+F+¦¦¿+µ/-°++/.gitattributes': Filename too long
 		///		and the returned code is nonnil.
 		/// </exception>
 		static public bool Be(

@@ -56,10 +56,21 @@ namespace nilnul.fs.git.svr_.gitlab.client_.vaulted
 		public string ensure_assumeUnnormed(Name name)
 		{
 			var normed = svr_.gitlab.repo._NameX.Encode(name);
+			try
+			{
 			svr_.gitlab.client.prj._CreationX._ByWebReq_assumesNormed(
 				this.boxed.getToken()
 				,normed
 			);
+
+			}
+			catch (
+				System.Net.WebException e //远程服务器返回错误: (400) 错误的请求。
+			)
+			{
+				// if the name is already there, we just need to return		;
+				// also later when push, the repo name is autocreated if it doesnot exist.
+			}
 			return normed;
 
 		}

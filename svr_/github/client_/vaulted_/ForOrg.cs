@@ -111,8 +111,28 @@ namespace nilnul.fs.git.svr_.github.client_.vaulted_
 			//_username = saved.UserName;
 			return gitHubClient;
 		}
+		public override string urn(string repo)
+		{
+			return _urn4ssh_assumeValid(repo);
+			//return github.client.repo._UrlX.Url(_username, repo);
+			//return github.client.repo._UrlX.Url(_username, repo);
+		}
 
 
+		public string _urn4ssh_assumeValid(string name)
+		{
+			return (
+				nilnul.fs.git.svr_.github.client.org.repo._UrlX.Ssh_withUsername(
+					this.org
+					,
+					name
+
+				)
+			)
+			;
+
+
+		}
 		public string urn4ssh(nilnul.fs.git.svr.repo.Name name)
 		{
 			return (
@@ -127,6 +147,7 @@ namespace nilnul.fs.git.svr_.github.client_.vaulted_
 
 
 		}
+
 
 	}
 }

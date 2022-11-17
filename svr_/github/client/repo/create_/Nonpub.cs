@@ -34,6 +34,7 @@ namespace nilnul.fs.git.svr_.github.client.repo.create_
 					{ //* innerXpn: null;{Name = "ApiValidationException" FullName = "Octokit.ApiValidationException"};AssemblyQualifiedName: "Octokit.ApiValidationException, Octokit, Version=0.51.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230";{"Repository creation failed."} */
 						if (e is Octokit.RepositoryExistsException e2)
 						{
+							/// as the method is "ensure"
 							//Debug.WriteLine($"{repo2create} already exists");
 							return true; //the exception will be suppresed
 

@@ -33,6 +33,16 @@ namespace nilnul.fs.git.module.repo._cfg_.remote.urls
 		=>
 			Txts(module, new _remote.Name(remote),git);
 
+		public static IEnumerable<string> Txts_addressAssumeModule(
+			string module
+			, string remote
+			,
+			nilnul.win.prog_.Git git = null
+		)
+		=>
+			Txts(nilnul.fs.git.Module.FroAddress(module), remote,git);
+
+
 
 	}
 }

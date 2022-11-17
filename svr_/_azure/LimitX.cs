@@ -20,6 +20,9 @@
 			}
 		}
 
+		/// <summary>
+		/// 5G
+		/// </summary>
 		static public int Push {
 			get {
 

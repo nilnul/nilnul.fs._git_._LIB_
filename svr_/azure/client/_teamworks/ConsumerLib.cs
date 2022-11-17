@@ -359,7 +359,15 @@ InvalidProjectNameException: TF50316: The following name is not valid: _t2208221
 		}
 
 
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="projectName"></param>
+		/// <param name="description"></param>
+		/// <param name="processName"></param>
+		/// <returns></returns>
+		/// <exception cref="Microsoft.TeamFoundation.Core.WebApi.ProjectAlreadyExistsException"> TF200019: The following project already exists on the Azure DevOps Server: nilnul._set_._LIB_. You cannot create a new project with the same name as an existing project. Provide a different name.
+		/// </exception>
 		public TeamProject _createProject4private_teamNameAssumeNormalized(
 			string projectName
 			,

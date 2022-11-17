@@ -17,5 +17,11 @@ namespace nilnul.fs.folder_.giT_
 		public Nonrepo(FolderI val) : base(val)
 		{
 		}
+
+		static public Nonrepo OfAddress(string s) {
+			return new Nonrepo(
+				nilnul.fs.Folder.FroAddress(s)
+			);
+		}
 	}
 }

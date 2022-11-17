@@ -146,7 +146,7 @@ namespace nilnul.fs.git.svr_.github.client_
 		{
 			return github.client.repo._UrlX.Url(_username, repo);
 		}
-		public string urn(string repo)
+		public virtual string urn(string repo)
 		{
 			return _urn4ssh_assumeRepo(repo);
 			//return github.client.repo._UrlX.Url(_username, repo);
