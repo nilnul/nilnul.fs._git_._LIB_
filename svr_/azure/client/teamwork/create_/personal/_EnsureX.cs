@@ -30,9 +30,11 @@ namespace nilnul.fs.git.svr_.azure.client.teamwork.create_.personal
 					 client
 					,
 					repoName
-				).ToString(); ;
+				).ToString();
 			}
-			catch (Microsoft.TeamFoundation.Core.WebApi.ProjectAlreadyExistsException TF200019)
+			catch (
+				Microsoft.TeamFoundation.Core.WebApi.ProjectAlreadyExistsException TF200019
+			)
 			{
 				return $"{repoName} already exists:{TF200019.ToString()}";
 			}

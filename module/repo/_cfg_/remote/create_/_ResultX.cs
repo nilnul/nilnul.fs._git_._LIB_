@@ -42,13 +42,13 @@ fatal: remote origin already exists.
 		/// <returns></returns>
 		///
 		[Obsolete()]
-		public static nilnul.win.prog._run.Result Result(
+		public static os.proc_.finished._result.CodMsgErr Result(
 			nilnul.fs.git.ModuleI folder,
 			_remote.Name remoteName,
 			nilnul.web.UrlI3 url, 
 			nilnul.win.prog_.Git git=null)
 		{
-			return nilnul.win.prog_.git.run._ResultX.Result(
+			return nilnul.os.prog_.git.run_.exit_.onDue._ResultX.Result(
 				folder
 				,
 				$"remote add {remoteName} {url}"
@@ -58,7 +58,7 @@ fatal: remote origin already exists.
 
 		
 
-		public static nilnul.win.prog._run.Result Result(
+		public static os.proc_.finished._result.CodMsgErr Result(
 			nilnul.fs.git.ModuleI folder,
 			string remoteName,
 			string url, 
@@ -84,7 +84,7 @@ fatal: remote origin already exists.
 			);
 		}
 
-		public static nilnul.win.prog._run.Result Result(
+		public static os.proc_.finished._result.CodMsgErr Result(
 			nilnul.fs.git.Module folder,
 			_remote.Name remoteName,
 			nilnul.web.UrlI3 url, 
@@ -93,7 +93,7 @@ fatal: remote origin already exists.
 			return Result(folder as ModuleI, remoteName,url,git);
 		}
 
-		public static nilnul.win.prog._run.Result Result(
+		public static os.proc_.finished._result.CodMsgErr Result(
 			nilnul.fs.folder_.git_.Top folder,
 			_remote.Name remoteName,
 			nilnul.web.UrlI3 url, 
@@ -111,19 +111,19 @@ fatal: remote origin already exists.
 			);
 		}
 
-		public static nilnul.win.prog._run.Result Result(
+		public static os.proc_.finished._result.CodMsgErr Result(
 			nilnul.fs.folder_.git_.Top folder,
 			_remote.Name remoteName,string  url, nilnul.win.prog_.Git git=null)
 		{
 			return Result(folder,remoteName, nilnul.web.url._ParseX3.Parse(url) );
 		}
 
-		public static nilnul.win.prog._run.Result Result(nilnul.fs.folder_.git_.Top folder, string v, UrlI3 url, win.prog_.Git git)
+		public static os.proc_.finished._result.CodMsgErr Result(nilnul.fs.folder_.git_.Top folder, string v, UrlI3 url, win.prog_.Git git)
 		{
 			return Result(folder, new _remote.Name(v),url,git);
 		}
 
-		public static nilnul.win.prog._run.Result Result(nilnul.fs.folder_.git_.Top folder, string remoteName, string url, nilnul.win.prog_.Git git=null)
+		public static os.proc_.finished._result.CodMsgErr Result(nilnul.fs.folder_.git_.Top folder, string remoteName, string url, nilnul.win.prog_.Git git=null)
 		{
 			return Result(
 				folder,
@@ -135,12 +135,12 @@ fatal: remote origin already exists.
 		}
 
 
-		public static nilnul.win.prog._run.Result Result(nilnul.fs.FolderI folder, string remoteName, string url, nilnul.win.prog_.Git git=null)
+		public static os.proc_.finished._result.CodMsgErr Result(nilnul.fs.FolderI folder, string remoteName, string url, nilnul.win.prog_.Git git=null)
 		{
 			return Result( new nilnul.fs.folder_.git_.Top(folder) ,remoteName,url,git);
 		}
 
-		public static nilnul.win.prog._run.Result Result(ModuleI folder, string v, UrlI3 url, win.prog_.Git git)
+		public static os.proc_.finished._result.CodMsgErr Result(ModuleI folder, string v, UrlI3 url, win.prog_.Git git)
 		{
 			return Result(folder,new _remote.Name(v),url,git);
 		//	throw new NotImplementedException();

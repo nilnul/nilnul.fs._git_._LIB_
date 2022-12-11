@@ -7,7 +7,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 
-namespace nilnul.win.prog_
+namespace nilnul.os.prog_
 {
 	public class Git
 	{
@@ -33,7 +33,7 @@ namespace nilnul.win.prog_
 
 		//}
 
-		public static nilnul.fs._address.Div DivInProgram = new fs._address.Div(DirInProgram);
+		public static nilnul.fs._address.Div DivInProgram = new nilnul.fs._address.Div(DirInProgram);
 
 
 		public static nilnul.fs.address_.ShieldI Container64 = new nilnul.fs.address_.shield_.BaseDiv(
@@ -507,7 +507,9 @@ namespace nilnul.win.prog_
 					 )
 		{
 
+
 		}
+
 		public override string ToString()
 		{
 			return _location;
@@ -545,10 +547,10 @@ namespace nilnul.win.prog_
 
 				);
 
-		public static nilnul.win.prog_.Git CreateFor64Bit()
+		public static nilnul.os.prog_.Git CreateFor64Bit()
 		{
 
-			return new nilnul.win.prog_.Git(
+			return new nilnul.os.prog_.Git(
 
 				File64Bit
 			);
@@ -571,13 +573,13 @@ namespace nilnul.win.prog_
 
 
 
-		public static nilnul.win.prog_.Git Singleton => nilnul.obj_.Singleton<Git>.Instance;
+		public static nilnul.os.prog_.Git Singleton => nilnul.obj_.Singleton<Git>.Instance;
 
 
-		public static nilnul.win.prog_.Git StaticInstance = CreateFor64Bit();
+		public static nilnul.os.prog_.Git StaticInstance = CreateFor64Bit();
 
 
-		public static nilnul.win.prog_.Git Injected;
+		public static nilnul.os.prog_.Git Injected;
 
 		static public void Inject()
 		{

@@ -68,7 +68,7 @@ namespace nilnul.fs.folder_.git_
 			///note: in ".git", the following command returns empty. 
 			///		in submodule, the following command returns the root of the submodule.
 
-			win.prog._run.Result result = nilnul.win.prog_.git.run._ResultX1.Result(this.en.address.en, "rev-parse --show-toplevel", git);
+			var result = nilnul.os.prog_.git.run_.exit_.onDue._ResultX.Result(this.en.address.en, "rev-parse --show-toplevel", git);
 
 			/// for repo (whichi is not bare), "" is returned. and errCode is 0.
 			/// for bareRepo (work), the base address is returned

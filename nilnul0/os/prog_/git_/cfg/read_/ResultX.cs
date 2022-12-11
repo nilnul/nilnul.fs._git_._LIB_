@@ -9,8 +9,8 @@ namespace nilnul.win.prog_.git_.cfg.read_
 {
 	static public class _ResultX
 	{
-		static public nilnul.win.prog._run.Result Result(nilnul.fs.address_.spear_.ParentDoc file, string key, nilnul.win.prog_.Git git=null) {
-			return nilnul.win.prog_.git.run._ResultX.Result(
+		static public os.proc_.finished._result.CodMsgErr Result(nilnul.fs.address_.spear_.ParentDoc file, string key, nilnul.win.prog_.Git git=null) {
+			return nilnul.os.prog_.git.run_.exit_.onDue._ResultX.Result(
 				file.parent
 				,
 				$"config -f {file.doc} {key}"
@@ -18,7 +18,7 @@ namespace nilnul.win.prog_.git_.cfg.read_
 			);
 		}
 
-		public static nilnul.win.prog._run.Result Result(
+		public static os.proc_.finished._result.CodMsgErr Result(
 			Spear spear1
 					, string key,
 			nilnul.win.prog_.Git git = null
@@ -29,7 +29,7 @@ namespace nilnul.win.prog_.git_.cfg.read_
 		}
 
 
-		public static nilnul.win.prog._run.Result Result(
+		public static os.proc_.finished._result.CodMsgErr Result(
 			string file, string key, nilnul.win.prog_.Git git = null
 		)
 		{

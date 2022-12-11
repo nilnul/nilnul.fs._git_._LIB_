@@ -43,9 +43,9 @@ The size-pack value is the size of your repository when it is pushed to a remote
 		/// <param name="git"></param>
 		/// <returns></returns>
 
-		public static win.prog._run.Result Result4human(nilnul.fs.git.ModuleI module, nilnul.win.prog_.Git git = null, int? life = null)
+		public static os.proc_.finished._result.CodMsgErr Result4human(nilnul.fs.git.ModuleI module, nilnul.win.prog_.Git git = null, int? life = null)
 		{
-			return nilnul.os.prog_.git.run_.timed_.ended._ResultX.Result(module, "count-objects -vH", git, life ?? milisecondsNeeded);
+			return nilnul.os.prog_.git.run_.exit_.onDue._ResultX.Result(module, "count-objects -vH", git, life ?? milisecondsNeeded);
 
 		}
 
@@ -67,7 +67,7 @@ The size-pack value is the size of your repository when it is pushed to a remote
 		{
 			var msg = nilnul.txt.split_._LineX.Line_eachTrim_delEmpty(
 					//nilnul.win.prog_.git.run_.timeout.result._MsgX.Msg
-					nilnul.os.prog_.git.run_.timed_.ended.result_.stdSyn._MsgX.Msg
+					nilnul.os.prog_.git.run_.exit_.onDue.result_.stdSyn._MsgX.Msg
 
 					(
 						module

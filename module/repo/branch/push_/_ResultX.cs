@@ -15,7 +15,7 @@ All files are written in a manner that implicitly preserves referential integrit
 	static public class _ResultX
 	{ 
 
-		static public nilnul.win.prog._run.Result Exe(
+		static public os.proc_.finished._result.CodMsgErr Exe(
 			nilnul.fs.git.Module folder,
 			nilnul.fs.git.module.repo._cfg_._remote.Name remote
 			, 
@@ -26,18 +26,18 @@ All files are written in a manner that implicitly preserves referential integrit
 		{
 			Trace.TraceInformation($"now run pushing commnd of git for {folder}:{nameof(remote)}:{remote}, {nameof(branch)}:{branch}");
 
-			return nilnul.win.prog_.git.run._ResultX.Result(folder, $"push {remote} {branch}",git);    //all here means all branches.
+			return nilnul.os.prog_.git.run_.exit_.onDue._ResultX.Result(folder, $"push {remote} {branch}",git);    //all here means all branches.
 		}
 
 
 
-		static public nilnul.win.prog._run.Result Exe(nilnul.fs.git.Module folder, string remote, string branch, nilnul.win.prog_.Git git=null)
+		static public os.proc_.finished._result.CodMsgErr Exe(nilnul.fs.git.Module folder, string remote, string branch, nilnul.win.prog_.Git git=null)
 		{
 			return Exe( (folder),new _cfg_._remote.Name(remote),new _branch.Name(branch), git);
 			
 		}
 
-		static public nilnul.win.prog._run.Result Exe(nilnul.fs.Folder folder, string remote, string branch, nilnul.win.prog_.Git git=null)
+		static public os.proc_.finished._result.CodMsgErr Exe(nilnul.fs.Folder folder, string remote, string branch, nilnul.win.prog_.Git git=null)
 		{
 			return Exe( 
 				new  Module(folder)
@@ -49,7 +49,7 @@ All files are written in a manner that implicitly preserves referential integrit
 			);
 		}
 
-		static public nilnul.win.prog._run.Result Exe(string folder, string remote, string branch, nilnul.win.prog_.Git git=null)
+		static public os.proc_.finished._result.CodMsgErr Exe(string folder, string remote, string branch, nilnul.win.prog_.Git git=null)
 		{
 			return Exe( Module.FroAddress(folder),new _cfg_._remote.Name(remote),new _branch.Name(branch), git);
 			

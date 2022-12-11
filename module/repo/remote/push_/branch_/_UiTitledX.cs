@@ -29,7 +29,7 @@ All files are written in a manner that implicitly preserves referential integrit
 		)
 		{
 			//Trace.TraceInformation($"now run pushing commnd of git for {folder}:{nameof(remote)}:{remote}, {nameof(branch)}:{branch}");
-			return nilnul.win.prog_.git.run_.ui._ExitCodeX.ExitCode(folder, $"push {remote} {branch}",git);   
+			return nilnul.os.prog_.git.run_.exit._CodX._Cod_ofDir9argument9cmd(folder, $"push {remote} {branch}",git);   
 			//return nilnul.win.prog_.git.run._ExitCodeX.ExitCode(folder, $"push {remote} {branch}",git);   
 		}
 

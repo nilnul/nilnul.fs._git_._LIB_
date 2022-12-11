@@ -22,15 +22,15 @@ namespace nilnul.fs.git.module.repo.cfg.section_.core
 		static public string GetVal(
 			nilnul.fs.git.ModuleI module
 			,
-			nilnul.win.prog_.Git git = null
+			nilnul.os.prog_.Git git = null
 
 		)
 		{
 
-			var result = nilnul.win.prog_.git.run_.timeout._ResultX.Result(module, $"config {KEY}", git, 30*1000, 30*1000);
+			var result = nilnul.os.prog_.git.run_.exit_.onDue._ResultX.Result(module, $"config {KEY}", git, 30*1000, 30*1000);
 			
 
-			return result.msgOrNul4errTrimmed??"";
+			return result.msg0Nul4errTrimmed??"";
 
 			
 		}

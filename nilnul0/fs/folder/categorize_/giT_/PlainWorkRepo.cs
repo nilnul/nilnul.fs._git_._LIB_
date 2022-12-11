@@ -18,9 +18,7 @@ namespace nilnul.fs.folder.categorize_.git_
 		{
 
 			var result =
-				win.prog_.git.run._ResultX1._Result_assumeAddress
-				
-
+				os.prog_.git.run_.exit._ResultX._Result_assumeAddress
 				//win.prog_.git.run_.timeout._ResultX.Result_ofAddress
 				(
 				folder/*.container.ToString()*/,
@@ -51,7 +49,7 @@ namespace nilnul.fs.folder.categorize_.git_
 		{
 			//StringWriter output = new StringWriter();
 
-			var result = nilnul.win.prog_.git.run._ResultX.Result(
+			var result = nilnul.os.prog_.git.run_.exit._ResultX.Result(
 							folder,
 			 "rev-parse --is-inside-work-tree"
 

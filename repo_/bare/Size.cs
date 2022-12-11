@@ -29,9 +29,9 @@ The size-pack value is the size of your repository when it is pushed to a remote
 		  appends unit Human readable
 			*/
 
-		public static win.prog._run.Result Result(nilnul.fs.git.repo_.IBare module, nilnul.win.prog_.Git git=null)
+		public static os.proc_.finished._result.CodMsgErr Result(nilnul.fs.git.repo_.IBare module, nilnul.win.prog_.Git git=null)
 		{
-			return nilnul.win.prog_.git.run._ResultX.Result_ofAddress(module.ToString(), "count-objects -vH", git);
+			return nilnul.os.prog_.git.run_.exit_.onDue._ResultX.Result_ofAddress(module.ToString(), "count-objects -vH", git);
 
 		}
 

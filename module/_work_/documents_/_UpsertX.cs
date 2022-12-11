@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.git.module._work_.documents_
 {
+	/// <summary>
+	/// files updated or inserted since latest commit;
+	/// </summary>
 
 	static public class _UpsertX
 	{

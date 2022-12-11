@@ -15,7 +15,7 @@ namespace nilnul.fs.git.module.index.commit_.allowEmpty_
 			,
 			nilnul.win.prog_.Git git=null)
 		{
-			return nilnul.win.prog_.git.run_.ui._ExitCodeX._ExitCode_ofAddress(
+			return nilnul.os.prog_.git.run_.exit._CodX._Cod_ofDir9argument9cmd(
 				_module
 				, 
 				$"commit --allow-empty  -m\"{_msg_normalized}\""

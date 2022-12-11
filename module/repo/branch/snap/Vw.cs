@@ -15,7 +15,7 @@ namespace nilnul.fs.git.module.repo.branch.snap
 		   error code is 128 if the ref doesn't exist
 		 */
 
-		static public nilnul.win.prog._run.Result Result(
+		static public os.proc_.finished._result.CodMsgErr Result(
 			nilnul.fs.git.ModuleI module,
 			nilnul.fs.git.repo._reference.Name reference
 			,
@@ -24,7 +24,7 @@ namespace nilnul.fs.git.module.repo.branch.snap
 			int? timeout_milliseconds=null
 		)
 		{
-			return nilnul.win.prog_.git.run_.timeout._ResultX.Result(module, $"rev-parse {reference}", git, timeout_milliseconds??5000);
+			return nilnul.os.prog_.git.run_.exit_.onDue._ResultX.Result(module, $"rev-parse {reference}", git, timeout_milliseconds??5000);
 		}
 
 		static public string Msg(
@@ -36,7 +36,7 @@ namespace nilnul.fs.git.module.repo.branch.snap
 			int? timeout_milliseconds=null
 		)
 		{
-			return nilnul.win.prog._run.result._MsgX.Msg( Result(module,reference,git,timeout_milliseconds));
+			return nilnul.os.proc_.finished._result.data._MsgX.Msg( Result(module,reference,git,timeout_milliseconds));
 		}
 		static public string MsgNul(
 			nilnul.fs.git.ModuleI module,
@@ -47,7 +47,7 @@ namespace nilnul.fs.git.module.repo.branch.snap
 			int? timeout_milliseconds=null
 		)
 		{
-			return nilnul.win.prog._run.result._MsgOrNul4errX.TxtNul( Result(module,reference,git,timeout_milliseconds));
+			return nilnul.os.proc_.finished._result.data._Msg0Nul4errX.TxtNul( Result(module,reference,git,timeout_milliseconds));
 		}
 
 

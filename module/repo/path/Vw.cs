@@ -23,7 +23,7 @@ namespace nilnul.fs.git.module.repo.path
 		static public string Path_assumeWorktop(string workTop, nilnul.win.prog_.Git git = null)
 		{
 
-			win.prog._run.Result result = nilnul.win.prog_.git.run._ResultX1.Result_ofAddress(workTop, "rev-parse --git-dir", git);
+			var result = nilnul.os.prog_.git.run_.exit_.onDue._ResultX.Result_ofAddress(workTop, "rev-parse --git-dir", git);
 
 			if (result.notBeErr)
 			{

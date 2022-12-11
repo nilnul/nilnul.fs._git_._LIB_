@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 namespace nilnul.fs.git.module._work_.documents_
 {
 
+	/// <summary>
+	/// updated or deleted
+	/// </summary>
 	static public class _ChangeX
 	{
 		/// <summary>
@@ -23,7 +26,8 @@ namespace nilnul.fs.git.module._work_.documents_
 		)
 		{
 			var arg = "ls-files -oc --exclude-standard";
-			var result = nilnul.win.prog_.git.run._ResultX1._Result_assumeAddress(
+			var result =nilnul.os.prog_.git.run_.exit._ResultX._Result_assumeAddress
+				(
 				module
 				,
 				 arg  /* git config --global core.quotePath false

@@ -10,6 +10,11 @@ namespace nilnul.fs.git.module
 	{
 		public const string DENOTE = ".git";
 
+		static public string DefaultAddress_worktopAssumeAddress(string module)
+		{
+			return System.IO.Path.Combine(module, ".git");
+		}
+
 		static public nilnul.fs.address_.ShieldI DefaultShield(nilnul.fs.git.ModuleI module)
 		{
 			return nilnul.fs.address_.shield_.BaseDir.Create_dirDenote(module.top1.en.address.en, DENOTE);
