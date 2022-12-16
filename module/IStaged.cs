@@ -19,11 +19,13 @@ namespace nilnul.fs.git.module
 	 */
 
 	/// <summary>
+	/// including: index and work.
 	/// what is committed is in the index rather than the working tree
 	/// </summary>
 	/// <see cref="repo.IIndex"/>
 	/// alias:
 	///		staged
+	///			like state,
 	///			such as to differ from <see cref="repo.IIndex"/>
 	///		index
 	public interface IStaged

@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.fs.git.module.work.move_.into_
+namespace nilnul.fs.git.module.repo.remote.current
 {
-
-	///	make a tmp snap, then <see cref="module.repo.snap.override_._StateX"/>
-	///	
+	/* 
+	 git symbolic-ref refs/remotes/origin/HEAD refs/remotes/origin/master
+	 */
 	/// <summary>
-	/// 
 	/// </summary>
-	class _BranchX
+	internal class _AssignX
 	{
 	}
 }

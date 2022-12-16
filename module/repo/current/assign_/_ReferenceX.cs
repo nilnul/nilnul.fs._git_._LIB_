@@ -5,14 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using G = nilnul.win.prog_.Git;
 
-namespace nilnul.fs.git.module.head.set_
+namespace nilnul.fs.git.module.repo.current.assign_
 {
-	/*es, you can do this.
+	/*stackoverflow.com/questions/1282639/switch-git-branch-without-files-checkout
+	 * 
+	 * Yes, you can do this.
 
 git symbolic-ref HEAD refs/heads/otherbranch
 If you need to commit on this branch, you'll want to reset the index too otherwise you'll end up committing something based on the last checked out branch.
 
 git reset*/
+	/*
+	 Use echo "ebff34ffb665de0694872dceabe0edeaf50ec5a9" > .git/HEAD followed by git reset to point to a ref instead of a branch. – 
+cadorn
+ Oct 18, 2012 at 19:03
+
+Directly writing to the HEAD file is less dependable. What if you are in a subdir? For detached head (head pointing to SHA1 directly), try this: git update-ref HEAD refs/heads/otherbranch
+
+git update-ref is useful, but it also moves the tip of the current branch. – 
+tomekwi
+
+	 */
 	static public class _ReferenceX
 	{
 		

@@ -20,7 +20,7 @@ namespace nilnul.os.prog_.git.run_.exit
 		)
 		{
 			var t= _CodX_lurk._Cod_of1argument(_module,arg,git);
-			Thread.Sleep(3*1000);
+			//Thread.Sleep(3*1000);
 			return t;
 		
 		

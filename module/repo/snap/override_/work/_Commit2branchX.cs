@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.fs.git.module.repo.snap.override_
+namespace nilnul.fs.git.module.repo.snap.override_.work
 {
 	/*
 	 https://stackoverflow.com/questions/51814990/git-how-do-you-replace-your-current-working-directory-with-a-previous-commit-wi
@@ -26,9 +26,14 @@ git reset --hard <old_commit>
 
 That resets the index (and working tree) to the right content, but that also moves HEAD. However, that moves tmp HEAD, not master HEAD.
 
+
+
 move back tmp HEAD to where master is, but without modifying the index or the working tree (which are representing what we need for a new commit)
 
 git reset --soft master
+
+
+
 
 make a new commit, on top of master/tmp HEAD, which represents the right content (the old commit).
 
@@ -42,7 +47,7 @@ git branch -M tmp master
 	/// <summary>
 	/// 
 	/// </summary>
-	class _WorkX
+	class _Commit2branchX
 	{
 	}
 }

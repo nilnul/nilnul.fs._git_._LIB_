@@ -10,7 +10,7 @@ namespace nilnul.fs.git.module.repo.snap.override_.work_
 	/// checkout the old snap, copy the files to a tmp place
 	/// checkout the branch you specified, delete all work, move files in from that tmp place.
 	/// </summary>
-	class _ByCheckoutAndOverride
+	class _ByCheckout2tmp
 	{
 	}
 }

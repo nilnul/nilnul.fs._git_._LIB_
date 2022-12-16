@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.fs.git.module.work.move_.into_
+namespace nilnul.fs.git.module.repo.stage.make_
 {
-
-	///	make a tmp snap, then <see cref="module.repo.snap.override_._StateX"/>
-	///	
 	/// <summary>
-	/// 
+	/// git reset HEAD
+	/// # index = HEAD
 	/// </summary>
-	class _BranchX
+	internal class Current
 	{
 	}
 }

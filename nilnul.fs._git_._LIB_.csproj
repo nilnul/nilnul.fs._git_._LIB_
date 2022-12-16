@@ -101,10 +101,10 @@
       <HintPath>packages\AE.Net.Mail.1.7.7816.38666\lib\net48\AE.Net.Mail.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.CodeCommit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\AWSSDK.CodeCommit.3.7.100.25\lib\net45\AWSSDK.CodeCommit.dll</HintPath>
+      <HintPath>..\..\(packages)\AWSSDK.CodeCommit.3.7.100.33\lib\net45\AWSSDK.CodeCommit.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\AWSSDK.Core.3.7.100.25\lib\net45\AWSSDK.Core.dll</HintPath>
+      <HintPath>..\..\(packages)\AWSSDK.Core.3.7.102.1\lib\net45\AWSSDK.Core.dll</HintPath>
     </Reference>
     <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745">
       <HintPath>packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
@@ -126,20 +126,20 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.25.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Abstractions.6.25.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Abstractions.6.25.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\Microsoft.IdentityModel.Clients.ActiveDirectory.5.3.0\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.25.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.IdentityModel.JsonWebTokens.6.25.0\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.JsonWebTokens.6.25.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.25.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Logging.6.25.0\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Logging.6.25.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.25.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Tokens.6.25.0\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\Microsoft.IdentityModel.Tokens.6.25.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.Build2.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
@@ -232,7 +232,7 @@
       <HintPath>..\..\(packages)\nilnul._data_._LIB_.1.1.221023.84757\lib\net481\nilnul._data_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._fs_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._fs_._LIB_.2.1.221119.44737\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
+      <HintPath>..\..\(packages)\nilnul._fs_._LIB_.2.1.221209.141242\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._fs_._WIN_CTR_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\nilnul._fs_._WIN_CTR_.1.1.220828.160201\lib\net481\nilnul._fs_._WIN_CTR_.dll</HintPath>
@@ -264,7 +264,7 @@
       <HintPath>..\..\(packages)\nilnul._obj_._LIB_.1.2.221126.72816\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._os_._LIB4FX_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._os_._LIB4FX_.1.0.221130.130108\lib\net481\nilnul._os_._LIB4FX_.dll</HintPath>
+      <HintPath>..\..\(packages)\nilnul._os_._LIB4FX_.1.0.221212.85512\lib\net481\nilnul._os_._LIB4FX_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._rel_._LIB_.1.2.220817.152548\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
@@ -288,7 +288,7 @@
       <HintPath>..\..\(packages)\nilnul._win_._CTR4WIN_.1.1.220909.180734\lib\net481\nilnul._win_._CTR4WIN_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._win_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\nilnul._win_._LIB_.1.1.221129.132809\lib\net481\nilnul._win_._LIB_.dll</HintPath>
+      <HintPath>..\..\(packages)\nilnul._win_._LIB_.1.1.221212.74225\lib\net481\nilnul._win_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._xml_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>..\..\(packages)\nilnul._xml_._LIB_.1.1.221119.43115\lib\net481\nilnul._xml_._LIB_.dll</HintPath>
@@ -305,8 +305,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IdentityModel" />
-    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.25.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\(packages)\System.IdentityModel.Tokens.Jwt.6.25.0\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\(packages)\System.IdentityModel.Tokens.Jwt.6.25.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
@@ -428,22 +428,35 @@
     <Compile Include="module\cfg\key\Val.cs" />
     <Compile Include="module\child_\INested.cs" />
     <Compile Include="module\child_\nested\SubtreeAbsorb.cs" />
+    <Compile Include="module\IState.cs" />
+    <Compile Include="module\repo\current\assign_\ref_\_ByDetachX.cs" />
+    <Compile Include="module\repo\current\assign_\_SnapX.cs" />
+    <Compile Include="module\repo\current\assign_\NewFolder1\Reference.cs" />
+    <Compile Include="module\repo\current\assign_\snap_\Defaulted.cs" />
     <Compile Include="module\repo\current\be_\IReifiable.cs" />
+    <Compile Include="module\repo\current_\branch\assign_\_SnapX.cs" />
+    <Compile Include="module\repo\current_\branch\_AssignX.cs" />
     <Compile Include="module\repo\current_\branch_\unborn\stash_\Xpn.cs" />
     <Compile Include="module\repo\current_\branch_\unborn\stash_\xpn_\NoSnap.cs" />
     <Compile Include="module\repo\current_\ISnap.cs" />
     <Compile Include="module\repo\current\assign_\ref_\_TimedX.cs" />
     <Compile Include="module\repo\current_\reifiable\Stash.cs" />
+    <Compile Include="module\repo\remote\current\_DropX - Copy.cs" />
+    <Compile Include="module\repo\remote\current\_DropX.cs" />
     <Compile Include="module\repo\size_\_StdSynX.cs" />
+    <Compile Include="module\repo\snap\override_\work\_Commit2branchX.cs" />
     <Compile Include="module\repo\snap\override_\work_\_ByCheckoutContent.cs" />
-    <Compile Include="module\repo\snap\override_\work_\_ByCheckoutAndOverride.cs" />
-    <Compile Include="module\repo\snap\override_\_WorkX.cs" />
+    <Compile Include="module\repo\snap\override_\work_\_ByCheckout2tmp.cs" />
+    <Compile Include="module\repo\snap\override_\_StateX.cs" />
+    <Compile Include="module\repo\stage\make_\Current.cs" />
     <Compile Include="module\repo\Unlock.cs" />
     <Compile Include="module\repo\_cfg_\remote\urn\Change.cs" />
     <Compile Include="module\repo\_cfg_\remote_\svR_\azure\url_\IInvlid.cs" />
     <Compile Include="module\repo\_cfg_\remote_\svR_\azure\urn_\IInvlid.cs" />
     <Compile Include="module\stash_\Xpn.cs" />
     <Compile Include="module\stash_\xpn_\NoSnap.cs" />
+    <Compile Include="module\state\move_\_ToBranchX.cs" />
+    <Compile Include="module\work\cmmit_\_ToBranchX.cs" />
     <Compile Include="module\work\move_\into_\branch_\_BranchX.cs" />
     <Compile Include="module\work\move_\into_\_BranchX.cs" />
     <Compile Include="module\_stash\ICreate.cs" />
@@ -740,6 +753,9 @@
     <Compile Include="repo\current_\ISnap.cs" />
     <Compile Include="repo\current\Detach.cs" />
     <Compile Include="repo\ICurrent.cs" />
+    <Compile Include="repo\remote\Current.cs" />
+    <Compile Include="repo\remote\current\assign_\Defaulted.cs" />
+    <Compile Include="repo\remote\current\Drop.cs" />
     <Compile Include="repo\_UnlockX.cs" />
     <Compile Include="repo\Snap.cs" />
     <Compile Include="repo\snap\Branch.cs" />
@@ -1121,7 +1137,7 @@
     <Compile Include="nilnul0\fs\folder\git_\_commit\div_\work_\RootOfInnerModule.cs" />
     <Compile Include="nilnul0\fs\folder\git_\_TopX.cs" />
     <Compile Include="nilnul0\fs\folder\sups\NearestGitModule.cs" />
-    <Compile Include="module\repo\current\assign_\Reference.cs" />
+    <Compile Include="module\repo\current\assign_\_ReferenceX.cs" />
     <Compile Include="module\repo\current\assign_\ref_\_BranchX.cs" />
     <Compile Include="module\head_\branch\Introduce.cs" />
     <Compile Include="module\stage\add_\allBut_\MinWinTitled.cs" />
@@ -1374,7 +1390,7 @@
     <Compile Include="module\work\doc_\~\Doc.cs" />
     <Compile Include="module\work\doc_\_ignore_\patch_\upsert_\Dotnet.cs" />
     <Compile Include="module\work\doc_\_ignore_\patch_\upsert_\_dotnet\Patch.cs" />
-    <Compile Include="module\StagedI.cs" />
+    <Compile Include="module\IStaged.cs" />
     <Compile Include="module\stage\be_\empty_\DryRun - Copy.cs" />
     <Compile Include="module\stage\reset_\BranchParent.cs" />
     <Compile Include="module\stage\_add\Neglect.cs" />
@@ -2115,9 +2131,11 @@
     <Folder Include="module\repo\branch_\current\remote\" />
     <Folder Include="module\repo\branch_\current_\reified\" />
     <Folder Include="module\repo\branch_\vereds\sort\" />
+    <Folder Include="module\repo\current\assign_\snap\" />
     <Folder Include="module\repo\current\assing_\" />
     <Folder Include="module\repo\current\at_\" />
     <Folder Include="module\repo\current\vs_\work\" />
+    <Folder Include="module\repo\current_\branch\assign\" />
     <Folder Include="module\repo\current_\branch\vw_\" />
     <Folder Include="module\repo\current_\branch_\sed\" />
     <Folder Include="module\repo\log\" />
@@ -2128,8 +2146,10 @@
     <Folder Include="module\repo\snaps\commits\_append\" />
     <Folder Include="module\repo\snaps\commits\_ins_\" />
     <Folder Include="module\repo\snap\net_\" />
+    <Folder Include="module\repo\snap\override_\work\commit2branch\" />
     <Folder Include="module\repo\snap\refers\" />
     <Folder Include="module\repo\snap\revert\" />
+    <Folder Include="module\repo\snap_\current\copy_\" />
     <Folder Include="module\repo\snap_\current\document\toWork\by_\" />
     <Folder Include="module\repo\snap_\current\froRepo_\" />
     <Folder Include="module\repo\snap_\staged\" />
@@ -2295,6 +2315,7 @@
     <Folder Include="repo\branch\_name\txt_\dnts_\" />
     <Folder Include="repo\div\root\" />
     <Folder Include="repo\remote\branch\" />
+    <Folder Include="repo\remote\current\drop_\" />
     <Folder Include="repo\snap\branch\" />
     <Folder Include="repo\_branch\name_\dnts\be_\local_\_pub_\" />
     <Folder Include="repo\_branch\name_\_vered\_prefix\txt\be_\" />
@@ -2456,7 +2477,7 @@
     <None Include="Resources\vsSln.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\..\%28packages%29\AWSSDK.CodeCommit.3.7.100.25\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />
+    <Analyzer Include="..\..\%28packages%29\AWSSDK.CodeCommit.3.7.100.33\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />
   </ItemGroup>
   <!--<ItemGroup>
     <PackageReference Include="AdysTech.CredentialManager">
