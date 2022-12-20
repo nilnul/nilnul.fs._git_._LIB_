@@ -12,8 +12,8 @@ namespace nilnul.os.prog_.git.run_.exit
 		//	return nilnul.win.program_.Git.RunCmd_result(module, arg, git);
 		//}
 
-		static public int _Cod_of1argument(
-			nilnul.fs.address_.ShieldI _module,
+		static public int _Cod_assumeAddress_assumeArgument(
+			string _module,
 			string arg,
 			nilnul.win.prog_.Git git = null
 			)
@@ -30,11 +30,23 @@ namespace nilnul.os.prog_.git.run_.exit
 				,
 				arg
 				,
-				_module.ToString()
+				_module
 				
 
 			);
 		}
+
+		static public int _Cod_of1argument(
+			nilnul.fs.address_.ShieldI _module,
+			string arg,
+			nilnul.win.prog_.Git git = null
+			)
+		{
+			return _Cod_assumeAddress_assumeArgument(_module.ToString(),arg,git);
+		
+	
+		}
+
 
 		static public int _Cod_ofArgument9cmd(
 			

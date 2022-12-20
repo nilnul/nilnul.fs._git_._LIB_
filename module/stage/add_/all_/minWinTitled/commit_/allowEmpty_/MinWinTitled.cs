@@ -20,7 +20,9 @@ namespace nilnul.fs.git.module.index.add_.all_.minWinTitled.commit_.allowEmpty_
 			var err=index.add_.all_._MinWinTitledX.ExitCode(module, git);
 			if (err==0)
 			{
-				return	nilnul.fs.git.module.index.commit_.allowEmpty_._MinUiTitledX.ExitCode(module, msg, git);
+				//fs.git.module.repo.unlock_.wait._TimeoutX._Timeout_addressAssumeModule(module.ToString());
+
+				return nilnul.fs.git.module.index.commit_.allowEmpty_._MinUiTitledX.ExitCode(module, msg, git);
 			}
 			else
 			{

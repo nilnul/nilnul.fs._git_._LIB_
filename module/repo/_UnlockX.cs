@@ -12,7 +12,7 @@ namespace nilnul.fs.git.module.repo
 		public const string LOCK_ENDING = git.repo.be_._LockenX.LOCK_ENDING;// ".lock";
 		static public void _ByRename_moduleAssumeAddress(string repobase)
 		{
-			nilnul.fs.git.repo._UnlockX._ByRename_assumeAddressAsFolder(
+			nilnul.fs.git.repo._UnlockX._ByRename_addressAssumeRepo(
 				nilnul.fs.git.module._RepoX.DefaultAddress_worktopAssumeAddress(repobase)
 			);
 		}

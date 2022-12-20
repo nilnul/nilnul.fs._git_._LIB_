@@ -9,19 +9,18 @@ using nilnul.fs.git;
 using nilnul.win.proc_.timeout_.end;
 using nilnul.win.prog._run._result;
 
-namespace nilnul.os.prog_.git.run_.exit_.onDue
+namespace nilnul.os.prog_.git.run_.exit_.onDue.cod_
 {
 	
 	/// <summary>
 	/// 
 	/// </summary>
-	static public class _CodX
+	static public class _ThrowKillingX
 	{
-
-		static public  int OfAddress(string arg, string dir, int? lurk=null, int? loom_aftLurk = null, int? bye = null,int? waitAftKill=null, Git git=null)
+		static public  int _Cod_ofArgument_assumeDir(string arg, string dir, int? lurk=null, int? loom_aftLurk = null, int? bye = null,int? waitAftKill=null, Git git=null)
 		{
 
-			return nilnul.os.prog.prep_.shell_.win_.hid.proc_.started_.doodle_.loom_.exit_.onDue._CodX._Cod_loomAssumeAftLurk
+			return nilnul.os.prog.prep_.shell_.win_.hid.proc_.started_.doodle_.loom_.exit_.throwKilling_.onDue._CodX._Cod_loomAssumeAftLurk
 				//run_.quit_.onDue.Cod.Singleton.ofAddress
 				(
 				nilnul.win.prog_.git.nulable.Fallback.NotNul(git).val.location
@@ -36,10 +35,11 @@ namespace nilnul.os.prog_.git.run_.exit_.onDue
 				,waitAftKill
 			);
 		}
+
 		static public  int _Cod_dirOfAddress_ofLoom9closing(string arg, string dir, int? life = null, int? bye = null, Git git=null)
 		{
 
-			return OfAddress(arg,dir,null,life,bye,null,git);
+			return _Cod_ofArgument_assumeDir(arg,dir,null,life,bye,null,git);
 		}
 
 

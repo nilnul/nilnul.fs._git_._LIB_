@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.os.prog_.git.run_.exit_.onDue
+namespace nilnul.os.prog_.git.run_.exit_.onDue.result_
 {
 	/// <summary>
-	/// timeout is implicit
 	/// </summary>
-	static public class _ResultX
+	static public class _Wait4unlock_assumeModuleX
 	{
-		//static public program_._git.Result Result(nilnul.fs.git.ModuleI module, string arg, nilnul.win.program_.Git git=null) {
-		//	return nilnul.win.program_.Git.RunCmd_result(module, arg, git);
-		//}
 	
 		static public proc_.finished._result.CodMsgErr _Result_assumeAddress(
 			string shield,
@@ -25,24 +21,20 @@ namespace nilnul.os.prog_.git.run_.exit_.onDue
 
 			)
 		{
-			return nilnul.os.prog.run_.exit_.onDue.Result.Singleton.ofAddress
-
-				(
-				nilnul.win.prog_.git.nulable.Fallback.NotNul(git).val.location
+			fs.git.module.repo.unlock_.wait._ForceX._ForceAsTask_addressAssumeModule(shield);
+			return _ResultX._Result_assumeAddress(
+				shield
 				,
+
 				arg
 				, 
-				shield
-				,life,bye
+				git
+				,
+				life
+				,
+				bye
 			);
-			//return nilnul.win.prog.run_.nonShell_.redir_.both_.noUi_.wait._ResultX.Result(
-			//	shield //.ToString()
-			//	,
-			//	nilnul.win.prog_.git.nulable.Fallback.NotNul(git).val.location
-			//	,
-			//	arg
-			//);
-			//return Result( new nilnul.fs.git.Module(module),arg,git);
+			
 		}
 		static public proc_.finished._result.CodMsgErr Result(
 			nilnul.fs.address_.ShieldI shield,
@@ -54,25 +46,21 @@ namespace nilnul.os.prog_.git.run_.exit_.onDue
 
 			)
 		{
-			return _Result_assumeAddress(
-				shield.ToString()
+			fs.git.module.repo.unlock_.wait._ForceX._ForceAsTask_addressAssumeModule(shield.ToString());
+			return _ResultX.Result(
+				shield
 				,
+
 				arg
 				, 
 				git
 				,
-				life,bye
+				life
+				,
+				bye
 			);
-			//return nilnul.win.prog.run_.nonShell_.redir_.both_.noUi_.wait._ResultX.Result(
-			//	shield //.ToString()
-			//	,
-			//	nilnul.win.prog_.git.nulable.Fallback.NotNul(git).val.location
-			//	,
-			//	arg
-			//);
-			//return Result( new nilnul.fs.git.Module(module),arg,git);
+			
 		}
-
 
 		static public proc_.finished._result.CodMsgErr Result_ofAddress(
 			string module,

@@ -15,6 +15,8 @@ namespace nilnul.fs.git.module.index.commit_.allowEmpty_
 			,
 			nilnul.win.prog_.Git git=null)
 		{
+			fs.git.module.repo.unlock_.wait._TimeoutX._Timeout_addressAssumeModule(_module);
+
 			return nilnul.os.prog_.git.run_.exit._CodX._Cod_ofDir9argument9cmd(
 				_module
 				, 

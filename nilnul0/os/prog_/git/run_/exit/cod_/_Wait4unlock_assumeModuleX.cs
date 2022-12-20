@@ -5,31 +5,31 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace nilnul.os.prog_.git.run_.exit
+namespace nilnul.os.prog_.git.run_.exit.cod_
 {
-	static public class _CodX
+	static public class _Wait4unlock_assumeModuleX
 	{
-		//static public program_._git.Result Result(nilnul.fs.git.ModuleI module, string arg, nilnul.win.program_.Git git=null) {
-		//	return nilnul.win.program_.Git.RunCmd_result(module, arg, git);
-		//}
 
-		static public int _Cod_assumeAddress_assumeArgument(
+		static public int _Cod_addressAssumeModule_assumeArgument(
 			string _module,
 			string arg,
 			nilnul.win.prog_.Git git = null
 		)
 		{
-			return _CodX_lurk._Cod_assumeAddress_assumeArgument(_module,arg,git);
-		
+			nilnul.fs.git.module.repo.unlock_.wait._ForceX._ForceAsTask_addressAssumeModule(_module).Wait();
+
+			return _CodX._Cod_assumeAddress_assumeArgument(_module,arg,git);
 		}
+
 		static public int _Cod_1argument(
 			nilnul.fs.address_.ShieldI _module,
 			string arg,
 			nilnul.win.prog_.Git git = null
 		)
 		{
-			return _Cod_assumeAddress_assumeArgument(_module.ToString(),arg,git);
-		
+			nilnul.fs.git.module.repo.unlock_.wait._ForceX._ForceAsTask_addressAssumeModule(_module.ToString()).Wait();
+
+			return _CodX._Cod_1argument(_module,arg,git);
 		}
 
 

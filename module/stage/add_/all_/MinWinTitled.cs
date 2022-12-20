@@ -18,6 +18,8 @@ namespace nilnul.fs.git.module.index.add_.all_
 	{
 		static public int ExitCode( nilnul.fs.git.ModuleI _module , nilnul.win.prog_.Git git=null)
 		{
+			fs.git.module.repo.unlock_.wait._TimeoutX._Timeout_addressAssumeModule(_module.ToString());
+
 			return nilnul.win.prog_.git.run._ExitCodeX.ExitCode(
 				_module
 				, 
