@@ -46,7 +46,7 @@ Finally, force master to be where tmp is: one new commit later.
 git branch -M tmp master
  Note also that git branch -M tmp master leaves you on master and deletes tmp
 	 */
-	/// <see cref="module.IState"/>
+	/// <see cref="module.IShelf"/>
 	/// <summary>
 	/// 
 	/// </summary>

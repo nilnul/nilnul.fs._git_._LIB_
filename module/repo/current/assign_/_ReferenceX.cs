@@ -28,9 +28,23 @@ tomekwi
 	 */
 	static public class _ReferenceX
 	{
-		
 
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="module"></param>
+		/// <param name="_ref">
+		/// we need this to be typed, or else:
+		///			fatal: Refusing to point HEAD outside of refs/
+		/// </param>
+		/// <param name="git"></param>
+
+		static public void _Vod_addressAssumeModule_assumeRef( string module, string _ref, nilnul.os.prog_.Git git = null)
+		{
+			nilnul.os.prog_.git.run_.exit.cod.vow_._NilX._Vod_ofAddress_ofArg(module, $"symbolic-ref HEAD {_ref}",git);
+
+		}
 
 		static public void Exe( nilnul.fs.folder_.git_.work_.Top module, git.repo._reference.Name _ref, nilnul.win.prog_.Git git = null)
 		{
@@ -45,7 +59,15 @@ tomekwi
 
 		}
 
-
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="module"></param>
+		/// <param name="_ref">
+		/// we need to make sure it's a "refs/*", as when given a detached head to git cmd, we get:
+		///		fatal: Refusing to point HEAD outside of refs/
+		/// </param>
+		/// <param name="git"></param>
 		static public void Exe( nilnul.fs.FolderI module, string _ref, nilnul.win.prog_.Git git = null)
 		{
 			Exe(new fs.folder_.git_.work_.Top( module), new git.repo._reference.Name(  _ref),git);

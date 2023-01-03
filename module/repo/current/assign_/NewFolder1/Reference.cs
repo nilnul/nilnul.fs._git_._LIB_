@@ -1,4 +1,5 @@
-﻿using System;
+﻿using nilnul.dev.git.module.branches_.seeded;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +27,8 @@ git update-ref is useful, but it also moves the tip of the current branch. –
 tomekwi
 
 	 */
+
+	[Obsolete(nameof(module.repo.current))]
 	static public class _ReferenceX
 	{
 		

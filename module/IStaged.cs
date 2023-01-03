@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.git.module
 {
+	/*This tree is a complex internal caching mechanism. Git generally tries to hide the implementation details of the Staging Index from the user.
+	To accurately view the state of the Staging Index we must utilize a lesser known Git command git ls-files. The git ls-files command is essentially a debug utility for inspecting the state of the Staging Index tree. 
+	 */
 	/*https://github.com/git/git/blob/master/Documentation/technical/index-format.txt
 	 
 		index file is not expected in bare repo.

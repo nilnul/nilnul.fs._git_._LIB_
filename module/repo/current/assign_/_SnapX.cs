@@ -20,7 +20,20 @@ namespace nilnul.fs.git.module.repo.current.assign_
 	/// <remarks>
 	/// would throw exception if there is no defaulted commit;
 	/// </remarks>
-	internal class _SnapX
+	static public class _SnapX
 	{
+		static public void _Vod_addressAssumeModule_assumeSnap(string _addressAssumeModule, string _assumeSnap
+			,
+			nilnul.os.prog_.Git git=null
+		) {
+
+			nilnul.os.prog_.git.run_.exit.cod.vow_._NilX._Vod_ofAddress_ofArg(
+				_addressAssumeModule
+				,
+				$"switch --detach {_assumeSnap}"
+				,
+				git
+			);
+		}
 	}
 }

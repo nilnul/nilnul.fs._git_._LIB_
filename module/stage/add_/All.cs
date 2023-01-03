@@ -23,7 +23,7 @@ namespace nilnul.fs.git.module.index.add_
 		/// <param name="git"></param>
 		static public void Exe( nilnul.fs.folder_.git_.Top _module , nilnul.win.prog_.Git git=null)
 		{
-			fs.git.module.repo.unlock_.wait._TimeoutX._Timeout_addressAssumeModule(_module.ToString());
+			//fs.git.module.repo.unlock_.wait._TimeoutX._Timeout_addressAssumeModule(_module.ToString());
 			nilnul.win.prog_.git.run.exitCode.vow_._NilX.Void(
 				_module, "add -A"
 				,

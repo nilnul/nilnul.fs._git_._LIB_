@@ -4,15 +4,13 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace nilnul.win.prog_
+namespace nilnul.os.prog_
 {
 	/// <summary>
 	/// the git system that is for versioning control
 	/// </summary>
-	public class GitK
-		
+	public class Gitk
 	{
-
 
 		public const string DIR_IN_Program = "Git";
 
@@ -230,7 +228,7 @@ namespace nilnul.win.prog_
 		}
 
 
-		public GitK(string location)
+		public Gitk(string location)
 		{
 			_location = location;
 
@@ -238,7 +236,7 @@ namespace nilnul.win.prog_
 
 
 
-		public GitK()
+		public Gitk()
 			:this(
 				Address64
 				 )
@@ -246,7 +244,7 @@ namespace nilnul.win.prog_
 
 		}
 
-		public GitK(nilnul.fs.address_.SpearI address64)
+		public Gitk(nilnul.fs.address_.SpearI address64)
 		{
 			this._location = address64.ToString();
 		}
@@ -259,10 +257,10 @@ namespace nilnul.win.prog_
 
 		
 
-		static public GitK CreateFor64Bit()
+		static public Gitk CreateFor64Bit()
 		{
 
-			return new GitK(
+			return new Gitk(
 				Address64
 
 				
@@ -277,8 +275,17 @@ namespace nilnul.win.prog_
 
 
 
-		static public readonly GitK Singleton = SingletonByDefault<GitK>.Instance;
+		static public Gitk Singleton
+		{
+			get
+			{
+				return nilnul._obj.typ_.nilable_.unprimable_.Singleton<Gitk>.Instance;
+			}
+		}
+			
 
-		static public GitK StaticInstance = Singleton;
+		//static public readonly GitK Singleton = SingletonByDefault<GitK>.Instance;
+
+		static public Gitk StaticInstance = Singleton;
 	}
 }

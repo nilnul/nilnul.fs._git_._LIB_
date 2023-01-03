@@ -44,7 +44,7 @@ namespace nilnul.fs.git.module.repo.head
 
 		static public StackOne1 Put(nilnul.fs.folder_.git_.Top module, nilnul.fs.git.module.repo._branch.Name newBranch, G git = null) {
 
-			var _oldRef=repo.head.vw_._ShowRefX.Txt(module,git);
+			var _oldRef=repo.current._VwX.Txt(module,git);
 
 			Head1._Checkout2NewBranch( module, newBranch,git);
 

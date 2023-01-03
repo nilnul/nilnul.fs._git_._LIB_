@@ -19,7 +19,7 @@ namespace nilnul.win.prog_.git.run
 			nilnul.win.prog_.Git git = null
 			)
 		{
-			return os.prog_.git.run_.exit._CodX_lurk._Cod_of1argument(_module,arg,git);
+			return os.prog_.git.run_.exit._CodX._Cod_1argument(_module,arg,git);
 			//return nilnul.win.prog.run._ExitCodeX.ExitCode(
 			//	_module
 			//	,
