@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-namespace nilnul.fs.git.module.repo.branch_.vered_.nub_.newest
+namespace nilnul.fs.git.module.repo.branch_.vered_.nub_.newest_.noncurrent
 {
 	/// <summary>
 	/// if the last two bakBranches are same in contents, delete the last one, 

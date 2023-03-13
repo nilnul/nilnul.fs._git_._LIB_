@@ -41,11 +41,11 @@ namespace nilnul.fs.git.module.stow.create
 			nilnul.os.prog_.Git git = null
 		)
 		{
-			///create the bak branch; and also reset the head; soe here, the bak branch is not the default branch, and thus can be force dropped;
+			///create the bak branch; and also reset the head; so here, the bak branch is not the default branch, and thus can be force dropped;
 			///
 			var branch = _CreateX._Branch_addressAssumeModule_assumeNub(_location, _assumeShelfKey, git);
 
-			var newBranch =module.repo.branch_.vered_.nub_.newest._RegressX._Regress_addressAssumeModule_branchAssumeNewest(_location, branch, git);
+			var newBranch =module.repo.branch_.vered_.nub_.newest_.noncurrent._RegressX._Regress_addressAssumeModule_branchAssumeNewest(_location, branch, git);
 			newlyCreated = (branch == newBranch);
 			return newBranch;
 		}

@@ -87,6 +87,30 @@
     <LangVersion>latest</LangVersion>
     <!--<LangVersion>preview</LangVersion>-->
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev2nuget|AnyCPU'">
+    <OutputPath>bin\Dev2nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Sym2nuget|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Sym2nuget\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
   <PropertyGroup>
     <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
@@ -232,7 +256,7 @@
       <HintPath>packages\nilnul._data_._LIB_.1.1.221023.84757\lib\net481\nilnul._data_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._fs_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\_TEST_(Git\packages\nilnul._fs_._LIB_.2.1.230103.90900\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
+      <HintPath>..\_TEST_(Git\packages\nilnul._fs_._LIB_.2.1.230111.61524-sym\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._fs_._WIN_CTR_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._fs_._WIN_CTR_.1.1.220828.160201\lib\net481\nilnul._fs_._WIN_CTR_.dll</HintPath>
@@ -264,7 +288,7 @@
       <HintPath>packages\nilnul._obj_._LIB_.1.2.221230.134914\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._os_._LIB4FX_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._os_._LIB4FX_.1.0.221219.174314\lib\net481\nilnul._os_._LIB4FX_.dll</HintPath>
+      <HintPath>..\_TEST_(Git\packages\nilnul._os_._LIB4FX_.1.0.230111.120633-sym\lib\net481\nilnul._os_._LIB4FX_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._rel_._LIB_.1.2.220817.152548\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
@@ -276,7 +300,7 @@
       <HintPath>packages\nilnul._time_._LIB_.1.1.221120.114651\lib\net481\nilnul._time_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._txt_._LIB_.1.1.221218.142109\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
+      <HintPath>..\_TEST_(Git\packages\nilnul._txt_._LIB_.1.1.230107.122025-sym\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._txt_._WIN_CTR_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._txt_._WIN_CTR_.1.1.220828.153928\lib\net481\nilnul._txt_._WIN_CTR_.dll</HintPath>
@@ -426,6 +450,10 @@
     <Compile Include="module\be_\Nonwrought.cs" />
     <Compile Include="module\be_\_LockedX1.cs" />
     <Compile Include="module\branches\merge_\Squash.cs" />
+    <Compile Include="module\branch\create_\_CheckoutX.cs" />
+    <Compile Include="module\branch_\orphan_\_WorkKeptX.cs" />
+    <Compile Include="module\branch_\orphan_\StowIntact.cs" />
+    <Compile Include="module\branch_\orphan_\WorkCleared.cs" />
     <Compile Include="module\cfg\key\Val.cs" />
     <Compile Include="module\child_\INested.cs" />
     <Compile Include="module\child_\nested\SubtreeAbsorb.cs" />
@@ -493,24 +521,29 @@
     <Compile Include="module\repo\_cfg_\remote\urn\Change.cs" />
     <Compile Include="module\repo\_cfg_\remote_\svR_\azure\url_\IInvlid.cs" />
     <Compile Include="module\repo\_cfg_\remote_\svR_\azure\urn_\IInvlid.cs" />
+    <Compile Include="module\stage\commit\IVod.cs" />
+    <Compile Include="module\stage\commit\_VodX.cs" />
+    <Compile Include="module\stage\commit_\All.cs" />
     <Compile Include="module\stow\create\_CollapseX.cs" />
-    <Compile Include="module\repo\branch_\vered_\nub_\newest\_RegressX.cs" />
+    <Compile Include="module\repo\branch_\vered_\nub_\newest_\noncurrent\_RegressX.cs" />
     <Compile Include="module\stow\document\_RmX.cs" />
     <Compile Include="module\stow\ISkim.cs" />
     <Compile Include="module\stow\_CreateX.cs" />
     <Compile Include="module\stage\commit_\emptible_\Msgless.cs" />
     <Compile Include="module\stage\document\_ResetX.cs" />
     <Compile Include="module\stage\document\_RestoreX.cs" />
-    <Compile Include="module\stash_\Xpn.cs" />
-    <Compile Include="module\stash_\xpn_\NoSnap.cs" />
+    <Compile Include="module\stow_\Xpn.cs" />
+    <Compile Include="module\stow_\xpn_\NoSnap.cs" />
     <Compile Include="module\stow\move_\_ToBranchX.cs" />
     <Compile Include="module\statue_\aligned\Move2snap.cs" />
+    <Compile Include="module\stow\_SkimX.cs" />
     <Compile Include="module\stow\_skim\snap\_CollapseX.cs" />
     <Compile Include="module\stow\_skim\_Snap2orphanX.cs" />
     <Compile Include="module\work\cmmit_\_ToBranchX.cs" />
     <Compile Include="module\work\document\_RestoreX.cs" />
     <Compile Include="module\work\move_\into_\branch_\_BranchX.cs" />
     <Compile Include="module\work\move_\into_\_BranchX.cs" />
+    <Compile Include="module\work_\xpn_\size_\TooLargeException.cs" />
     <Compile Include="module\_stash\ICreate.cs" />
     <Compile Include="module\_work_\documents_\IChange.cs" />
     <Compile Include="module\_work_\documents_\IUpsert.cs" />
@@ -644,6 +677,9 @@
     <Compile Include="module\_work_\documents_\Nonignored.cs" />
     <Compile Include="nilnul0\fs\folder\categorize_\giT_\plainWorkRepo_\Deadlined.cs" />
     <Compile Include="nilnul0\fs\folder\git_\cfg_\safe_\_DirecotoryInGlobalX.cs" />
+    <Compile Include="nilnul0\fs\folder_\empty\git_\clone_\IBare.cs" />
+    <Compile Include="nilnul0\fs\folder_\empty\git_\clone_\IBranchSingle.cs" />
+    <Compile Include="nilnul0\fs\folder_\empty\git_\IClone.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\documents_\notDotLed_\nonlink_\_WithinWorkX.cs" />
     <Compile Include="module\_work_\documents_\_NonlinkX.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\directories_\nonlink_\_NontopX.cs" />
@@ -775,6 +811,8 @@
     <Compile Include="nilnul0\os\prog_\git\run_\exit\_CodX_unlurk.cs" />
     <Compile Include="nilnul0\os\prog_\git\run_\exit_\onDue\cod_\_ThrowKillingX.cs" />
     <Compile Include="nilnul0\os\prog_\git\run_\exit_\onDue\result_\_Wait4unlock_assumeModuleX.cs" />
+    <Compile Include="nilnul0\os\prog_\git\run_\Xpn4GitRun.cs" />
+    <Compile Include="nilnul0\os\prog_\git\run_\IXpn.cs" />
     <Compile Include="nilnul0\os\prog_\git\run_\lurk_\exit\NewFolder1\_CodX - Copy.cs" />
     <Compile Include="nilnul0\os\prog_\git\run_\exit\%28\_CodX.cs" />
     <Compile Include="nilnul0\os\prog_\git\run_\exit\%28\_ResultX1.cs" />
@@ -802,8 +840,12 @@
     <Compile Include="Properties\SettingsX.cs" />
     <Compile Include="Repo.cs" />
     <Compile Include="repo\Act.cs" />
+    <Compile Include="repo\act_\IXpn.cs" />
     <Compile Include="repo\act_\Unlock.cs" />
+    <Compile Include="repo\act_\xpn_\FsAccessDenied.cs" />
+    <Compile Include="repo\be_\_FsAccessIssueX.cs" />
     <Compile Include="repo\be_\Lockee.cs" />
+    <Compile Include="repo\be_\_crashed\_NewIsTakenX.cs" />
     <Compile Include="repo\branch\Fetch.cs" />
     <Compile Include="repo\branch\Move.cs" />
     <Compile Include="repo\branch_\current_\IReified.cs" />
@@ -921,6 +963,8 @@
     <Compile Include="svr_\azure\_client\Org.cs" />
     <Compile Include="svr_\bitbucket\client\repo\size\Limit.cs" />
     <Compile Include="svr_\github\repo\urn_\_SshX.cs" />
+    <Compile Include="svr_\gitlab\acc\IWorkshop.cs" />
+    <Compile Include="svr_\gitlab\acc\workshop\size\IStat.cs" />
     <Compile Include="svr_\gitlab\client\prj\create_\IImport.cs" />
     <Compile Include="svr_\gitlab\client\prj\Creation.cs" />
     <Compile Include="svr_\gitlab\client\prj\ICreate.cs" />
@@ -977,7 +1021,7 @@
     <Compile Include="module\files\List.cs" />
     <Compile Include="module\head\Detach.cs" />
     <Compile Include="module\stage\commit_\AllowEmpty.cs" />
-    <Compile Include="module\stage\trackings\_DelX.cs" />
+    <Compile Include="module\stage\document\_DelX.cs" />
     <Compile Include="module\repo\branch\BringOut.cs" />
     <Compile Include="module\repo\branch\bringOut_\KeepWork.cs" />
     <Compile Include="module\repo\branch\co_\tracked\be_\Pushed.cs" />
@@ -1483,18 +1527,18 @@
     <Compile Include="module\repo\_fetch_\Options.cs" />
     <Compile Include="module\repo\_snap_\BlankI.cs" />
     <Compile Include="module\_StashX.cs" />
-    <Compile Include="module\stash\pop_\_BranchX.cs" />
-    <Compile Include="module\stash\apply_\_IndexX.cs" />
-    <Compile Include="module\stash\PushI.cs" />
-    <Compile Include="module\stash\push_\IndexI.cs" />
-    <Compile Include="module\stash\push_\_IncUntracked.cs" />
-    <Compile Include="module\stash\push_\_AllX.cs" />
-    <Compile Include="module\stash\Save.cs" />
-    <Compile Include="module\stash\save_\All.cs" />
-    <Compile Include="module\stash\save_\_IndexX.cs" />
-    <Compile Include="module\stash\_ApplyX.cs" />
-    <Compile Include="module\stash\_VwX.cs" />
-    <Compile Include="module\stash\_DropX.cs" />
+    <Compile Include="module\_stow\pop_\_BranchX.cs" />
+    <Compile Include="module\_stow\apply_\_IndexX.cs" />
+    <Compile Include="module\_stow\PushI.cs" />
+    <Compile Include="module\_stow\push_\IndexI.cs" />
+    <Compile Include="module\_stow\push_\_IncUntracked.cs" />
+    <Compile Include="module\_stow\push_\_AllX.cs" />
+    <Compile Include="module\_stow\Save.cs" />
+    <Compile Include="module\_stow\save_\All.cs" />
+    <Compile Include="module\_stow\save_\_IndexX.cs" />
+    <Compile Include="module\_stow\_ApplyX.cs" />
+    <Compile Include="module\_stow\_VwX.cs" />
+    <Compile Include="module\_stow\_DropX.cs" />
     <Compile Include="module\stow\Vw.cs" />
     <Compile Include="module\top\_TopX.cs" />
     <Compile Include="module\_work_\documents_\Modified.cs" />
@@ -1868,7 +1912,7 @@
     <Compile Include="svr_\Gitlab.cs" />
     <Compile Include="svr_\gitlab\_prjs\Prjs.cs" />
     <Compile Include="svr_\gitlab\client\prj\create_\rest_\webReq\create_\parTxt\Add.cs" />
-    <Compile Include="svr_\gitlab\user\user\PrivateToken.cs" />
+    <Compile Include="svr_\gitlab\usr\user\PrivateToken.cs" />
     <Compile Include="svr_\vs\repo\Name.cs" />
     <Compile Include="svr_\vs\repo\_name\txt\Be.cs" />
     <Compile Include="svr_\vs\repo\_name\txt\be\Vow.cs" />
@@ -2036,7 +2080,7 @@
     <Compile Include="svr_\gitlab\_prjs\Projects.cs" />
     <Compile Include="svr_\gitlab\client\prj\NewFolder1\Add.cs" />
     <Compile Include="svr_\gitlab\User.cs" />
-    <Compile Include="svr_\gitlab\user\PrivateToken.cs" />
+    <Compile Include="svr_\gitlab\usr\PrivateToken.cs" />
     <Compile Include="svr_\gitlab\_client\Gitlab.cs" />
     <Compile Include="svr_\VisualStudio.cs" />
     <Compile Include="svr_\vs\client\teamwork\add_\%28retiring\ByWebClient_basicUser.cs" />
@@ -2152,6 +2196,7 @@
     <Compile Include="_svr_\LimitInMbyteI.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="module\branch_\orphan\" />
     <Folder Include="module\cfg\ignore\" />
     <Folder Include="module\cfg\section\key\val\" />
     <Folder Include="module\cfg\section_\sub\" />
@@ -2195,6 +2240,7 @@
     <Folder Include="module\repo\branch_\current_\reified\" />
     <Folder Include="module\repo\branch_\vereds\sort\" />
     <Folder Include="module\repo\branch_\vered_\nub\delNewIfSame\" />
+    <Folder Include="module\repo\branch_\vered_\nub_\newest\" />
     <Folder Include="module\repo\current\assign_\snap\" />
     <Folder Include="module\repo\current\assing_\" />
     <Folder Include="module\repo\current\at_\" />
@@ -2270,8 +2316,9 @@
     <Folder Include="module\stage\commit~\" />
     <Folder Include="module\stage\divisions_\ignored\" />
     <Folder Include="module\stage\reset_\NewFolder1\" />
+    <Folder Include="module\stage\trackings\" />
     <Folder Include="module\stashed\" />
-    <Folder Include="module\stash\push\" />
+    <Folder Include="module\stash_\" />
     <Folder Include="module\statue\" />
     <Folder Include="module\stow\create\_collapse\" />
     <Folder Include="module\tree\co\dif_\" />
@@ -2294,6 +2341,7 @@
     <Folder Include="module\work\doc_\_ignore_\patch_\upsert_\dotnet\" />
     <Folder Include="module\work\doc_\_ignore_\patch_\upsert_\_dotnet\patch_\" />
     <Folder Include="module\work\merge_\" />
+    <Folder Include="module\work_\nonRt\" />
     <Folder Include="module\_branch\" />
     <Folder Include="module\_cfg_\attributes\" />
     <Folder Include="module\_cfg_\exclude\_patch\" />
@@ -2302,6 +2350,7 @@
     <Folder Include="module\_index_\" />
     <Folder Include="module\_merge\" />
     <Folder Include="module\_repo_\" />
+    <Folder Include="module\_stow\push\" />
     <Folder Include="module\_work_\directories\" />
     <Folder Include="module\_work_\directory_\noDotLed\" />
     <Folder Include="module\_work_\directory_\notDotLed_\nonlink\directories_\" />
@@ -2655,6 +2704,10 @@ if $(ConfigurationName) == Release (
 	if  $(ConfigurationName)==Dev2nuget (
 		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-dev
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-dev.nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Sym2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-sym
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source nuget.org
 	)
 )</PostBuildEvent>
   </PropertyGroup>

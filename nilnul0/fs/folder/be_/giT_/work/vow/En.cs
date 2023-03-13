@@ -11,5 +11,12 @@ namespace nilnul.fs.folder.be_.git_.work.vow
 		public En(FolderI val) : base(val)
 		{
 		}
+
+		public static En OfAddress(string module)
+		{
+			return new En(
+				nilnul.fs.Folder.FroAddress(module)
+			);
+		}
 	}
 }

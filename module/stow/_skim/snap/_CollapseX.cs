@@ -47,7 +47,7 @@ namespace nilnul.fs.git.module.stow._skim.snap
 			///
 			var branch = _skim._Snap2orphanX._Branch_addressAssumeModule_assumeNub(_location,_assumeStowBranch, _assumeSkimKey, git);
 
-			var newBranch = module.repo.branch_.vered_.nub_.newest._RegressX._Regress_addressAssumeModule_branchAssumeNewest(_location, branch, git);
+			var newBranch = module.repo.branch_.vered_.nub_.newest_.noncurrent._RegressX._Regress_addressAssumeModule_branchAssumeNewest(_location, branch, git);
 			newlyCreated = (branch == newBranch);
 			return newBranch;
 		}

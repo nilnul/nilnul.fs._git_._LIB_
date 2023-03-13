@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.git.module.index.add_
 {
+	/// git add -A
+	/// -or-
+	/// git add --all
+	/// note: git add -a is error;
 	/// <summary>
 	/// including：
 	///		removed,
@@ -14,6 +18,15 @@ namespace nilnul.fs.git.module.index.add_
 	///	not including:
 	///		ignored
 	/// </summary>
+	/// <remarks>
+	/// vs:
+	///		git commit --all,
+	///			which "Tell the command to automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected."
+	///	vs:
+	///		git add . stages new files and modifications, without deletions (on the current directory and its subdirectories).
+	///	vs:
+	///		git add -u stages modifications and deletions, without new files
+	/// </remarks>
 	static public class _AllX
 	{
 		/// <summary>

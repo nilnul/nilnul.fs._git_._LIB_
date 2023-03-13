@@ -49,7 +49,17 @@ namespace nilnul.fs.git.module.stow._skim
 			try
 			{
 				nilnul.os.prog_.git.run_.exit.cod.vow_._NilX._Vod_ofAddress_ofArg(
-					_location, $"switch --orphan {orphanBranch}", git
+					_location,
+					$"checkout --orphan {orphanBranch}" //don't use switch --orphan as it may fail due to:
+					/*
+					 error: Your local changes to the following files would be overwritten by checkout:
+.gitignore
+Please commit your changes or stash them before you switch branches.
+Aborting
+					 */
+					// it seems that switch would try to reset stage, resulting loss of modification to workspace; it will complain about modified, not deleted;
+					,
+					git
 				);       
 			}
 			catch (Exception x)

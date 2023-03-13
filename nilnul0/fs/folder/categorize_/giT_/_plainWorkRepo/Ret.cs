@@ -15,8 +15,15 @@ namespace nilnul.fs.folder.categorize_.git_._plainWorkRepo
 	{
 		/// <summary>
 		/// not in any module.
-		/// note, some non-plain folder may incur eroor, eg: "fatal: bad config line 19 in file .git/config" ( The reason might some nuls are at the end.). Then the folder is wrongly deemed as plain.
+		/// note, some non-plain folder may incur eroor, eg: "fatal: bad config line 19 in file .git/config" ( The reason might some nuls are at the end.), or the owner is not the current user, then the folder is wrongly deemed as plain.
 		/// </summary>
+		/// <remarks>
+		/// </remarks>
+		/// alias:
+		///		trivia
+		///		none
+		///		noop
+		///		nope
 		Plain,
 
 		/// <summary>

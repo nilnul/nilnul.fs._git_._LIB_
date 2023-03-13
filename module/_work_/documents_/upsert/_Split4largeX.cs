@@ -14,6 +14,12 @@ namespace nilnul.fs.git.module._work_.documents_.upsert
 	/// </summary>
 	static public class _Split4largeX
 	{
+		static public long InOctets_beforeAllowance= (
+			(long)(svrs_._aagg.LimitInMbyteX.Blob)
+		) * nilnul.num_.radix_.binary_.Mega.INT32 // 1048576
+		;
+		static public long InOctets= ((long)(svrs_._aagg.LimitInMbyteX.Blob * .9)) * 1048576;
+
 		/// <summary>
 		/// 
 		/// </summary>
@@ -61,7 +67,13 @@ nilnul.fs.address_.Spear.Parse(
 				);
 			}
 			var totalSizeInMb = sumOfPushInMb + currentRepoSizeInMbytes;
-			if ( totalSizeInMb >= svrs_._aagg.LimitInMbyteX.Repo)
+			if ( totalSizeInMb >=
+				fs.git.module.work_.xpn_.size_.TooLargeException.SafeSizeInMoctets
+				/*
+				svrs_._aagg.LimitInMbyteX.Repo *
+				0.9	// we allow some misc files to be added;
+				*/
+			)
 			{
 				throw new documents_.upsert_.xpn_.BeyondQuotaException(
 					$"total size({totalSizeInMb}MB) of repo:{module} after the commint commit will be greater than {svrs_._aagg.LimitInMbyteX.Repo}Mb set by {typeof(svrs_._aagg.LimitInMbyteX).FullName}.{nameof(svrs_._aagg.LimitInMbyteX.Repo)}"
@@ -69,17 +81,17 @@ nilnul.fs.address_.Spear.Parse(
 
 			}
 
-			var blobUpperInMb = ((long) ( svrs_._aagg.LimitInMbyteX.Blob * .9 ) )* 1048576;
+			var blobUpperInOctets = ((long) ( svrs_._aagg.LimitInMbyteX.Blob * .9 ) )* 1048576;
 
 			nonlinkFileEs.Where(
 				d =>
-				d.Length >=blobUpperInMb
+				d.Length >=blobUpperInOctets
 			).ForEach(
 				t=>
 				nilnul.fs.file.split_._ThinToeX._Folder0nul_Split1drop_assumeFile_assumePositive(
 					t.Item1
 					,
-					blobUpperInMb
+					blobUpperInOctets
 				)
 			);
 

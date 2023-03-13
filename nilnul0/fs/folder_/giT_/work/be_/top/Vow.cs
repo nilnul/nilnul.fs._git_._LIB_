@@ -17,5 +17,9 @@ namespace nilnul.fs.folder_.git_.work.be_.top
 			}
 		}
 
+		public void vow(string module)
+		{
+			base.vow(nilnul.fs.folder_.git_.Work.FroAddress(module));
+		}
 	}
 }

@@ -29,7 +29,7 @@ namespace nilnul.fs.folder.categorize_.git_
 
 			if (result.beErr)
 			{	/// eg: bad config at last lines filled with nuls; in this case, it's a bad module;
-				/// 
+				/// or lack prevelige when,say the owner is not the current user.
 				return _plainWorkRepo.Ret.Plain;
 			}
 			else

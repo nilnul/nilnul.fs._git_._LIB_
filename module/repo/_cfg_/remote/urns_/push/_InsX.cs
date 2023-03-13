@@ -42,7 +42,26 @@ git remote set-url origin --push --add user2@repo2
 			 */
 		static public void _Vod_urnAssumeValid(nilnul.fs.git.ModuleI folder, _remote.Name remote, string url, nilnul.win.prog_.Git git=null)
 		{
-			nilnul.win.prog_.git.run.exitCode.vow_._NilX.Void(folder,$"remote set-url --add {remote} {url}",git);
+			var argument = $"remote set-url --add {remote} {url}";
+			try
+			{
+				nilnul.win.prog_.git.run.exitCode.vow_._NilX.Void(folder,argument,git);
+
+			}
+			catch (Exception x)
+			{
+			/*eg: 
+			 * error: could not lock config file .git/config: File exists
+			fatal: could not set 'remote.nilnulBak_all6.url' to 'git@github.com:sb/somerepo.git'
+
+			having seen that, we can check that a "config.lock" exists;
+			*/
+				throw new Exception(
+					$"having run git({git}) {argument} at ({url}), the returned exit code is nonnil;"
+					,
+					x
+				);
+			}
 
 		}
 
