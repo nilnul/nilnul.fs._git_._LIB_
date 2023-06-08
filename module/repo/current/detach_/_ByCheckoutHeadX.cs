@@ -12,7 +12,7 @@ namespace nilnul.fs.git.module.repo.current.detach_
 			nilnul.os.prog_.git.run_.exit.cod.vow_._NilX._Vod_ofAddress_ofArg(
 				_addressAssumeModule
 				,
-				"checkout @" // don't use checkout HEAD or else some error happens;
+				"checkout @" // don't use checkout HEAD; rather use "@",or else some error happens;
 				,
 				git
 			);

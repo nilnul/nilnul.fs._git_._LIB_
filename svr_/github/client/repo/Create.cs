@@ -45,7 +45,7 @@ namespace nilnul.fs.git.svr_.github.client.repo
 							return true; //the exception will be suppresed
 
 						}
-						else
+						else  // when using useranem and password, not token, the authentication is failed;
 						{
 							return false;   //the exception will be rethrown
 						}

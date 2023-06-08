@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.fs.git.module.repo.branch.co.be_
 {
 	/// <summary>
-	/// diff of two branches
+	/// diff of two branches;	/// compare the content of the two branches, where the two branch might differ in meta data but same in content;
 	/// </summary>
 	static public class _DestinationsSameX
 	{

@@ -68,7 +68,7 @@ Aborting
 				throw new Exception($"exception {x} when: checkout -b {orphanBranch} @ {_location}", x);
 			}
 
-			Trace.TraceInformation($"committing worksite for { _location}");
+			//Trace.TraceInformation($"committing worksite for { _location}");
 
 			try
 			{
@@ -110,6 +110,7 @@ Aborting
 			}
 			Trace.TraceInformation($"added and committed all changes at { _location}");
 			#region make a tmp branch such that we can step back with the tip therein without affecting others
+			// move to the shelf branch;
 			fs.git.module.repo.current._AssignX._Assign_1assumeHead(module, _shelfBranch);
 
 			///create temp branch to backoff
@@ -120,13 +121,11 @@ Aborting
 			//nilnul.txt_._GuidX.Construct_noHyphen(Guid.NewGuid());
 
 			Trace.TraceInformation($"creating temp branch:{tempBranch} @ {_location}");
-
 			nilnul.os.prog_.git.run_.exit.cod.vow_.nil_._CustomXpnX.OfAddress(_location, $"checkout -b {tempBranch}", $"exception when checkout -b {tempBranch} @{_location}", git);
-
 			Trace.TraceInformation($"created temp branch{tempBranch}  @ {_location}");
 			#endregion
-			Trace.TraceInformation($"backtracking head  @ {_location}");
 
+			Trace.TraceInformation($"backtracking head  @ {_location}");
 
 			//change the index to the HEAD~; also moved branch
 			nilnul.os.prog_.git.run_.exit.cod.vow_._NilX.OfAddress(_location, "reset HEAD~", git);

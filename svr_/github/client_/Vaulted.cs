@@ -18,9 +18,9 @@ namespace nilnul.fs.git.svr_.github.client_
 	/// </exception>
 	///
 	[Serializable]
-	public class Vaulted :svr.client_.AccVaultedI
+	public class Vaulted : svr.client_.AccVaultedI
 
-		//: ISerializable
+	//: ISerializable
 	{
 		public const string HEADER = "git";
 		public virtual string vaultKey()
@@ -31,61 +31,79 @@ namespace nilnul.fs.git.svr_.github.client_
 		/// <summary>
 		/// github requires a header; you can provide a random value, such as "header"
 		/// </summary>
-		private string _prod=HEADER;
+		private string _prod = HEADER;
 
 		//public string header => _header;
 
 		[Obsolete(nameof(prod))]
-		public string header {
-			get {
+		public string header
+		{
+			get
+			{
 				return _prod;
 			}
-			set {
+			set
+			{
 				_prod = value;
 			}
 		}
-		public string prod {
-			get {
+		public string prod
+		{
+			get
+			{
 				return _prod;
 			}
-			set {
+			set
+			{
 				_prod = value;
 			}
 		}
 
 
 		private string _username;
+
+		/// https://docs.github.com/en/rest/overview/authenticating-to-the-rest-api?apiVersion=2022-11-28
+		/// <summary>
+		/// 
+		/// Authentication with username and password is not supported.
+		/// If you try to authenticate with user name and password, you will receive a 4xx error.
+		/// </summary>
+		/// user name, and the token.
+		/// 
 		public string username
 		{
 			get
 			{
 				return _username;
 			}
-			set {
+			set
+			{
 				_username = value;
 			}
 		}
 
 
 
-		public string credKey4push =>vaultKey();
+		public string credKey4push => vaultKey();
 
-		static public bool operator ==(Vaulted a, Vaulted b) {
-			return object.ReferenceEquals(a,b)
-				||
-				( a._prod == b._prod && a._username == b._username );
-		}
-		static public bool operator !=(Vaulted a, Vaulted b) {
-			return !(a==b);
-		}
-
-		public Vaulted(string header, string username)
+		static public bool operator ==(Vaulted a, Vaulted b)
 		{
-			this._prod = header;
+			return object.ReferenceEquals(a, b)
+				||
+				(a._prod == b._prod && a._username == b._username);
+		}
+		static public bool operator !=(Vaulted a, Vaulted b)
+		{
+			return !(a == b);
+		}
+
+		public Vaulted(string prod_, string username)
+		{
+			this._prod = prod_;
 			this._username = username;
 		}
 
-		public Vaulted( string username):this(HEADER,username)
+		public Vaulted(string username) : this(HEADER, username)
 		{
 			//this._username = username;
 		}
@@ -102,9 +120,9 @@ namespace nilnul.fs.git.svr_.github.client_
 		/// <see cref="Of"/>
 		/// </summary>
 		/// <param name="github"></param>
-		public Vaulted(svr.client_.accVaulted_.Github github):this(
-			github.header,github.cred().UserName
-			
+		public Vaulted(svr.client_.accVaulted_.Github github) : this(
+			github.header, github.cred().UserName
+
 		)
 		{
 		}
@@ -112,9 +130,10 @@ namespace nilnul.fs.git.svr_.github.client_
 		static public Vaulted Of(
 			svr.client_.accVaulted_.Github
 
-			github) {
+			github)
+		{
 
-			return new  Vaulted(
+			return new Vaulted(
 
 				github.header
 				,
@@ -122,7 +141,8 @@ namespace nilnul.fs.git.svr_.github.client_
 			);
 		}
 
-	public virtual GitHubClient githubClient() {
+		public virtual GitHubClient githubClient()
+		{
 			var gitHubClient = new GitHubClient(
 				new ProductHeaderValue(this.header)
 			);
@@ -134,13 +154,13 @@ namespace nilnul.fs.git.svr_.github.client_
 				throw new exception_.UnexpectedException("after ensurance,  the credential shall not be null.");
 			}
 
-			gitHubClient.Credentials = new Credentials( saved.UserName,saved.Password);
+			gitHubClient.Credentials = new Credentials(saved.UserName, saved.Password);
 
 			//_username = saved.UserName;
 			return gitHubClient;
 		}
 
-		
+
 
 		public string gitUrl(string repo)
 		{

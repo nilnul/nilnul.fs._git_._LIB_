@@ -20,7 +20,7 @@ namespace nilnul.fs.git.module.stow._skim.snap
 
 
 	/// <summary>
-	/// if the last two bakBranches are same in contents, delete the last one, 
+	/// if the last two bakBranches are same in contents, delete the latest one, 
 	/// </summary>
 	public static class _CollapseX
 	{

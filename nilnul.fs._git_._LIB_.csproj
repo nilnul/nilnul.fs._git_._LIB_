@@ -125,10 +125,10 @@
       <HintPath>packages\AE.Net.Mail.1.7.7816.38666\lib\net48\AE.Net.Mail.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.CodeCommit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>packages\AWSSDK.CodeCommit.3.7.100.46\lib\net45\AWSSDK.CodeCommit.dll</HintPath>
+      <HintPath>..\..\.deps\AWSSDK.CodeCommit.3.7.100.136\lib\net45\AWSSDK.CodeCommit.dll</HintPath>
     </Reference>
     <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>packages\AWSSDK.Core.3.7.103.8\lib\net45\AWSSDK.Core.dll</HintPath>
+      <HintPath>..\..\.deps\AWSSDK.Core.3.7.106.43\lib\net45\AWSSDK.Core.dll</HintPath>
     </Reference>
     <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745">
       <HintPath>packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
@@ -140,8 +140,11 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Azure.DevOps.Comments.WebApi, Version=18.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.Azure.DevOps.Comments.WebApi.dll</HintPath>
+    <Reference Include="Microsoft.Azure.DevOps.Comments.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.Azure.DevOps.Comments.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Pipelines.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.Azure.Pipelines.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Azure.Services.AppAuthentication, Version=1.6.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>packages\Microsoft.Azure.Services.AppAuthentication.1.6.2\lib\net472\Microsoft.Azure.Services.AppAuthentication.dll</HintPath>
@@ -150,175 +153,178 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.IdentityModel.Abstractions.6.25.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.30.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Microsoft.IdentityModel.Abstractions.6.30.1\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IdentityModel.Clients.ActiveDirectory.5.3.0\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.IdentityModel.JsonWebTokens.6.25.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.30.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Microsoft.IdentityModel.JsonWebTokens.6.30.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.IdentityModel.Logging.6.25.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.30.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Microsoft.IdentityModel.Logging.6.30.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.IdentityModel.Tokens.6.25.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.30.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Microsoft.IdentityModel.Tokens.6.30.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.Build2.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.Common, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.VisualStudio.Services.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Common.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.VisualStudio.Services.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.Core.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.Core.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.Dashboards.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Dashboards.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.Dashboards.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.DistributedTask.Common.Contracts, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.16.170.0\lib\net462\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.16.205.1\lib\net462\Microsoft.TeamFoundation.DistributedTask.Common.Contracts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.TeamFoundation.Pipelines.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.Pipelines.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.Policy.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Policy.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.Policy.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.SourceControl.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.SourceControl.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.Test.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Test.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.Test.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.TestManagement.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.TestManagement.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.TestManagement.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.Wiki.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Wiki.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.Wiki.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.Work.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.Work.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.Work.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.WorkItemTracking.Process.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.WorkItemTracking.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.TeamFoundation.WorkItemTracking.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Services.Common, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.VisualStudio.Services.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.Common.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.VisualStudio.Services.Client.16.205.1\lib\net462\Microsoft.VisualStudio.Services.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.VisualStudio.Services.TestManagement.TestPlanning.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Services.TestResults.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.TeamFoundationServer.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.TestResults.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.VisualStudio.Services.TestResults.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Services.WebApi, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.VisualStudio.Services.Client.16.170.0\lib\net462\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
+      <HintPath>..\..\.deps\Microsoft.VisualStudio.Services.Client.16.205.1\lib\net462\Microsoft.VisualStudio.Services.WebApi.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\.deps\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+    <Reference Include="nilnul.collection_._discrete_._LIB_,Version=1.1.220728.140313, Culture=neutral, PublicKeyToken=085f320e4a727230">
       <HintPath>packages\nilnul.collection_._discrete_._LIB_.1.1.220728.140313\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nilnul.num._integer_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul.num._integer_._LIB_.1.1.220905.105721\lib\net481\nilnul.num._integer_._LIB_.dll</HintPath>
+    <Reference Include="nilnul.num._integer_._LIB_,Version=1.1.230515.93530-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul.num._integer_._LIB_.1.1.230515.93530-sym\lib\net481\nilnul.num._integer_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._quotient_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul.num._quotient_._LIB_.1.1.220926.131208\lib\net481\nilnul.num._quotient_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._quotient_._LIB_.1.1.230525.53320-sym\lib\net481\nilnul.num._quotient_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._real_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul.num._real_._LIB_.2.1.220818.53104\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.230524.75043-sym\lib\net481\nilnul.num._real_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._acc_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._acc_._LIB_,Version=2.1.220731.182834, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._acc_._LIB_.2.1.220731.182834\lib\net48\nilnul._acc_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._acc_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._acc_._LINQ_,Version=1.1.220731.182834, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._acc_._LINQ_.1.1.220731.182834\lib\net48\nilnul._acc_._LINQ_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._app_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>packages\nilnul._app_._LIB_.1.1.220729.93739\lib\net48\nilnul._app_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._app_._LIB_,Version=1.1.230506.102031-sym, Culture=neutral, PublicKeyToken=085f320e4a727230">
+      <HintPath>packages\nilnul._app_._LIB_.1.1.230506.102031-sym\lib\net481\nilnul._app_._LIB_.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._bit_._LIB_.1.1.221129.150825\lib\net481\nilnul._bit_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._bit_._LIB_,Version=1.1.230415.233652-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._bit_._LIB_.1.1.230415.233652-sym\lib\net481\nilnul._bit_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._character_._LIB_, Version=2.1.8387.39356, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._character_._LIB_.2.1.221218.135114\lib\net481\nilnul._character_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._character_._LIB_,Version=2.1.230408.121401-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._character_._LIB_.2.1.230408.121401-sym\lib\net481\nilnul._character_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._comm_._LIB_, Version=1.0.7827.34092, Culture=neutral, PublicKeyToken=085f320e4a727230">
       <HintPath>packages\nilnul._comm_._LIB_.1.0.7827.34092\lib\net48\nilnul._comm_._LIB_.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nilnul._data_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._data_._LIB_.1.1.221023.84757\lib\net481\nilnul._data_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._data_._LIB_,Version=1.1.230318.144409-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._data_._LIB_.1.1.230318.144409-sym\lib\net481\nilnul._data_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._fs_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\_TEST_(Git\packages\nilnul._fs_._LIB_.2.1.230111.61524-sym\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._fs_._LIB_,Version=2.1.230513.173215-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._fs_._LIB_.2.1.230513.173215-sym\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._fs_._WIN_CTR_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._fs_._WIN_CTR_,Version=1.1.220828.160201, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._fs_._WIN_CTR_.1.1.220828.160201\lib\net481\nilnul._fs_._WIN_CTR_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._human_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+    <Reference Include="nilnul._human_._LIB_,Version=1.1.220725.151533, Culture=neutral, PublicKeyToken=085f320e4a727230">
       <HintPath>packages\nilnul._human_._LIB_.1.1.220725.151533\lib\net48\nilnul._human_._LIB_.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nilnul._human_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
+    <Reference Include="nilnul._human_._LINQ_,Version=1.1.220725.150847, Culture=neutral, PublicKeyToken=085f320e4a727230">
       <HintPath>packages\nilnul._human_._LINQ_.1.1.220725.150847\lib\net48\nilnul._human_._LINQ_.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nilnul._ling_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._ling_._LIB_,Version=1.1.220728.141114, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._ling_._LIB_.1.1.220728.141114\lib\net48\nilnul._ling_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._linq_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._linq_._LIB_,Version=1.1.220906.140610, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._linq_._LIB_.1.1.220906.140610\lib\net481\nilnul._linq_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._num_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._num_._LIB_.1.1.220826.15831\lib\net481\nilnul._num_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._num_._LIB_.1.1.230522.92555-sym\lib\net481\nilnul._num_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._num_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._num_._LINQ_.1.1.220825.155237\lib\net481\nilnul._num_._LINQ_.dll</HintPath>
+    <Reference Include="nilnul._num_._LINQ_,Version=1.1.230419.172425-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._num_._LINQ_.1.1.230419.172425-sym\lib\net481\nilnul._num_._LINQ_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._obj_._CTR4WIN_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._obj_._CTR4WIN_,Version=1.1.220725.150624, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._obj_._CTR4WIN_.1.1.220725.150624\lib\net48\nilnul._obj_._CTR4WIN_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._obj_._LIB_.1.2.221230.134914\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.230525.115800-sym\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._os_._LIB4FX_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\_TEST_(Git\packages\nilnul._os_._LIB4FX_.1.0.230111.120633-sym\lib\net481\nilnul._os_._LIB4FX_.dll</HintPath>
+    <Reference Include="nilnul._os_._LIB4FX_,Version=1.0.230111.120633-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._os_._LIB4FX_.1.0.230111.120633-sym\lib\net481\nilnul._os_._LIB4FX_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._rel_._LIB_.1.2.220817.152548\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._rel_._LIB_,Version=1.2.230318.123603-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._rel_._LIB_.1.2.230318.123603-sym\lib\net481\nilnul._rel_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._set_._LIB_.1.1.220905.140119\lib\net481\nilnul._set_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._set_._LIB_,Version=1.1.230515.74449-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._set_._LIB_.1.1.230515.74449-sym\lib\net481\nilnul._set_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._time_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._time_._LIB_.1.1.221120.114651\lib\net481\nilnul._time_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._time_._LIB_,Version=1.1.230319.90029-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._time_._LIB_.1.1.230319.90029-sym\lib\net481\nilnul._time_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\_TEST_(Git\packages\nilnul._txt_._LIB_.1.1.230107.122025-sym\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._txt_._LIB_,Version=1.1.230426.165255-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._txt_._LIB_.1.1.230426.165255-sym\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._txt_._WIN_CTR_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._txt_._WIN_CTR_,Version=1.1.220828.153928, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._txt_._WIN_CTR_.1.1.220828.153928\lib\net481\nilnul._txt_._WIN_CTR_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._web_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._web_._LIB_.1.1.221218.52403\lib\net481\nilnul._web_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._web_._LIB_,Version=1.1.230511.181942-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\nilnul._web_._LIB_.1.1.230511.181942-sym\lib\net481\nilnul._web_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._win_._CTR4WIN_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._win_._CTR4WIN_,Version=1.1.220909.180734, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._win_._CTR4WIN_.1.1.220909.180734\lib\net481\nilnul._win_._CTR4WIN_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._win_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._win_._LIB_,Version=1.1.221219.174250, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._win_._LIB_.1.1.221219.174250\lib\net481\nilnul._win_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._xml_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="nilnul._xml_._LIB_,Version=1.1.221119.43115, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._xml_._LIB_.1.1.221119.43115\lib\net481\nilnul._xml_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="Octokit, Version=4.0.1.0, Culture=neutral, PublicKeyToken=0be8860aee462442, processorArchitecture=MSIL">
-      <HintPath>packages\Octokit.4.0.1\lib\netstandard2.0\Octokit.dll</HintPath>
+    <Reference Include="Octokit, Version=6.0.0.0, Culture=neutral, PublicKeyToken=0be8860aee462442, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Octokit.6.0.0\lib\netstandard2.0\Octokit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -329,8 +335,8 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IdentityModel" />
-    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.25.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\System.IdentityModel.Tokens.Jwt.6.25.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.30.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.IdentityModel.Tokens.Jwt.6.30.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
     </Reference>
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
@@ -355,8 +361,8 @@
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
-    <Reference Include="System.Reactive, Version=5.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
-      <HintPath>packages\System.Reactive.5.0.0\lib\net472\System.Reactive.dll</HintPath>
+    <Reference Include="System.Reactive, Version=6.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Reactive.6.0.0\lib\net472\System.Reactive.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
@@ -386,8 +392,8 @@
     <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Text.Json, Version=7.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Text.Json.7.0.1\lib\net462\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
@@ -425,14 +431,14 @@
     <Reference Include="ZTn.Json.JsonTreeView, Version=1.0.7838.23259, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\ZTn.Json.JsonTreeView.1.0.7838.23259\lib\net48\ZTn.Json.JsonTreeView.dll</HintPath>
     </Reference>
-    <Reference Include="_nilnul_._CTR4WIN_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+    <Reference Include="_nilnul_._CTR4WIN_,Version=1.1.220818.3083605, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\_nilnul_._CTR4WIN_.1.1.220818.3083605\lib\net48\_nilnul_._CTR4WIN_.dll</HintPath>
     </Reference>
-    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\_nilnul_._LIB_.1.1.220819.143251\lib\net481\_nilnul_._LIB_.dll</HintPath>
+    <Reference Include="_nilnul_._LIB_,Version=1.1.230415.182959-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\_nilnul_._LIB_.1.1.230415.182959-sym\lib\net481\_nilnul_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="_nilnul_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\_nilnul_._LINQ_.1.1.220819.143032\lib\net481\_nilnul_._LINQ_.dll</HintPath>
+    <Reference Include="_nilnul_._LINQ_,Version=1.1.230219.73454-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>packages\_nilnul_._LINQ_.1.1.230219.73454-sym\lib\net481\_nilnul_._LINQ_.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -460,6 +466,12 @@
     <Compile Include="module\IShelf.cs" />
     <Compile Include="module\IStatue.cs" />
     <Compile Include="module\IStow.cs" />
+    <Compile Include="module\repo\branch\co_\ITrack.cs" />
+    <Compile Include="module\repo\branch\co_\tracker\Dif.cs" />
+    <Compile Include="module\repo\branch\co_\tracker\dif_\ByShow.cs" />
+    <Compile Include="module\repo\snap\co\intertwine.cs" />
+    <Compile Include="module\repo\snap\IRetro.cs" />
+    <Compile Include="module\repo\refer_\remote\Upd.cs" />
     <Compile Include="module\repo\act_\reset_\_MixedX.cs" />
     <Compile Include="module\repo\act_\_ResetX.cs" />
     <Compile Include="module\repo\branch\history\_VwX.cs" />
@@ -504,12 +516,17 @@
     <Compile Include="module\repo\refer_\branch\be_\Noreified.cs" />
     <Compile Include="module\repo\remote\current\_DropX - Copy.cs" />
     <Compile Include="module\repo\remote\current\_DropX.cs" />
+    <Compile Include="module\repo\snap\retro\Snaps.cs" />
     <Compile Include="module\repo\size_\_StdSynX.cs" />
+    <Compile Include="module\repo\snap\document\checkout_\AsNew.cs" />
     <Compile Include="module\repo\snap\history\_VwX.cs" />
     <Compile Include="module\repo\snap\override_\work\_Commit2branchX.cs" />
     <Compile Include="module\repo\snap\override_\work_\_ByCheckoutContent.cs" />
     <Compile Include="module\repo\snap\override_\work_\_ByCheckout2tmp.cs" />
     <Compile Include="module\repo\snap\override_\_StateX.cs" />
+    <Compile Include="module\repo\snap\parent_\First.cs" />
+    <Compile Include="module\repo\snap\parents\indexed\Notation.cs" />
+    <Compile Include="module\repo\snap\ancestor\Notation.cs" />
     <Compile Include="module\repo\snap_\current\_BySwitchX.cs" />
     <Compile Include="module\repo\snap_\Msgless.cs" />
     <Compile Include="module\repo\snap_\parentless_\empty_\Msgless.cs" />
@@ -537,13 +554,15 @@
     <Compile Include="module\stow\move_\_ToBranchX.cs" />
     <Compile Include="module\statue_\aligned\Move2snap.cs" />
     <Compile Include="module\stow\_SkimX.cs" />
-    <Compile Include="module\stow\_skim\snap\_CollapseX.cs" />
+    <Compile Include="module\stow\_skim\orphan\_CollapseX.cs" />
     <Compile Include="module\stow\_skim\_Snap2orphanX.cs" />
     <Compile Include="module\work\cmmit_\_ToBranchX.cs" />
+    <Compile Include="module\work\document\create_\FromCommit.cs" />
     <Compile Include="module\work\document\_RestoreX.cs" />
     <Compile Include="module\work\move_\into_\branch_\_BranchX.cs" />
     <Compile Include="module\work\move_\into_\_BranchX.cs" />
     <Compile Include="module\work_\xpn_\size_\TooLargeException.cs" />
+    <Compile Include="module\_cfg_\log\Date.cs" />
     <Compile Include="module\_stash\ICreate.cs" />
     <Compile Include="module\_work_\documents_\IChange.cs" />
     <Compile Include="module\_work_\documents_\IUpsert.cs" />
@@ -853,14 +872,19 @@
     <Compile Include="repo\branch_\IUnborn.cs" />
     <Compile Include="repo\branch_\noncurrent\Fetch.cs" />
     <Compile Include="repo\branch_\noncurrent\fetch_\NonFast1forward.cs" />
+    <Compile Include="repo\co\Dif.cs" />
     <Compile Include="repo\current\be_\IReifiable.cs" />
     <Compile Include="repo\current_\branch_\IReified.cs" />
     <Compile Include="repo\current_\ISnap.cs" />
     <Compile Include="repo\current\Detach.cs" />
     <Compile Include="repo\ICurrent.cs" />
+    <Compile Include="repo\refer_\remote\Upd.cs" />
     <Compile Include="repo\remote\Current.cs" />
     <Compile Include="repo\remote\current\assign_\Defaulted.cs" />
     <Compile Include="repo\remote\current\Drop.cs" />
+    <Compile Include="module\repo\remote\Dif.cs" />
+    <Compile Include="module\repo\remote\dif_\NeedPush.cs" />
+    <Compile Include="module\repo\remote\dif_\NeedFetch.cs" />
     <Compile Include="repo\unlock_\wait\_TimeoutX.cs" />
     <Compile Include="repo\unlock_\wait\_ForceX.cs" />
     <Compile Include="repo\unlock_\_WaitX.cs" />
@@ -2220,7 +2244,7 @@
     <Folder Include="module\head_\branch_\" />
     <Folder Include="module\pull_\brancH_\noncurrent\" />
     <Folder Include="module\reference\del_\" />
-    <Folder Include="module\reference_\branch\" />
+    <Folder Include="module\refer_\branch\" />
     <Folder Include="module\repo\%28retiring\" />
     <Folder Include="module\repo\blob\checkout_\" />
     <Folder Include="module\repo\branches\NewFolder1\" />
@@ -2230,6 +2254,7 @@
     <Folder Include="module\repo\branches_\vered\" />
     <Folder Include="module\repo\branches_\withCurrent_\" />
     <Folder Include="module\repo\branch\co_\tracked\be_\pushed_\" />
+    <Folder Include="module\repo\branch\co_\tracked_\" />
     <Folder Include="module\repo\branch\push_\svr_\bb\" />
     <Folder Include="module\repo\branch\push_\svr_\_bb_\" />
     <Folder Include="module\repo\branch\to_\head\" />
@@ -2254,8 +2279,10 @@
     <Folder Include="module\repo\current_\reified\vw_\" />
     <Folder Include="module\repo\log\" />
     <Folder Include="module\repo\remote\branch\drop_\" />
+    <Folder Include="module\repo\remote\dif_\dif_\" />
     <Folder Include="module\repo\remote\push_\branch_\uiTitled_\titled\" />
     <Folder Include="module\repo\remote_\local\" />
+    <Folder Include="module\repo\retro_\" />
     <Folder Include="module\repo\snaps\commits\notes\" />
     <Folder Include="module\repo\snaps\commits\_append\" />
     <Folder Include="module\repo\snaps\commits\_ins_\" />
@@ -2263,6 +2290,8 @@
     <Folder Include="module\repo\snap\override_\work\commit2branch\" />
     <Folder Include="module\repo\snap\refers\" />
     <Folder Include="module\repo\snap\revert\" />
+    <Folder Include="module\repo\snap\_parents\" />
+    <Folder Include="module\repo\snap\_parent\" />
     <Folder Include="module\repo\snap_\current\copy_\" />
     <Folder Include="module\repo\snap_\current\document\toWork\by_\" />
     <Folder Include="module\repo\snap_\current\froRepo_\" />
@@ -2335,6 +2364,7 @@
     <Folder Include="module\work\div\restore_\" />
     <Folder Include="module\work\div\root\" />
     <Folder Include="module\work\documents_\" />
+    <Folder Include="module\work\document_\newly\" />
     <Folder Include="module\work\doc_\ignore\ensure_\" />
     <Folder Include="module\work\doc_\ignore\upd_\dotNet\" />
     <Folder Include="module\work\doc_\ignore\upsert\" />
@@ -2437,6 +2467,7 @@
     <Folder Include="repo\div\root\" />
     <Folder Include="repo\remote\branch\" />
     <Folder Include="repo\remote\current\drop_\" />
+    <Folder Include="repo\remote\dif\" />
     <Folder Include="repo\snap\branch\" />
     <Folder Include="repo\_branch\name_\dnts\be_\local_\_pub_\" />
     <Folder Include="repo\_branch\name_\_vered\_prefix\txt\be_\" />
@@ -2598,7 +2629,7 @@
     <None Include="Resources\vsSln.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="packages\AWSSDK.CodeCommit.3.7.100.46\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />
+    <Analyzer Include="..\..\.deps\AWSSDK.CodeCommit.3.7.100.136\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />
   </ItemGroup>
   <!--<ItemGroup>
     <PackageReference Include="AdysTech.CredentialManager">
