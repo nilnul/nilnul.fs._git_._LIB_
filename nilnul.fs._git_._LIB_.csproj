@@ -13,8 +13,7 @@
     <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
     <Deterministic>false</Deterministic>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -120,6 +119,9 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>t.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AE.Net.Mail, Version=1.7.7816.38666, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\AE.Net.Mail.1.7.7816.38666\lib\net48\AE.Net.Mail.dll</HintPath>
@@ -139,6 +141,9 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GitLabApiClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.fs.git.svr_.gitlab.client_.GitLabApiClient.1.20.0\lib\net48\GitLabApiClient.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Azure.DevOps.Comments.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.16.205.1\lib\net462\Microsoft.Azure.DevOps.Comments.WebApi.dll</HintPath>
@@ -225,9 +230,8 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul.collection_._discrete_._LIB_,Version=1.1.220728.140313, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>packages\nilnul.collection_._discrete_._LIB_.1.1.220728.140313\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.collection_._discrete_._LIB_.1.1.230611.40617-sym\lib\net481\nilnul.collection_._discrete_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._integer_._LIB_,Version=1.1.230515.93530-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul.num._integer_._LIB_.1.1.230515.93530-sym\lib\net481\nilnul.num._integer_._LIB_.dll</HintPath>
@@ -236,7 +240,7 @@
       <HintPath>..\..\.deps\nilnul.num._quotient_._LIB_.1.1.230531.94846-sym\lib\net481\nilnul.num._quotient_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._real_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.230603.142050-sym\lib\net481\nilnul.num._real_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.230327.112057\lib\net481\nilnul.num._real_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._acc_._LIB_,Version=2.1.220731.182834, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._acc_._LIB_.2.1.220731.182834\lib\net48\nilnul._acc_._LIB_.dll</HintPath>
@@ -244,9 +248,8 @@
     <Reference Include="nilnul._acc_._LINQ_,Version=1.1.220731.182834, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._acc_._LINQ_.1.1.220731.182834\lib\net48\nilnul._acc_._LINQ_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._app_._LIB_,Version=1.1.230506.102031-sym, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>packages\nilnul._app_._LIB_.1.1.230506.102031-sym\lib\net481\nilnul._app_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="nilnul._app_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._app_._LIB_.1.1.220729.93739\lib\net48\nilnul._app_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._bit_._LIB_,Version=1.1.230415.233652-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._bit_._LIB_.1.1.230415.233652-sym\lib\net481\nilnul._bit_._LIB_.dll</HintPath>
@@ -258,11 +261,11 @@
       <HintPath>packages\nilnul._comm_._LIB_.1.0.7827.34092\lib\net48\nilnul._comm_._LIB_.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nilnul._data_._LIB_,Version=1.1.230318.144409-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._data_._LIB_.1.1.230318.144409-sym\lib\net481\nilnul._data_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._data_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._data_._LIB_.1.1.221023.84757\lib\net481\nilnul._data_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._fs_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._fs_._LIB_.2.1.230529.13904-sym\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._fs_._LIB_.2.1.230103.90900\lib\net481\nilnul._fs_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._fs_._WIN_CTR_,Version=1.1.220828.160201, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._fs_._WIN_CTR_.1.1.220828.160201\lib\net481\nilnul._fs_._WIN_CTR_.dll</HintPath>
@@ -291,28 +294,28 @@
       <HintPath>packages\nilnul._obj_._CTR4WIN_.1.1.220725.150624\lib\net48\nilnul._obj_._CTR4WIN_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.230528.145436-sym\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.230623.10954-sym\lib\net481\nilnul._obj_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._os_._LIB4FX_,Version=1.0.230111.120633-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._os_._LIB4FX_.1.0.230111.120633-sym\lib\net481\nilnul._os_._LIB4FX_.dll</HintPath>
+    <Reference Include="nilnul._os_._LIB4FX_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._os_._LIB4FX_.1.0.230106.71859\lib\net481\nilnul._os_._LIB4FX_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._rel_._LIB_,Version=1.2.230318.123603-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._rel_._LIB_.1.2.230318.123603-sym\lib\net481\nilnul._rel_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._rel_._LIB_.1.2.230617.144331-sym\lib\net481\nilnul._rel_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._set_._LIB_,Version=1.1.230515.74449-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._set_._LIB_.1.1.230515.74449-sym\lib\net481\nilnul._set_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._set_._LIB_.1.1.230615.145110-sym\lib\net481\nilnul._set_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._time_._LIB_,Version=1.1.230319.90029-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._time_._LIB_.1.1.230319.90029-sym\lib\net481\nilnul._time_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._time_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._time_._LIB_.1.1.221120.114651\lib\net481\nilnul._time_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._txt_._LIB_,Version=1.1.230426.165255-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._txt_._LIB_.1.1.230426.165255-sym\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._txt_._LIB_.1.1.230617.113803-sym\lib\net481\nilnul._txt_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._txt_._WIN_CTR_,Version=1.1.220828.153928, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._txt_._WIN_CTR_.1.1.220828.153928\lib\net481\nilnul._txt_._WIN_CTR_.dll</HintPath>
     </Reference>
-    <Reference Include="nilnul._web_._LIB_,Version=1.1.230511.181942-sym, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._web_._LIB_.1.1.230511.181942-sym\lib\net481\nilnul._web_._LIB_.dll</HintPath>
+    <Reference Include="nilnul._web_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._web_._LIB_.1.1.221218.52403\lib\net481\nilnul._web_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._win_._CTR4WIN_,Version=1.1.220909.180734, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>packages\nilnul._win_._CTR4WIN_.1.1.220909.180734\lib\net481\nilnul._win_._CTR4WIN_.dll</HintPath>
@@ -442,8 +445,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IDepo.cs" />
     <Compile Include="IManaged.cs" />
-    <Compile Include="IModule.cs" />
+    <Compile Include="module\repo\branch\history\snaps\be_\_NonPluralX.cs" />
+    <Compile Include="module\repo\branch_\Default.cs" />
+    <Compile Include="module\work\cmmit_\orphan\collapse_\_CollapseX.cs" />
+    <Compile Include="module\work\cmmit_\orphan_\_Snap2orphanX.cs" />
+    <Compile Include="module\_work_\documents_\noDotLed_\nonlink_\large\each\Split.cs" />
+    <Compile Include="NewFolder1\IModule.cs" />
     <Compile Include="IRepo.cs" />
     <Compile Include="module\act_\reset_\_HardX.cs" />
     <Compile Include="module\act_\Unlock.cs" />
@@ -455,20 +464,47 @@
     <Compile Include="module\be_\locked\Anto.cs" />
     <Compile Include="module\be_\Nonwrought.cs" />
     <Compile Include="module\be_\_LockedX1.cs" />
+    <Compile Include="module\blob\tro\MergeFile.cs" />
     <Compile Include="module\branches\merge_\Squash.cs" />
-    <Compile Include="module\branch\create_\_CheckoutX.cs" />
-    <Compile Include="module\branch_\orphan_\_WorkKeptX.cs" />
-    <Compile Include="module\branch_\orphan_\StowIntact.cs" />
-    <Compile Include="module\branch_\orphan_\WorkCleared.cs" />
-    <Compile Include="module\cfg\key\Val.cs" />
+    <Compile Include="module\ICfg.cs" />
+    <Compile Include="module\IRefLog.cs" />
+    <Compile Include="module\ISetting.cs" />
+    <Compile Include="module\reflog\Recover.cs" />
+    <Compile Include="module\repo\branch\create_\_CheckoutX.cs" />
+    <Compile Include="module\repo\branch\history\snaps\be_\plural_\_ByLogX.cs" />
+    <Compile Include="module\repo\branch\history\snaps\be_\plural_\_ByRecentsX.cs" />
+    <Compile Include="module\repo\branch\history\snaps\be_\plural_\_ByRevListX.cs" />
+    <Compile Include="module\repo\branch\history\snaps\be_\_PluralX.cs" />
+    <Compile Include="module\repo\branch\history\snaps_\recentTwo_\IByGitLog.cs" />
+    <Compile Include="module\repo\branch\history\snaps_\recentTwo_\_ByRevListX.cs" />
+    <Compile Include="module\repo\branch\history\snaps_\recentTwo_\_ByShowBranchX.cs" />
+    <Compile Include="module\repo\branch\history\snaps_\_RecentTwoX.cs" />
+    <Compile Include="module\repo\branch\IMerge.cs" />
+    <Compile Include="module\repo\branch\IPatch.cs" />
+    <Compile Include="module\repo\branch\merge_\IThreeWay.cs" />
+    <Compile Include="module\repo\branch\merge_\ITwoWay.cs" />
+    <Compile Include="module\repo\branch_\orphan_\_WorkKeptX.cs" />
+    <Compile Include="module\repo\branch_\orphan_\StowIntact.cs" />
+    <Compile Include="module\repo\branch_\orphan_\WorkCleared.cs" />
+    <Compile Include="module\repo\branch_\vered_\nub_\newest_\noncurrent\retract_\_ToOrphanX.cs" />
+    <Compile Include="module\repo\branch_\vered_\nub_\newest_\noncurrent\retract_\_toOrphan\fallback_\_RetPrevIfDelElseNulX.cs" />
+    <Compile Include="module\repo\IGitLog.cs" />
+    <Compile Include="module\repo\remote\branch\DropFroServer.cs" />
+    <Compile Include="module\_setting\cfg\key\Val.cs" />
     <Compile Include="module\child_\INested.cs" />
     <Compile Include="module\child_\nested\SubtreeAbsorb.cs" />
+    <Compile Include="module\IContent.cs" />
+    <Compile Include="module\IRevision.cs" />
     <Compile Include="module\IShelf.cs" />
     <Compile Include="module\IStatue.cs" />
     <Compile Include="module\IStow.cs" />
+    <Compile Include="module\repo\log_\IRaw.cs" />
     <Compile Include="module\repo\branch\co_\ITrack.cs" />
     <Compile Include="module\repo\branch\co_\tracker\Dif.cs" />
     <Compile Include="module\repo\branch\co_\tracker\dif_\ByShow.cs" />
+    <Compile Include="module\repo\ISnap.cs" />
+    <Compile Include="module\repo\ISnaps.cs" />
+    <Compile Include="module\repo\snap\co\RangeDiff.cs" />
     <Compile Include="module\repo\snap\co\intertwine.cs" />
     <Compile Include="module\repo\snap\IRetro.cs" />
     <Compile Include="module\repo\refer_\remote\Upd.cs" />
@@ -516,6 +552,9 @@
     <Compile Include="module\repo\refer_\branch\be_\Noreified.cs" />
     <Compile Include="module\repo\remote\current\_DropX - Copy.cs" />
     <Compile Include="module\repo\remote\current\_DropX.cs" />
+    <Compile Include="module\repo\snap\IWhatChanged.cs" />
+    <Compile Include="module\repo\snap\of_\PrimaryParentRecur.cs" />
+    <Compile Include="module\repo\snap\of_\OneOfParents.cs" />
     <Compile Include="module\repo\snap\retro\Snaps.cs" />
     <Compile Include="module\repo\size_\_StdSynX.cs" />
     <Compile Include="module\repo\snap\document\checkout_\AsNew.cs" />
@@ -532,6 +571,7 @@
     <Compile Include="module\repo\snap_\parentless_\empty_\Msgless.cs" />
     <Compile Include="module\repo\stage\make_\Current.cs" />
     <Compile Include="module\repo\unlock_\wait\_TimeoutX.cs" />
+    <Compile Include="module\repo\_cfg_\merge\ConflictStyle.cs" />
     <Compile Include="module\repo\_UnlockX.cs" />
     <Compile Include="module\repo\unlock_\_WaitX.cs" />
     <Compile Include="module\repo\unlock_\wait\_ForceX.cs" />
@@ -554,15 +594,20 @@
     <Compile Include="module\stow\move_\_ToBranchX.cs" />
     <Compile Include="module\statue_\aligned\Move2snap.cs" />
     <Compile Include="module\stow\_SkimX.cs" />
-    <Compile Include="module\stow\_skim\orphan\_CollapseX.cs" />
-    <Compile Include="module\stow\_skim\_Snap2orphanX.cs" />
+    <Compile Include="module\work\cmmit_\orphan\_CollapseX.cs" />
+    <Compile Include="module\work\cmmit_\_Snap2orphanX.cs" />
+    <Compile Include="module\tree\co\dif_\NameOnly.cs" />
+    <Compile Include="module\tree\co\_dif\Li_.cs" />
     <Compile Include="module\work\cmmit_\_ToBranchX.cs" />
     <Compile Include="module\work\document\create_\FromCommit.cs" />
     <Compile Include="module\work\document\_RestoreX.cs" />
     <Compile Include="module\work\move_\into_\branch_\_BranchX.cs" />
     <Compile Include="module\work\move_\into_\_BranchX.cs" />
     <Compile Include="module\work_\xpn_\size_\TooLargeException.cs" />
-    <Compile Include="module\_cfg_\log\Date.cs" />
+    <Compile Include="module\_setting\_cfg_\log\Date.cs" />
+    <Compile Include="module\_setting\_cfg_\merge\ConflictStyle.cs" />
+    <Compile Include="module\_repo_\Merge_Head.cs" />
+    <Compile Include="module\_setting\IConfig.cs" />
     <Compile Include="module\_stash\ICreate.cs" />
     <Compile Include="module\_work_\documents_\IChange.cs" />
     <Compile Include="module\_work_\documents_\IUpsert.cs" />
@@ -684,8 +729,8 @@
     <Compile Include="module\work\document_\Larges.cs" />
     <Compile Include="module\work\doc_\ignore\put_\Nilnul0dotnet.cs" />
     <Compile Include="module\work\doc_\~\Ignore.cs" />
-    <Compile Include="module\_cfg\IIgnore.cs" />
-    <Compile Include="module\_cfg\Symlink.cs" />
+    <Compile Include="module\_setting\IExclude0ignore.cs" />
+    <Compile Include="module\_setting\_cfg\Symlink.cs" />
     <Compile Include="module\repo\_cfg\IExclude.cs" />
     <Compile Include="module\_repo\IPath.cs" />
     <Compile Include="module\_work\_ignore\_rules\RscX.cs" />
@@ -909,71 +954,84 @@
     <Compile Include="repo\_reference\name_\_strict\txt\be\Vow.cs" />
     <Compile Include="repo\_reference\name_\_strict\txt\be\vow\En.cs" />
     <Compile Include="repo\_reference\_name\txt\be_\ByGit.cs" />
+    <Compile Include="repo_\bare\Head.cs" />
     <Compile Include="repo_\bare\Mirror.cs" />
+    <Compile Include="repo_\INonbare.cs" />
     <Compile Include="svrs_\IAagg.cs" />
+    <Compile Include="svrs_\_aagg\LimitInMbyteX.cs" />
     <Compile Include="svr\Client.cs" />
-    <Compile Include="svr\client\RepoI.cs" />
-    <Compile Include="svr\client\repos\size\Accrue.cs" />
-    <Compile Include="svr\client\repo\OfI.cs" />
-    <Compile Include="svr\client\repo\of_\AccVaultedClient.cs" />
-    <Compile Include="svr\client\repo\push\Size.cs" />
-    <Compile Include="svr\client\repo\push\size\Limit.cs" />
-    <Compile Include="svr\client\repo\sortie_\byHost\biject_\Nom1nonemptys.cs" />
-    <Compile Include="svr\client\repo\sortie_\byHost\biject_\Nom1nonempty.cs" />
-    <Compile Include="svr\client\repo\biject_\Word.cs" />
-    <Compile Include="svr\client\repo\document\size\Limit.cs" />
-    <Compile Include="svr\client\repo\Eq.cs" />
-    <Compile Include="svr\client\repo\eq_\BySvr.cs" />
-    <Compile Include="svr\client\repo\sortie_\ByHost.cs" />
-    <Compile Include="svr\client\repo\Url.cs" />
-    <Compile Include="svr\client\_repo_\BaseUrl.cs" />
-    <Compile Include="svr\client\_repo_\Client.cs" />
-    <Compile Include="svr\client\_repo_\Ensure - Copy.cs" />
-    <Compile Include="svr\client\_repo_\UrnI.cs" />
-    <Compile Include="svr\client\_repo_\Url.cs" />
-    <Compile Include="svr\client\_repo_\Exists.cs" />
-    <Compile Include="svr\client\_repo_\Create.cs" />
-    <Compile Include="svr\client\_repo_\Ensure.cs" />
-    <Compile Include="svr\client\_repo_\url_\AsTxt.cs" />
-    <Compile Include="svr\client_\AccVaultedA.cs" />
-    <Compile Include="svr\client_\AccVaultedI.cs" />
-    <Compile Include="svr\client_\accVaulted_\GitlabI.cs" />
-    <Compile Include="svr\client_\vaulted\named\Typed.cs" />
-    <Compile Include="svr\client_\vaulted\Typed.cs" />
-    <Compile Include="svr\client_\vaulted\~\AccVaulted.cs" />
-    <Compile Include="svr\client_\accVaulted_\Amazon.cs" />
-    <Compile Include="svr\client_\accVaulted_\Vs.cs" />
-    <Compile Include="svr\client_\accVaulted_\Gitlab.cs" />
-    <Compile Include="svr\client_\%28retiring\NoCred - Copy.cs" />
-    <Compile Include="svr\client_\AccVaultedS.cs" />
-    <Compile Include="svr\client_\AccVaulted.cs" />
-    <Compile Include="svr\client_\vaulted\Named.cs" />
-    <Compile Include="svr\client_\vaulted\Nameds.cs" />
-    <Compile Include="svr\client_\accVaulted_\github\Named.cs" />
-    <Compile Include="svr\client_\vaulted\repo\Named.cs" />
-    <Compile Include="svr\client_\vaulted\repo\Nameds.cs" />
-    <Compile Include="svr\client_\vaulted\repo\names_\Dict.cs" />
+    <Compile Include="svr\usr\IGrps.cs" />
+    <Compile Include="svr\usr\IRepo.cs" />
+    <Compile Include="svr\usr\ITeamwork.cs" />
+    <Compile Include="svr\usr\RepoI.cs" />
+    <Compile Include="svr\usr\repos\size\Accrue.cs" />
+    <Compile Include="svr\usr\repo\IMgt.cs" />
+    <Compile Include="svr\usr\repo\OfI.cs" />
+    <Compile Include="svr\usr\repo\of_\AccVaultedClient.cs" />
+    <Compile Include="svr\usr\repo\push\Size.cs" />
+    <Compile Include="svr\usr\repo\push\size\Limit.cs" />
+    <Compile Include="svr\usr\repo\sortie_\byHost\biject_\Nom1nonemptys.cs" />
+    <Compile Include="svr\usr\repo\sortie_\byHost\biject_\Nom1nonempty.cs" />
+    <Compile Include="svr\usr\repo\biject_\Word.cs" />
+    <Compile Include="svr\usr\repo\document\size\Limit.cs" />
+    <Compile Include="svr\usr\repo\Eq.cs" />
+    <Compile Include="svr\usr\repo\eq_\BySvr.cs" />
+    <Compile Include="svr\usr\repo\sortie_\ByHost.cs" />
+    <Compile Include="svr\usr\repo\Url.cs" />
+    <Compile Include="svr\usr\_repo_\BaseUrl.cs" />
+    <Compile Include="svr\usr\_repo_\Client.cs" />
+    <Compile Include="svr\usr\_repo_\Ensure - Copy.cs" />
+    <Compile Include="svr\usr\_repo_\UrnI.cs" />
+    <Compile Include="svr\usr\_repo_\Url.cs" />
+    <Compile Include="svr\usr\_repo_\Exists.cs" />
+    <Compile Include="svr\usr\_repo_\Create.cs" />
+    <Compile Include="svr\usr\_repo_\Ensure.cs" />
+    <Compile Include="svr\usr\_repo_\url_\AsTxt.cs" />
+    <Compile Include="svr\usr_\AccVaultedA.cs" />
+    <Compile Include="svr\usr_\AccVaultedI.cs" />
+    <Compile Include="svr\usr_\accVaulted_\GitlabI.cs" />
+    <Compile Include="svr\usr_\vaulted\named\Typed.cs" />
+    <Compile Include="svr\usr_\vaulted\Typed.cs" />
+    <Compile Include="svr\usr_\vaulted\~\AccVaulted.cs" />
+    <Compile Include="svr\usr_\accVaulted_\Amazon.cs" />
+    <Compile Include="svr\usr_\accVaulted_\Vs.cs" />
+    <Compile Include="svr\usr_\accVaulted_\Gitlab.cs" />
+    <Compile Include="svr\usr_\%28retiring\NoCred - Copy.cs" />
+    <Compile Include="svr\usr_\AccVaultedS.cs" />
+    <Compile Include="svr\usr_\AccVaulted.cs" />
+    <Compile Include="svr\usr_\vaulted\Named.cs" />
+    <Compile Include="svr\usr_\vaulted\Nameds.cs" />
+    <Compile Include="svr\usr_\accVaulted_\github\Named.cs" />
+    <Compile Include="svr\usr_\vaulted\repo\Named.cs" />
+    <Compile Include="svr\usr_\vaulted\repo\Nameds.cs" />
+    <Compile Include="svr\usr_\vaulted\repo\names_\Dict.cs" />
+    <Compile Include="svr\IClient.cs" />
+    <Compile Include="svr\IUsr.cs" />
+    <Compile Include="svr\usr\teamwork\IRepos.cs" />
+    <Compile Include="svr\usr_\IOrg.cs" />
+    <Compile Include="svr\usr_\IPersonal.cs" />
     <Compile Include="svr_\amazon\client\repo\create\_EnsureX.cs" />
     <Compile Include="svr_\amazon\client\repo\_CreateX.cs" />
     <Compile Include="svr_\amazon\client_\vaulted\Repo.cs" />
-    <Compile Include="svr_\azure\client\Division.cs" />
-    <Compile Include="svr_\azure\client\division_\Prjs.cs" />
-    <Compile Include="svr_\azure\client\Prjs.cs" />
-    <Compile Include="svr_\azure\client\repo\be_\Exist.cs" />
-    <Compile Include="svr_\azure\client\repo\push\size\Limit.cs" />
-    <Compile Include="svr_\azure\client\repo\IUrl.cs" />
-    <Compile Include="svr_\azure\client\teamwork\Create.cs" />
-    <Compile Include="svr_\azure\client\teamwork\create_\Pub.cs" />
-    <Compile Include="svr_\azure\client\teamwork\create_\Personal.cs" />
-    <Compile Include="svr_\azure\client\teamwork\create_\personal\_EnsureX.cs" />
-    <Compile Include="svr_\azure\client\teamwork\Repos.cs" />
-    <Compile Include="svr_\azure\client\teamwork\repo_\Defaulted.cs" />
-    <Compile Include="svr_\azure\client\teamwork\create_\ViaLib.cs" />
-    <Compile Include="svr_\azure\client\teamwork\create_\_PrjDefault.cs" />
+    <Compile Include="svr_\azure\acc_\org\prjs\_count\Limit.cs" />
+    <Compile Include="svr_\azure\usr\Division.cs" />
+    <Compile Include="svr_\azure\usr\division_\Prjs.cs" />
+    <Compile Include="svr_\azure\usr\Prjs.cs" />
+    <Compile Include="svr_\azure\usr\repo\be_\Exist.cs" />
+    <Compile Include="svr_\azure\usr\repo\push\size\Limit.cs" />
+    <Compile Include="svr_\azure\usr\repo\IUrl.cs" />
+    <Compile Include="svr_\azure\usr\teamwork\Create.cs" />
+    <Compile Include="svr_\azure\usr\teamwork\create_\Pub.cs" />
+    <Compile Include="svr_\azure\usr\teamwork\create_\Personal.cs" />
+    <Compile Include="svr_\azure\usr\teamwork\create_\personal\_EnsureX.cs" />
+    <Compile Include="svr_\azure\usr\teamwork\Repos.cs" />
+    <Compile Include="svr_\azure\usr\teamwork\repo_\Defaulted.cs" />
+    <Compile Include="svr_\azure\usr\teamwork\create_\ViaLib.cs" />
+    <Compile Include="svr_\azure\usr\teamwork\create_\_PrjDefault.cs" />
     <Compile Include="svr_\azure\Client.cs" />
-    <Compile Include="svr_\azure\client\Teamwork.cs" />
-    <Compile Include="svr_\azure\client\teamwork\Division.cs" />
-    <Compile Include="svr_\azure\client\_teamworks\ConsumerLib.cs" />
+    <Compile Include="svr_\azure\usr\Teamwork.cs" />
+    <Compile Include="svr_\azure\usr\teamwork\Division.cs" />
+    <Compile Include="svr_\azure\usr\_teamworks\ConsumerLib.cs" />
     <Compile Include="svr_\azure\client_\vaulted\Repo.cs" />
     <Compile Include="svr_\azure\_api\Version.cs" />
     <Compile Include="svr_\azure\_client_\Orged.cs" />
@@ -986,21 +1044,43 @@
     <Compile Include="svr_\azure\repo\_name\txt\be_\StartWithMinus.cs" />
     <Compile Include="svr_\azure\_client\Org.cs" />
     <Compile Include="svr_\bitbucket\client\repo\size\Limit.cs" />
+    <Compile Include="svr_\bitbucket\usr\repo\push\blob\size\Limit.cs" />
+    <Compile Include="svr_\bitbucket\usr\repo\push\size\Limit.cs" />
+    <Compile Include="svr_\bitbucket\usr\repo\size\Limit.cs" />
     <Compile Include="svr_\github\client\repo\Vw.cs" />
+    <Compile Include="svr_\github\client\request_\IVersion.cs" />
+    <Compile Include="svr_\github\client_\gql\repo\ICreationTime.cs" />
+    <Compile Include="svr_\github\client_\IGraphQl.cs" />
     <Compile Include="svr_\github\repo\urn_\_SshX.cs" />
-    <Compile Include="svr_\gitlab\acc\IWorkshop.cs" />
-    <Compile Include="svr_\gitlab\acc\workshop\size\IStat.cs" />
-    <Compile Include="svr_\gitlab\client\prj\create_\IImport.cs" />
-    <Compile Include="svr_\gitlab\client\prj\Creation.cs" />
-    <Compile Include="svr_\gitlab\client\prj\ICreate.cs" />
-    <Compile Include="svr_\gitlab\client\prj\_CreationX.cs" />
-    <Compile Include="svr_\gitlab\client\repo\_UrlX.cs" />
-    <Compile Include="svr_\gitlab\grp\Prjs.cs" />
-    <Compile Include="svr_\gitlab\grp\prj\create_\_PublicX.cs" />
-    <Compile Include="svr_\gitlab\grp\prj\GetId.cs" />
-    <Compile Include="svr_\gitlab\grp\prj\_CreationX.cs" />
-    <Compile Include="svr_\gitlab\IGroup.cs" />
-    <Compile Include="svr_\gitlab\IProject.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\create_\byWebReq_\_TokenInHeaderX.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\IMgt.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp\Id.cs" />
+    <Compile Include="svr_\gitlab\usrs_\schemas\_VwNamespacesX.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\create_\pub_\xpn_\IByPush.cs" />
+    <Compile Include="svr_\gitlab\usr\teamworks_\Prjs.cs" />
+    <Compile Include="svr_\gitlab\usrs_\_NamespacesX.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp\repo\create_\NewFolder1\_PublicX.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp\repo\create_\pub_\_OfGrpNameX.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp\repo\create_\_CreationX.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp\treamworks_\Prjs.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp_\IXpn.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp_\xpn_\NameNonexist.cs" />
+    <Compile Include="svr_\gitlab\usr_\IById.cs" />
+    <Compile Include="svr_\gitlab\usr_\IWorkshop.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\size\IStat.cs" />
+    <Compile Include="svr_\gitlab\usr\NewFolder1\PrivateToken.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\create_\byWebReq_\_TokenInAuthorizationX.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\create_\IByWebClient.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\create_\IImport.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\Creation.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\_CreationX.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\_UrlX.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp\_TeamworksX.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp\repo\create_\_PublicX.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp\repo\GetId.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp\repo\_CreationX.cs" />
+    <Compile Include="svr_\gitlab\usr_\IGroup.cs" />
+    <Compile Include="svr_\gitlab\usr\repo_\NewFolder1\IProject.cs" />
     <Compile Include="svr_\Codeup.cs" />
     <Compile Include="svr_\Gitea.cs" />
     <Compile Include="svr_\github\client\org\repo\Create.cs" />
@@ -1013,7 +1093,7 @@
     <Compile Include="svr_\github\client\repo\create_\_PersonalX.cs" />
     <Compile Include="svr_\github\client\repo~\Github.cs" />
     <Compile Include="Module2.cs" />
-    <Compile Include="Module0BareRepo.cs" />
+    <Compile Include="NewFolder1\IModule0BareRepo.cs" />
     <Compile Include="modules\each\_cfg_\remotes\EnsureBitbucketAcc.cs" />
     <Compile Include="module\act_\ReInit.cs" />
     <Compile Include="module\BeI.cs" />
@@ -1023,10 +1103,10 @@
     <Compile Include="module\be_\Unlink.cs" />
     <Compile Include="module\be_\unlink\Vow.cs" />
     <Compile Include="module\be_\unlink\vow\En.cs" />
-    <Compile Include="module\branch\merge_\AllTheirs.cs" />
-    <Compile Include="module\branch\merge_\TheirsOnlyIfConflict.cs" />
-    <Compile Include="module\branch_\current\be_\Empty.cs" />
-    <Compile Include="module\branch_\current\_upstream\_CfgX.cs" />
+    <Compile Include="module\repo\branch\merge_\merge_\AllTheirs.cs" />
+    <Compile Include="module\repo\branch\merge_\TheirsOnlyIfConflict.cs" />
+    <Compile Include="module\repo\branch_\current\be_\Empty.cs" />
+    <Compile Include="module\repo\branch_\current\_upstream\_CfgX.cs" />
     <Compile Include="module\content\Modules.cs" />
     <Compile Include="module\destination\_HashObjectX.cs" />
     <Compile Include="module\directory\Db.cs" />
@@ -1105,13 +1185,13 @@
     <Compile Include="module\repo\snap\tree\_VwX.cs" />
     <Compile Include="repo\_branch\_name\txt\_be\whole\set_\Invalids.cs" />
     <Compile Include="svr\Clients.cs" />
-    <Compile Include="svr\client_\accVaulted_\~\Github - Copy.cs" />
-    <Compile Include="svr\client_\_accVaulted\Settings1.Designer.cs">
+    <Compile Include="svr\usr_\accVaulted_\~\Github - Copy.cs" />
+    <Compile Include="svr\usr_\_accVaulted\Settings1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings1.settings</DependentUpon>
     </Compile>
-    <Compile Include="svr\client_\_accVaulted\SettingsX.cs" />
+    <Compile Include="svr\usr_\_accVaulted\SettingsX.cs" />
     <Compile Include="svr\co_\ToGitee.cs" />
     <Compile Include="svr_\amazon\client_\AccInVault.cs" />
     <Compile Include="svr_\amazon_\region\Client.cs" />
@@ -1126,14 +1206,18 @@
     <Compile Include="svr_\github\repo\blob\lenth\Limit.cs" />
     <Compile Include="svr_\github\_client_\Login.cs" />
     <Compile Include="svr_\github\_client_\Header.cs" />
-    <Compile Include="svr_\gitlab\client_\AccInVault.cs" />
-    <Compile Include="svr_\gitlab\client_\vaulted\Repo.cs" />
-    <Compile Include="svr_\gitlab\Prjs.cs" />
-    <Compile Include="svr_\gitlab\repo\document\ISize.cs" />
-    <Compile Include="svr_\gitlab\repo\document\_size\Limit.cs" />
-    <Compile Include="svr_\gitlab\repo\ICreate.cs" />
-    <Compile Include="svr_\gitlab\repo\_NameX.cs" />
+    <Compile Include="svr_\gitlab\usr_\AccInVault.cs" />
+    <Compile Include="svr_\gitlab\usr_\vaulted\Repo4pub.cs" />
+    <Compile Include="svr_\gitlab\usr\_TeamworksX.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\document\ISize.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\document\_size\Limit.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\ICreate.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\_NameX.cs" />
+    <Compile Include="svr_\gitlab\usr_\_ByNameX.cs" />
+    <Compile Include="svr_\gitlab\usr_\_grp\IAcc.cs" />
+    <Compile Include="svr_\gitlab\_clients\Li_.cs" />
     <Compile Include="svr_\gitlab\_ClientX.cs" />
+    <Compile Include="svr_\gitlab\_ApiX.cs" />
     <Compile Include="svr_\vs\client\repo\_UrlX.cs" />
     <Compile Include="svr_\vs\client\teamwork\create_\Pub.cs" />
     <Compile Include="svr_\vs\client\teamwork\create_\Personal.cs" />
@@ -1177,8 +1261,8 @@
     <Compile Include="_module\work\be_\NothingButIgnoreSetting.cs" />
     <Compile Include="module\work\be_\Empty.cs" />
     <Compile Include="module\work\div\Restore.cs" />
-    <Compile Include="module\_cfg_\_AttributeX.cs" />
-    <Compile Include="module\_cfg_\_AttributesX.cs" />
+    <Compile Include="module\_setting\_cfg_\_AttributeX.cs" />
+    <Compile Include="module\_setting\_cfg_\_AttributesX.cs" />
     <Compile Include="module\crypt_\_TranscryptX.cs" />
     <Compile Include="module\_work_\directory_\unLink\documents_\_Nonlinks.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\documents_\_WithinWorkX.cs" />
@@ -1224,7 +1308,7 @@
     <Compile Include="repo_\bare\ov_\Folder.cs" />
     <Compile Include="repo_\bare\Size.cs" />
     <Compile Include="svr_\Github.cs" />
-    <Compile Include="svr_\gitlab\repos\_count\_LimitX.cs" />
+    <Compile Include="svr_\gitlab\usr\repos\_count\_LimitX.cs" />
     <Compile Include="module\work\division\be_\_ignored\rules\Dehydrate.cs" />
     <Compile Include="module\work\division\be_\_ignored\rules_\Vs.cs" />
     <Compile Include="module\work\div\doc_\ignore~\NewFolder1\Doc.cs" />
@@ -1235,9 +1319,9 @@
     <Compile Include="module\work\doc_\~\Doc - 复制.cs" />
     <Compile Include="module\work\div\doc_\ignore\patch_\_NilnulX.cs" />
     <Compile Include="module\work\division\be_\_ignored\rules_\dotnet0nilnul\ovFile_\patch~\_NilnulX.cs" />
-    <Compile Include="module\_cfg_\exclude\Depatch.cs" />
-    <Compile Include="module\_cfg_\exclude\Unput.cs" />
-    <Compile Include="module\_cfg_\exclude\unput\IfLinesNonEmpty.cs" />
+    <Compile Include="module\_setting\_cfg_\exclude\Depatch.cs" />
+    <Compile Include="module\_setting\_cfg_\exclude\Unput.cs" />
+    <Compile Include="module\_setting\_cfg_\exclude\unput\IfLinesNonEmpty.cs" />
     <Compile Include="nilnul0\fs\address_\shield\git_\modules_\nonlink_\_InsideX.cs" />
     <Compile Include="nilnul0\fs\address_\shield\git_\modules_\nonlink_\_InternalX.cs" />
     <Compile Include="nilnul0\fs\address_\shield\git_\modules_\_InternalX.cs" />
@@ -1358,12 +1442,12 @@
     <Compile Include="module\work\doc_\ignore\put_\dotnet\Ensure - 复制.cs" />
     <Compile Include="module\work\doc_\ignore\put_\dotnet\Ensure.cs" />
     <Compile Include="module\work\doc_\ignore\patch_\dotnet\nilnul~\AftEnsureFile.cs" />
-    <Compile Include="module\_cfg_\exclude\be_\ExistsFile.cs" />
-    <Compile Include="module\_cfg_\exclude\Address.cs" />
-    <Compile Include="module\_cfg_\exclude\Put.cs" />
-    <Compile Include="module\_cfg_\exclude\Patch.cs" />
-    <Compile Include="module\_cfg_\exclude\put\_IfLinesNonemptyX.cs" />
-    <Compile Include="module\_cfg_\exclude\_create\Force.cs" />
+    <Compile Include="module\_setting\_cfg_\exclude\be_\ExistsFile.cs" />
+    <Compile Include="module\_setting\_cfg_\exclude\Address.cs" />
+    <Compile Include="module\_setting\_cfg_\exclude\Put.cs" />
+    <Compile Include="module\_setting\_cfg_\exclude\Patch.cs" />
+    <Compile Include="module\_setting\_cfg_\exclude\put\_IfLinesNonemptyX.cs" />
+    <Compile Include="module\_setting\_cfg_\exclude\_create\Force.cs" />
     <Compile Include="module\work\division\be_\_ignored\rules_\dotnet0nilnul~\_Rules.cs" />
     <Compile Include="module\repo\snap_\current\document\toWork\ByCheckout.cs" />
     <Compile Include="nilnul0\fs\folder\be_\giT_\repo\Vow1.cs" />
@@ -1530,7 +1614,7 @@
     <Compile Include="module\stage\_add\Neglect.cs" />
     <Compile Include="module\stage\_commit\_msg\txt\op_\ReplaceDblQuote - Copy.cs" />
     <Compile Include="module\stage\_commit\_msg\txt\op_\replaceDblQuote\Ed - Copy.cs" />
-    <Compile Include="module\log_\referal\_ClearX.cs" />
+    <Compile Include="module\reflog_\referal\_ClearX.cs" />
     <Compile Include="module\neglect_\SkipWorktree.cs" />
     <Compile Include="module\reference\Upd.cs" />
     <Compile Include="module\reference\construct_\Branch.cs" />
@@ -1685,13 +1769,13 @@
     <Compile Include="module\reference\Spec.cs" />
     <Compile Include="module\stage\add\commit\AddCommit.cs" />
     <Compile Include="module\branches_\HasSnap.cs" />
-    <Compile Include="module\branch_\current\be_\Master.cs" />
-    <Compile Include="module\branch_\current\be_\master\Vow.cs" />
-    <Compile Include="module\branch_\current\pull_\RemoteBranch.cs" />
-    <Compile Include="module\branch_\current\Pull.cs" />
-    <Compile Include="module\branch_\current\Vw.cs" />
-    <Compile Include="module\branch_\current\_pull\option_\MergeStrategy.cs" />
-    <Compile Include="module\branch_\master\to_\Head.cs" />
+    <Compile Include="module\repo\branch_\current\be_\Master.cs" />
+    <Compile Include="module\repo\branch_\current\be_\master\Vow.cs" />
+    <Compile Include="module\repo\branch_\current\pull_\RemoteBranch.cs" />
+    <Compile Include="module\repo\branch_\current\current\Pull.cs" />
+    <Compile Include="module\repo\branch_\current\current\Vw.cs" />
+    <Compile Include="module\repo\branch_\current\_pull\option_\option_\MergeStrategy.cs" />
+    <Compile Include="module\repo\branch_\master\to_\to_\Head.cs" />
     <Compile Include="module\repo\_cfg_\remote\url\change_\Pass.cs" />
     <Compile Include="module\checkout_\Merge.cs" />
     <Compile Include="module\checkout_\Master.cs" />
@@ -1699,13 +1783,12 @@
     <Compile Include="module\gc_\All.cs" />
     <Compile Include="module\merge_\Strategy.cs" />
     <Compile Include="module\Refer.cs" />
-    <Compile Include="module\Log.cs" />
+    <Compile Include="module\repo\log_\Log.cs" />
     <Compile Include="module\ReflogX.cs" />
     <Compile Include="module\Fsck.cs" />
     <Compile Include="module\conflict\Resolve.cs" />
     <Compile Include="module\document_\Symlink.cs" />
-    <Compile Include="module\log_\RefLog.cs" />
-    <Compile Include="module\log_\Document.cs" />
+    <Compile Include="module\repo\log_\Document.cs" />
     <Compile Include="module\refs\Pack.cs" />
     <Compile Include="module\repo\%40ref\to_\%40Ref.cs" />
     <Compile Include="module\repo\branches\Filter.cs" />
@@ -1807,7 +1890,7 @@
     <Compile Include="module\work\merge\conflict\Restore.cs" />
     <Compile Include="module\work\merge\Resolve.cs" />
     <Compile Include="module\work\_merge\tool_\Kdiff3.cs" />
-    <Compile Include="module\_cfg\File.cs" />
+    <Compile Include="module\_setting\_cfg\File.cs" />
     <Compile Include="module\repo\_cfg_\gc\Auto.cs" />
     <Compile Include="module\repo\_cfg_\branch\remote_\Default.cs" />
     <Compile Include="module\repo\_cfg_\GitAttributes.cs" />
@@ -1820,8 +1903,8 @@
     <Compile Include="module\repo\_cfg_\_remote\_name\txt\be\vow\Ed.cs" />
     <Compile Include="module\work\div\doc_\ignore\establish_\DotNet.cs" />
     <Compile Include="module\work\div\doc_\ignore~\_Apply.cs" />
-    <Compile Include="module\work\division\be_\_ignored\Pattern.cs" />
-    <Compile Include="module\_log\Log.cs" />
+    <Compile Include="module\_setting\_ignore\Pattern.cs" />
+    <Compile Include="module\repo\_log\Log.cs" />
     <Compile Include="module\_merge_\NoCommit.cs" />
     <Compile Include="module\_push\Ssh.cs" />
     <Compile Include="module\_sub\OtherOptions.cs" />
@@ -1848,10 +1931,10 @@
     <Compile Include="Properties\Settings.cs" />
     <Compile Include="repo_\_bare\folder\Ini.cs" />
     <Compile Include="svrs_\vsBbGl\client_\token\prjs\Add.cs" />
-    <Compile Include="svr\repo\Name.cs" />
-    <Compile Include="svr\repo\_name\txt\Be.cs" />
-    <Compile Include="svr\repo\_name\txt\be\Vow.cs" />
-    <Compile Include="svr\repo\_name\txt\be\vow\Ee.cs" />
+    <Compile Include="svr\usr\repo\Name.cs" />
+    <Compile Include="svr\usr\repo\_name\txt\Be.cs" />
+    <Compile Include="svr\usr\repo\_name\txt\be\Vow.cs" />
+    <Compile Include="svr\usr\repo\_name\txt\be\vow\Ee.cs" />
     <Compile Include="svr_\amazon\repos\_count\Limit.cs" />
     <Compile Include="svr_\amazon\repo\_pushed\blob\_size\Limit.cs" />
     <Compile Include="svr_\amazon\repo\_size\Limit.cs" />
@@ -1868,7 +1951,7 @@
     <Compile Include="svr_\azure\repo\_size\Limit.cs" />
     <Compile Include="svr_\bitbucket\client_\cfged\repo\Client.cs" />
     <Compile Include="svr_\Azure.cs" />
-    <Compile Include="svr_\gitlab\repo\_size\Limit.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\_size\Limit.cs" />
     <Compile Include="svr_\vs_\prefixed_\cfged\client_\vaulted\repo\create_\prjDefault\ensure\_NormalizeRepoNameFirstX.cs" />
     <Compile Include="svr_\bitbucket\client\repo\url_\_UrlX.cs" />
     <Compile Include="svr_\bitbucket\client\repo\_CreateX.cs" />
@@ -1882,19 +1965,19 @@
     <Compile Include="svr_\bitbucket\client\repo\put_\privatize_\ByPersonalUrl.cs" />
     <Compile Include="svr_\bitbucket\client\repo\put_\MakePrivate.cs" />
     <Compile Include="svr_\bitbucket\client_\token\prjs\Add.cs" />
-    <Compile Include="svr_\gitlab\client\prj\create_\rest_\webReq\create_\parTyped\Create.cs" />
-    <Compile Include="svr_\gitlab\client\prj\create_\rest_\webReq\create_\parTyped\OnNormedName.cs" />
-    <Compile Include="svr_\gitlab\client\IRepo.cs" />
-    <Compile Include="svr_\gitlab\client\repo\Url.cs" />
-    <Compile Include="svr_\gitlab\repo\name\Normalize.cs" />
-    <Compile Include="svr_\gitlab\repo\Name.cs" />
-    <Compile Include="svr_\gitlab\repo\name_\Normed.cs" />
-    <Compile Include="svr_\gitlab\repo\_name\txt\Be.cs" />
-    <Compile Include="svr_\gitlab\repo\_name\txt\be\Vow.cs" />
-    <Compile Include="svr_\gitlab\repo\_name\txt\be\vow\Ee.cs" />
-    <Compile Include="svr_\gitlab\client\repo\NewFolder1\Url.cs" />
-    <Compile Include="svr_\gitlab\client_\vaulted\repo\Url.cs" />
-    <Compile Include="svr_\gitlab\_CfgedX.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\create_\byWebReq_\parTyped\Create.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\create_\byWebReq_\parTyped\OnNormedName.cs" />
+    <Compile Include="svr_\gitlab\usr\IRepo.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\Url.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\name\Normalize.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\Name.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\name_\Normed.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\_name\txt\Be.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\_name\txt\be\Vow.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\_name\txt\be\vow\Ee.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\url_\Url.cs" />
+    <Compile Include="svr_\gitlab\usr_\vaulted\repo\Url.cs" />
+    <Compile Include="svr_\gitlab\usr_\_CfgedX.cs" />
     <Compile Include="svr_\vs\client\teamwork\add_\ByWebClient_basicUser1.cs" />
     <Compile Include="svr_\vs\client\teamwork\Rec.cs" />
     <Compile Include="svr_\vs\client\teamwork\rec\Has.cs" />
@@ -1916,7 +1999,7 @@
     <Compile Include="nilnul0\fs\folder_\giT_\work\be_\Top.cs" />
     <Compile Include="svrs_\vsBbGl\client\prjs\%28retiring\Add.cs" />
     <Compile Include="svr\ClientI.cs" />
-    <Compile Include="svr\repo\branches\Vw.cs" />
+    <Compile Include="svr\usr\repo\branches\Vw.cs" />
     <Compile Include="svr_\bitbucket\api\repos\Username.cs" />
     <Compile Include="svr_\bitbucket\api\repos\user\Repo.cs" />
     <Compile Include="svr_\bitbucket\api\repos\user\repo\exist\Client.cs" />
@@ -1932,12 +2015,12 @@
     <Compile Include="svr_\bitbucket\bitbucket\Projects.cs" />
     <Compile Include="svr_\bitbucket\projects\Add.cs" />
     <Compile Include="svr_\bitbucket\bitbucket\User.cs" />
-    <Compile Include="svr_\bitbucket\user\user\Credential.cs" />
-    <Compile Include="svr_\bitbucket\user\user\credential\Put.cs" />
+    <Compile Include="svr_\bitbucket\usr\user\Credential.cs" />
+    <Compile Include="svr_\bitbucket\usr\user\credential\Put.cs" />
     <Compile Include="svr_\Gitlab.cs" />
-    <Compile Include="svr_\gitlab\_prjs\Prjs.cs" />
-    <Compile Include="svr_\gitlab\client\prj\create_\rest_\webReq\create_\parTxt\Add.cs" />
-    <Compile Include="svr_\gitlab\usr\user\PrivateToken.cs" />
+    <Compile Include="svr_\gitlab\usr\repos_\Prjs.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\create_\byWebReq_\parTxt\Add.cs" />
+    <Compile Include="svr_\gitlab\usr\NewFolder1\user\PrivateToken.cs" />
     <Compile Include="svr_\vs\repo\Name.cs" />
     <Compile Include="svr_\vs\repo\_name\txt\Be.cs" />
     <Compile Include="svr_\vs\repo\_name\txt\be\Vow.cs" />
@@ -1984,7 +2067,7 @@
     <Compile Include="module\repo\branches_\seeded\Seeded.cs" />
     <Compile Include="module\repo\branches_\seeded\seeded\Current.cs" />
     <Compile Include="module\repo\_branches\Tree.cs" />
-    <Compile Include="module\cfg\cfg\All.cs" />
+    <Compile Include="module\_setting\cfg\cfg\All.cs" />
     <Compile Include="module\repo\_cfg_\Ignore.cs" />
     <Compile Include="module\repo\remote\Fetch.cs" />
     <Compile Include="module\repo\remote\Password.cs" />
@@ -1992,9 +2075,9 @@
     <Compile Include="module\repo\_cfg_\remote\url\Change.cs" />
     <Compile Include="module\repo\_cfg_\remote\url_\push\upd~\Set.cs" />
     <Compile Include="module\repo\_cfg_\remote\url\vw\parse~\Parse.cs" />
-    <Compile Include="module\cfg\cfg\SparseCheckout.cs" />
-    <Compile Include="module\cfg\_submodule\Submodule.cs" />
-    <Compile Include="module\cfg\_submodules\Submodules.cs" />
+    <Compile Include="module\_setting\cfg\cfg\SparseCheckout.cs" />
+    <Compile Include="module\_setting\cfg\_submodule\Submodule.cs" />
+    <Compile Include="module\_setting\cfg\_submodules\Submodules.cs" />
     <Compile Include="module\repo\_cfg_\Config.cs" />
     <Compile Include="module\RefLog.cs" />
     <Compile Include="module\repo\snaps\Merge.cs" />
@@ -2005,13 +2088,13 @@
     <Compile Include="module\sub\Submodules.cs" />
     <Compile Include="module\subs\submodules\Add.cs" />
     <Compile Include="module\refs\UpdateRef.cs" />
-    <Compile Include="module\_cfg\_cfg\SystemWide.cs" />
+    <Compile Include="module\_setting\_cfg\_cfg\SystemWide.cs" />
     <Compile Include="module\dir\be_\Work.cs" />
     <Compile Include="module\dir\category_\_repoNot\RepoDescedentRoot.cs" />
     <Compile Include="module\dir_\work\be_\Top.cs" />
     <Compile Include="module\dir_\work_\NonRoot.cs" />
     <Compile Include="module\cmd_\Clean.cs" />
-    <Compile Include="svr_\gitlab\client\prj\create_\rest_\webReq\create_\Add.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\create_\byWebReq_\Add.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dir\be_\Top.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dir\category_\WorkRoot_WorkNonroot.cs" />
     <Compile Include="nilnul0\fs\_git\_git\ReportErrException.cs" />
@@ -2099,14 +2182,14 @@
     <Compile Include="svr_\bitbucket\Projects.cs" />
     <Compile Include="svr_\bitbucket\client\prjs\Add.cs" />
     <Compile Include="svr_\bitbucket\User.cs" />
-    <Compile Include="svr_\bitbucket\user\Credential.cs" />
-    <Compile Include="svr_\bitbucket\user\credential\Put.cs" />
+    <Compile Include="svr_\bitbucket\usr\Credential.cs" />
+    <Compile Include="svr_\bitbucket\usr\credential\Put.cs" />
     <Compile Include="svr_\gitlab\Client.cs" />
-    <Compile Include="svr_\gitlab\_prjs\Projects.cs" />
-    <Compile Include="svr_\gitlab\client\prj\NewFolder1\Add.cs" />
-    <Compile Include="svr_\gitlab\User.cs" />
+    <Compile Include="svr_\gitlab\usr\repos_\Projects.cs" />
+    <Compile Include="svr_\gitlab\usr\repo\create_\byWebReq_\NewFolder1\Add.cs" />
+    <Compile Include="svr_\gitlab\IUsr.cs" />
     <Compile Include="svr_\gitlab\usr\PrivateToken.cs" />
-    <Compile Include="svr_\gitlab\_client\Gitlab.cs" />
+    <Compile Include="svr_\gitlab\usr_\NewFolder1\Gitlab.cs" />
     <Compile Include="svr_\VisualStudio.cs" />
     <Compile Include="svr_\vs\client\teamwork\add_\%28retiring\ByWebClient_basicUser.cs" />
     <Compile Include="svr_\vs\client\repos\add_\ByWebClient_basicUser.cs" />
@@ -2144,7 +2227,7 @@
     <Compile Include="module\repo\branch_\current\nulable\Vw.cs" />
     <Compile Include="module\repo\branch\Tree.cs" />
     <Compile Include="module\Cfg.cs" />
-    <Compile Include="module\cfg\All.cs" />
+    <Compile Include="module\_setting\cfg\All.cs" />
     <Compile Include="module\work\division_\_ignored\_ignore\Ignore.cs" />
     <Compile Include="module\repo\_cfg_\Remotes.cs" />
     <Compile Include="module\repo\_cfg_\remotes\Vw.cs" />
@@ -2153,10 +2236,10 @@
     <Compile Include="module\repo\remote\urls\Show.cs" />
     <Compile Include="module\repo\_cfg_\remote\url_\push\upd~\forPush\Set.cs" />
     <Compile Include="module\repo\_cfg_\remote\url\vw\Parse.cs" />
-    <Compile Include="module\cfg\settings\Show.cs" />
-    <Compile Include="module\cfg\SparseCheckout.cs" />
-    <Compile Include="module\cfg\Submodule.cs" />
-    <Compile Include="module\cfg\Submodules.cs" />
+    <Compile Include="module\_setting\cfg\settings\Show.cs" />
+    <Compile Include="module\_setting\cfg\SparseCheckout.cs" />
+    <Compile Include="module\_setting\cfg\Submodule.cs" />
+    <Compile Include="module\_setting\cfg\Submodules.cs" />
     <Compile Include="module\cmd_\cmb_\Clean.cs" />
     <Compile Include="module\cmd_\Reset.cs" />
     <Compile Include="module\cmd_\UpdateRef.cs" />
@@ -2178,7 +2261,7 @@
     <Compile Include="module\work\directory\dir\_categorize\WorkRoot_WorkNonroot.cs" />
     <Compile Include="module\work\folder_\NotInnerModuleRoot.cs" />
     <Compile Include="module\_work_\Root.cs" />
-    <Compile Include="module\_cfg\SystemWide.cs" />
+    <Compile Include="module\_setting\_cfg\SystemWide.cs" />
     <Compile Include="nilnul0\fs\_git\ReportErrException.cs" />
     <Compile Include="nilnul0\fs\_git\Result.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -2200,9 +2283,9 @@
     <Compile Include="svr_\bitbucket\client_\cfged\repo\url_\_WithAccX.cs" />
     <Compile Include="svr_\bitbucket\client_\cfged\repo\_UrlX.cs" />
     <Compile Include="svr_\_GitlabX.cs" />
-    <Compile Include="Tortoise.cs" />
+    <Compile Include="nilnul0\os\prog_\gitty_\Tortoise.cs" />
     <Compile Include="tortoise\Icons.cs" />
-    <Compile Include="svr\_client\Rev.cs" />
+    <Compile Include="module\repo\snaps_\Rev.cs" />
     <Compile Include="_module\Clone.cs" />
     <Compile Include="_module\clone_\NoCheckout.cs" />
     <Compile Include="_module\Ini.cs" />
@@ -2221,10 +2304,7 @@
     <Compile Include="_svr_\LimitInMbyteI.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="module\branch_\orphan\" />
-    <Folder Include="module\cfg\ignore\" />
-    <Folder Include="module\cfg\section\key\val\" />
-    <Folder Include="module\cfg\section_\sub\" />
+    <Folder Include="module\blob\tro\_merge\" />
     <Folder Include="module\checkout\" />
     <Folder Include="module\commit_\" />
     <Folder Include="module\conflict\resolve\" />
@@ -2243,6 +2323,7 @@
     <Folder Include="module\exe_\git\result_\" />
     <Folder Include="module\file\" />
     <Folder Include="module\head_\branch_\" />
+    <Folder Include="module\pac\" />
     <Folder Include="module\pull_\brancH_\noncurrent\" />
     <Folder Include="module\reference\del_\" />
     <Folder Include="module\refer_\branch\" />
@@ -2259,7 +2340,6 @@
     <Folder Include="module\repo\branch\push_\svr_\bb\" />
     <Folder Include="module\repo\branch\push_\svr_\_bb_\" />
     <Folder Include="module\repo\branch\to_\head\" />
-    <Folder Include="module\repo\branch_\current\current\" />
     <Folder Include="module\repo\branch_\current\nulable\_vw_\" />
     <Folder Include="module\repo\branch_\current\remote\" />
     <Folder Include="module\repo\branch_\current\snap\tag\" />
@@ -2267,6 +2347,7 @@
     <Folder Include="module\repo\branch_\vereds\sort\" />
     <Folder Include="module\repo\branch_\vered_\nub\delNewIfSame\" />
     <Folder Include="module\repo\branch_\vered_\nub_\newest\" />
+    <Folder Include="module\repo\branch_\vered_\nub_\newest_\noncurrent\_regress\" />
     <Folder Include="module\repo\current\assign_\snap\" />
     <Folder Include="module\repo\current\assing_\" />
     <Folder Include="module\repo\current\at_\" />
@@ -2278,7 +2359,6 @@
     <Folder Include="module\repo\current_\branch_\sed\" />
     <Folder Include="module\repo\current_\reified\snap\vw_\NewFolder1\NewFolder1\" />
     <Folder Include="module\repo\current_\reified\vw_\" />
-    <Folder Include="module\repo\log\" />
     <Folder Include="module\repo\remote\branch\drop_\" />
     <Folder Include="module\repo\remote\dif_\dif_\" />
     <Folder Include="module\repo\remote\push_\branch_\uiTitled_\titled\" />
@@ -2351,7 +2431,7 @@
     <Folder Include="module\stash_\" />
     <Folder Include="module\statue\" />
     <Folder Include="module\stow\create\_collapse\" />
-    <Folder Include="module\tree\co\dif_\" />
+    <Folder Include="module\stow\_skim\" />
     <Folder Include="module\work\directory\dir\be_\" />
     <Folder Include="module\work\division\be_\ignored\" />
     <Folder Include="module\work\division\be_\_ignored\rules_\vs\" />
@@ -2364,7 +2444,6 @@
     <Folder Include="module\work\div\doc_\ignore\_patch\rsc\" />
     <Folder Include="module\work\div\restore_\" />
     <Folder Include="module\work\div\root\" />
-    <Folder Include="module\work\documents_\" />
     <Folder Include="module\work\document_\newly\" />
     <Folder Include="module\work\doc_\ignore\ensure_\" />
     <Folder Include="module\work\doc_\ignore\upd_\dotNet\" />
@@ -2374,13 +2453,15 @@
     <Folder Include="module\work\merge_\" />
     <Folder Include="module\work_\nonRt\" />
     <Folder Include="module\_branch\" />
-    <Folder Include="module\_cfg_\attributes\" />
-    <Folder Include="module\_cfg_\exclude\_patch\" />
     <Folder Include="module\_commit\" />
     <Folder Include="module\_dst\" />
     <Folder Include="module\_index_\" />
     <Folder Include="module\_merge\" />
-    <Folder Include="module\_repo_\" />
+    <Folder Include="module\_setting\cfg\ignore\" />
+    <Folder Include="module\_setting\cfg\section\key\val\" />
+    <Folder Include="module\_setting\cfg\section_\sub\" />
+    <Folder Include="module\_setting\_cfg_\attributes\" />
+    <Folder Include="module\_setting\_cfg_\exclude\_patch\" />
     <Folder Include="module\_stow\push\" />
     <Folder Include="module\_work_\directories\" />
     <Folder Include="module\_work_\directory_\noDotLed\" />
@@ -2485,41 +2566,41 @@
     <Folder Include="repo_\bare\ov_\folder_\tmp\" />
     <Folder Include="svrs_\vsBbGl\client\prjs\add_\" />
     <Folder Include="svrs_\vsBbGl\client_\token\prjs\add\" />
-    <Folder Include="svr\clients_\" />
-    <Folder Include="svr\client\repo\map_\word\" />
-    <Folder Include="svr\client\repo\map_\word_\" />
-    <Folder Include="svr\client\repo\set\" />
-    <Folder Include="svr\client\repo\set_\byHost\map_\" />
-    <Folder Include="svr\client\repo\set_\byHost_\" />
-    <Folder Include="svr\client\repo\sortie_\byHost\biject_\named_\" />
-    <Folder Include="svr\client\repo\sortie_\byHost\biject_\nom1nonemptyEs\" />
-    <Folder Include="svr\client\repo\sortie_\byHost\biject_\nomNonempty\" />
     <Folder Include="svr\co\" />
-    <Folder Include="svr\repo\branches\vw\" />
-    <Folder Include="svr\_client_\" />
+    <Folder Include="svr\usr\repo\branches\vw\" />
+    <Folder Include="svr\usr\repo\map_\word\" />
+    <Folder Include="svr\usr\repo\map_\word_\" />
+    <Folder Include="svr\usr\repo\set\" />
+    <Folder Include="svr\usr\repo\set_\byHost\map_\" />
+    <Folder Include="svr\usr\repo\set_\byHost_\" />
+    <Folder Include="svr\usr\repo\sortie_\byHost\biject_\named_\" />
+    <Folder Include="svr\usr\repo\sortie_\byHost\biject_\nom1nonemptyEs\" />
+    <Folder Include="svr\usr\repo\sortie_\byHost\biject_\nomNonempty\" />
+    <Folder Include="svr\usr_\grp\" />
     <Folder Include="svr_\amazon\_client\" />
     <Folder Include="svr_\amazon_\ohio\client\repo\" />
     <Folder Include="svr_\amazon_\region\client_\" />
     <Folder Include="svr_\aws_\" />
     <Folder Include="svr_\aw_\" />
     <Folder Include="svr_\azure\acc\" />
-    <Folder Include="svr_\azure\acc_\" />
-    <Folder Include="svr_\azure\client\repos\" />
-    <Folder Include="svr_\azure\client\repo\url_\" />
-    <Folder Include="svr_\azure\client\repo_\" />
-    <Folder Include="svr_\azure\client\teamwork\create_\personal_\" />
-    <Folder Include="svr_\azure\client\teamwork\repo\" />
-    <Folder Include="svr_\azure\client\_division\" />
+    <Folder Include="svr_\azure\acc_\org\prjs\count\" />
+    <Folder Include="svr_\azure\usr\repos\" />
+    <Folder Include="svr_\azure\usr\repo\url_\" />
+    <Folder Include="svr_\azure\usr\repo_\" />
+    <Folder Include="svr_\azure\usr\teamwork\create_\personal_\" />
+    <Folder Include="svr_\azure\usr\teamwork\repo\" />
+    <Folder Include="svr_\azure\usr\_division\" />
+    <Folder Include="svr_\azure\usr_\" />
     <Folder Include="svr_\github\client\repo\url\" />
     <Folder Include="svr_\github\client\repo_\" />
-    <Folder Include="svr_\gitlab\client\prj\create_\rest_\webReq\create_\parTyped\%28retiring\" />
-    <Folder Include="svr_\gitlab\client\repos\" />
-    <Folder Include="svr_\gitlab\grp\client\" />
-    <Folder Include="svr_\gitlab\grp\prj\alter\" />
-    <Folder Include="svr_\gitlab\grp\prj\alter_\" />
-    <Folder Include="svr_\gitlab\prjs\" />
-    <Folder Include="svr_\gitlab\repos\count\" />
-    <Folder Include="svr_\gitlab\repo\_pushed\" />
+    <Folder Include="svr_\github\NewFolder1\" />
+    <Folder Include="svr_\gitlab\usr\repos\count\" />
+    <Folder Include="svr_\gitlab\usr\repo\create_\byWebReq_\parTyped\%28retiring\" />
+    <Folder Include="svr_\gitlab\usr\repo\create_\rest_\" />
+    <Folder Include="svr_\gitlab\usr\repo\_pushed\" />
+    <Folder Include="svr_\gitlab\usr\_teamworks\" />
+    <Folder Include="svr_\gitlab\usr_\grp\repo\alter\" />
+    <Folder Include="svr_\gitlab\usr_\grp\repo\alter_\" />
     <Folder Include="svr_\vs\client\teamworks\" />
     <Folder Include="svr_\vs\client\teamwork\has\" />
     <Folder Include="svr_\vs\client_\prefixed_\" />
@@ -2561,7 +2642,7 @@
       <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="svr\client_\_accVaulted\Settings1.settings">
+    <None Include="svr\usr_\_accVaulted\Settings1.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
     </None>
@@ -2632,6 +2713,9 @@
   <ItemGroup>
     <Analyzer Include="..\..\.deps\AWSSDK.CodeCommit.3.7.100.136\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="License.txt" Pack="true" PackagePath="" />
+  </ItemGroup>
   <!--<ItemGroup>
     <PackageReference Include="AdysTech.CredentialManager">
       <Version>2.3.0</Version>
@@ -2698,7 +2782,7 @@
       <Output TaskParameter="Assemblies" ItemName="Targets" />
     </GetAssemblyIdentity>
     <ItemGroup>
-      <VersionNumber Include="@(Targets->'%(Version)')" />
+      <VersionNumber Include="@(Targets-&gt;'%(Version)')" />
       <MajorMinor Include="$([System.Text.RegularExpressions.Regex]::Replace(&quot;%(Targets.Version)&quot;, &quot;^([^\.]+)\.([^\.]+)(.*)$&quot;, &quot;$1.$2&quot;))" />
     </ItemGroup>
   </Target>
@@ -2740,6 +2824,7 @@ if $(ConfigurationName) == Release (
 	if  $(ConfigurationName)==Sym2nuget (
 		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-sym
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source nuget.org
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source my
 	)
 )</PostBuildEvent>
   </PropertyGroup>
@@ -2755,7 +2840,7 @@ if $(ConfigurationName) == Release (
   <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <!--<PropertyGroup>
 		<PostBuildEvent>
-			xcopy /Y /E /D /I "$(SolutionDir)\packages\*.*" "$(MSBuildProjectDirectory)\packages\"
+			xcopy /Y /E /D /I "packages\*.*"packages\"
 
 			"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -OutputDirectory ..\..
 

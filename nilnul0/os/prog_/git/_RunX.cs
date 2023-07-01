@@ -128,13 +128,19 @@ namespace nilnul.os.prog_.git
 			);
 		}
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="git">nullable</param>
+		/// <param name="module"></param>
+		/// <param name="args"></param>
 		static public void _Vod_1dirOfAddress_ofArgs(
 			nilnul.win.prog_.Git git,
 
 			string module //git is supposed to run on a nonModule folder
 			,
 			IEnumerable<string> args
-			)
+		)
 		{
 			 _Vod_worksiteAssumeNulable_ofArgument(
 				 nilnul.fs.address_.shield_._AddressX1.Create(module)
@@ -144,9 +150,51 @@ namespace nilnul.os.prog_.git
 				).ToString()
 				, git
 			);
-
 		}
 
+		static public void _Vod_0nulable_1address_2args(
+			nilnul.os.prog_.Git git0nul,
+
+			string moduleAddress //git is supposed to run on a nonModule folder
+			,
+			IEnumerable<string> args
+		)
+		{
+			 _Vod_worksiteAssumeNulable_ofArgument(
+				 nilnul.fs.address_.shield_._AddressX1.Create(moduleAddress)
+				,
+				new nilnul.win.prog._run.Args1(
+					args
+				).ToString()
+				, git0nul
+			);
+		}
+		static public void _Vod_0nulable_1address_2args(
+			nilnul.os.prog_.Git git0nul,
+
+			string moduleAddress //git is supposed to run on a nonModule folder
+			,
+			params string[] args
+		)
+		{
+			 _Vod_worksiteAssumeNulable_ofArgument(
+				 nilnul.fs.address_.shield_._AddressX1.Create(moduleAddress)
+				,
+				new nilnul.win.prog._run.Args1(
+					args
+				).ToString()
+				, git0nul
+			);
+		}
+
+
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="git">nulable</param>
+		/// <param name="module"></param>
+		/// <param name="args"></param>
 		static public void _Vod_1dirOfAddress_ofArgs(
 			nilnul.win.prog_.Git git,
 
@@ -156,30 +204,23 @@ namespace nilnul.os.prog_.git
 			)
 		{
 			 _Vod_1dirOfAddress_ofArgs(git, module, (IEnumerable<string>)args);
-
 		}
 		static public void _Vod_dirOfAddress_ofArgs(
-
 			string module //git is supposed to run on a nonModule folder
 			,
 			params string[] args
-			
-
-			)
+		)
 		{
 			 _Vod_1dirOfAddress_ofArgs(null, module, args);
-
 		}
-		static public void _Vod_dirOfAddress_ofArgument(
 
+		static public void _Vod_dirOfAddress_ofArgument(
 			string module //git is supposed to run on a nonModule folder
 			,
-			 string args
-			
-
-			)
+			string argument
+		)
 		{
-			 _Vod_worksiteAssumeAddress_ofArgument(module, args);
+			 _Vod_worksiteAssumeAddress_ofArgument(module, argument);
 
 		}
 

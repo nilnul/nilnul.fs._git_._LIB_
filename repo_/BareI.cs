@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.fs.git.repo_
 {
 	/// <summary>
-	/// 
+	/// bared repo, which is 
 	/// </summary>
 	public interface IBare
 	{

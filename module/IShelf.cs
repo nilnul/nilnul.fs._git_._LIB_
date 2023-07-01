@@ -9,7 +9,9 @@
 	///		nonwork
 	///		antiwork
 	///		workless
+	///		Head9stage
+	///		Snap9stage
 	///		
-	///	vs: <see cref="IStatue"/> which includes repo,stage and work, this excludes repo.
+	///	vs: <see cref="IStatue"/> which includes repo,stage and work, whileas this excludes repo.
 	public interface IShelf { }
 }

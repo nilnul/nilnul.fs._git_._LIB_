@@ -24,10 +24,10 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 					 */
 					break;
 				case ExitCode.Unfound:
-					return "time out or repo unfound";
+					return "possible reason: some file is too large (for github the limit is 100Mbytes), time out or repo unfound";
 					break;
 				default:
-					return "unexplained; report this to programmer.";
+					return "Error happend during pushing. Details are in the console; you can reproduce it by trying pushing again. Also consider reporting to the developer.";
 					break;
 			}
 		}

@@ -14,6 +14,14 @@ namespace nilnul.fs.git.svr_.gitlab
 	{
 		private nilnul.web.credential_._token.Data _credential;
 
+
+		///docs.gitlab.com/ee/user/profile/personal_access_tokens.html
+		/// <summary>
+		/// Though required, GitLab usernames are ignored when authenticating with a personal access token. There is an issue for tracking to make GitLab use the username.
+		/// </summary>
+		/// <remarks>
+		/// password: don't use password. it may pose security risk, and it might be not working. use token instead.
+		/// </remarks>
 		public nilnul.web.credential_._token.Data credential
 		{
 			get { return _credential; }
@@ -40,7 +48,7 @@ namespace nilnul.fs.git.svr_.gitlab
 
 
 		public const string Prj_sinceRoot = "/projects";
-		static void CreatePrj(string prjName)
+		 void CreatePrj(string prjName)
 		{
 
 

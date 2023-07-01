@@ -5,6 +5,8 @@
 	/// </summary>
 	/// alias:
 	///		stow
-	///			"st"age, "w"'o'rk
+	///			"st"age, "w"'o'rk, hwere wo is reversed to ow;
+	///		stage9work
+	///		stash
 	public interface IStow { }
 }

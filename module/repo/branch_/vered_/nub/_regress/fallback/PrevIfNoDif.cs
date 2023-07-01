@@ -8,12 +8,12 @@ namespace nilnul.fs.git.module.repo.branch_.vered_.key.delNewIfSame
 	public static class _RetPrevIfDelElseNulX
 	{
 		public static nilnul.txt_.Vered PrevNulable(
-					nilnul.fs.git.ModuleI module
-					,
-					nilnul.fs.git.repo._branch.name_._vered.Key branch
-					,
-					nilnul.win.prog_.Git git = null
-				)
+			nilnul.fs.git.ModuleI module
+			,
+			nilnul.fs.git.repo._branch.name_._vered.Key branch
+			,
+			nilnul.win.prog_.Git git = null
+		)
 		{
 			txt_.Vered[] sorted = branch_.vereds._SortX.Seq(module, branch, git).ToArray();
 

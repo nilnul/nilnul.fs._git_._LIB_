@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.git
 {
+	/// <summary>
+	/// from client, we call the remote as svr, which ends with 'r', the initial of "remote";
+	/// </summary>
+	/// <remarks>
+	/// client is implied in "svr";
+	/// </remarks>
+	public interface ISvr { }
 	//[Serializable]
 	public interface SvrI
 	{

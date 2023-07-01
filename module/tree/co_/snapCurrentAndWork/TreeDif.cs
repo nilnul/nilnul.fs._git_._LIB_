@@ -11,7 +11,6 @@ namespace nilnul.fs.git.module.saved.commit_.current.vsWork
 		public static string TreeDif(fs.Folder folder)
 		{
 			return TreeDif(folder.ToString());
-			throw new NotImplementedException();
 		}
 
 		/*-u[<mode>] 

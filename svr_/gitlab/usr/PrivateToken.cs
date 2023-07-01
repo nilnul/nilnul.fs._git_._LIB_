@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.fs.git.svr_.gitlab.user
+namespace nilnul.fs.git.svr_.gitlab.usr
 {
 	public class PrivateToken
 	{
@@ -13,7 +13,7 @@ namespace nilnul.fs.git.svr_.gitlab.user
 		*/
 
 		public const string QueryStr_FieldName = "private_token";
-		public const string Header_FieldNae = "PRIVATE-TOKEN";
+		public const string Header_FieldName = "PRIVATE-TOKEN";
 
 
 	}

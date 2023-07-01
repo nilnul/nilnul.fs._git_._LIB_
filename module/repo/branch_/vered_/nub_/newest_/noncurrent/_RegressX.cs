@@ -12,12 +12,15 @@ namespace nilnul.fs.git.module.repo.branch_.vered_.nub_.newest_.noncurrent
 	/// if the last two bakBranches are same in contents, delete the last one, 
 	/// </summary>
 	/// <remarks>
-	/// 
+	///  even if the previous branch is not orphan, we will still retract to it if the tree are the same;
+	///  if we require it to be orphan, <see cref="retract_._ToOrphanX"/>
 	/// </remarks>
 	/// alias:
 	///		regress
 	///		
 	///		idempotent
+	///
+	[Obsolete(nameof(retract_._ToOrphanX))]
 	public static class _RegressX
 	{
 		/// <summary>

@@ -13,7 +13,7 @@ namespace nilnul.fs.git.module
 use --global or --local or --system as per your needs.
 
 		 */
-	public class Cfg
+	 class Cfg
 	{
 
 		/*git config --add remote.all.url ssh://user@server/repos/g0.git
