@@ -27,16 +27,18 @@ namespace nilnul.fs.git.repo.be_._crashed
 		{
 			return s.EndsWith(_EXT_ENDING);
 		}
+		static public bool _Be_assumeRepoAddress(string repobase)
+		{
+			return System.IO.Directory.EnumerateFiles(repobase).Any(d => d.EndsWith(_EXT_ENDING));
+
+			//return __Be_assumeRepobase(nilnul.fs.Folder.FroAddress(repobase));
+		}
 
 		public static bool __Be_assumeRepobase(FolderI en)
 		{
 			return nilnul.fs.folder._DocsX.Denotes(en).Any(d => d.en.EndsWith(_EXT_ENDING));
 		}
 
-		static public bool _Be_assumeRepoAddress(string repobase)
-		{
-			return __Be_assumeRepobase(nilnul.fs.Folder.FroAddress(repobase));
-		}
 
 		public static bool Be(fs.folder_.git_.Repo folder)
 		{

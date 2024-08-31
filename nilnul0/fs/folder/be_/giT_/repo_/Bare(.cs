@@ -23,12 +23,20 @@ namespace nilnul.fs.folder.be_.giT_.repo_
 
 		}
 
+		public bool _be_0folder(string folder)
+		{
+			return fs.folder.be_.git_.Repo.Ov(boxed)._be_assumeFolder(folder)
+				&&
+				nilnul.fs.folder_.git_.repo.be_._BareX._Be_assumeRepoAddress(folder,boxed);
+		}
+
 		public bool be(FolderI folder)
 		{
-			return fs.folder.be_.git_. Repo.Ov(boxed).be(folder)
+			return fs.folder.be_.git_.Repo.Ov(boxed).be(folder)
 				&&
 				nilnul.fs.folder_.git_.repo.be_._BareX._Be_assumeRepo(folder,boxed);
 		}
+
 		public bool be(Folder obj)
 		{
 			return be((FolderI)obj);

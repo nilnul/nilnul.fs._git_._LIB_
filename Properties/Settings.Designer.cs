@@ -12,7 +12,7 @@ namespace nilnul.fs.git.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.6.0.0")]
     public sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -32,94 +32,6 @@ namespace nilnul.fs.git.Properties {
             }
             set {
                 this["svr_vs__prefix"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
-            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
-            "tring>vs</string>\r\n</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection moduleRemoteKeysVs {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemoteKeysVs"]));
-            }
-            set {
-                this["moduleRemoteKeysVs"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
-            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
-            "tring>aws</string>\r\n  <string>aw</string>\r\n</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection moduleRemoteKeysAw {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemoteKeysAw"]));
-            }
-            set {
-                this["moduleRemoteKeysAw"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
-<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-  <string>bitBucket</string>
-  <string>bitbucket</string>
-  <string>bb</string>
-</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection moduleRemoteKeysBb {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemoteKeysBb"]));
-            }
-            set {
-                this["moduleRemoteKeysBb"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
-            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
-            "tring>gitLab</string>\r\n  <string>gitlab</string>\r\n  <string>gl</string>\r\n</Array" +
-            "OfString>")]
-        public global::System.Collections.Specialized.StringCollection moduleRemoteKeysGl {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemoteKeysGl"]));
-            }
-            set {
-                this["moduleRemoteKeysGl"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
-            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
-            "tring>awGlBbVs</string>\r\n</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection moduleRemoteKeysAwGlBbVs {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemoteKeysAwGlBbVs"]));
-            }
-            set {
-                this["moduleRemoteKeysAwGlBbVs"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
-            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
-            "tring>azure</string>\r\n</ArrayOfString>")]
-        public global::System.Collections.Specialized.StringCollection moduleRemote_azure {
-            get {
-                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemote_azure"]));
-            }
-            set {
-                this["moduleRemote_azure"] = value;
             }
         }
         
@@ -237,6 +149,154 @@ namespace nilnul.fs.git.Properties {
             }
             set {
                 this["clients_my_base6four"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsd=\"http://www.w3." +
+            "org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <s" +
+            "tring>vs</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection moduleRemoteKeysVs {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemoteKeysVs"]));
+            }
+            set {
+                this["moduleRemoteKeysVs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsd=\"http://www.w3." +
+            "org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <s" +
+            "tring>aws</string>\r\n  <string>aw</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection moduleRemoteKeysAw {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemoteKeysAw"]));
+            }
+            set {
+                this["moduleRemoteKeysAw"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
+<ArrayOfString xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+  <string>bitBucket</string>
+  <string>bitbucket</string>
+  <string>bb</string>
+</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection moduleRemoteKeysBb {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemoteKeysBb"]));
+            }
+            set {
+                this["moduleRemoteKeysBb"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsd=\"http://www.w3." +
+            "org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <s" +
+            "tring>gitLab</string>\r\n  <string>gitlab</string>\r\n  <string>gl</string>\r\n</Array" +
+            "OfString>")]
+        public global::System.Collections.Specialized.StringCollection moduleRemoteKeysGl {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemoteKeysGl"]));
+            }
+            set {
+                this["moduleRemoteKeysGl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsd=\"http://www.w3." +
+            "org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <s" +
+            "tring>awGlBbVs</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection moduleRemoteKeysAwGlBbVs {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemoteKeysAwGlBbVs"]));
+            }
+            set {
+                this["moduleRemoteKeysAwGlBbVs"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsd=\"http://www.w3." +
+            "org/2001/XMLSchema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\">\r\n  <s" +
+            "tring>azure</string>\r\n</ArrayOfString>")]
+        public global::System.Collections.Specialized.StringCollection moduleRemote_azure {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["moduleRemote_azure"]));
+            }
+            set {
+                this["moduleRemote_azure"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2200")]
+        public int svr__azure_usr_repos__count_limit {
+            get {
+                return ((int)(this["svr__azure_usr_repos__count_limit"]));
+            }
+            set {
+                this["svr__azure_usr_repos__count_limit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("250")]
+        public int svr__azure_repo__size_limit_InGb {
+            get {
+                return ((int)(this["svr__azure_repo__size_limit_InGb"]));
+            }
+            set {
+                this["svr__azure_repo__size_limit_InGb"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("32766")]
+        public int svr__azure_repo_division__length_Limit_full {
+            get {
+                return ((int)(this["svr__azure_repo_division__length_Limit_full"]));
+            }
+            set {
+                this["svr__azure_repo_division__length_Limit_full"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4096")]
+        public int svr__azure_repo_div_dnt__length_Limit_full {
+            get {
+                return ((int)(this["svr__azure_repo_div_dnt__length_Limit_full"]));
+            }
+            set {
+                this["svr__azure_repo_div_dnt__length_Limit_full"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("64")]
+        public int svr__azure_repo__name_txt_be_maxlength {
+            get {
+                return ((int)(this["svr__azure_repo__name_txt_be_maxlength"]));
+            }
+            set {
+                this["svr__azure_repo__name_txt_be_maxlength"] = value;
             }
         }
     }

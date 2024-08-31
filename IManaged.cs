@@ -5,6 +5,7 @@
 	/// </summary>
 	/// alias:
 	///		depo0bared
+	///		nonplain
 	///		
 	public interface IManaged:IModule0BareRepo {
 

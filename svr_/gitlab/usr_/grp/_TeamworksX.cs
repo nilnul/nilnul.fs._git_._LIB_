@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.git.svr_.gitlab.usr_.grp
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <seealso cref="acc_.grp.ICollaboration"/>
 	static public class _TeamworksX
 	{
 		

@@ -1,0 +1,9 @@
+﻿# ignore those files 
+
+.*
+
+#DONOT ignore those files (this is what the ! is for - un ignore files)
+!.gitignore
+
+
+#If you want to ignore all dotfiles, add this in your .gitignore file

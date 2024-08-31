@@ -14,6 +14,8 @@ namespace nilnul.fs.git
 	///		depo
 	///			,depository, like repository
 	///		managed,<see cref="IManaged"/>
+	///		module
+	///		
 	///
 
 	[Obsolete(nameof(IDepo))]

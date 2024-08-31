@@ -10,6 +10,19 @@ namespace nilnul.fs.folder_.git_.work.be_
 {
 	static public class _TopX
 	{
+		//static  bool _Be_0werk(string obj, nilnul.win.prog_.Git git = null)
+		//{
+		//	return nilnul.fs.address.eq_.AsShield.Singleton.Equals(
+
+		//		nilnul.fs.folder_.git_.work._RtX._Address_0werk(obj,git)
+		//		,
+		//		nilnul.fs.address_.shield.op_.unary_.Tgt.Singleton.Op_ofAddress(
+		//			obj
+		//		)
+		//	);
+		//}
+
+
 		//static public bool Be(Work obj, nilnul.win.prog_.Git git = null)
 		//{
 		//	return nilnul.fs.address_.shield.Eq.Singleton.Equals(obj.getRoot(), obj.en.address.en);
@@ -21,6 +34,8 @@ namespace nilnul.fs.folder_.git_.work.be_
 		/// <param name="obj"></param>
 		/// <param name="git"></param>
 		/// <returns></returns>
+
+
 		static public bool __Be_ofAddress(string obj, nilnul.win.prog_.Git git = null)
 		{
 			return nilnul.fs.address_.shield.Eq.Singleton.Equals(
@@ -31,8 +46,8 @@ namespace nilnul.fs.folder_.git_.work.be_
 					obj
 				)
 			);
-
 		}
+
 
 		static public bool Be(Work obj, nilnul.win.prog_.Git git = null)
 		{

@@ -1,19 +1,23 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using GitLabApiClient;
+//using GitLabApiClient;
 //using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.Diagnostics;
 using System.Linq;
+using GitLabApiClient;
 
 namespace nilnul.fs.git.svr_.gitlab.usr_.grp
 {
+	/// <summary>
+	/// the id of a grp;
+	/// </summary>
 	static public class _IdX
 	{
 

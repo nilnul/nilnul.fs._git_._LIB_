@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="nilnul.fs.git.depo.repo._setting._descript" GeneratedClassName="TheSettings1">
+  <Profiles />
+  <Settings>
+    <Setting Name="defaultLine" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Unnamed repository; edit this file 'description' to name the repository.</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

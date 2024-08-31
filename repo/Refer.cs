@@ -14,7 +14,7 @@ namespace nilnul.fs.git.repo
 	///		1)References are pointers to commits. Unlike objects, which are immutable, references are mutable (can be updated to point to a new commit).
 	///		2) human -readable
 	/// </remarks>
-	static public class _ReferX
+	static class _ReferX
 	{
 	}
 }

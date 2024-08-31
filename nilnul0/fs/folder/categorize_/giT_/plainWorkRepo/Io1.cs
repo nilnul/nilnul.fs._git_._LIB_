@@ -68,6 +68,10 @@ namespace nilnul.fs.folder.categorize_.git_.plainWorkRepo
 
 
 
+		//static  Io _Io_0folder(string folder, nilnul.win.prog_.Git git=null)
+		//{
+		//	/// <see cref="PlainWorkRepo"/>
+		//}
 		static public Io Eval(nilnul.fs.FolderI folder, nilnul.win.prog_.Git git=null)
 		{
 			//StringWriter output = new StringWriter();

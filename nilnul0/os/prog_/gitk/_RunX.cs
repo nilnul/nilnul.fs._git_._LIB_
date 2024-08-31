@@ -34,12 +34,12 @@ namespace nilnul.os.prog_.gitk
 		static public void _Vod_ofArgument(
 			string arg
 			,
-			nilnul.win.prog_.Git git = null
+			nilnul.os.prog_.Gitk gitk = null
 		)
 		{
 			Process.Start(
 				new ProcessStartInfo(
-			   nilnul.win.prog_.git.nulable.Fallback.NotNul(git).val.location
+			   nilnul.os.prog_.gitk.nulable.Fallback.NotNul(gitk).val.location
 			   ,
 			   arg
 			   )

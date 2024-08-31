@@ -1,0 +1,173 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nilnul.win.prog_.git.run
+{
+	[Obsolete(" for lurking, see: " + nameof(run_.lurk._CodX) + "; for cod, see: " + nameof(run._CodX))]
+	static public class _ExitCodeX
+	{
+		//static public program_._git.Result Result(nilnul.fs.git.ModuleI module, string arg, nilnul.win.program_.Git git=null) {
+		//	return nilnul.win.program_.Git.RunCmd_result(module, arg, git);
+		//}
+
+		static public int _Cod_0address_1argument(
+			string _module,
+			string _argument,
+			nilnul.win.prog_.Git git = null
+			)
+		{
+			return os.prog_.git.run_.exit._CodX._Cod_assumeAddress_assumeArgument(_module,_argument,git);
+			//return nilnul.win.prog.run._ExitCodeX.ExitCode(
+			//	_module
+			//	,
+			//	nilnul.win.prog_.git.nulable.Fallback.NotNul(git).val.location
+			//	,
+			//	arg
+			//);
+		}
+		static public int _ExitCode(
+			nilnul.fs.address_.ShieldI _module,
+			string arg,
+			nilnul.win.prog_.Git git = null
+			)
+		{
+			return os.prog_.git.run_.exit._CodX._Cod_1argument(_module,arg,git);
+			//return nilnul.win.prog.run._ExitCodeX.ExitCode(
+			//	_module
+			//	,
+			//	nilnul.win.prog_.git.nulable.Fallback.NotNul(git).val.location
+			//	,
+			//	arg
+			//);
+		}
+
+
+		static public int _ExitCode(
+			
+			string arg,
+			nilnul.win.prog_.Git git = null
+			)
+		{
+			return _ExitCode(null,arg,git);
+			
+		}
+		static public int ExitCode(
+			nilnul.fs.git.ModuleI module,
+			string arg,
+			nilnul.win.prog_.Git git = null
+			)
+		{
+			return _ExitCode(
+				module.top1.en.address.en
+				,
+				arg
+				,git
+			);
+		}
+
+
+		static public int _ExitCode_ofAddress(
+			string module //git is supposed to run on a nonModule folder
+			,
+			string arg,
+			nilnul.win.prog_.Git git = null
+			)
+		{
+			return _ExitCode(
+				 nilnul.fs.address_.shield_._AddressX1.Create(module)
+				,
+				arg
+				,git
+			);
+		}
+
+		static public int _Cod_1address_2args(
+			nilnul.win.prog_.Git git ,
+
+			string module //git is supposed to run on a nonModule folder
+			,
+			IEnumerable<string> args
+			)
+		{
+			return _Cod_0address_1argument(
+				 (module)
+				,
+				new nilnul.win.prog._run.Args1(
+					args
+				).ToString()
+				,git
+			);
+
+		}
+		static public int _ExitCode_ofAddress(
+			nilnul.win.prog_.Git git ,
+
+			string module //git is supposed to run on a nonModule folder
+			,
+			IEnumerable<string> args
+			)
+		{
+			return _ExitCode(
+				 nilnul.fs.address_.shield_._AddressX1.Create(module)
+				,
+				new nilnul.win.prog._run.Args1(
+					args
+				).ToString()
+				,git
+			);
+
+		}
+
+
+		static public int _ExitCode_ofAddress(
+			nilnul.win.prog_.Git git,
+
+			string module //git is supposed to run on a nonModule folder
+			,
+			params string[] args
+			)
+		{
+			return _ExitCode_ofAddress(git, module, (IEnumerable<string>)args);
+
+		}
+		static public int _ExitCode_ofAddress(
+
+			string module //git is supposed to run on a nonModule folder
+			,
+			params string[] args
+			)
+		{
+			return _ExitCode_ofAddress(null, module, args);
+
+		}
+
+		static public int _Cod_0address_1args(
+
+			string module //git is supposed to run on a nonModule folder
+			,
+			params string[] args
+			)
+		{
+			return _Cod_1address_2args(null, module, args);
+
+		}
+		static public int _Cod_0address_2args(
+
+			string module //git is supposed to run on a nonModule folder
+			,
+			nilnul.os.prog_.Git git
+			,
+			params string[] args
+			)
+		{
+			return _Cod_1address_2args(git, module, args);
+
+		}
+
+
+
+	}
+}

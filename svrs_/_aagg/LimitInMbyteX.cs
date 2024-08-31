@@ -6,6 +6,7 @@ namespace nilnul.fs.git.svrs_._aagg
 	/// <summary>
 	/// in Mb
 	/// </summary>
+	/// <see cref="fs.git.depo._work_.document_._large.Settings1.Default"/>
 	public class LimitInMbyteX
 	{
 		static public int Repo {
@@ -20,7 +21,6 @@ namespace nilnul.fs.git.svrs_._aagg
 					,
 					svr_._gitlab.LimitInMbyteX.Repo
 				}.Min();
-				
 			}
 		}
 
@@ -39,8 +39,6 @@ namespace nilnul.fs.git.svrs_._aagg
 					,
 					svr_._gitlab.LimitInMbyteX.Push
 				}.Min();
-
-
 			}
 		}
 

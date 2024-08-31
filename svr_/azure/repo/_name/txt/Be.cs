@@ -14,6 +14,7 @@ namespace nilnul.fs.git.svr_.azure.repo._name.txt
 	/// </summary>
 	public class Be : /*txt::*/nilnul.txt.BeI
 	{
+		static public int MaxLength = fs.git.Properties.Settings.Default.svr__azure_repo__name_txt_be_maxlength;
 		public bool be(string obj)
 		{
 			return Regex.IsMatch(

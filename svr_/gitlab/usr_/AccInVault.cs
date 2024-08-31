@@ -1,4 +1,4 @@
-﻿using nilnul.fs.git.client;
+using nilnul.fs.git.client;
 using Octokit;
 using System;
 using System.Collections.Generic;
@@ -24,6 +24,11 @@ namespace nilnul.fs.git.svr_.gitlab.client_
 		static public string CredKey(string acc) {
 			return svr_.gitlab._ClientX.VaultKey(acc);
 		}
+		static public string CredKey(string acc,string org) {
+			return svr_.gitlab._ClientX.VaultKey(acc)+$"/{org}";
+		}
+
+
 
 		public string credKey4push =>svr_.gitlab._ClientX.VaultKey(accName);
 

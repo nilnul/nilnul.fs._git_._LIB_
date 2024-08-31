@@ -42,12 +42,17 @@ answered Aug 26, 2016 at 6:17
 
 		public static void _ByRename_addressAssumeRepo(string  en)
 		{
-			new System.IO.DirectoryInfo(en).EnumerateFiles(en).Where( d=>d.Name.EndsWith(LOCK_ENDING)).Each(
+			new System.IO.DirectoryInfo(en).EnumerateFiles("*.lock")
+			//	.Where(
+			//	d=>
+			//	d.Name.EndsWith(LOCK_ENDING)
+			//)
+			.Each(
 				d=>
 				nilnul.fs.file._RenameX.Rename(
 					 d.FullName
 					,
-					$"{d}{nilnul.time_.datetime.lex_.alnum_.NonyearCollapse.Singleton.phrase()}"
+					$"{d.Name}{nilnul.time_.datetime.lex_.alnum_.NonyearCollapse.Singleton.phrase()}"
 				)
 			);
 		}
@@ -60,14 +65,16 @@ answered Aug 26, 2016 at 6:17
 
 		public static void _ByRename(FolderI en)
 		{
-			nilnul.fs.folder._DocsX.Denotes(en).Where( d=>d.en.EndsWith(LOCK_ENDING)).Each(
-				d=>
-				nilnul.fs.file._RenameX.Rename(
-					new nilnul.fs.address_.spear_.ParentDoc(en.address.en,d)
-					,
-					$"{d}{nilnul.time_.datetime.lex_.alnum_.NonyearCollapse.Singleton.phrase()}"
-				)
-			);
+			_ByRename_addressAssumeRepo(en.address.en.ToString());
+
+			//nilnul.fs.folder._DocsX.Denotes(en).Where( d=>d.en.EndsWith(LOCK_ENDING)).Each(
+			//	d=>
+			//	nilnul.fs.file._RenameX.Rename(
+			//		new nilnul.fs.address_.spear_.ParentDoc(en.address.en,d)
+			//		,
+			//		$"{d}{nilnul.time_.datetime.lex_.alnum_.NonyearCollapse.Singleton.phrase()}"
+			//	)
+			//);
 		}
 
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.fs.git.svr.client.repo.push
+namespace nilnul.fs.git.svr.usr.repo.push
 {
 	class Size
 	{

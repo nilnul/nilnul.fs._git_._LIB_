@@ -1,0 +1,177 @@
+﻿#	 eg:
+#	atlassian.com/git/tutorials/saving-changes/gitignore
+
+
+##########  ending previous as the count of sharp character is longer than any one in previous;
+
+# matches from anywhere
+
+## ignores:
+	h
+	g/h
+		#note, if g doesnot contain any other files, then git status will not show 'g'; 
+		#	if g contains another file, then git status will show "g/" as a whole, not showing g/i; maybe it's for perf reasons?
+		# in either case, tortoise git will show unignored file in g;
+		# in either case, git status -u will show unignored file.
+		#  git status -u --ignored will show unignored file.
+
+# matches from the start, not from the middle.
+
+logs/debug.log
+
+logs/debug.log
+## but not
+debug.log
+build/logs/debug.log
+
+
+
+
+########  /
+Prepending a slash matches files only in the repository root.
+########
+
+/debug.log
+
+## matches:
+
+debug.log
+but not
+logs/debug.log
+
+# A question mark matches exactly one character.
+debug?.log
+
+debug0.log
+debugg.log
+but not
+debug10.log
+
+###########
+ Appending a slash indicates the pattern is a directory. The entire contents of any directory in the repository matching that name – including all of its files and subdirectories – will be ignored
+
+logs/
+
+########## \, the backslash, not slash
+# You can use \ to escape .gitignore pattern characters if you have files or directories containing them:
+
+foo\[01\].txt
+
+## ignore the file literally named foo[01].txt
+
+
+##########
+Square brackets can also be used to match a single character from a specified range.
+
+debug[0-9].log
+
+## matches:
+
+debug0.log
+debug1.log
+#but not
+debug10.log
+
+############
+ Square brackets match a single character form the specified set.
+
+debug[01].log
+## matches:
+debug0.log
+debug1.log
+### but not
+debug2.log
+debug01.log
+
+# An exclamation mark can be used to match any character except one from the specified set.
+
+debug[!01].log
+## matches:
+
+debug2.log
+### but not
+debug0.log
+debug1.log
+debug01.log  #"01" is not a single letter;
+
+
+
+#Ranges can be numeric or alphabetic.
+debug[a-z].log
+
+debuga.log
+debugb.log
+## but not
+debug1.log
+
+
+###########  Wildcards can be used in directory names as well.
+logs/*day/debug.log
+
+# ignores:
+
+logs/monday/debug.log
+logs/tuesday/debug.log
+## but not
+logs/latest/debug.log
+
+
+
+
+#######  You can prepend a pattern with a double asterisk to match directories anywhere in the repository.
+
+		 
+**/logs   # where "**/" can mathc "" the empty string;
+
+## matches:
+##	logs/debug.log
+##  logs/monday/foo.bar
+## build/logs/debug.log
+
+
+logs/**/debug.log
+
+## ignores:
+
+logs/debug.log
+logs/monday/debug.log
+logs/monday/pm/debug.log
+
+
+
+
+##############
+ You can also use a double asterisk to match files based on their name and the name of their parent directory.
+###############
+**/logs/debug.log
+
+## matches:
+logs/debug.log
+build/logs/debug.log
+
+but not
+logs/build/debug.log
+
+
+
+
+
+
+##############
+# Due to a performance-related quirk in Git, you can not negate a file that is ignored due to a pattern matching a directory
+##############
+
+logs/
+!logs/important.log
+
+# ignores:
+
+logs/debug.log
+logs/important.log
+
+
+
+
+			*/
+	}
+}

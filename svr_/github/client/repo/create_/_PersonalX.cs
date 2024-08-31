@@ -44,6 +44,8 @@ namespace nilnul.fs.git.svr_.github.client.repo.create_
 						}
 					}
 				);
+
+				///put here to return a url, even when there is xpn; if we want to return no url when xpn, move this line outside the catch clause;
 				return github.client.repo._UrlX.Url(
 					gitHubClient.Credentials.Login
 					,
@@ -52,6 +54,7 @@ namespace nilnul.fs.git.svr_.github.client.repo.create_
 				);
 
 			};
+
 		}
 
 		public static string Ensure(svr_.github.client_.Vaulted gitHubClient, string repo)

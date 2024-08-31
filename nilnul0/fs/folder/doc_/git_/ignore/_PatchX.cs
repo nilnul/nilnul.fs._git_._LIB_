@@ -14,6 +14,16 @@ namespace nilnul.fs.folder.doc_.git_.ignore
 	{
 		
 
+		static public void _Vod_0folderHavingIgnore(string spear, IEnumerable<string> lines)
+		{
+			nilnul.fs.file_.git_.ignore._PatchX._Vod_0file(
+				doc_.git_._IgnoreX._Address_0folder(spear)
+				,
+				
+				lines
+			);
+		}
+
 		static public void _OfFolder(nilnul.fs.FolderI spear, IEnumerable<string> lines)
 		{
 			nilnul.fs.file_.git_.ignore._PatchX._OfSpear(

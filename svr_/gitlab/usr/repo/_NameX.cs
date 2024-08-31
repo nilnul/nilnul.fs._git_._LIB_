@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 
 namespace nilnul.fs.git.svr_.gitlab.repo
 {
@@ -18,11 +18,18 @@ namespace nilnul.fs.git.svr_.gitlab.repo
 			;
 
 
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="unnormedName">
+		///raw; unnormalized name
+		/// </param>
+		/// <returns></returns>
 
-		static public string Encode(string intendedName) {
+		static public string Encode(string unnormedName) {
 
 			return Regex.Replace(
-				intendedName
+				unnormedName
 				,
 				$@"(
 					^ (?'a'0*) (?={_name.txt.Be.SPECIAL})
@@ -33,7 +40,7 @@ namespace nilnul.fs.git.svr_.gitlab.repo
 				)"
 				,
 				m=>m.Result(
-				"0${a}"
+				"0${a}"	//prepend 0s to "", or "00", ..., if it's between two special anchors;
 				)
 				, RegexOptions.IgnorePatternWhitespace | RegexOptions.Singleline
 			);
@@ -41,7 +48,14 @@ namespace nilnul.fs.git.svr_.gitlab.repo
 		}
 
 
-		static public string Decode(string intendedName) {
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="normedName">
+		/// normalized name;
+		/// </param>
+		/// <returns></returns>
+		static public string Decode(string normedName) {
 
 
 
@@ -54,7 +68,7 @@ namespace nilnul.fs.git.svr_.gitlab.repo
 				";
 #if DEBUG
 
-			var matched = Regex.Match(intendedName, pattern, RegexOptions.IgnorePatternWhitespace | RegexOptions.Singleline );
+			var matched = Regex.Match(normedName, pattern, RegexOptions.IgnorePatternWhitespace | RegexOptions.Singleline );
 
 
 #endif
@@ -63,7 +77,7 @@ namespace nilnul.fs.git.svr_.gitlab.repo
 
 
 			return  Regex.Replace(
-				intendedName
+				normedName
 				,
 				pattern
 				,

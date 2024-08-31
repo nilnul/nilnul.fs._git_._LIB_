@@ -22,6 +22,7 @@ They cannot contain a sequence @{.
 They cannot be the single character @. 
 They cannot contain a \.  
 		 */
+
 	/// <summary>
 	/// 
 	/// </summary>
@@ -47,6 +48,12 @@ They cannot contain a \.
 			x=>x.Contains("//")
 			,
 			x=>x.Contains("..")
+			,
+			x=>x.StartsWith("-")	/*
+	 if it begins with '-', tortoise git will complain it's an invalid option.
+	 */
+
+
 
 		};
 

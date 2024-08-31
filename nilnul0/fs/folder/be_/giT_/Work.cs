@@ -66,6 +66,14 @@ namespace nilnul.fs.folder.be_.git_
 		{
 
 		}
+		public bool _be_0folder(string obj)
+		{
+			return 
+				categorize_.git_.PlainWorkRepo._Trich_assumeFolder(obj,boxed)== categorize_.git_._plainWorkRepo.Ret.Work
+			;
+			//throw new NotImplementedException();
+		}
+
 
 		public bool be(FolderI obj)
 		{
@@ -74,6 +82,7 @@ namespace nilnul.fs.folder.be_.git_
 			);
 			//throw new NotImplementedException();
 		}
+
 
 		[Obsolete("shall be Static ")]
 		public bool be(FolderI obj, Git git)

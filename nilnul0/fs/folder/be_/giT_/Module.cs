@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.folder.be_.giT_
 {
+	/// <summary>
+	/// depo. werk or embedded repo.
+	/// </summary>
 	static public class _ModuleX
 	{
 

@@ -28,12 +28,24 @@ remote: error: GH001: Large files detected. You may want to try Git Large File S
 		/// </summary>
 		public const int File_RECOMMEND_Size_IN_MB = 50;
 
-
-
-		public const int PUSH_IN_GIGABYTES =
-			//nilnul.num.real.ext.op_.binary_()
-			2
+		/// <summary>
+	/// fatal: pack exceeds maximum allowed size (2.00 GiB)
+		/// </summary>
+		/// <remarks>
+		/// int.max= 2^31-1 = 2G -1
+		/// </remarks>
+		public const int _PUSH_IN_GIGABYTES_PER_MANUAL =			2
 			;
+
+		public const long _PUSH_IN_OCTETS_PER_MANUAL =			_PUSH_IN_GIGABYTES_PER_MANUAL * nilnul.num_.radix_.binary_.Giga.LONG
+			;
+
+		/// <summary>
+		/// per practice, keep the push not above 500Moctets lest some errors, such as those concerning transporting, pop out;
+		/// </summary>
+		public const int PUSH_IN_MEGABYTES =	500	;
+
+		public const int PUSH_IN_OCTETS =	PUSH_IN_MEGABYTES *	nilnul.num_.radix_.binary_.Mega.INT32;
 
 
 	}

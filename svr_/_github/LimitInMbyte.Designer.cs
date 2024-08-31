@@ -12,7 +12,7 @@ namespace nilnul.fs.git.svr_._github {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.10.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.7.0.0")]
     public sealed partial class LimitInMbyte : global::System.Configuration.ApplicationSettingsBase {
         
         private static LimitInMbyte defaultInstance = ((LimitInMbyte)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new LimitInMbyte())));
@@ -49,7 +49,7 @@ namespace nilnul.fs.git.svr_._github {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("2048")]
+        [global::System.Configuration.DefaultSettingValueAttribute("512")]
         public int push {
             get {
                 return ((int)(this["push"]));

@@ -8,8 +8,21 @@ using nilnul.fs.folder_.git_;
 
 namespace nilnul.fs.file_.git_.ignore
 {
+	/// <summary>
+	/// create or override,  by force
+	/// </summary>
 	static public class _EnforceX
 	{
+		static public void _Vod_0spear(string targetAddress, string blob)
+		{
+			System.IO.File.WriteAllText(targetAddress, blob);
+		}
+
+		static public void _Vod_0spear(string targetAddress, IEnumerable< string> blob)
+		{
+			System.IO.File.WriteAllLines(targetAddress, blob);
+		}
+
 		static public void Make(nilnul.fs.address_.SpearI targetAddress, string blob)
 		{
 			System.IO.File.WriteAllText(targetAddress.ToString(), blob);

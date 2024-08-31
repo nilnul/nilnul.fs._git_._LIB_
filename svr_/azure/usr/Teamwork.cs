@@ -7,6 +7,16 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.git.svr_.azure.client
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// alias:
+	///		colab
+	///		collab
+	///		teamspace
+	///		teamwork
+	///		teamjob
+	///		
 	public class Teamwork
 		:
 		nilnul.obj.Box1<Client>

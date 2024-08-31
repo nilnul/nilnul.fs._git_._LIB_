@@ -6,8 +6,16 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.git
 {
-	public interface ModuleI:_module_.BlankI,_module_.TopI, _module_.TopI1, IModule
-	{
 
+	[Obsolete(nameof(DepoI))]
+	public interface ModuleI
+		:
+		DepoI
+		,
+		_module_.TopI
+		,
+		IModule
+	{
+		
 	}
 }

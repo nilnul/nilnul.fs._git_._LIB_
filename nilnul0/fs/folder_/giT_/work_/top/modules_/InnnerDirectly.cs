@@ -10,6 +10,8 @@ namespace nilnul.fs.folder_.git_.work_.top.modules_
 	/// <summary>
 	/// internal, excluding self
 	/// </summary>
+	/// alias:
+	///		enclave
 	public static class _InnerDirectlyX
 	{
 		public static IEnumerable<nilnul.fs._address.DivI> _Divs(

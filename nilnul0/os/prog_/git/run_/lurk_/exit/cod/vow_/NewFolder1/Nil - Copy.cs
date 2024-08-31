@@ -21,6 +21,24 @@ namespace nilnul.win.prog_.git.run_.ui.exitCode.vow_
 			);
 		}
 
+		public static void _Vod_0address_1argument(
+			string module,
+			string arg,
+			nilnul.win.prog_.Git git = null
+			)
+		{
+			int obj = _ExitCodeX._Cod_0address_1argument(module, arg, git);
+			if (obj!=0)
+			{
+				throw new Exception(
+					$"when running git {arg} @ {module}:{obj}"
+				);
+
+			}
+			//nilnul.num.integer_.int32.be_.nil.Vow.Singleton.vow(
+			//	obj
+			//);
+		}
 		public static void Void(
 			nilnul.fs.address_.ShieldI module,
 			string arg,
@@ -31,6 +49,7 @@ namespace nilnul.win.prog_.git.run_.ui.exitCode.vow_
 				_ExitCodeX._ExitCode(module, arg, git)
 			);
 		}
+
 
 		public static void Void(FolderI en, string v, Git git=null)
 		{

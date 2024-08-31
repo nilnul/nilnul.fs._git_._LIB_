@@ -7,8 +7,12 @@ using System.Linq.Expressions;
 namespace nilnul.fs.folder_.git_.work_.top.modules_
 {
 	/// <summary>
-	/// excluding self; including indirect ones
+	/// excluding self; including indirect ones;
 	/// </summary>
+	/// alias:
+	///		enclaveRecurly
+	///	.bat:
+	///		dir /s/ad/b | findstr \\\.git$
 	public static class _InternalX
 	{
 		public static IEnumerable<nilnul.fs._address.DivI> _Divs(

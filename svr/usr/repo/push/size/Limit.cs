@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.fs.git.svr.client.repo.push.size
+namespace nilnul.fs.git.svr.usr.repo.push.size
 {
 	/// <summary>
 	/// the minimu of the limits of all svrs such that it can be accomodated by every server.
@@ -25,10 +25,10 @@ svr_.github.client.repo.push.size._LimitX.File_RECOMMEND_Size_IN_MB * nilnul.num
 		/// <summary>
 		/// 2g
 		/// </summary>
-		int eachPush = Math.Min(
-			svr_.github.client.repo.push.size._LimitX.PUSH_IN_GIGABYTES
+		int eachPushInMoctets = Math.Min(
+			svr_.github.client.repo.push.size._LimitX.PUSH_IN_MEGABYTES
 			,
-			svr_.azure.client.repo.push.size._LimitX.PUSH_IN_GIGABYTES
+			svr_.azure.client.repo.push.size._LimitX.PUSH_IN_GIGABYTES*1024
 		);
 
 	}

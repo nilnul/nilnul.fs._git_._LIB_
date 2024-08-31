@@ -32,6 +32,20 @@ namespace nilnul.fs.folder_.git_.work
 		/// <returns>the physical, not the symlink, path.
 		/// if the "HEAD" file in "/.git" is empty, the returned is the Rt of super module. (If your HEAD file is somehow emptied or corrupted, you’ll start seeing the exact same error, even though you are currently in a correctly initialized repository. If you HEAD file is missing, you'll see the error too.)
 		/// </returns>
+		static public string _Address_0werk(
+			string _insideWork_notRepo
+			,
+			nilnul.win.prog_.Git git=null
+		)
+		{
+			return 
+				nilnul.win.prog_.git.run.result.msg._TrimmedX.OfAddress(
+					_insideWork_notRepo
+					,
+					"rev-parse --show-toplevel"
+				)  ///note: in ".git", whether it's bare or not, the following command returns empty. in submodule, the command returns the root of the submodule.
+			;
+		}
 		static public string __Address_ofAddress(
 			string _insideWork_notRepo
 			,

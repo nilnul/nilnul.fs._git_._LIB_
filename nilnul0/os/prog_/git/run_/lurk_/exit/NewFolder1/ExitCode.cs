@@ -12,6 +12,28 @@ namespace nilnul.win.prog_.git.run_.ui
 	static public class _ExitCodeX
 	{
 	
+		static public int _Cod_0address_1argument(
+			string _module,
+			string arg,
+			nilnul.win.prog_.Git git = null
+			)
+		{
+			return os.prog_.git.run_.exit._CodX_lurk._Cod_assumeAddress_assumeArgument(
+				_module,
+				arg
+				, 
+					git
+				
+			
+			);
+			//return nilnul.win.prog.run._ExitCodeX.ExitCode(
+			//	_module
+			//	,
+			//	nilnul.win.prog_.git.nulable.Fallback.NotNul(git).val.location
+			//	,
+			//	arg
+			//);
+		}
 
 		static public int _ExitCode(
 			nilnul.fs.address_.ShieldI _module,
@@ -35,6 +57,7 @@ namespace nilnul.win.prog_.git.run_.ui
 			//	arg
 			//);
 		}
+
 
 		static public int ExitCode(
 			nilnul.fs.git.ModuleI module,

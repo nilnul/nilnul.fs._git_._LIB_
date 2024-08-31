@@ -1,0 +1,93 @@
+﻿using nilnul.obj.seq.be_;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nilnul.fs.git.depo.pier.be_._dry_.by_.status_
+{
+	/// <summary>
+	/// git status -s
+	/// the out put is like <see cref="_ByDryRunX"/>
+	/// </summary>
+	///git-scm.com/docs/git-status
+
+	[Obsolete("the parsing needs further investigation per manual;")]
+	static  class _Ver2ndX
+	{
+		static public bool _Be_0depo(string gitTop, nilnul.win.prog_.Git git = null)
+		{
+			return _Be_0depo(gitTop, (nilnul.os.prog_.Git)git);
+		}
+		static public bool _Be_0depo(string gitTop)
+		{
+			return _Be_0depo(gitTop, (nilnul.os.prog_.Git)null);
+		}
+		static public bool _Be_0depo(string gitTop, nilnul.os.prog_.Git git = null)
+		{
+			var result = nilnul.os.prog_.git.run_.exit._ResultX._Result_assumeAddress(    //note: errCode is 1.
+				gitTop
+				,
+				"status -s -uno --porcelain=v2"  //-uno   #excluding untracked;  v1 is default; 
+				/*
+				 per manual, "!!" means ignored file;
+				per tryout, ignored files are not shown;
+				that is cuz:
+			   Ignored files are not listed unless --ignored is used; if it is, ignored files are indicated by !!.
+				 */
+				,
+				git
+			);
+
+
+
+
+			if (result.exitCode == 0)
+			{
+				return _OfTracked(result.msg);
+
+
+			}
+
+			throw new nilnul.fs._git.ReportErrException(result.err + ";cod:" + result.exitCode);
+
+		}
+		static internal bool _OfTracked(string msg) {
+
+			/*Ordinary changed entries have the following format:
+
+1 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <path>
+Renamed or copied entries have the following format:
+
+2 <XY> <sub> <mH> <mI> <mW> <hH> <hI> <X><score> <path><sep><origPath>*/
+			return nilnul.txt.split_._LineX.Line_removeWhite(
+													msg
+									).All(
+										l =>
+										{
+											var t = l.Split(new[] { ' ' }, 2);
+											return t.Last().StartsWith(".");
+
+										}
+									);
+
+		}
+
+		static public bool Be(nilnul.fs.folder_.git_.Top gitTop, nilnul.win.prog_.Git git = null)
+		{
+			return _Be_0depo(gitTop.en.address.en.ToString(), git);
+
+
+
+		}
+
+		public static bool _Be_0depo(DirectoryInfo depo, nilnul.win.prog_.Git git = null)
+		{
+			return _Be_0depo(depo.FullName, git);
+
+		}
+
+	}
+}

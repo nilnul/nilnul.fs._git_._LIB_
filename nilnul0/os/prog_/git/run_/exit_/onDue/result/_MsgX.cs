@@ -11,8 +11,8 @@ namespace nilnul.os.prog_.git.run_.exit_.onDue.result
 	/// </summary>
 	public class _MsgX
 	{
-		public static string Msg(
-			nilnul.fs.FolderI module,
+		public static string _Msg_0address4folder(
+			string folder,
 			string arg,
 			nilnul.win.prog_.Git git = null
 
@@ -22,8 +22,8 @@ namespace nilnul.os.prog_.git.run_.exit_.onDue.result
 			)
 		{
 			return nilnul.os.proc_.finished._result.data._MsgX.Msg(
-				nilnul.os.prog_.git.run_.exit_.onDue._ResultX.Result(
-					module
+				nilnul.os.prog_.git.run_.exit_.onDue._ResultX._Result_assumeAddress(
+					folder
 					,
 					arg
 					,
@@ -32,6 +32,32 @@ namespace nilnul.os.prog_.git.run_.exit_.onDue.result
 				)
 			);
 		}
+		public static string Msg(
+			nilnul.fs.FolderI folder,
+			string arg,
+			nilnul.win.prog_.Git git = null
+
+			,
+			int? life = null
+
+			)
+		{
+			return _Msg_0address4folder(
+				folder.address.en.ToString(),arg,git
+			);
+			//return nilnul.os.proc_.finished._result.data._MsgX.Msg(
+			//	nilnul.os.prog_.git.run_.exit_.onDue._ResultX.Result(
+			//		folder
+			//		,
+			//		arg
+			//		,
+			//		git
+			//		, life
+			//	)
+			//);
+		}
+
+
 		private static string Msg(nilnul.fs.folder_.git_.work_.Top top1, string arg, Git git,
 			int? life = null
 )

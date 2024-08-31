@@ -12,10 +12,10 @@ namespace nilnul.fs.file_.git_.ignore
 	/// </summary>
 	static public class _PatchX
 	{
-		static public void _OfSpear(nilnul.fs.FileI spear1, IEnumerable<string> lines)
+		static public void _Vod_0file(string spear1, IEnumerable<string> lines)
 		{
-			var spear = spear1.ToString();
-			var allLines = System.IO.File.ReadAllLines(spear);
+			
+			var allLines = System.IO.File.ReadAllLines(spear1);
 
 			var lines2patch = lines.Where(
 					x => nilnul.obj.str_.enumerable.be_._NoneX.None(
@@ -27,18 +27,26 @@ namespace nilnul.fs.file_.git_.ignore
 			if (lines2patch.Any())
 			{
 				System.IO.File.AppendAllLines(
-					spear
+					spear1
 					,
 					new[] { "" }
 				);
 
 				System.IO.File.AppendAllLines(
-					spear
+					spear1
 					,
 					lines2patch
 
 				);
 			}
+		}
+
+		static public void _OfSpear(nilnul.fs.FileI spear1, IEnumerable<string> lines)
+		{
+			var spear = spear1.ToString();
+			_Vod_0file(spear,lines);
+			//return;
+	
 		}
 		static public void _OfSpear(string spear, IEnumerable<string> lines)
 		{

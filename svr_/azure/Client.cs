@@ -41,12 +41,35 @@ namespace nilnul.fs.git.svr_.azure
 			set { _token = value; }
 		}
 
+		public string _username;
+		public string username
+		{
+			get { return _username; }
+			set { _username = value; }
+		}
 
-		public Client(string org0, string token0)
+		public Client(string org0, string username, string token0)
 		{
 			_org = org0;
+			_username = username;
 			_token = token0;
 		}
+
+		public Client(string org0, string token0):this( org0,default,token0 )
+		{
+			//_org = org0;
+			//_token = token0;
+		}
+
+		public Client(string orgName, NetworkCredential personalAccessToken):this(orgName,personalAccessToken?.UserName,personalAccessToken?.Password)
+		{
+		}
+		static public Client _Of_1nulable(string orgName, NetworkCredential personalAccessToken)
+		{
+
+			return new Client(orgName, personalAccessToken?.UserName, personalAccessToken?.Password);
+		}
+
 
 		public string spear()
 		{
@@ -84,7 +107,7 @@ namespace nilnul.fs.git.svr_.azure
 				new Uri(this.spear())
 				//uriBase
 				, new VssBasicCredential(
-				"", this.token
+				this.username??"", this.token
 			)
 
 			);
@@ -98,13 +121,13 @@ namespace nilnul.fs.git.svr_.azure
 		static public Client CreateFroVault(string orgName)
 		{
 
-			var url = nilnul.fs.git.svr_.azure._client._OrgX.Spear(orgName);
+			//var url = nilnul.fs.git.svr_.azure._client._OrgX.Spear(orgName);
 
 			var keyName = nilnul.fs.git.svr_.azure._client._OrgX.Rsc(orgName); ;
 
 			var personalAccessToken = nilnul.win.app_._CredManX.Get(keyName);
 
-			return new Client(orgName, personalAccessToken.Password);
+			return new Client(orgName, personalAccessToken);//.Password);
 		}
 
 		/// <summary>

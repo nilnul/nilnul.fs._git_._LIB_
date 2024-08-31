@@ -8,6 +8,23 @@ namespace nilnul.win.prog_.git.run.result.msg
 	public class _TrimmedX
 	{
 
+		public static string _Txt_0address_1argument(
+			string  module,
+			string arg,
+			nilnul.win.prog_.Git git = null
+			)
+		{
+			return _MsgX._Msg_0address(
+				module
+				,
+				arg
+				,
+				git
+
+			).Trim();
+
+
+		}
 		public static string Txt(
 			nilnul.fs.address_.ShieldI module,
 			string arg,
@@ -25,6 +42,7 @@ namespace nilnul.win.prog_.git.run.result.msg
 
 
 		}
+
 		public static string Txt(Exist address, string v, prog_.Git git=null)
 		{
 			return Txt(address.en, v, git);

@@ -17,6 +17,13 @@ namespace nilnul.fs.git.repo.div
 				,git
 			);
 		}
+
+		/// <summary>
+		/// works for bare repo, or embedded|nest repo.
+		/// </summary>
+		/// <param name="_divShield"></param>
+		/// <param name="git"></param>
+		/// <returns></returns>
 		static public string _Exe_ofShield(
 			string _divShield, nilnul.win.prog_.Git git =null
 		) {

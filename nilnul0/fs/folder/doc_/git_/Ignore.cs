@@ -31,6 +31,16 @@ If you wish the exclude patterns to affect only certain repositories (instead of
 		{
 			return new nilnul.fs.address_.spear_.ParentDoc(address, IgnoreFileName);
 		}
+		public  static string _Address_0folder(string address)
+		{
+			return System.IO.Path.Combine(address, IgnoreFileName);
+		}
+		public  static string _Address_0parent(string address)
+		{
+			return System.IO.Path.Combine(address, IgnoreFileName);
+		}
+
+
 		static public nilnul.fs.address_.SpearI Spear(nilnul.fs.FolderI folder) {
 			return Spear(folder.address.en );
 		}

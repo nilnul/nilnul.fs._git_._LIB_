@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace nilnul.win.prog_.git._run._cfg.setting_
 {
 	/// <summary>
-	/// called misleadingly as global
+	/// called misleadingly as global.
+	/// ~/.gitconfig
 	/// </summary>
 	class User
 	{

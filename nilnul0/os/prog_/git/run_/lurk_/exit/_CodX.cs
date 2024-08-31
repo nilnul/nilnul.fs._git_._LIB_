@@ -156,6 +156,27 @@ namespace nilnul.os.prog_.git.run_.lurk_.exit
 				lurk
 			);
 		}
+		static public int _Cod_0address_1argument_3milliseconds4lurk(
+			string module //git is supposed to run on a nonModule folder
+			,
+			string arg
+			,
+			nilnul.win.prog_.Git git = null
+			,
+			int? lurk=null
+
+			)
+		{
+			return _ExitCode(
+				 nilnul.fs.address_.shield_._AddressX1.Create(module)
+				,
+				arg
+				,git
+				,
+				lurk
+			);
+		}
+
 		static public int _Cod_ofAddress_ofArgument_lurkAssumeNum(
 			string module //git is supposed to run on a nonModule folder
 			,

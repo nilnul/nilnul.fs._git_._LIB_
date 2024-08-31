@@ -27,6 +27,23 @@ In uncommon circumstances, repositories may be larger than 10GB. For instance, t
 
 */
 
-		public static nilnul.num.ext_.Inf1 HardLimit =  num.ext_.Inf1.Singleton;
+		[Obsolete("it seems microsoft updated the documentation;")]
+
+		public static nilnul.num.ext_.Inf1 HardLimit = num.ext_.Inf1.Singleton;
+
+		///
+		/// learn.microsoft.com/en-us/azure/devops/repos/git/limits?view=azure-devops
+		/// <summary>
+		/// Repositories should be no larger than 250 GB. 
+		/// </summary>
+		public static int HardLimitInGb
+		{
+			get
+			{
+				return fs.git.Properties.Settings.Default.svr__azure_repo__size_limit_InGb;
+			}
+		}
+
+
 	}
 }

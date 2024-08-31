@@ -86,13 +86,16 @@ namespace nilnul.fs.git.svr_.azure.client_
 
 		public svr_.azure.Client genAzureClient()
 		{
-			return new Client(this._org, this.cred0nul?.Password);
+			return  svr_.azure.Client._Of_1nulable (this._org, this.cred0nul);
+			//return new Client(this._org, this.cred0nul?.Password);
 		}
 
 		static public svr_.azure.Client Client(Vaulted vaulted) {
-			return new Client(
-				vaulted.org,vaulted.cred0nul?.Password
-			);
+			return  svr_.azure.Client._Of_1nulable (vaulted.org, vaulted.cred0nul);
+
+			//return new Client(
+			//	vaulted.org,vaulted.cred0nul?.Password
+			//);
 		}
 
 		static public Vaulted Client(svr_.azure.Client vaulted) {

@@ -24,6 +24,7 @@ namespace nilnul.fs.folder.categorize_.git_._plainWorkRepo
 		///		none
 		///		noop
 		///		nope
+		///		drab
 		Plain,
 
 		/// <summary>

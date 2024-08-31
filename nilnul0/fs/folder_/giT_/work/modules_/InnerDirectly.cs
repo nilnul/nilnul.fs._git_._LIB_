@@ -12,6 +12,8 @@ namespace nilnul.fs.folder_.git_.work.modules_
 	/// <summary>
 	/// not including self
 	/// </summary>
+	/// alias:
+	///		enclaved
 	static public class _InnerDirectlyX
 	{
 

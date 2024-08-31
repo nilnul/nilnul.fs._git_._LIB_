@@ -14,12 +14,20 @@ namespace nilnul.fs.folder.be_.giT_.repo_.bare_
 	 */
 	static public class _TopX
 	{
+		static public bool _Be_0folder(string address, Git git=null) {
+			return nilnul.fs.folder.be_.giT_.repo_.Bare.Ov(git)._be_0folder(address)
+				&&
+				nilnul.fs.folder_.giT_.repo.be_._TopX._Be_assumeRepoAddress(address,git);
+
+		}
+
 		static public bool Be(string address, Git git=null) {
 			return nilnul.fs.folder.be_.giT_.repo_.Bare.Ov(git).be_ofAddress(address)
 				&&
 				nilnul.fs.folder_.giT_.repo.be_._TopX._Be_assumeRepoAddress(address,git);
 
 		}
+
 
 		public static bool Be(FolderI folder, Git git=null)
 		{
