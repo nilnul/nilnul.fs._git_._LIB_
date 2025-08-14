@@ -266,7 +266,7 @@ $RECYCLE.BIN/
 mono_crash.*
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
-[Ll]og/
+#/[Ll]og/
 Generated\ Files/
 nunit-*.xml
 BenchmarkDotNet.Artifacts/
