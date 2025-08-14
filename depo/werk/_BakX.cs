@@ -20,7 +20,7 @@ namespace nilnul.fs.git.depo.werk
 	/// </summary>
 	/// <remarks>
 	/// This is called from <see cref="fs.git.depo_.IWrought"/>
-	/// ;here we don't split large files;
+	/// ;here we don't split large files; to split, <see cref=""/>
 	/// </remarks>
 	/// 
 	static public class _BakX
@@ -262,10 +262,9 @@ Aborting
 			);
 
 
-
 			long batchMax = 512l * nilnul.num_.radix_.binary_.Mega.INT32;
 
-			List<List<string>> batches = new();
+			List<List<string>> batches = new(); ///files partitioned
 
 			//rel_.net_._tree.Unconstrained<string> tree4div = forestBuilder.SingleOrDefault();
 			//if (tree4div is null)
@@ -401,25 +400,32 @@ Aborting
 				return (current, totalSize);
 			}
 
-			long allowed_0document(string file)
+			long allowed_0document(string document)
 			{
-				return allowed(System.IO.Path.Combine(_depo, file));
+				return allowed_1document1(
+					//System.IO.Path.Combine
+					_depo, document
+				);
 			}
 
-
-			long allowed(string file)
+			long allowed_1document1(string depo, string document)
 			{
 				if (
 					/// it might be folder that is symlink
-					nilnul.fs.location.be_.Symlink._Be_0location(
-						file
+					///
+
+					nilnul.fs.folder.destiny.be_._ReparseX._Be_0folder_1destiny(
+						depo,document
 					)
 				)
 				{
 					return SYMLINK_SIZE;
 				}
 				return new System.IO.FileInfo(
-					file
+					System.IO.Path.Combine(
+						depo,
+						document
+					)
 				).Length;
 			}
 
@@ -542,16 +548,11 @@ Aborting
 								//return latestTagName;
 							}
 						}
-
-
 					}
-
 
 					if (latestTagName0Nul is null)
 					{
-
 						var tag4batch = $"{tag4batchPrefix}{i}";
-
 						nilnul.os.prog_.git.run_.exit_.onDue.result._Vow_codOkX.OfAddress(
 							_depo
 							,
@@ -577,7 +578,7 @@ Aborting
 								,
 								arg
 								, git
-							); // what does this mean?
+							); // what does this mean? set the current branch head (HEAD) to <commit> (meta may vary, but content are the same; hence we reuse the old revision), optionally modifying index and working tree to match.
 						}
 						catch (Exception x)
 						{

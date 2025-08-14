@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,7 +46,8 @@ namespace nilnul.fs.git.repo.be_
 		///		objects/pack/*.lock
 		///		objects/pack/pack_git2_??idx.lock
 		///	eg:
-		///		packed-refs.new may prevent reference update after crash ?
+		///		.git/packed-refs.new
+		///			,may prevent reference update after crash ?
 		///		:
 		///		Rename from 'D:/1(Git/.git/packed-refs.new' to 'D:/1(Git/.git/packed-refs' failed. Should I try again? (y/n) 
 		///	eg:

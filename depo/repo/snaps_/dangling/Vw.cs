@@ -1,10 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.fs.git.module.repo.snaps_.dangling
+namespace nilnul.fs.git.depo.repo.snaps_.dangling
 {
 	class Vw
 	{
@@ -25,5 +26,25 @@ dangling blob 7108f7ecb345ee9d0084193f147cdad4d2998293
 In this case, you can see your missing commit after the string “dangling commit”. You can recover it the same way, by adding a branch that points to that SHA-1.
 
 		 */
+
+		///git fsck --no-reflog
+		///git fsck --lost-found
+		///
+
+		/// <summary>
+		/// </summary>
+		/// <param name="depo"></param>
+		/// <param name="git"></param>
+		/// <returns>
+		/// </returns>
+		///
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		static public string _Msg_0depo(
+			string depo, nilnul.os.prog_.Git git = default
+		)
+		{
+
+			return _vw_.by_.fsck_._LostFoundX._Msg_0depo(depo,git);
+		}
 	}
 }

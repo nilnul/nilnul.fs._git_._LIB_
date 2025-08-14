@@ -1,4 +1,4 @@
-﻿using nilnul.fs;
+using nilnul.fs;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;

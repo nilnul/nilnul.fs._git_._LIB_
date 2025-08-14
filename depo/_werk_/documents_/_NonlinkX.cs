@@ -1,14 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.fs.git.module._work_.documents_
+namespace nilnul.fs.git.depo._werk_.documents_
 {
 	/// <summary>
-	/// if the module is linked, this returns empty.
+	/// the module can be a link. But the document is not link at any level.
 	/// </summary>
 	static public class _NonlinkX
 	{

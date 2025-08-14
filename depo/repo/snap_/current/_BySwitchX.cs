@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +28,7 @@ namespace nilnul.fs.git.module.repo.snap_.current
 			return nilnul.os.prog_.git.run_.exit._ResultX._Result_assumeAddress(
 				_addressAssumeModule
 				,
-				$"show HEAD" 
+				$"show HEAD" /// git show ; git show @
 				,
 				git
 			);

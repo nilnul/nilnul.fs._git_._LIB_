@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.git.module_.unlink._work_.documents_.unlink
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <see cref="nilnul.fs.git.depo._werk_.documents_."/>
+	///
+	[Obsolete(nameof(fs.git.depo._werk_.documents_.included_.linkless._DelDuplicateX))]
 	static public class _DelDuplicateX
 	{
 
@@ -23,7 +29,9 @@ namespace nilnul.fs.git.module_.unlink._work_.documents_.unlink
 			//var shield = nilnul.fs.address_.shield_._AddressX1.Create(folder);
 			//var documents = nilnul.fs.git.module_.unlink._work_.documents_._UnlinkX.Infos_ofAddress(folder);
 
-			nilnul.fs.files.dedup_._TraceSrcX._Void(
+			nilnul.fs.files.dedup_.inSym_._TraceSrcX._Void(
+				/// todo: not hardlink, but softlink
+				// nilnul.fs.folder.documents_.
 				nilnul.fs.git.module_.unlink._work_.documents_._UnlinkX.Addresses_ofAddress(folder)
 				, log
 

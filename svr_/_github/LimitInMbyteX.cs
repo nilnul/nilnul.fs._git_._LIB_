@@ -1,4 +1,4 @@
-﻿namespace nilnul.fs.git.svr_._github
+namespace nilnul.fs.git.svr_._github
 {
 	/// <summary>
 	/// in Mb
@@ -27,9 +27,13 @@
 			}
 		}
 
+		/// the pack size limit is 2G;
 		/// <summary>
 		/// 2G
 		/// </summary>
+		/// <remarks>
+		/// but it seeems this is better less than 500M, to make the push not error prone;
+		/// </remarks>
 
 		static public int Push {
 			get {

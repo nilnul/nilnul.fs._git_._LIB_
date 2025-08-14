@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,6 +21,10 @@ namespace nilnul.fs.folder.be_.giT_
 	///			(repo_.bare_.nontop is not manageable)
 	///		(repo_.nonbare is not manageable)
 	/// </summary>
+	/// alias:
+	///		manualable
+	///		managible
+	///		
 	public class Manageable
 		:
 		nilnul.win.prog_.git.Boxed,

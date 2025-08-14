@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +15,7 @@ namespace nilnul.fs.git.depo.repo.snap_.current.parents
 		/// <param name="_depo"></param>
 		/// <param name="git"></param>
 		/// <returns>
-		/// parents; self will not be shown
+		/// parents that are separated by space; self will not be shown
 		/// </returns>
 		static public IEnumerable<string> _Parents_0depo(string _depo, nilnul.os.prog_.Git git = null)
 		{

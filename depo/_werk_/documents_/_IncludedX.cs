@@ -1,9 +1,10 @@
-﻿using nilnul.fs.address_.spear;
+using nilnul.fs.address_.spear;
 using nilnul.fs.git.module._work_.documents_;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -28,6 +29,7 @@ namespace nilnul.fs.git.depo._werk_.documents_
 	static public class _IncludedX
 	{
 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		static public IEnumerable<string> _Documents_0depo(
 			string depo
 			,
@@ -50,6 +52,7 @@ namespace nilnul.fs.git.depo._werk_.documents_
 
 		}
 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		static public IEnumerable<(string document,string address)> _Document9addressEs_0depo(
 			string depo
 			,
@@ -62,6 +65,8 @@ namespace nilnul.fs.git.depo._werk_.documents_
 				) // else it's a symlink folder.
 			);
 		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		static public IEnumerable<(string document,fs.address_.Spear spear)> _Document9spearEs_0depo(
 			string depo
 			,
@@ -72,6 +77,8 @@ namespace nilnul.fs.git.depo._werk_.documents_
 			 item=>(item.document, nilnul.fs.address_.Spear.Parse( item.address) )
 			);
 		}
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		static public IEnumerable<(string document,FileInfo info)> _Document9infoEs_0depo(
 			string depo
 			,

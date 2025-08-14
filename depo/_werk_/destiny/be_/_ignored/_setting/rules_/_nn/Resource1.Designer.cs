@@ -68,11 +68,13 @@ namespace nilnul.fs.git.depo._werk_.destiny.be_._ignored._setting.rules_._nn {
         ///#~$*
         ///**/~$*
         ///
+        ///
         ///#files generated for output
         ///#**/out)*
         ///#**/~out)*
         ///**/*.out(![Gg]it)*
         ///**/*.out(![Gg]it).*
+        ///
         ///
         ///# excluded; not controlled by version
         ///**/*(!Git/
@@ -81,23 +83,21 @@ namespace nilnul.fs.git.depo._werk_.destiny.be_._ignored._setting.rules_._nn {
         ///#**/*(![Gg]it)
         ///#**/*(![Gg]it).*
         ///
-        ///**/*(![Gg]it)*
+        ///*(![Gg]it)*
         ///
-        ///**/![Gg]it)*/
-        ///
-        ///
+        ///#**/![Gg]it)*/
         ///
         ///
         ///
         ///#nilnul retiring a repo by renaming it to the ~{reason}{date}).git
-        ///**/*).git/
-        ///**/*(.git/
-        ///**/*(!git/
+        ///*).git/
+        ///*(.git/
+        ///*(!git/
         ///
         ///
         ///
         ///
-        ///#nilnul: makeing a repo from insi [rest of string was truncated]&quot;;.
+        ///#nilnul: makeing a repo from inside a repo;  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string nilnulIgnore {
             get {

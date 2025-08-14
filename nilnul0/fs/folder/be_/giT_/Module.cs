@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,6 +10,8 @@ namespace nilnul.fs.folder.be_.giT_
 	/// <summary>
 	/// depo. werk or embedded repo.
 	/// </summary>
+	///
+	[Obsolete("Name:Depo is preferred;")]
 	static public class _ModuleX
 	{
 

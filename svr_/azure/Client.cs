@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.Services.Common;
+using Microsoft.VisualStudio.Services.Common;
 using Microsoft.VisualStudio.Services.WebApi;
 using System;
 using System.Collections.Generic;
@@ -123,7 +123,7 @@ namespace nilnul.fs.git.svr_.azure
 
 			//var url = nilnul.fs.git.svr_.azure._client._OrgX.Spear(orgName);
 
-			var keyName = nilnul.fs.git.svr_.azure._client._OrgX.Rsc(orgName); ;
+			var keyName = nilnul.fs.git.svr_.azure._client._OrgX.Rsc(orgName); 
 
 			var personalAccessToken = nilnul.win.app_._CredManX.Get(keyName);
 

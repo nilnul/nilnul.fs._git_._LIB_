@@ -15,7 +15,8 @@
     <FileAlignment>512</FileAlignment>
     <Nullable>enable</Nullable>
     <TargetFrameworkProfile />
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <Deterministic>false</Deterministic>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -134,15 +135,14 @@
     <ErrorReport>prompt</ErrorReport>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AWSSDK.CodeCommit, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\AWSSDK.CodeCommit.3.7.401.11\lib\net45\AWSSDK.CodeCommit.dll</HintPath>
+    <Reference Include="AWSSDK.CodeCommit, Version=4.0.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\AWSSDK.CodeCommit.4.0.0.14\lib\net472\AWSSDK.CodeCommit.dll</HintPath>
     </Reference>
-    <Reference Include="AWSSDK.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\AWSSDK.Core.3.7.400.11\lib\net45\AWSSDK.Core.dll</HintPath>
+    <Reference Include="AWSSDK.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=885c28607f98e604, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\AWSSDK.Core.4.0.0.16\lib\net472\AWSSDK.Core.dll</HintPath>
     </Reference>
-    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745">
-      <HintPath>packages\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="DotNetZip, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\DotNetZip.1.16.0\lib\net40\DotNetZip.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
@@ -150,8 +150,8 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="GitLabApiClient, Version=1.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\GitLabApiClient.1.8.0\lib\net48\GitLabApiClient.dll</HintPath>
+    <Reference Include="GitLabApiClient, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.fs.git.svr_.gitlab.client_.GitLabApiClient.1.20.0\lib\net48\GitLabApiClient.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Azure.DevOps.Comments.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.19.225.1\lib\net472\Microsoft.Azure.DevOps.Comments.WebApi.dll</HintPath>
@@ -163,56 +163,8 @@
       <HintPath>packages\Microsoft.Azure.Services.AppAuthentication.1.6.2\lib\net472\Microsoft.Azure.Services.AppAuthentication.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Extensions.Caching.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Caching.Memory, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Extensions.Caching.Memory.8.0.0\lib\net462\Microsoft.Extensions.Caching.Memory.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Configuration, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Extensions.Configuration.8.0.0\lib\net462\Microsoft.Extensions.Configuration.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Extensions.Configuration.Abstractions.8.0.0\lib\net462\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Extensions.Configuration.Binder.8.0.2\lib\net462\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Extensions.DependencyInjection.8.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Extensions.DependencyInjection.Abstractions.8.0.1\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Logging, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Extensions.Logging.8.0.0\lib\net462\Microsoft.Extensions.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=8.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Extensions.Logging.Abstractions.8.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Options, Version=8.0.0.2, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Extensions.Options.8.0.2\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Extensions.Primitives, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.Extensions.Primitives.8.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=8.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.IdentityModel.Abstractions.8.0.2\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Clients.ActiveDirectory, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.IdentityModel.Clients.ActiveDirectory.5.3.0\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=8.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.IdentityModel.JsonWebTokens.8.0.2\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Logging, Version=8.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.IdentityModel.Logging.8.0.2\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.IdentityModel.Tokens, Version=8.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.IdentityModel.Tokens.8.0.2\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=9.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Microsoft.Bcl.AsyncInterfaces.9.0.7\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.TeamFoundation.Build2.WebApi, Version=19.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\Microsoft.TeamFoundationServer.Client.19.225.1\lib\net472\Microsoft.TeamFoundation.Build2.WebApi.dll</HintPath>
@@ -271,14 +223,11 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json.Bson, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Newtonsoft.Json.Bson.1.0.2\lib\net45\Newtonsoft.Json.Bson.dll</HintPath>
-    </Reference>
     <Reference Include="nilnul.collection_._discrete_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.collection_._discrete_._LIB_.1.1.240820.180817\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.collection_._discrete_._LIB_.1.1.241123.135147\lib\net48\nilnul.collection_._discrete_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.lang_._cognom_._LIB_, Version=2.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.lang_._cognom_._LIB_.2.0.240820.191858\lib\net48\nilnul.lang_._cognom_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.lang_._cognom_._LIB_.2.0.250301.125903\lib\net48\nilnul.lang_._cognom_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.lang_._cot_._LIB4FX_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\nilnul.lang_._cot_._LIB4FX_.1.0.240820.181034\lib\net48\nilnul.lang_._cot_._LIB4FX_.dll</HintPath>
@@ -286,95 +235,99 @@
     <Reference Include="nilnul.lang_._cot_._LIB_, Version=2.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\nilnul.lang_._cot_._LIB_.2.0.240820.192426\lib\net48\nilnul.lang_._cot_._LIB_.dll</HintPath>
     </Reference>
+    <Reference Include="nilnul.num.real._func_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num.real._func_._LIB_.1.1.250413.134211\lib\net48\nilnul.num.real._func_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num.real._matrix_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num.real._matrix_._LIB_.1.1.250521.95721\lib\net48\nilnul.num.real._matrix_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul.num.real._stream_._LIB_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul.num.real._stream_._LIB_.1.0.250211.94435\lib\net48\nilnul.num.real._stream_._LIB_.dll</HintPath>
+    </Reference>
     <Reference Include="nilnul.num._integer_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num._integer_._LIB_.1.1.240820.180619\lib\net48\nilnul.num._integer_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._integer_._LIB_.1.1.250329.142625\lib\net48\nilnul.num._integer_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._quotient_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num._quotient_._LIB_.1.1.240820.181307\lib\net48\nilnul.num._quotient_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._quotient_._LIB_.1.1.250715.43409\lib\net48\nilnul.num._quotient_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul.num._real_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.240820.181730\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul.num._real_._LIB_.2.1.250715.71654\lib\net48\nilnul.num._real_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._acc_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._acc_._LIB_.2.1.240822.93708\lib\net48\nilnul._acc_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._acc_._LIB_.2.1.241204.115319\lib\net48\nilnul._acc_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._acc_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._acc_._LINQ_.1.1.240822.93441\lib\net48\nilnul._acc_._LINQ_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._acc_._LINQ_.1.1.241204.115016\lib\net48\nilnul._acc_._LINQ_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._app_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._app_._LIB_.1.1.240823.120852\lib\net48\nilnul._app_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._app_._LIB_.1.1.241223.105344\lib\net48\nilnul._app_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._bit_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.240820.61016\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
-      <Aliases>global,bit</Aliases>
+      <HintPath>..\..\.deps\nilnul._bit_._LIB_.1.1.250417.141758\lib\net48\nilnul._bit_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._character_._LIB_, Version=2.1.8387.39356, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._character_._LIB_.2.1.240820.61209\lib\net48\nilnul._character_._LIB_.dll</HintPath>
-      <Aliases>global,character</Aliases>
+      <HintPath>..\..\.deps\nilnul._character_._LIB_.2.1.250403.154606\lib\net48\nilnul._character_._LIB_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._collective_._LIB__, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._collective_._LIB__.1.0.250314.91731\lib\net48\nilnul._collective_._LIB__.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._data_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._data_._LIB_.1.1.240816.14601\lib\net481\nilnul._data_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._data_._LIB_.1.1.250106.92030\lib\net48\nilnul._data_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._fs_._LIB_, Version=2.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._fs_._LIB_.2.1.240820.183300\lib\net48\nilnul._fs_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._fs_._LIB_.2.1.250710.91321\lib\net48\nilnul._fs_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._lang_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._lang_._LIB_.1.1.240820.191307\lib\net48\nilnul._lang_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._lang_._LIB_.1.1.250405.132122\lib\net48\nilnul._lang_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._linq_._LIB_, Version=1.1.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._linq_._LIB_.1.1.231012.113523-sym\lib\net481\nilnul._linq_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._linq_._LIB_.1.1.240824.153439\lib\net48\nilnul._linq_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._num_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._num_._LIB_.1.1.240820.180030\lib\net48\nilnul._num_._LIB_.dll</HintPath>
-      <Aliases>global,num</Aliases>
+      <HintPath>..\..\.deps\nilnul._num_._LIB_.1.1.241212.85916\lib\net48\nilnul._num_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._num_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._num_._LINQ_.1.1.240820.180032\lib\net48\nilnul._num_._LINQ_.dll</HintPath>
-    </Reference>
-    <Reference Include="nilnul._obj_._CTR4WIN_,Version=1.1.220725.150624, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>packages\nilnul._obj_._CTR4WIN_.1.1.220725.150624\lib\net48\nilnul._obj_._CTR4WIN_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._num_._LINQ_.1.1.241212.85916\lib\net48\nilnul._num_._LINQ_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._obj_._LIB_, Version=1.2.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.240820.60457\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
-      <Aliases>global,obj</Aliases>
+      <HintPath>..\..\.deps\nilnul._obj_._LIB_.1.2.250714.94425\lib\net48\nilnul._obj_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._os_._LIB4FX_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._os_._LIB4FX_.1.0.240822.162256\lib\net48\nilnul._os_._LIB4FX_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._os_._LIB4FX_.1.0.241001.153554\lib\net48\nilnul._os_._LIB4FX_.dll</HintPath>
+    </Reference>
+    <Reference Include="nilnul._relation_._LIB_, Version=1.0.0.0, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\nilnul._relation_._LIB_.1.0.250323.170516\lib\net48\nilnul._relation_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._rel_._LIB_, Version=1.2.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._rel_._LIB_.1.2.240820.175759\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._rel_._LIB_.1.2.250424.44336\lib\net48\nilnul._rel_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._set_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._set_._LIB_.1.1.240820.175638\lib\net48\nilnul._set_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._set_._LIB_.1.1.250118.94723\lib\net48\nilnul._set_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._time_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._time_._LIB_.1.1.240820.182010\lib\net48\nilnul._time_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._time_._LIB_.1.1.250713.164734\lib\net48\nilnul._time_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._txt_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._txt_._LIB_.1.1.240820.180349\lib\net48\nilnul._txt_._LIB_.dll</HintPath>
-      <Aliases>global,txt</Aliases>
+      <HintPath>..\..\.deps\nilnul._txt_._LIB_.1.1.250407.50617\lib\net48\nilnul._txt_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._web_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._web_._LIB_.1.1.240823.120553\lib\net48\nilnul._web_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._web_._LIB_.1.1.250207.122711\lib\net48\nilnul._web_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._win_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._win_._LIB_.1.1.240820.195010\lib\net48\nilnul._win_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._win_._LIB_.1.1.241018.181651\lib\net48\nilnul._win_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="nilnul._xml_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\nilnul._xml_._LIB_.1.1.240820.172116\lib\net48\nilnul._xml_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\nilnul._xml_._LIB_.1.1.250227.70442\lib\net48\nilnul._xml_._LIB_.dll</HintPath>
     </Reference>
-    <Reference Include="Octokit, Version=13.0.1.0, Culture=neutral, PublicKeyToken=0be8860aee462442, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Octokit.13.0.1\lib\netstandard2.0\Octokit.dll</HintPath>
-    </Reference>
-    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    <Reference Include="Octokit, Version=14.0.0.0, Culture=neutral, PublicKeyToken=0be8860aee462442, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\Octokit.14.0.0\lib\netstandard2.0\Octokit.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    <Reference Include="System.Buffers, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Buffers.4.6.1\lib\net462\System.Buffers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Collections.Immutable, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Collections.Immutable.8.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    <Reference Include="System.Collections.Immutable, Version=9.0.0.7, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Collections.Immutable.9.0.7\lib\net462\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.NonGeneric, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
@@ -383,26 +336,16 @@
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Console, Version=4.0.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Console.4.3.1\lib\net46\System.Console.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Core" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
-    </Reference>
     <Reference Include="System.Drawing" />
-    <Reference Include="System.IdentityModel" />
-    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=8.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.IdentityModel.Tokens.Jwt.8.0.2\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
-    </Reference>
     <Reference Include="System.Interactive.Async, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\Ix-Async.1.2.5\lib\net45\System.Interactive.Async.dll</HintPath>
     </Reference>
     <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=9.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.IO.Pipelines.9.0.7\lib\net462\System.IO.Pipelines.dll</HintPath>
     </Reference>
     <Reference Include="System.Linq, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\System.Linq.4.3.0\lib\net463\System.Linq.dll</HintPath>
@@ -413,74 +356,43 @@
       <HintPath>packages\System.Linq.Expressions.4.3.0\lib\net463\System.Linq.Expressions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    <Reference Include="System.Memory, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Memory.4.6.3\lib\net462\System.Memory.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http, Version=4.1.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Net.Http.4.3.4\lib\net46\System.Net.Http.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Net.Http.Formatting, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\Microsoft.AspNet.WebApi.Client.6.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
     <Reference Include="System.Numerics" />
-    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reactive, Version=6.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Reactive.6.0.1\lib\net472\System.Reactive.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Numerics.Vectors.4.6.1\lib\net462\System.Numerics.Vectors.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <HintPath>..\..\.deps\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Runtime.CompilerServices.Unsafe.6.1.2\lib\net462\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Extensions, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\System.Runtime.Extensions.4.3.1\lib\net462\System.Runtime.Extensions.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
-    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="System.Text.Encodings.Web, Version=9.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Text.Encodings.Web.9.0.7\lib\net462\System.Text.Encodings.Web.dll</HintPath>
     </Reference>
-    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Security.Cryptography.X509Certificates.4.3.2\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Text.Json, Version=8.0.0.4, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\System.Text.Json.8.0.4\lib\net462\System.Text.Json.dll</HintPath>
+    <Reference Include="System.Text.Json, Version=9.0.0.7, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Text.Json.9.0.7\lib\net462\System.Text.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\.deps\System.Threading.Tasks.Extensions.4.6.3\lib\net462\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Cors, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -497,11 +409,8 @@
     <Reference Include="System.Web.Http.WebHost, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\.deps\Microsoft.AspNet.WebApi.WebHost.5.3.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
     </Reference>
-    <Reference Include="System.Windows" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
@@ -510,14 +419,18 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\_nilnul_._LIB_.1.1.240820.60235\lib\net48\_nilnul_._LIB_.dll</HintPath>
+      <HintPath>..\..\.deps\_nilnul_._LIB_.1.1.241016.32119\lib\net48\_nilnul_._LIB_.dll</HintPath>
     </Reference>
     <Reference Include="_nilnul_._LINQ_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
-      <HintPath>..\..\.deps\_nilnul_._LINQ_.1.1.240820.60236\lib\net48\_nilnul_._LINQ_.dll</HintPath>
+      <HintPath>..\..\.deps\_nilnul_._LINQ_.1.1.241016.32253\lib\net48\_nilnul_._LINQ_.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DepoI.cs" />
+    <Compile Include="depo\act_\Checkout.cs" />
+    <Compile Include="depo\act_\ICustomRack9werk.cs" />
+    <Compile Include="depo\act_\IRackOnly.cs" />
+    <Compile Include="depo\act_\reset_\hard_\Parent.cs" />
     <Compile Include="depo\bank\Diff.cs" />
     <Compile Include="depo\bank\_diff_\by_\DiffIndex.cs" />
     <Compile Include="depo\BeI - Copy.cs" />
@@ -539,7 +452,9 @@
     <Compile Include="depo\be_\unhatched_\wet\Vow.cs" />
     <Compile Include="depo\be_\unhatched_\wet\vow\En.cs" />
     <Compile Include="depo\checkout_\xpn_\PathUnable2create.cs" />
+    <Compile Include="depo\destiny_\ISymLink.cs" />
     <Compile Include="depo\Divisions.cs" />
+    <Compile Include="depo\divisions_\IGlob.cs" />
     <Compile Include="depo\divisions_\tracked\untrack_\Ignore.cs" />
     <Compile Include="depo\divisions_\untracked_\Ignored.cs" />
     <Compile Include="depo\divisions_\untracked_\ignored\Track.cs" />
@@ -551,10 +466,13 @@
     <Compile Include="depo\divisions_\untracked_\_ignored\pattern_\negate_\Directory.cs" />
     <Compile Include="depo\dossiers\vw_\StatusPorcelain.cs" />
     <Compile Include="depo\IBak.cs" />
+    <Compile Include="depo\ICheckout.cs" />
     <Compile Include="depo\IPull.cs" />
     <Compile Include="depo\IRepo.cs" />
+    <Compile Include="depo\ISubTree.cs" />
     <Compile Include="depo\IWerk.cs" />
     <Compile Include="depo\IWorktree.cs" />
+    <Compile Include="depo\nom_\IWung.cs" />
     <Compile Include="depo\pier\add_\many_\InOnFolder.cs" />
     <Compile Include="depo\pier\add_\WithoutDeleted.cs" />
     <Compile Include="depo\pier\add_\WithoutNew.cs" />
@@ -564,6 +482,13 @@
     <Compile Include="depo\pier\be_\wet\vow\En.cs" />
     <Compile Include="depo\pier\be_\_dry_\by_\ByStatusShort.cs" />
     <Compile Include="depo\pier\be_\_dry_\by_\status_\_Ver2ndX.cs" />
+    <Compile Include="depo\pier\commit_\IMerge.cs" />
+    <Compile Include="depo\pier\commit_\merge_\ISquash.cs" />
+    <Compile Include="depo\pier\destinys\redact_\WithWerk.cs" />
+    <Compile Include="depo\pier\destinys\revamp_\PerWerk.cs" />
+    <Compile Include="depo\pier\destinys\revise_\PerWerk.cs" />
+    <Compile Include="depo\pier\destiny\let_\FroSnap.cs" />
+    <Compile Include="depo\pier\destiny\let_\Head.cs" />
     <Compile Include="depo\pier\vs_\Treeish.cs" />
     <Compile Include="depo\pier\vs_\VsSnap.cs" />
     <Compile Include="depo\pier\vs_\vsSnap\VsParent.cs" />
@@ -577,6 +502,7 @@
     <Compile Include="depo\pier_\wet\_bak_\hence\_alone\_orphan_\_IfHatchedX.cs" />
     <Compile Include="depo\pier_\wet\_bak_\_HenceX.cs" />
     <Compile Include="depo\rack\branch\IReset.cs" />
+    <Compile Include="depo\rack\branch_\current\reset_\Parent.cs" />
     <Compile Include="depo\rack\_diff_\by_\ByDiffIndex.cs" />
     <Compile Include="depo\rack\_PathX.cs" />
     <Compile Include="depo\repo\branches_\all\IPush.cs" />
@@ -595,6 +521,88 @@
     <Compile Include="depo\repo\head\be_\Hatched.cs" />
     <Compile Include="depo\repo\head\be_\hatched\Vow.cs" />
     <Compile Include="depo\repo\head\be_\hatched\vow\En.cs" />
+    <Compile Include="depo\repo\remote\IRefers.cs" />
+    <Compile Include="depo\repo\remote\refers\_VwX.cs" />
+    <Compile Include="depo\repo\remote\refers_\IPull.cs" />
+    <Compile Include="depo\repo\remote\refers_\pull\_VwX.cs" />
+    <Compile Include="depo\repo\remote\refers_\specs_\IForce.cs" />
+    <Compile Include="depo\repo\remote\refers_\specs_\INegative.cs" />
+    <Compile Include="depo\repo\snaps\_merge_\Options.cs" />
+    <Compile Include="depo\repo\snaps_\dangling\_vw_\by_\LogWithRefX.cs" />
+    <Compile Include="depo\repo\snaps_\dangling\_vw_\by_\RefLogX.cs" />
+    <Compile Include="depo\repo\snaps_\_PathsChangedX.cs" />
+    <Compile Include="depo\repo\snaps_\IRecent.cs" />
+    <Compile Include="depo\repo\snaps_\mem\_vw_\by_\log_\_RecentX.cs" />
+    <Compile Include="depo\repo\snaps_\mem\vw_\_ByGitkX.cs" />
+    <Compile Include="depo\repo\snaps_\mem\_vw_\by_\_LogX.cs" />
+    <Compile Include="depo\repo\snaps\_vw_\by_\_LogX.cs" />
+    <Compile Include="depo\repo\snaps_\dangling\IGc.cs" />
+    <Compile Include="depo\repo\snaps_\dangling\_vw_\by_\FsckX.cs" />
+    <Compile Include="depo\repo\snaps_\dangling\_vw_\by_\fsck_\_LostFoundX.cs" />
+    <Compile Include="depo\repo\snaps_\min\_vw_\by_\_LogX.cs" />
+    <Compile Include="depo\repo\snaps_\stash\_vw_\by_\_FsckX.cs" />
+    <Compile Include="depo\repo\snap\be_\IDangling.cs" />
+    <Compile Include="depo\repo\snap\co\discern_\OnHead9pre.cs" />
+    <Compile Include="depo\repo\snap\co_\Parent.cs" />
+    <Compile Include="depo\repo\snap\co_\parent\Diff.cs" />
+    <Compile Include="depo\repo\snap\parents\_vw_\by_\uxp_\_ShowX.cs" />
+    <Compile Include="depo\repo\snap\parents\_vw_\by_\_LogX.cs" />
+    <Compile Include="depo\repo\snap\rel_\parent\_VwX.cs" />
+    <Compile Include="depo\repo\snap\tree\destinys\_vw_\by_\_LsTreeX.cs" />
+    <Compile Include="depo\repo\snap\_TimeX.cs" />
+    <Compile Include="depo\repo\snap_\current\hash\Vw.cs" />
+    <Compile Include="depo\repo\snap_\current\hash\_vw_\by_\RevList.cs" />
+    <Compile Include="depo\repo\snap_\current\tree\destinys\_vw_\by_\LsTree.cs" />
+    <Compile Include="depo\repo\snap_\merge_\ISubtreeish.cs" />
+    <Compile Include="depo\stow\bak_\werk8orphan_\_AnatomyLargeX.cs" />
+    <Compile Include="depo\stow\destiny\Checkout.cs" />
+    <Compile Include="depo\stow\destiny\_diff_\by_\Diff.cs" />
+    <Compile Include="depo\stow\Reset.cs" />
+    <Compile Include="depo\stow\Revert.cs" />
+    <Compile Include="depo\stow\revert_\conflict\Resolve.cs" />
+    <Compile Include="depo\stow\revert_\conflict\_resolve_\Ours0theirs.cs" />
+    <Compile Include="depo\stow\stash_\GitDirCustom.cs" />
+    <Compile Include="depo\stow_\IDry.cs" />
+    <Compile Include="depo\_rack_\entry_\blob_\IDangling.cs" />
+    <Compile Include="depo\_rack_\entry_\IBlob.cs" />
+    <Compile Include="depo\_werk_\directories_\_nonlink_\_UnLinkX.cs" />
+    <Compile Include="depo\_werk_\directory_\nonlink\directories_\_omnihard_\_UnlinkX.cs" />
+    <Compile Include="depo\_werk_\directory_\nonlink\dirs_\_hard_\_UnLinkX.cs" />
+    <Compile Include="depo\_werk_\directory_\nonlink\divs_\_omnihard_\_UnLinkX.cs" />
+    <Compile Include="depo\_werk_\divs_\INonlink.cs" />
+    <Compile Include="depo\_werk_\divs_\unclave_\_UnlinkX.cs" />
+    <Compile Include="depo\_werk_\divs_\_NonlinkX.cs" />
+    <Compile Include="depo\_werk_\div\dirs_\unclave_\IUnlink.cs" />
+    <Compile Include="depo\_werk_\documents_\included_\linkless\_DelDuplicateX.cs" />
+    <Compile Include="depo\_werk_\documents_\included_\linkless_\large\each\split\_XpnWhenExceedQuotaX - Copy.cs" />
+    <Compile Include="depo\_werk_\documents_\nonlink\IDeDuplicate.cs" />
+    <Compile Include="depo\werk_\alt\Add.cs" />
+    <Compile Include="depo\werk_\IAlternative.cs" />
+    <Compile Include="depo\_cfg\_setting\IgnoreCase.cs" />
+    <Compile Include="depo\_submodule\GitLink.cs" />
+    <Compile Include="depo\_werk_\dossiers_\untracked_\IInHead.cs" />
+    <Compile Include="depo\_werk_\IDirectories.cs" />
+    <Compile Include="depo\_werk_\IDivs.cs" />
+    <Compile Include="depo\_werk_\IDocument.cs" />
+    <Compile Include="depo_\IInbox.cs" />
+    <Compile Include="depo_\IMothballed.cs" />
+    <Compile Include="depo_\large\_split_\by_\ISubDelegate.cs" />
+    <Compile Include="nilnul0\fs\folder\be_\giT_\werk_\IInward.cs" />
+    <Compile Include="nilnul0\os\prog_\git\run_\due_\IEnd.cs" />
+    <Compile Include="nilnul0\os\prog_\git\_run\_cfg\_setting\sect_\init_\TemplateDir.cs" />
+    <Compile Include="repo\branch\snap\IPut.cs" />
+    <Compile Include="repo\branch\_push_\respec_\Defaulted.cs" />
+    <Compile Include="repo\branch\_push_\remote_\Defaulted.cs" />
+    <Compile Include="repo\branch_\IRemote.cs" />
+    <Compile Include="repo\destinys\Log.cs" />
+    <Compile Include="repo\destinys\log_\Deleted.cs" />
+    <Compile Include="repo\Fsck.cs" />
+    <Compile Include="repo\fsck_\IUnreachable.cs" />
+    <Compile Include="repo\fsck_\LostFound.cs" />
+    <Compile Include="repo\fsck_\IFull.cs" />
+    <Compile Include="repo\gc_\_AutoX.cs" />
+    <Compile Include="repo\head\assign_\IBranch.cs" />
+    <Compile Include="repo\head\branch\_vw_\by_\UnbornBranch.cs" />
     <Compile Include="depo\repo\head\vw_\IName.cs" />
     <Compile Include="depo\repo\head\vw_\xpn_\Err.cs" />
     <Compile Include="depo\repo\head\_vw_\by_\ISymbolicRef.cs" />
@@ -702,14 +710,14 @@
     <Compile Include="depo\repo\snaps\_vw_\by_\log_\all_\_GraphX.cs" />
     <Compile Include="depo\repo\snaps\_vw_\by_\log_\all_\_ParentX.cs" />
     <Compile Include="depo\repo\snaps\_vw_\by_\log_\_AllX.cs" />
-    <Compile Include="depo\repo\snaps\_vw_\by_\_WithSizeX.cs" />
+    <Compile Include="depo\repo\snaps\_vw_\by_\_RevListX.cs" />
     <Compile Include="depo\repo\snap\bound_\Caret.cs" />
     <Compile Include="depo\repo\snap\bound_\IDots.cs" />
     <Compile Include="depo\repo\snap\bound_\IEitherByTriDots.cs" />
     <Compile Include="depo\repo\snap\bound_\IRangeByTwoDots.cs" />
     <Compile Include="depo\repo\snap\bound_\tridot\InDiff.cs" />
     <Compile Include="depo\repo\snap\branchs\_VwX.cs" />
-    <Compile Include="depo\repo\snap\parents\_vw_\by_\_RevParse.cs" />
+    <Compile Include="depo\repo\snap\parents\_vw_\by_\alt_\_RevParse.cs" />
     <Compile Include="depo\repo\snap\co\IDiscern.cs" />
     <Compile Include="depo\repo\snap\dossiers\_vs_\by_\IByDiff.cs" />
     <Compile Include="depo\repo\snap\dossiers\_vs_\by_\_DiffTreeX.cs" />
@@ -734,7 +742,7 @@
     <Compile Include="depo\repo\snap\_vw_\IBy.cs" />
     <Compile Include="depo\repo\snap_\current\nym\_vw_\by_\RevList.cs" />
     <Compile Include="depo\repo\snap_\current\parents\Vw.cs" />
-    <Compile Include="depo\repo\snap\parents\_vw_\By.cs" />
+    <Compile Include="depo\repo\snap\parents\_VwX.cs" />
     <Compile Include="depo\repo\snap\set_\Generation.cs" />
     <Compile Include="depo\repo\snap\dossiers\vw_\AlteredByDiff.cs" />
     <Compile Include="depo\repo\snap\dossiers\vw_\Deleted8log.cs" />
@@ -842,21 +850,27 @@
     <Compile Include="depo\stow\be_\submitten_\_ByDiffIndexX.cs" />
     <Compile Include="depo\stow\be_\submitten_\_ByDiffFilesX.cs" />
     <Compile Include="depo\rack\Inconcile.cs" />
+    <Compile Include="depo\stow\document\checkout_\IHead.cs" />
+    <Compile Include="depo\stow\document\checkout_\IMergeHead.cs" />
+    <Compile Include="depo\stow\document\checkout_\Ours.cs" />
+    <Compile Include="depo\stow\document\checkout_\Theirs.cs" />
+    <Compile Include="depo\stow\document\ICheckout.cs" />
     <Compile Include="depo\stow\IDiscern.cs" />
     <Compile Include="depo\stow\IStatue.cs" />
     <Compile Include="depo\stow\stash_\Untracked.cs" />
     <Compile Include="depo\stow\stash_\alsoUntracked_\All.cs" />
     <Compile Include="depo\stow\status_\AlsoIgnored.cs" />
-    <Compile Include="depo\stow\_bak_\UnbornTip4Bak.cs" />
+    <Compile Include="depo\stow\_bak_\IUnbornTip4Bak.cs" />
     <Compile Include="depo\stow\_diff_\by_\ByDiffFiles.cs" />
     <Compile Include="depo\stow_\conflict\IAbort.cs" />
     <Compile Include="depo\stow_\conflict\resolve_\MergeTool.cs" />
     <Compile Include="depo\werk\bak_\ISplitHere.cs" />
     <Compile Include="depo\werk\be_\NewFolder1\Nonwrought.cs" />
     <Compile Include="depo\werk\be_\NewFolder1\Wrought.cs" />
+    <Compile Include="depo\werk\destiny\fro_\IPier.cs" />
     <Compile Include="depo\werk\IBak.cs" />
     <Compile Include="depo\werk\ICheckout.cs" />
-    <Compile Include="depo\werk\vs_\Index.cs" />
+    <Compile Include="depo\werk\vs_\_pier_\by_\Diff.cs" />
     <Compile Include="depo\werk\vs_\Treeish.cs" />
     <Compile Include="depo\werk\vs_\VsParent.cs" />
     <Compile Include="depo\werk\vs_\VsSnap.cs" />
@@ -869,6 +883,8 @@
     <Compile Include="depo\_pier_\destinys_\IInserted8pier5head.cs" />
     <Compile Include="depo\_pier_\destinys_\_inserted_\by_\DiffCache.cs" />
     <Compile Include="depo\_pier_\destinys_\_changed_\by_\DiffCache.cs" />
+    <Compile Include="depo\_pier_\destiny\ISlot.cs" />
+    <Compile Include="depo\_pier_\destiny\ISlots.cs" />
     <Compile Include="depo\_pier_\destiny_\IChanged.cs" />
     <Compile Include="depo\_pier_\destiny_\IInPier.cs" />
     <Compile Include="depo\_pier_\destiny_\no8pier_\IInHead.cs" />
@@ -1099,11 +1115,11 @@
     <Compile Include="depo\_werk_\destinys_\included_\IChanged.cs" />
     <Compile Include="depo\_werk_\dossiers_\feat_\INonRepoed.cs" />
     <Compile Include="depo\_werk_\dossiers_\feat_\IRevamped.cs" />
-    <Compile Include="depo\_werk_\documents_\included_\nonlink_\large\each\split\_XpnWhenExceedQuotaX.cs" />
-    <Compile Include="depo\_werk_\documents_\included_\nonlink_\large\each\_SplitX.cs" />
+    <Compile Include="depo\_werk_\documents_\included_\revamp_\unlink_\large\each\split\_XpnWhenExceedQuotaX.cs" />
+    <Compile Include="depo\_werk_\documents_\included_\linkless_\large\each\_SplitX.cs" />
     <Compile Include="depo\_werk_\dossiers_\feat_\IEnhancedVsPier.cs" />
-    <Compile Include="depo\_werk_\documents_\included_\_NonlinkX.cs" />
-    <Compile Include="depo\_werk_\documents_\included_\nonlink_\_LargeNonlinkFilesX.cs" />
+    <Compile Include="depo\_werk_\documents_\included_\_LinklessX.cs" />
+    <Compile Include="depo\_werk_\documents_\included_\linkless_\_LargeNonlinkFilesX.cs" />
     <Compile Include="depo\_werk_\dossiers_\ITracked.cs" />
     <Compile Include="depo\_werk_\dossiers_\IXpn.cs" />
     <Compile Include="depo\_werk_\dossiers_\tracked_\xpn_\IMarkedDelete8Pier.cs" />
@@ -1289,7 +1305,6 @@
     <Compile Include="depo\repo\snap\override_\_StateX.cs" />
     <Compile Include="depo\repo\snap\parent_\First.cs" />
     <Compile Include="depo\repo\snap\parents\indexed\Notation.cs" />
-    <Compile Include="depo\repo\snap\expr_\ancestor\Notation.cs" />
     <Compile Include="depo\repo\snap_\current\_BySwitchX.cs" />
     <Compile Include="depo\repo\snap_\Msgless.cs" />
     <Compile Include="depo\repo\snap_\parentless_\empty_\Msgless.cs" />
@@ -1442,8 +1457,8 @@
     <Compile Include="depo\_werk_\destiny\be_\_ignored\_settings\Blacklist.cs" />
     <Compile Include="depo\_werk_\div\doc_\ignore\establish_\Dotnet9nilnul.cs" />
     <Compile Include="depo\_werk_\div\doc_\ignore\patch_\_Nilnul0dotnetX.cs" />
-    <Compile Include="depo\werk\document_\Large.cs" />
-    <Compile Include="depo\werk\document_\Larges.cs" />
+    <Compile Include="depo\werk\document_\ILarge.cs" />
+    <Compile Include="depo\werk\document_\ILarges.cs" />
     <Compile Include="depo\_werk_\doc_\ignore\establish_\Nilnul0dotnet.cs" />
     <Compile Include="depo\_werk_\doc_\~\Ignore.cs" />
     <Compile Include="depo\_setting\IExclude0ignore.cs" />
@@ -1467,19 +1482,19 @@
     <Compile Include="nilnul0\fs\folder_\empty\git_\clone_\IBare.cs" />
     <Compile Include="nilnul0\fs\folder_\empty\git_\clone_\IBranchSingle.cs" />
     <Compile Include="nilnul0\fs\folder_\empty\git_\IClone.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\documents_\notDotLed_\nonlink_\_WithinWorkX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\documents_\notDotLed_\nonlink_\_WithinWorkX.cs" />
     <Compile Include="depo\_werk_\documents_\_NonlinkX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\directories_\nonlink_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\directories_\noDotLed_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\directories_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\nonlink_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\_NotDotLedX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\documents_\notDotLed_\_WithinWorkX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\directories_\noDotLed_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\directories_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\directories_\unclave_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\directories_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dirs_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dirs_\_NotDotLedX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\documents_\notDotLed_\_WithinWorkX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\directories_\unclave_\nonlink_\_nonmodule_\by_\_NonModuleX.cs" />
     <Compile Include="depo\_werk_\directory_\notDotLed_\nonlink\dirs_\notDotLed_\_UnLinkX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\divs_\nonlink_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\divs_\noDotLed_\nonlink_\_NontopX.cs" />
-    <Compile Include="depo\_werk_\directory_\unLink\dirs_\_UnLinkX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\divs_\nonlink_\_inward_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\divs_\unclave_\nonlink_\_NonModuleX.cs" />
+    <Compile Include="depo\_werk_\directory_\nonlink\dirs_\_HardX.cs" />
     <Compile Include="depo\_werk_\dirs_\noDotLed_\_UnlinkX.cs" />
     <Compile Include="depo\_werk_\dirs_\_NotDotLedX.cs" />
     <Compile Include="depo\_werk_\dirs_\_UnLinkX1.cs" />
@@ -1507,27 +1522,27 @@
     <Compile Include="nilnul0\fs\folder\be_\giT_\repo_\bare_\top\Anto.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\work\dirs_\NoEmbedRepoS.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\work\dir\be_\NotEmbedRepo.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\nontop_\_NotDotLedX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dir\be_\NoEmbedRepoS.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dir_\NoEmbedRepoS.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\nontop_\nonlink_\_NotDotLedX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\notDotLed_\nonlink_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\notDotLed_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\nontop_\_NonlinkX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\divs_\noDotLed_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\divs_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\NewFolder1\_DocumentsX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\directories_\noDotLed_\nonlink_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\directories_\noDotLed_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\directories_\nonlink_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\directories_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dirs_\noDotLed_\nonlink_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dirs_\noDotLed_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dirs_\nonlink_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dir\be_\NoEmbedRepo_byName.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dir_\NoEmbedRepo_byName.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dir_\nonlink_\giT_\_NoEmbedRepoSX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dirs_\untop_\_NotDotLedX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dir\be_\NoEmbedRepoS.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dir_\NoEmbedRepoS.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dirs_\untop_\nonlink_\_NotDotLedX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dirs_\unclave_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dirs_\unclave_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dirs_\untop_\_NonlinkX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dirs_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\divs_\unclave_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\divs_\werk_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\NewFolder1\_DocumentsX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\directories_\noDotLed_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\directories_\noDotLed_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\directories_\nonlink_\_inward_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\directories_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\dirs_\noDotLed_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\dirs_\noDotLed_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\dirs_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\dir\be_\NoEmbedRepo_byName.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\dir_\NoEmbedRepo_byName.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\dir_\nonlink_\giT_\_NoEmbedRepoSX.cs" />
     <Compile Include="depo\document\FroRepo.cs" />
     <Compile Include="depo\repo\doc_\cfg_\Custom.cs" />
     <Compile Include="nilnul0\fs\folder\be_\giT_\manable\Anto.cs" />
@@ -1549,12 +1564,12 @@
     <Compile Include="nilnul0\fs\folder_\giT_\repo\top_\ByRevParse.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\repo\top_\byRevParse_\Abs.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\repo_\bare\ModuleRt - Copy.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dirs_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\dir_\_NoEmbedRepoSX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\divs_\noDotLed_\nonlink_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\divs_\noDotLed_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\divs_\nonlink_\_NontopX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\divs_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\dirs_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\dir_\_NoEmbedRepoSX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\divs_\noDotLed_\nonlink_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\divs_\noDotLed_\_NontopX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\divs_\nonlink_\_WithinWorkX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\divs_\_NontopX.cs" />
     <Compile Include="nilnul0\fs\folder_\nonlink\dir_\nonlink_\giT_\Manables.cs" />
     <Compile Include="nilnul0\fs\folder_\nonlink\div_\nonlink_\giT_\Depos.cs" />
     <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\Plain.cs" />
@@ -1660,6 +1675,7 @@
     <Compile Include="depo\repo\head\be_\_HatchedX.cs" />
     <Compile Include="depo\repo\head\be_\_hatched_\by_\_ByRevParseX.cs" />
     <Compile Include="depo\repo\head\be_\_hatched_\by_\ByStatus.cs" />
+    <Compile Include="repo\head\history\snaps\_vw_\by_\_LogX.cs" />
     <Compile Include="repo\head_\IUnborn.cs" />
     <Compile Include="repo\head_\refer_\IReified.cs" />
     <Compile Include="repo\head_\IHatched.cs" />
@@ -1680,14 +1696,35 @@
     <Compile Include="repo\push_\IXpn.cs" />
     <Compile Include="repo\push_\xpn_\IHavingSecret.cs" />
     <Compile Include="repo\refers\Each.cs" />
-    <Compile Include="repo\refers\Vw.cs" />
+    <Compile Include="repo\refers\IVw.cs" />
     <Compile Include="repo\refer\expr_\ISnap.cs" />
+    <Compile Include="repo\refer\val_\INoRecurse.cs" />
+    <Compile Include="repo\refer_\basic\val\IGet.cs" />
+    <Compile Include="repo\refer_\basic\val\ILet.cs" />
+    <Compile Include="repo\refer_\IBasic.cs" />
+    <Compile Include="repo\refer_\ISymbolic.cs" />
+    <Compile Include="repo\refer_\sym\_val_\IAfterRef.cs" />
     <Compile Include="repo\refer_\tag\lex_\Typed.cs" />
     <Compile Include="repo\refer_\branch\lex_\Abundant.cs" />
     <Compile Include="repo\remote\branch\IDrop.cs" />
+    <Compile Include="repo\remote\fetch\IRefSpec.cs" />
+    <Compile Include="repo\remote\IGroup.cs" />
+    <Compile Include="repo\remote\IUrl.cs" />
+    <Compile Include="repo\remote\_fetch_\refspec_\Defaulted.cs" />
+    <Compile Include="repo\remote\_push_\IUrl.cs" />
     <Compile Include="repo\snaps\progenitor\Vw.cs" />
+    <Compile Include="repo\snaps\_vw_\by_\ByRevList.cs" />
+    <Compile Include="repo\snaps\_vw_\by_\_LogX.cs" />
+    <Compile Include="repo\snaps_\dangling\_DeleteX.cs" />
+    <Compile Include="repo\snaps_\IDangling.cs" />
+    <Compile Include="repo\snaps_\IPath.cs" />
+    <Compile Include="repo\snap\Bound.cs" />
+    <Compile Include="repo\snap\IDag.cs" />
     <Compile Include="repo\snap\IRepresentation.cs" />
     <Compile Include="repo\snap\Note.cs" />
+    <Compile Include="repo\snap\Of.cs" />
+    <Compile Include="repo\snap\of_\Pseudo.cs" />
+    <Compile Include="repo\snap\of_\_pseudo\Li_.cs" />
     <Compile Include="repo\snap\op_\NthParent.cs" />
     <Compile Include="repo\refer_\remote\Upd.cs" />
     <Compile Include="repo\remote\Current.cs" />
@@ -1698,12 +1735,16 @@
     <Compile Include="depo\repo\remote\dif_\NeedFetch.cs" />
     <Compile Include="repo\snap\of_\ITree.cs" />
     <Compile Include="repo\snap\of_\tree_\ITree.cs" />
+    <Compile Include="repo\snap\op_\Parent.cs" />
     <Compile Include="repo\snap\op_\parent\Repeat.cs" />
+    <Compile Include="repo\snap\op_\Self.cs" />
+    <Compile Include="repo\snap\rel_\parent\_vw_\by_\_LogX.cs" />
     <Compile Include="repo\snap\tree\Entries.cs" />
     <Compile Include="repo\snap\vw_\Log9stat.cs" />
     <Compile Include="repo\snap\_attrs\Li_.cs" />
     <Compile Include="repo\snap_\head\_vw_\by_\ByCatFile.cs" />
     <Compile Include="repo\snap_\IRevert.cs" />
+    <Compile Include="repo\snap_\merge_\current\revert_\MainParent.cs" />
     <Compile Include="repo\tag_\Annotate.cs" />
     <Compile Include="repo\vow_\unlocked_\NewFolder1\_WaitX.cs" />
     <Compile Include="repo\vow_\unlocked_\wait\NewFolder1\_ForceX.cs" />
@@ -1715,6 +1756,7 @@
     <Compile Include="repo\vow_\unlocked_\_WaitAndSeeX.cs" />
     <Compile Include="repo\vow_\unlocked_\_WatchoutAndWaitX.cs" />
     <Compile Include="repo\_branch\Store.cs" />
+    <Compile Include="repo\_GcX.cs" />
     <Compile Include="repo\_pseudo\Li_.cs" />
     <Compile Include="repo\_push\IEntities.cs" />
     <Compile Include="repo\_push\IRemote.cs" />
@@ -1763,6 +1805,7 @@
     <Compile Include="svr\usr\repo\IMgt.cs" />
     <Compile Include="svr\usr\repo\OfI.cs" />
     <Compile Include="svr\usr\repo\of_\AccVaultedClient.cs" />
+    <Compile Include="svr\usr\repo\pull\RequestReceived.cs" />
     <Compile Include="svr\usr\repo\push\Size.cs" />
     <Compile Include="svr\usr\repo\push\size\Limit.cs" />
     <Compile Include="svr\usr\repo\sortie_\byHost\biject_\Nom1nonemptys.cs" />
@@ -1807,6 +1850,7 @@
     <Compile Include="svr\usr\teamwork\IRepos.cs" />
     <Compile Include="svr\usr_\IOrg.cs" />
     <Compile Include="svr\usr_\IPersonal.cs" />
+    <Compile Include="svr_\amazon\conn_\IProxy.cs" />
     <Compile Include="svr_\amazon\usr\repo\blob\_size\Limit.cs" />
     <Compile Include="svr_\amazon\usr\repo\create\_EnsureX.cs" />
     <Compile Include="svr_\amazon\usr\repo\_CreateX.cs" />
@@ -1814,6 +1858,7 @@
     <Compile Include="svr_\azure\client_\_RepoX.cs" />
     <Compile Include="svr_\azure\client_\_ColabX.cs" />
     <Compile Include="svr_\azure\client_\_OperationX.cs" />
+    <Compile Include="svr_\azure\usr_\IOrg.cs" />
     <Compile Include="svr_\azure\_ClientX.cs" />
     <Compile Include="svr_\azure\usr\colab\_DropX.cs" />
     <Compile Include="svr_\azure\usr\repo\blob\_size\Limit.cs" />
@@ -1853,6 +1898,7 @@
     <Compile Include="svr_\bitbucket\usr\repo\push\blob\size\Limit.cs" />
     <Compile Include="svr_\bitbucket\usr\repo\push\size\Limit.cs" />
     <Compile Include="svr_\bitbucket\usr\repo\size\Limit.cs" />
+    <Compile Include="svr_\eg_\chn_\ICodingNet.cs" />
     <Compile Include="svr_\gitee\grp_\free\members\ICount.cs" />
     <Compile Include="svr_\gitee\IAccount.cs" />
     <Compile Include="svr_\gitee\IGroup.cs" />
@@ -1869,7 +1915,9 @@
     <Compile Include="svr_\github\client_\gql\repo\ICreationTime.cs" />
     <Compile Include="svr_\github\client_\IGraphQl.cs" />
     <Compile Include="svr_\github\repo\urn_\_SshX.cs" />
-    <Compile Include="svr_\gitlab\acc_\grp\ICollaboration.cs" />
+    <Compile Include="svr_\gitlab\grp\colabs\IVw.cs" />
+    <Compile Include="svr_\gitlab\grp\IColabs.cs" />
+    <Compile Include="svr_\gitlab\usr_\grp\ICollaboration.cs" />
     <Compile Include="svr_\gitlab\grp\ISub.cs" />
     <Compile Include="svr_\gitlab\usr\IGroups.cs" />
     <Compile Include="svr_\gitlab\usr\repo\create_\byWebReq_\_TokenInHeaderX.cs" />
@@ -1904,8 +1952,8 @@
     <Compile Include="svr_\gitlab\usr_\grp\repo\_CreationX.cs" />
     <Compile Include="svr_\gitlab\usr_\IGroup.cs" />
     <Compile Include="svr_\gitlab\usr\repo_\NewFolder1\IProject.cs" />
-    <Compile Include="svr_\Codeup.cs" />
-    <Compile Include="svr_\eg_\cn_\Gitea.cs" />
+    <Compile Include="svr_\eg_\chn_\Codeup.cs" />
+    <Compile Include="svr_\eg_\chn_\Gitea.cs" />
     <Compile Include="svr_\github\client\org\repo\Create.cs" />
     <Compile Include="svr_\github\client\org\repo\Url.cs" />
     <Compile Include="svr_\github\client\Repo.cs" />
@@ -2043,8 +2091,8 @@
     <Compile Include="svr_\gitlab\_ApiX.cs" />
     <Compile Include="svr_\gitlab\_grp\_open\Li_.cs" />
     <Compile Include="svr_\IApi.cs" />
-    <Compile Include="svr_\eg_\cn_\IGitCode.cs" />
-    <Compile Include="svr_\eg_\cn_\IGitee.cs" />
+    <Compile Include="svr_\eg_\chn_\IGitCode.cs" />
+    <Compile Include="svr_\eg_\chn_\IGitee.cs" />
     <Compile Include="svr_\nonprivy_\ISourceForge.cs" />
     <Compile Include="svr_\vs\client\repo\_UrlX.cs" />
     <Compile Include="svr_\vs\client\teamwork\create_\Pub.cs" />
@@ -2086,6 +2134,7 @@
       <DependentUpon>LimitInMbyte.settings</DependentUpon>
     </Compile>
     <Compile Include="svr_\_gitlab\LimitX.cs" />
+    <Compile Include="_depo\init_\_GitDirCustomX.cs" />
     <Compile Include="_depo_\IPier.cs" />
     <Compile Include="_depo\work\BeA.cs" />
     <Compile Include="_depo\work\be_\NothingButIgnoreSetting.cs" />
@@ -2095,7 +2144,7 @@
     <Compile Include="depo\_setting\_cfg_\_AttributesX.cs" />
     <Compile Include="depo\crypt_\_TranscryptX.cs" />
     <Compile Include="depo\_werk_\directory_\unLink\documents_\_Nonlinks.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\documents_\_WithinWorkX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\documents_\_WithinWorkX.cs" />
     <Compile Include="depo\_werk_\documents_\nonlink\_DelDuplicateX.cs" />
     <Compile Include="depo\_werk_\documents_\_NoIgnoreSetting.cs" />
     <Compile Include="depo\_werk_\_DirectoryX.cs" />
@@ -2123,7 +2172,7 @@
     <Compile Include="nilnul0\fs\folder\doc_\giT_\ignore\_PatchX.cs" />
     <Compile Include="nilnul0\fs\folder\git_\manageds_\inner\Any.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\repo\CmdRt.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\BeI.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\BeI.cs" />
     <Compile Include="nilnul0\os\prog_\%28retiring\GitK - Copy.cs" />
     <Compile Include="nilnul0\os\prog_\git\run_\end\result\NewFolder1\_MsgX - Copy.cs" />
     <Compile Include="nilnul0\os\prog_\git\run_\end\_ResultX.cs" />
@@ -2307,12 +2356,12 @@
     <Compile Include="nilnul0\fs\folder_\giT_\work\Rt.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\work\VowI.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\work\vow\En.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\Nontop.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\DirI.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\modules_\InDirectly.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\modules_\Internal.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\modules_\InnnerDirectly.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\top\modules_\_InsideX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\Nontop.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\DirI.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\modules_\InDirectly.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\modules_\Internal.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\modules_\InnnerDirectly.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\top\modules_\_InsideX.cs" />
     <Compile Include="nilnul0\fs\folder_\nonlinks\_ModulesX.cs" />
     <Compile Include="nilnul0\fs\folder_\nonlink\div_\nonlink_\giT_\depos_\Inside.cs" />
     <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\manable\div_\nonlink_\giT_\depo_\directlies_\Directly.cs" />
@@ -2418,15 +2467,15 @@
     <Compile Include="depo\repo\_cfg_\remote_\svR_\_AzureX%28.cs" />
     <Compile Include="depo\repo\_cfg_\remote_\svR_\_GlX.cs" />
     <Compile Include="depo\repo\_cfg_\remote_\svR_\_AwX.cs" />
-    <Compile Include="depo\_werk_\directories_\_UnLinkX.cs" />
+    <Compile Include="depo\_werk_\directories_\_NonlinkX.cs" />
     <Compile Include="depo\_werk_\directory\_DirectoriesX.cs" />
     <Compile Include="depo\_werk_\directory\_DivsX.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dirs_\nontop_\_DirsX.cs" />
-    <Compile Include="depo\_werk_\directory_\unLink\directories_\_UnlinkX.cs" />
-    <Compile Include="depo\_werk_\directory_\unLink\divs_\_UnLinkX.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dirs_\_untop_\_DirsX.cs" />
+    <Compile Include="depo\_werk_\directory_\nonlink\directories_\_OmnihardX.cs" />
+    <Compile Include="depo\_werk_\directory_\nonlink\divs_\_OmnihardX.cs" />
     <Compile Include="depo\_werk_\dirs_\NewFolder1\_UnLinkX.cs" />
     <Compile Include="depo\_werk_\dossier\_DelDuplicateX.cs" />
-    <Compile Include="depo\_werk_\documents_\_Nonlinks.cs" />
+    <Compile Include="depo\_werk_\documents_\_nonlink_\_UnLinkX.cs" />
     <Compile Include="depo\_werk_\_DirsX.cs" />
     <Compile Include="depo\_werk_\_DivsX.cs" />
     <Compile Include="depo\_werk_\_Directories.cs" />
@@ -2555,7 +2604,7 @@
     <Compile Include="nilnul0\fs\folder\git_\Init.cs" />
     <Compile Include="nilnul0\fs\folder\git_\init_\Bare.cs" />
     <Compile Include="nilnul0\fs\folder_\giT_\Top2.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\Top.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\Top.cs" />
     <Compile Include="nilnul0\fs\folder_\nonlink\divs_\_NonRepoX.cs" />
     <Compile Include="nilnul0\fs\folder_\nonlink\documents_\_NonRepoX.cs" />
     <Compile Include="nilnul0\fs\folder_\nonlink_\giT_\plain\divs_\_NonRepoX.cs" />
@@ -2685,7 +2734,7 @@
     <Compile Include="depo\repo\branch_\current\Pull.cs" />
     <Compile Include="depo\repo\Gui.cs" />
     <Compile Include="depo\repo\snaps\Pack.cs" />
-    <Compile Include="depo\repo\snaps_\Dangling.cs" />
+    <Compile Include="depo\repo\snaps_\IDangling.cs" />
     <Compile Include="depo\repo\snaps_\dangling\Vw.cs" />
     <Compile Include="depo\repo\snap\_TagX.cs" />
     <Compile Include="depo\repo\state\Fsck.cs" />
@@ -2704,7 +2753,7 @@
     <Compile Include="depo\pier\addresses\Untrack.cs" />
     <Compile Include="depo\pier\blobs\Vw.cs" />
     <Compile Include="depo\pier\path\AssumeUnchanged.cs" />
-    <Compile Include="depo\pier\dossier\put_\File2Prev.cs" />
+    <Compile Include="depo\pier\destiny\let_\File2Prev.cs" />
     <Compile Include="depo\pier\Reset.cs" />
     <Compile Include="depo\pier\Clear.cs" />
     <Compile Include="depo\pier\division\Rm.cs" />
@@ -2889,7 +2938,7 @@
     <Compile Include="nilnul0\fs\folder\categorize_\giT_\_plainWorkRepo\ret\be_\Work.cs" />
     <Compile Include="nilnul0\fs\_folder\NoneRootSubRepo.cs" />
     <Compile Include="nilnul0\fs\_folder\NoneWorkRepo.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\Module.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\_depo_\by_\Module.cs" />
     <Compile Include="depo\repo\branches\Branches.cs" />
     <Compile Include="depo\repo\branches_\seeded\Seeded.cs" />
     <Compile Include="depo\repo\branches_\seeded\seeded\Current.cs" />
@@ -2898,7 +2947,7 @@
     <Compile Include="depo\repo\_cfg_\Ignore.cs" />
     <Compile Include="depo\repo\remote\Fetch.cs" />
     <Compile Include="depo\repo\remote\Password.cs" />
-    <Compile Include="depo\repo\remote\reference\Del.cs" />
+    <Compile Include="depo\repo\remote\refer\Del.cs" />
     <Compile Include="depo\repo\_cfg_\remote\url\Change.cs" />
     <Compile Include="depo\repo\_cfg_\remote\url_\push\upd~\Set.cs" />
     <Compile Include="depo\repo\_cfg_\remote\url\vw\parse~\Parse.cs" />
@@ -2921,8 +2970,8 @@
     <Compile Include="depo\dir_\work_\NonRoot.cs" />
     <Compile Include="depo\cmd_\Clean.cs" />
     <Compile Include="svr_\gitlab\usr\repo\create_\byWebReq_\Add.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dir\be_\Top.cs" />
-    <Compile Include="nilnul0\fs\folder_\giT_\work_\nontop\dir\category_\WorkRoot_WorkNonroot.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dir\be_\Top.cs" />
+    <Compile Include="nilnul0\fs\folder_\giT_\werk_\untop\dir\category_\WorkRoot_WorkNonroot.cs" />
     <Compile Include="nilnul0\fs\_git\_git\ReportErrException.cs" />
     <Compile Include="nilnul0\fs\_git\_git\Result.cs" />
     <Compile Include="depo\ActI.cs" />
@@ -2971,7 +3020,7 @@
     <Compile Include="depo\pier\Files.cs" />
     <Compile Include="depo\pier\UnAdd.cs" />
     <Compile Include="depo\pier\ReIni.cs" />
-    <Compile Include="depo\pier\vs_\_vsHead_\Diff.cs" />
+    <Compile Include="depo\pier\vs_\_head_\by_\Diff.cs" />
     <Compile Include="depo\pier\Short.cs" />
     <Compile Include="depo\stow\Stash.cs" />
     <Compile Include="depo\pier\vw_\State.cs" />
@@ -3053,7 +3102,7 @@
     <Compile Include="depo\_werk_\destiny\be_\_ignored\_settings\_ignore\Ignore.cs" />
     <Compile Include="depo\repo\_cfg_\Remotes.cs" />
     <Compile Include="depo\repo\_cfg_\remotes\Vw.cs" />
-    <Compile Include="depo\repo\remote\reference\reference\Del.cs" />
+    <Compile Include="depo\repo\remote\refer\reference\Del.cs" />
     <Compile Include="depo\repo\remote\urls\Fetch.cs" />
     <Compile Include="depo\repo\remote\urls\Show.cs" />
     <Compile Include="depo\repo\_cfg_\remote\url_\push\upd~\forPush\Set.cs" />
@@ -3106,7 +3155,7 @@
     <Compile Include="svr_\_GitlabX.cs" />
     <Compile Include="nilnul0\os\prog_\gitty_\Tortoise.cs" />
     <Compile Include="tortoise\Icons.cs" />
-    <Compile Include="depo\repo\snaps_\Rev.cs" />
+    <Compile Include="depo\repo\snaps_\IRev.cs" />
     <Compile Include="_depo\Clone.cs" />
     <Compile Include="_depo\clone_\NoCheckout.cs" />
     <Compile Include="_depo\Ini.cs" />
@@ -3121,9 +3170,14 @@
     <Compile Include="_depo_\TopI.cs" />
     <Compile Include="_depo_\WorkI.cs" />
     <Compile Include="_depo_\RepoI.cs" />
+    <Compile Include="_depo_\_work_\dir_\IPartition.cs" />
+    <Compile Include="_depo_\_work_\dir_\_InboxX.cs" />
     <Compile Include="_repo_\entry\Notes.cs" />
     <Compile Include="_repo_\Head.cs" />
     <Compile Include="depo\_held_\IDossier.cs" />
+    <Compile Include="_repo_\refers_\ILogs.cs" />
+    <Compile Include="_repo_\refers_\logs\IGc.cs" />
+    <Compile Include="_repo_\refers_\Packed.cs" />
     <Compile Include="_svrs\Enum.cs" />
     <Compile Include="_svr\LimitInMbyteI.cs" />
     <Compile Include="_svr_\LimitInMbyteI.cs" />
@@ -3148,11 +3202,8 @@
     <Folder Include="depo\div\db\" />
     <Folder Include="depo\div\NewFolder1\" />
     <Folder Include="depo\div\sup_\" />
-    <Folder Include="depo\div_\top\" />
-    <Folder Include="depo\documents\" />
     <Folder Include="depo\document\froRepo\" />
     <Folder Include="depo\exe_\git\result_\" />
-    <Folder Include="depo\file\" />
     <Folder Include="depo\held\" />
     <Folder Include="depo\pac\" />
     <Folder Include="depo\pier\act_\act_\" />
@@ -3167,12 +3218,11 @@
     <Folder Include="depo\pier\dossiers\rite_\" />
     <Folder Include="depo\pier\dossier\_mode\" />
     <Folder Include="depo\pier\trackings\" />
-    <Folder Include="depo\pier\vs_\_head_\" />
+    <Folder Include="depo\pier\vs_\_vsHead_\" />
     <Folder Include="depo\pull_\brancH_\noncurrent\" />
     <Folder Include="depo\rack\commits\" />
     <Folder Include="depo\rack\entry_\" />
     <Folder Include="depo\rack\_dif\" />
-    <Folder Include="depo\repo\blob\checkout_\" />
     <Folder Include="depo\repo\branches\NewFolder1\" />
     <Folder Include="depo\repo\branches\_merge\algo_\" />
     <Folder Include="depo\repo\branches_\local\del_\" />
@@ -3183,8 +3233,6 @@
     <Folder Include="depo\repo\branch\co_\tracked_\" />
     <Folder Include="depo\repo\branch\push_\svr_\bb\" />
     <Folder Include="depo\repo\branch\push_\svr_\_bb_\" />
-    <Folder Include="depo\repo\branch\snap\assign_\" />
-    <Folder Include="depo\repo\branch\to_\head\" />
     <Folder Include="depo\repo\branch_\current\nulable\_vw_\" />
     <Folder Include="depo\repo\branch_\current\remote\" />
     <Folder Include="depo\repo\branch_\current\snap\alter_\" />
@@ -3201,37 +3249,33 @@
     <Folder Include="depo\repo\head\assign_\snap_\xpn_\" />
     <Folder Include="depo\repo\head\assign_\xpn_\" />
     <Folder Include="depo\repo\head\at_\" />
-    <Folder Include="depo\repo\head\branch\vw_\NewFolder1\" />
+    <Folder Include="depo\repo\head\branch\vw_\xpn_\" />
     <Folder Include="depo\repo\head\branch_\current\assign_\" />
-    <Folder Include="depo\repo\head\vs_\work\" />
     <Folder Include="depo\repo\head_\branchish_\sed\" />
     <Folder Include="depo\repo\head_\hatched\vw_\" />
     <Folder Include="depo\repo\head_\refer\assign\" />
     <Folder Include="depo\repo\head_\xpn_\empty_\xpn_\" />
     <Folder Include="depo\repo\pseudo_\custom\snap\" />
     <Folder Include="depo\repo\pseudo_\custom\val_\" />
-    <Folder Include="depo\repo\refer_\branchish\" />
-    <Folder Include="depo\repo\refer_\branch\" />
     <Folder Include="depo\repo\remote\branch\drop_\" />
     <Folder Include="depo\repo\remote\dif_\dif_\" />
     <Folder Include="depo\repo\remote\push_\branch_\uiTitled_\titled\" />
+    <Folder Include="depo\repo\remote\refers_\pull_\" />
     <Folder Include="depo\repo\remote_\local\" />
     <Folder Include="depo\repo\remote_\_default\" />
-    <Folder Include="depo\repo\snaps\notes\" />
-    <Folder Include="depo\repo\snaps\vw_\" />
     <Folder Include="depo\repo\snap\bound_\set_\" />
-    <Folder Include="depo\repo\snap\calc\_eval_\" />
     <Folder Include="depo\repo\snap\co\be_\" />
     <Folder Include="depo\repo\snap\duo_\work\" />
     <Folder Include="depo\repo\snap\expr_\caret_\" />
     <Folder Include="depo\repo\snap\expr_\op_\msg_\" />
     <Folder Include="depo\repo\snap\expr_\pseudo_\" />
-    <Folder Include="depo\repo\snap\net_\" />
     <Folder Include="depo\repo\snap\nym\vw_\" />
     <Folder Include="depo\repo\snap\of_\" />
     <Folder Include="depo\repo\snap\override_\work\commit2branch\" />
+    <Folder Include="depo\repo\snap\rel_\parent\_vw_\" />
     <Folder Include="depo\repo\snap\set_\border\coerce_\ancestry\" />
     <Folder Include="depo\repo\snap\set_\border\to_\" />
+    <Folder Include="depo\repo\snap\time\" />
     <Folder Include="depo\repo\snap\_betwixt\border\NewFolder1\" />
     <Folder Include="depo\repo\snap\_parents\" />
     <Folder Include="depo\repo\snap\_parent\" />
@@ -3239,6 +3283,7 @@
     <Folder Include="depo\repo\snap_\current\document\toWork\by_\" />
     <Folder Include="depo\repo\snap_\current\froRepo_\" />
     <Folder Include="depo\repo\snap_\current\nym\vw\" />
+    <Folder Include="depo\repo\snap_\current\parents\_vw_\by_\log\" />
     <Folder Include="depo\repo\snap_\msgless\" />
     <Folder Include="depo\repo\snap_\staged\" />
     <Folder Include="depo\repo\snap_\work\" />
@@ -3276,12 +3321,11 @@
     <Folder Include="depo\repo\_cfg_\_branch\" />
     <Folder Include="depo\repo\_cfg_\_http_\_proxy_\" />
     <Folder Include="depo\repo\_cfg_\_remote\_name\txt\be_\" />
-    <Folder Include="depo\repo\_commits_\" />
     <Folder Include="depo\stow\bak_\create\_collapse\" />
     <Folder Include="depo\stow\_skim\" />
+    <Folder Include="depo\stow\_stash_\" />
     <Folder Include="depo\stow\_state_\" />
-    <Folder Include="depo\werk\document_\newly\" />
-    <Folder Include="depo\werk\vs_\_pier_\" />
+    <Folder Include="depo\subtree_\" />
     <Folder Include="depo\_cfg\setting_\" />
     <Folder Include="depo\_held_\destinys\" />
     <Folder Include="depo\_merge\" />
@@ -3290,10 +3334,7 @@
     <Folder Include="depo\_pier_\destinys_\_untracked_\" />
     <Folder Include="depo\_pier_\dossiers\delete_\" />
     <Folder Include="depo\_pier_\dossier\drop_\force_\xpn_\" />
-    <Folder Include="depo\_pier_\dossier\reset_\" />
-    <Folder Include="depo\_pier_\dossier\rw_\" />
-    <Folder Include="depo\_pier_\xpn_\" />
-    <Folder Include="depo\_pier_\_dossiers_\by_\" />
+    <Folder Include="depo\_rack_\entity_\" />
     <Folder Include="depo\_repo_\meta\" />
     <Folder Include="depo\_repo_\refer_\" />
     <Folder Include="depo\_setting\cfg\ignore\" />
@@ -3320,10 +3361,12 @@
     <Folder Include="depo\_werk_\directories\" />
     <Folder Include="depo\_werk_\directory_\noDotLed\" />
     <Folder Include="depo\_werk_\directory_\notDotLed_\nonlink\directories_\" />
-    <Folder Include="depo\_werk_\directory_\unLink\dirs_\NewFolder1\" />
+    <Folder Include="depo\_werk_\divs\" />
+    <Folder Include="depo\_werk_\divs_\_nonlink_\" />
+    <Folder Include="depo\_werk_\div\docs_\unlink\" />
     <Folder Include="depo\_werk_\div\_dst\" />
+    <Folder Include="depo\_werk_\documents\" />
     <Folder Include="depo\_werk_\documents_\included_\revamped\size\" />
-    <Folder Include="depo\_werk_\documents_\nonlink_\" />
     <Folder Include="depo\_werk_\document\blob\" />
     <Folder Include="depo\_werk_\document\create_\" />
     <Folder Include="depo\_werk_\doc_\ignore\upsert_\_dotnet\patch_\" />
@@ -3368,16 +3411,16 @@
     <Folder Include="nilnul0\fs\folder_\giT_\plains_\" />
     <Folder Include="nilnul0\fs\folder_\giT_\repo\be_\top_\" />
     <Folder Include="nilnul0\fs\folder_\giT_\top\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\werk_\top\directory_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\werk_\top\dir\category_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\werk_\top\dir_\noEmbedRepo_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\werk_\top\div_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\werk_\untop\directories_\unclave_\nonlink_\notDotLed_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\werk_\untop\dir\category_\_default\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\werk_\untop\dir_\nontop_\" />
+    <Folder Include="nilnul0\fs\folder_\giT_\werk_\untop\dir_\notDotLed_\" />
     <Folder Include="nilnul0\fs\folder_\giT_\work\manageds_\" />
     <Folder Include="nilnul0\fs\folder_\giT_\work\vow_\" />
-    <Folder Include="nilnul0\fs\folder_\giT_\work_\nontop\directories_\noDotLed_\nonlink_\notDotLed_\" />
-    <Folder Include="nilnul0\fs\folder_\giT_\work_\nontop\dir\category_\_default\" />
-    <Folder Include="nilnul0\fs\folder_\giT_\work_\nontop\dir_\nontop_\" />
-    <Folder Include="nilnul0\fs\folder_\giT_\work_\nontop\dir_\notDotLed_\" />
-    <Folder Include="nilnul0\fs\folder_\giT_\work_\top\directory_\" />
-    <Folder Include="nilnul0\fs\folder_\giT_\work_\top\dir\category_\" />
-    <Folder Include="nilnul0\fs\folder_\giT_\work_\top\dir_\noEmbedRepo_\" />
-    <Folder Include="nilnul0\fs\folder_\giT_\work_\top\div_\" />
     <Folder Include="nilnul0\fs\folder_\nonlinks\documents_\giT_\" />
     <Folder Include="nilnul0\fs\folder_\nonlink\div_\nonlink_\giT_\depo_\" />
     <Folder Include="nilnul0\fs\folder_\nonlink\documents_\nonlink_\git_\" />
@@ -3413,12 +3456,18 @@
     <Folder Include="nilnul0\txt\be_\" />
     <Folder Include="repo\branch\co\" />
     <Folder Include="repo\branch\fetch_\" />
+    <Folder Include="repo\branch\push_\" />
     <Folder Include="repo\branch\_name\txt_\dnts_\" />
+    <Folder Include="repo\destinys_\" />
+    <Folder Include="repo\head\branch_\" />
+    <Folder Include="repo\log\destiny\" />
     <Folder Include="repo\remote\branch\drop_\" />
     <Folder Include="repo\remote\current\drop_\" />
     <Folder Include="repo\remote\dif\" />
     <Folder Include="repo\snaps\ancestor\" />
     <Folder Include="repo\snap\branch\" />
+    <Folder Include="repo\snap\dag\" />
+    <Folder Include="repo\snap_\merge\" />
     <Folder Include="repo\vow_\unlocked_\_delay\" />
     <Folder Include="repo\_branch\name_\dnts\be_\local_\_pub_\" />
     <Folder Include="repo\_branch\name_\_vered\_prefix\txt\be_\" />
@@ -3428,6 +3477,7 @@
     <Folder Include="repo\_branch\_name\_cha\" />
     <Folder Include="repo\_branch\_name_\" />
     <Folder Include="repo\_push\exitCode\" />
+    <Folder Include="repo\_push_\url_\" />
     <Folder Include="repo\_refer\name_\strict\" />
     <Folder Include="repo\_refer\_name\txt\_be_\" />
     <Folder Include="repo_\bare\create_\tmp\" />
@@ -3435,17 +3485,14 @@
     <Folder Include="repo_\bare\ov_\folder_\tmp\" />
     <Folder Include="svrs_\vsBbGl\client\prjs\add_\" />
     <Folder Include="svrs_\vsBbGl\client_\token\prjs\add\" />
-    <Folder Include="svr\co\" />
     <Folder Include="svr\usr\repo\branches\vw\" />
     <Folder Include="svr\usr\repo\map_\word\" />
     <Folder Include="svr\usr\repo\map_\word_\" />
-    <Folder Include="svr\usr\repo\set\" />
     <Folder Include="svr\usr\repo\set_\byHost\map_\" />
     <Folder Include="svr\usr\repo\set_\byHost_\" />
     <Folder Include="svr\usr\repo\sortie_\byHost\biject_\named_\" />
     <Folder Include="svr\usr\repo\sortie_\byHost\biject_\nom1nonemptyEs\" />
     <Folder Include="svr\usr\repo\sortie_\byHost\biject_\nomNonempty\" />
-    <Folder Include="svr\usr_\grp\" />
     <Folder Include="svr_\amazon\_client\" />
     <Folder Include="svr_\amazon_\ohio\client\repo\" />
     <Folder Include="svr_\amazon_\region\client_\" />
@@ -3457,10 +3504,7 @@
     <Folder Include="svr_\azure\usr\_division\" />
     <Folder Include="svr_\azure\usr_\org\prjs\count\" />
     <Folder Include="svr_\gitee\usr\repo\url_\" />
-    <Folder Include="svr_\github\client\repo\url\" />
-    <Folder Include="svr_\github\client\repo_\" />
-    <Folder Include="svr_\github\NewFolder1\" />
-    <Folder Include="svr_\github\usr\" />
+    <Folder Include="svr_\gitlab\acc_\grp\" />
     <Folder Include="svr_\gitlab\grp_\" />
     <Folder Include="svr_\gitlab\usr\repos\count\" />
     <Folder Include="svr_\gitlab\usr\repo\create_\byWebReq_\parTyped\%28retiring\" />
@@ -3485,10 +3529,10 @@
     <Folder Include="svr_\wellknown_\" />
     <Folder Include="svr_\_bak\" />
     <Folder Include="svr_\_vs\" />
-    <Folder Include="_depo\_work_\div\" />
-    <Folder Include="_depo_\top\" />
-    <Folder Include="_depo_\trans_\" />
+    <Folder Include="_depo\_work_\" />
     <Folder Include="_remote\" />
+    <Folder Include="_repo_\recent_\" />
+    <Folder Include="_repo_\snaps_\" />
     <Folder Include="_svrs\enum_\" />
   </ItemGroup>
   <ItemGroup>
@@ -3576,8 +3620,8 @@
     <None Include="License.txt" Pack="true" PackagePath="" />
   </ItemGroup>
   <ItemGroup>
-    <Analyzer Include="..\..\.deps\AWSSDK.CodeCommit.3.7.401.11\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />
-    <Analyzer Include="..\..\.deps\AWSSDK.CodeCommit.3.7.401.11\analyzers\dotnet\cs\SharedAnalysisCode.dll" />
+    <Analyzer Include="..\..\.deps\AWSSDK.CodeCommit.4.0.0.14\analyzers\dotnet\cs\AWSSDK.CodeCommit.CodeAnalysis.dll" />
+    <Analyzer Include="..\..\.deps\AWSSDK.CodeCommit.4.0.0.14\analyzers\dotnet\cs\SharedAnalysisCode.dll" />
   </ItemGroup>
   <!--<ItemGroup>
     <PackageReference Include="AdysTech.CredentialManager">
@@ -3645,7 +3689,7 @@
       <Output TaskParameter="Assemblies" ItemName="Targets" />
     </GetAssemblyIdentity>
     <ItemGroup>
-      <VersionNumber Include="@(Targets-&gt;'%(Version)')" />
+      <VersionNumber Include="@(Targets->'%(Version)')" />
       <MajorMinor Include="$([System.Text.RegularExpressions.Regex]::Replace(&quot;%(Targets.Version)&quot;, &quot;^([^\.]+)\.([^\.]+)(.*)$&quot;, &quot;$1.$2&quot;))" />
     </ItemGroup>
   </Target>
@@ -3669,14 +3713,19 @@
 if $(ConfigurationName) == Release (
 	"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
 	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source local
-	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source my
 	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget
+
+	"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source my
+
+
+
 ) ELSE (
 	if  $(ConfigurationName)==Symbol (
 		"NuGet.exe" pack "$(ProjectPath)" -Symbols -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source local
-		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source my
+
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source nuget
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).symbols.nupkg -SkipDuplicate -Source my
 	)
 	if  $(ConfigurationName)==Nuget (
 		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
@@ -3689,8 +3738,9 @@ if $(ConfigurationName) == Release (
 	if  $(ConfigurationName)==Sym2nuget (
 		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-sym
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source local
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source nuget
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source my
-		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source nuget.org
+
 	)
 )</PostBuildEvent>
   </PropertyGroup>
@@ -3698,6 +3748,8 @@ if $(ConfigurationName) == Release (
     <PropertyGroup>
       <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
     </PropertyGroup>
+    <Error Condition="!Exists('..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets'))" />
+    <Error Condition="!Exists('..\..\.deps\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets'))" />
     <!--<Error Condition="!Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets'))" />-->
     <!--<Error Condition="!Exists('..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />-->
@@ -3709,6 +3761,8 @@ if $(ConfigurationName) == Release (
   <Import Project="packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Import Project="..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\..\.deps\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
   <Import Project="..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\..\.deps\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <Import Project="..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\.deps\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <Import Project="..\..\.deps\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets" Condition="Exists('..\..\.deps\System.ValueTuple.4.6.1\build\net471\System.ValueTuple.targets')" />
   <!--<PropertyGroup>
 		<PostBuildEvent>
 			xcopy /Y /E /D /I "packages\*.*"packages\"

@@ -1,4 +1,4 @@
-﻿using nilnul.fs.folder_.git_.work_;
+using nilnul.fs.folder_.git_.work_;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -28,19 +28,7 @@ namespace nilnul.fs.git.module._work_
 				x=>System.IO.Directory.EnumerateFiles(x)
 			);
 
-            //foreach (var child in _work_._DirsX.Addresses_ofAddress(module))
-            //{
-            //    foreach (var item in _work_.directory._DocumentsX._OfNontopWork(child))
-            //    {
-            //        yield return item;
-            //    }
-            //}
-           
-            //foreach (var item in nilnul.fs.folder._DocsX.Infos_ofAddress(module))
-            //{
-            //    yield return item.FullName;
-            //}
-        }
+         }
 
         public static IEnumerable<FileInfo> FileInfoS_ofAddress(string module)
         {

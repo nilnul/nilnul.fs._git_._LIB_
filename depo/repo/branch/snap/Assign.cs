@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +17,15 @@ namespace nilnul.fs.git.depo.repo.branch.snap
 	///		eg:
 	///			git branch --force master
 	/// new-tip-commit can be a branch name(e.g., master, origin/master).
+	///
+	/// error:
+	///    if HEAD commit doesnot exist, then:
+	///    fatal: not a valid object name: 'master'
+	///  ,when we can use:
+	///		git branch -f master someOtherBranch
+	///			,not:  git checkout -b master
 	/// </summary>
+	/// <see cref="nilnul.fs.git.repo.branch.snap.IPut"/>
 	class Assign
 	{
 	}

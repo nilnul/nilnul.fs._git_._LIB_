@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,9 +7,24 @@ using System.Threading.Tasks;
 namespace nilnul.fs.folder.be_.git_.work_
 {
 	/// <summary>
-	/// work or repo
+	/// work, but not top. 
 	/// </summary>
-	public class Nontop : nilnul.fs.folder.BeI
+	/// alias:
+	///		inward
+	///		coterie
+	///		content
+	///		nonshell
+	///		innard
+	///		interior
+	///		internal
+	///		introspective
+	///		essence
+	///		pulp
+	public class Nontop :
+		nilnul.fs.folder.be_.giT_.werk_.IInward
+		,
+		nilnul.fs.folder.BeI
+
 	{
 		
 

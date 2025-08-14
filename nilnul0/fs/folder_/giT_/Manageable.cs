@@ -1,4 +1,4 @@
-﻿using nilnul.fs.address_;
+using nilnul.fs.address_;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace nilnul.fs.folder_.giT_
 {
 	/// <summary>
+	/// 
 	/// </summary>
 	public class Manageable
 		:

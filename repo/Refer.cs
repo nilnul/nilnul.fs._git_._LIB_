@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 namespace nilnul.fs.git.repo
 {
 	/// <summary>
+	/// name:ref
+	/// ;
+	/// reads which branch head the given symbolic ref refers to and outputs its path, relative to the .git/ directory
 	/// 
 	/// </summary>
 	/// <remarks>
@@ -16,5 +19,8 @@ namespace nilnul.fs.git.repo
 	/// </remarks>
 	static class _ReferX
 	{
+
 	}
+
+
 }

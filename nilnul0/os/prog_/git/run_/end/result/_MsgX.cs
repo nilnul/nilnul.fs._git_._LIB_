@@ -1,4 +1,5 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using nilnul.fs.folder_.git_;
 using nilnul.fs.folder_.git_.work_;
 using nilnul.fs.git;
@@ -31,6 +32,26 @@ namespace nilnul.os.prog_.git.run_.exit.result
 			)
 			);
 		}
+		public static string _GetMsg_0depo_1args(
+			string module
+			,
+			IEnumerable<string> args
+			,
+			nilnul.win.prog_.Git git = null
+		)
+		{
+			return nilnul.os.proc_.finished._result.data._MsgX.Msg(
+				nilnul.os.prog_.git.run_.exit._ResultX._Result_0address_1args(
+					module
+					,
+					args
+					,
+					git
+				)
+			);
+		}
+
+
 		public static string Msg(
 			nilnul.fs.FolderI module,
 			string arg,

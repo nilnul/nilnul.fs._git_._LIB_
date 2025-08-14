@@ -1,7 +1,8 @@
-﻿using Newtonsoft.Json;
+//using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using G = nilnul.win.prog_.Git;
@@ -10,6 +11,7 @@ namespace nilnul.fs.git.module.repo._cfg_.remote_.svr_.amazon_.newest
 {
 	public static class _EnsureOhioRepoX
 	{
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static string Json(
 			nilnul.fs.git.ModuleI module
 			,
@@ -32,6 +34,7 @@ namespace nilnul.fs.git.module.repo._cfg_.remote_.svr_.amazon_.newest
 
 		}
 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static string Json(
 			nilnul.fs.git.Module folder
 			,
@@ -45,8 +48,9 @@ namespace nilnul.fs.git.module.repo._cfg_.remote_.svr_.amazon_.newest
 			//throw new NotImplementedException();
 		}
 
-	
 
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		public static string Json(string folder,  G git = null)
 		{
 			return Json(

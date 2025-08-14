@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.git.depo.repo.snap
 {
+	/// https://mirrors.edge.kernel.org/pub/software/scm/git/docs/gitrevisions.html
 	/// <summary>
 	/// known as commitish; and as commitish leads to tree, so it's also treeish;
 	/// </summary>

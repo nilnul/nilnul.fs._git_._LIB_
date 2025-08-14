@@ -1,8 +1,9 @@
-﻿using nilnul.fs.address_.spear;
+using nilnul.fs.address_.spear;
 using nilnul.fs.git.module._work_.documents_;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -26,6 +27,15 @@ namespace nilnul.fs.git.depo._werk_.dossiers_
 	/// todo: correct?
 	static public class _IncludedX
 	{
+		/// <summary>
+		/// submodule is represented as a directory.
+		/// others, including some symlink direcotories,  are all denotes;
+		/// </summary>
+		/// <param name="depo"></param>
+		/// <param name="git"></param>
+		/// <returns></returns>
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		static public IEnumerable<string> _Dossier9submanagedEs_0depo(
 			string depo
 			,
@@ -76,16 +86,10 @@ namespace nilnul.fs.git.depo._werk_.dossiers_
 
 
 				yield return item;
-
-
-
-
 			}
-
-
-
 		}
 
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
 		static public IEnumerable<(string denote, string spear)> _Denotion9spearEs_0depo(
 			string depo
 			,

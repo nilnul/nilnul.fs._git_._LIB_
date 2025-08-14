@@ -1,7 +1,8 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using G = nilnul.win.prog_.Git;
@@ -10,6 +11,9 @@ namespace nilnul.fs.git.module.repo._cfg_.remote_.aw_.next.create_.ohio
 {
 	static public class _EnsureSvrFirst4VaultedCredX
 	{
+
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+
 		static public string Json(
 			nilnul.fs.git.ModuleI module
 			,
@@ -18,16 +22,13 @@ namespace nilnul.fs.git.module.repo._cfg_.remote_.aw_.next.create_.ohio
 			nilnul.win.prog_.Git git = null
 		)
 		{
-			var r = nilnul.fs.git.svr_.aw_.ohio.client_.cfged.repo.create._EnsureX.Ret(
-				repoName
-			);
 
-
-			;
 
 			return JsonConvert.SerializeObject( 
 				new {
-					svr =r,
+					svr = nilnul.fs.git.svr_.aw_.ohio.client_.cfged.repo.create._EnsureX.Ret(
+				repoName
+			),
 				remote=remote_.aw_.next.create_._OhioX.Json(
 				module
 				

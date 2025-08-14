@@ -6,7 +6,7 @@ namespace nilnul.fs.git.depo
 	/// repo and pier
 	/// </summary>
 	/// <remarks>
-	///
+	/// aka the GIT_DIR, which can be configurated in OsEnvironment Variable
 	/// </remarks>
 	/// and also stash?
 	/// alias:

@@ -1,4 +1,4 @@
-﻿namespace nilnul.fs.git.depo._werk_.destiny.be_._ignored._setting
+namespace nilnul.fs.git.depo._werk_.destiny.be_._ignored._setting
 {
 	/// <summary>
 	///		If there is a separator at the end of the pattern then the pattern will only match directories, otherwise the pattern can match both files and directories.
@@ -9,7 +9,7 @@
 	/// For example, a pattern doc/frotz/ matches doc/frotz directory, but not a/doc/frotz directory;
 	/// The pattern doc/frotz and /doc/frotz have the same effect in any .gitignore file. In other words, a leading slash is not relevant if there is already a middle slash in the pattern.
 	///
-	/// Otherwise the pattern may also match at any level below the .gitignore level; this means that with no separator, the pattern matches for any dst at any level.
+	/// Otherwise (no slash anywhere except the end) the pattern may also match at any level below the .gitignore level; this means that with no separator, the pattern matches for any dst at any level.
 	/// 
 	/// </summary>
 	/// alias:

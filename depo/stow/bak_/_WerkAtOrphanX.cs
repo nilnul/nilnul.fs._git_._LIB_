@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.Services.Common;
+using Microsoft.VisualStudio.Services.Common;
 using nilnul.fs.file.be;
 using nilnul.obj.lex_._byt.bind_.name_;
 using nilnul.obj.str;
@@ -12,7 +12,7 @@ namespace nilnul.fs.git.depo.stow.bak_
 	/// we will reset the stage. to avoid loss of work, <see cref="pier._BakX"/> shall be done beforehand.
 	/// 
 	/// <summary>
-	/// 
+	/// bak the werk separately as an orphan.
 	/// </summary>
 	/// <remarks>
 	/// designed to be called from within <see cref="depo_.IWrought"/>

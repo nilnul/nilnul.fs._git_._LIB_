@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,6 +7,13 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.folder.be_.git_
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// alias:
+	///		plain
+	///		nongit
+	///		none
 	static public class _NoneX
 	{
 		static public bool Be(FolderI folder, nilnul.win.prog_.Git git=null)

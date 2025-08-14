@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Linq;
 
 namespace nilnul.fs.git.svrs_._aagg
 {
 	/// <summary>
-	/// in Mb
+	/// 
 	/// </summary>
 	public class LimitX
 	{

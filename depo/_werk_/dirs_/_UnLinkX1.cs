@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,8 +10,10 @@ namespace nilnul.fs.git.module._work_.dirs_
 	/// <summary>
 	/// unlink at this part. the parent might be a link.
 	/// </summary>
+	///<see cref="nilnul.fs.folder_.giT_.work_.top.dirs_.nonlink_._NontopX"/>
 	///
-	/// <see cref="nilnul.fs.folder_.giT_.work_.nontop.dirs_.nonlink_._NontopX"/>
+	/// 
+	/// vs: <see cref="nilnul.fs.folder_.giT_.work_.nontop.dirs_.nonlink_._NontopX"/>
 
 	static public class _UnLinkX1
 	{

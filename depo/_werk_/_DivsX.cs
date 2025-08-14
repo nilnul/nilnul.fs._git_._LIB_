@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace nilnul.fs.git.module._work_
 {
+	/// <see cref="fs.git.depo._werk_.IDivs"/>
+	/// <summary>
+	/// 
+	/// </summary>
 	static public class _DivsX
 	{
 

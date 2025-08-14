@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,14 +13,6 @@ namespace nilnul.fs.git.repo.refer.op_
 	/// </summary>
 	/// 
 	internal class NthParent
-	{
-	}
-
-
-	/// <summary>
-	/// ^
-	/// </summary>
-	internal class Parent
 	{
 	}
 
